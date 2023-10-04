@@ -77,7 +77,13 @@ Nun kann jede Person, die automatisch eine Kiste mit der Kapazität von 5 besitz
 ![Game On The Floor](Skizzen/game_floor.png)
 
 ### Hacked Again - Game On The Wall
+Wenn alle roten Hacker-Cubes vom Boden entfernt wurden, so wird der Boden wieder schwarz und die Kisten sind dann auch wieder weg. 
+Nun greift der Hacker allerdings nochmal an, und infiziert die Wand vom DeepSpace. Somit poppen nun an der Wand, bis zu einer Höhe von 1,70 - 1,75 m wieder laute rote Hacker-Cubes auf. Diese müssen allerdings nun durch "Touch" entfernt werden. Sprich, wenn man einen roten Hacker-Cube berührt, so verschwindet er wieder - So bereinigt man dann wieder die Wand von den Hacker-Viren. 
 ![Game On The Wall](Skizzen/game_wall.png)
+
+### Succes - DeepSpace bereinigt
+Es wurden also sowohl der Boden, als auch die Wand von den Hacker-Viren befreit! Jetzt wird der gesamte Raum blau, und vorne am Bildschirm wird groß "SUCCES" angezeigt. Die Kinder haben es also geschafft den DeepSpace wieder virenfrei zu machen. Dazu soll noch ein bestimmter "Success-Sound" auftönen.
+![Success](Skizzen/success.png)
 
 ## 3. Risikoanalyse
 
