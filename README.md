@@ -27,16 +27,20 @@ Unser Ziel ist es den Kindern beizubringen, dass es Gefahren beziehungsweise Fal
 
 ### Start des Games
 Der Start beginnt damit, das der Bildschirm auf der Wand eine Vorschau produziert, von einem I-Pad, wo es die Möglichkeit gibt drei Apps zu spielen. Die Apps wären Schere-Stein-Papier, Tic-Tac-Toe und Memory. Auf dem Boden erscheinen drei Felder, für die Auswahl der Apps. In welchem Feld mehr Benutzer drinnen stehen, dieses Spiel wird ausgewählt.
-![](skizzen/2.AppsÖffnen.png)
+![Apps Öffnen](skizzen/apps_öffnen.png)
 
 ### Öffnen einer App
 In diesem Beispiel öffnen wir Tic-Tac-Toe und der Benutzer kann das jeweilige Game bis zum Ende spielen.
-![](skizzen/3.TicTacToe.png)
+![Tic Tac Toe](skizzen/ticTacToe.png)
 
 ### Frage zum Weiterspielen
 Nach dem Ende des Spiels kommt ein Feld über das Game, wo die Frage kommt: "Do you want to continue". Hierbei werden am Boden zwei Felder erscheinen um "Yes" oder "No" auszuwählen
-![](skizzen/4.Question.png)
+![Question](skizzen/question.png)
 
+
+### Po
+Nach dem Ende des Spiels kommt ein Feld über das Game, wo die Frage kommt: "Do you want to continue". Hierbei werden am Boden zwei Felder erscheinen um "Yes" oder "No" auszuwählen
+![Question](skizzen/question.png)
 ## 3. Risikoanalyse
 
 #### Chancen
@@ -48,10 +52,6 @@ Nach dem Ende des Spiels kommt ein Feld über das Game, wo die Frage kommt: "Do 
 - Website könnte zu komplex werden
 - Troubleshoot bei den Schnittstellen
 - Zeiteinteilung
-
-#### SWOT-Analyse
-![SWOT-Analyse](pics/SWOT-Analyse.png)
-
 
 ## 4. Projektablauf
 
