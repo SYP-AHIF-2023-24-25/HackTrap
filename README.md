@@ -32,7 +32,7 @@ Der Start beginnt damit, das der Bildschirm auf der Wand eine Vorschau produzier
 1. App: Safari
 2. App: Folder
 3. App: Settings
-![Apps am I-Pad](Skizzen/apps.png)
+![Apps am I-Pad](Skizzen/01_apps.png)
 
 ### Safari: 3 Spiele
 Safari wird automatisch geöffnet, und dann gibt es die Möglichkeit drei verschiedene Spiele zu spielen. Somit soll die Spannung am Anfang erstmal ein wenig gelockert werden.
@@ -45,45 +45,45 @@ Auf dem Boden erscheinen drei Felder, welche für die Auswahl des jeweiligen gew
 2. Spiel: Tic-Tac-Toe
 3. Spiel: Memory
 
-![Apps Öffnen](Skizzen/apps_öffnen.png)
+![Apps Öffnen](Skizzen/02_apps_oeffnen.png)
 
 ### Öffnen einer App
 In diesem Beispiel öffnen wir das Spiel Tic-Tac-Toe und die Kinder können das jeweilige Spiel bis zum Ende spielen.
-![Tic Tac Toe](Skizzen/ticTacToe.png)
+![Tic Tac Toe](Skizzen/03_ticTacToe.png)
 
 ### Frage zum Weiterspielen
 Nach dem Ende des Spiels kommt ein Feld über das Game, wo die Frage kommt: "Do you want to continue?". Hierbei werden am Boden zwei Felder erscheinen, wobei die Felder genauso groß wie die Buttons am Bildschirm sind, um "Yes" oder "No" auszuwählen.
 Hierbei wählen die Kinder wieder durch das draufsteigen auf eines der jeweiligen Felder aus, ob sie "Yes" oder "No" auswählen möchten.
 Was die Kinder allerdings nicht wissen ist, dass egal ob "Yes" oder "No" ausgewählt wird, beim Klicken jedes Buttons wird auf jeden Fall der Hacker-Angriff gestertet - Somit ist es quasi egal, ob die Kinder auf "Yes" oder "No" klicken.
-![Question](Skizzen/question.png)
+![Question](Skizzen/04_question.png)
 
 ### Pop-Up-Angriff
 Plötzlich tauchen lauter flackernde Pop-Ups auf, wobei die Kinder direkt merken, dass etwas nicht stimmt. Auf den Pop-Ups sollen verschiedene random-Memes angezeigt werden.
-![Question](Skizzen/popUp.png)
+![Question](Skizzen/05_popUp.png)
 
 ### Boom
 Nachdem also zahlreiche random-Memes auf dem Bildschrim aufgetaucht, und wieder verschwunden sind, wird der komplette DeepSpace schlussendlich schwarz und gleichzeitig hört man ein "Boom" - Dies soll sozusagen den "ShutDown" des DeepSpaces symbolisieren bzw. die komplette Machtübernahme des Hackers darstellen.
-![Boom](Skizzen/boom.png)
+![Boom](Skizzen/06_boom.png)
 
 ### You've Been Hacked
 Im nächsten Moment wird der komplette DeepSpace rot sein, und gleichzeitig soll alles piepen.
 Vorne auf dem Bildschirm wird die Message "You've been Hacked!" angezeigt (+ Totenkopf).
-![You've been hacked!](Skizzen/hacked.png)
+![You've been hacked!](Skizzen/07_hacked.png)
 
 ### Game On The Floor
 Dann poppen am Boden lauter rote "Cubes" mit Totenköpfen auf. Links vom DeepSpace gibt es am Boden 3 große Kisten am Boden symbolisiert.
 Wenn nun ein Kind/Person den DeepSpace-Boden betritt, so scheint unter den Füßen eine Kiste auf. Jede Kiste soll darüber einen kleinen Counter haben, der bis 5 geht. (Anzeige: 0/5, 1/5, etc.)
 Nun kann jede Person, die automatisch eine Kiste mit der Kapazität von 5 besitzt, die roten Hacker-Cubes aufsammeln. Wenn die eigene Kiste voll ist, so rennt die Person zu einer der 3 großen Kisten am linken Rand und stellt sich auf eine der 3 Kisten drauf. Wenn man sich auf eine der 3 Kisten draufstellt, so wird die eigene Kiste entleert, und die Kapazität ist nun wieder bei 0/5. Also könnnen wir nun wieder weitere rote Hacker-Cubes einsammeln gehen!
-![Game On The Floor](Skizzen/game_floor.png)
+![Game On The Floor](Skizzen/08_game-floor.png)
 
 ### Hacked Again - Game On The Wall
 Wenn alle roten Hacker-Cubes vom Boden entfernt wurden, so wird der Boden wieder schwarz und die Kisten sind dann auch wieder weg. 
 Nun greift der Hacker allerdings nochmal an, und infiziert die Wand vom DeepSpace. Somit poppen nun an der Wand, bis zu einer Höhe von 1,70 - 1,75 m wieder laute rote Hacker-Cubes auf. Diese müssen allerdings nun durch "Touch" entfernt werden. Sprich, wenn man einen roten Hacker-Cube berührt, so verschwindet er wieder - So bereinigt man dann wieder die Wand von den Hacker-Viren. 
-![Game On The Wall](Skizzen/game_wall.png)
+![Game On The Wall](Skizzen/09_game-wall.png)
 
 ### Succes - DeepSpace bereinigt
 Es wurden also sowohl der Boden, als auch die Wand von den Hacker-Viren befreit! Jetzt wird der gesamte Raum blau, und vorne am Bildschirm wird groß "SUCCES" angezeigt. Die Kinder haben es also geschafft den DeepSpace wieder virenfrei zu machen. Dazu soll noch ein bestimmter "Success-Sound" auftönen.
-![Success](Skizzen/success.png)
+![Success](Skizzen/10_success.png)
 
 ## 3. Risikoanalyse
 
