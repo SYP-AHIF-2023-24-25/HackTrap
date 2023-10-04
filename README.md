@@ -88,28 +88,51 @@ Es wurden also sowohl der Boden, als auch die Wand von den Hacker-Viren befreit!
 ## 3. Risikoanalyse
 
 #### Chancen
-
-- Produkt füllt eine Marktlücke 
+ 
+- Zukunftorierntiertes Umgehen mit dem Internet / den sozialen Medien wird den Kindern spielerisch gelehrt
+- Kooperation mit dem AEC bleibt erhalten
+- Projekt bleibt im AEC DeepSpace erhalten
 
 #### Projektrisiken
 
-- Website könnte zu komplex werden
-- Troubleshoot bei den Schnittstellen
-- Zeiteinteilung
+- Komplikationen bei der komplexen und neuen Umgebung (Unity, etc.)
+- Fehlerhafte Einschätzung bzgl. Zeitaufwand (Zeiteinteilung)
+- Komplikationen bei der Zusammenarbeit mit dem AEC/Deepspace
 
 ## 4. Projektablauf
 
-#### Rahmenbedingungen
+#### 4.1 Rahmenbedingungen
 
 - **Personell**
     - Klare Rollenverteilung
-    - Gegenseitige Unterstützung
-    - Entscheidungen untereinander Abstimmen
+    - Clean Code
+    - Demokratie
+        - Entscheidungen untereinander abstimmen
+        - Gegenseitige Unterstützung
+    - Alles wird gründlich mitdokumentiert
+        - Git Commits
+        - Versionen
+        - Fehlerbehebungen
 
-#### Meilensteine
+- **Finanziell**
+    - Tools die wir verwenden, sollten uns kostenlos zur Verfügung stehen
+    - eventuell: finanzielle Unterstützung / private Einlagen
+
+#### 4.2 Programmierumgebung
+
+- **Umgebung**
+    - GitHub
+    - Unity
+    - Visual Studio 2022
+
+#### 4.3 Meilensteine für die Projektumsetzung
 
 - **Wintersemester**
     - Genehmigung des Projektantrags
+    - Aufgabenverteilung (Wer macht was?)
+        - Jeder bekommt einen bestimmten Bereich zugewiesen
+    - Kennenlernen / Einlesen in Horizon
+    - "First-Guide-In" in die App
     - Website Gestaltung (Wireframe)
         - Demo mit Testdaten
     - Datenbank Erstellen und die Testdaten einlesen
