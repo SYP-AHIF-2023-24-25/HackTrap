@@ -7,7 +7,7 @@ Christian Ekhator, Julian Kapl, Julia Meyr & Amina Gabeljic
 ## 1. Initial Situation
 ### 1.1. Current Situation
 Since children tend to learn about Internet use at an early age, they still have little idea of what is happening in the background.
-The current project from the AS Elektroniker Center in Linz, NewHorizon, explains to children how data is distributed. However, dangers can arise that children are not yet aware of.
+The current project from the ARS Elektroniker Center in Linz, NewHorizon, explains to children how data is distributed. However, dangers can arise that children are not yet aware of.
 
 ### 1.2. Potential for improvement
 #### Problems
@@ -25,7 +25,7 @@ Our goal is to teach children that there are dangers and traps on the Internet. 
 ## Target state
 
 ### Start of the game
-The start begins with the screen on the wall producing a preview of an iPad, with 3 apps being displayed on the iPad. It should stay with only 3 apps, so as not to overwhelm the children with too many app displays at the beginning.
+The game begins with the screen on the wall producing a preview of an iPad, with 3 apps being displayed on the iPad. It should stay with only 3 apps, so as not to overwhelm the children with too many app displays at the beginning.
 
 Overview of the 3 apps:
 1st App: Safari
