@@ -1,6 +1,33 @@
 # HackTrap
 HackTrap is an AEC-DeepSpace-Game which teaches young children how to deal safely with the digitized internet world by playing through an exciting hacker-attack and killing the virus.
 
+
+# Userstories
+- Die User sollen am Boden getracket werden.
+- Die User sollen in der Lage sein ein Ipad über Usertracking am Boden zu nutzen.
+  - Sie sollen zwischen Minispiele entscheiden können (eines auswählen können).
+
+- Die User sollen das ausgewählte Minispiel spielen können (via Usertracking).
+  - Es soll auswählbar sein welches Feld sie besetzen wollen.
+- Die User sollen bei der "Hackerfrage" eine der Buttons (via Usertracking) auswählen können.
+
+
+# Sprints
+### 1. Sprint - Project Initialisation
+- Projektantrag
+- Feedback von Prof. Hasi - Userstories überarbeiten (nach AEC Meeting)
+- Horizon Template zum Laufen bringen (in Code einarbeiten)
+- Unity herunterladen (AEC Developer Kid)
+- Vorbereitung AEC Meeting (20.10)
+
+### 2. Sprint - Ipad & Minigames
+- Unity Tutorials
+- 3D Projekt aufsetzen (AEC Standards)
+- Ipad und Minispiele anzeigen
+- 1 Minispiel implementieren (TicTacToe)
+- Auswahl am Boden (Minispielauswahl, TicTacToe, Usertracking)
+- Hackerfrage + Minispiel Computer Intelligence
+
 ## Our Team
 Christian Ekhator, Julian Kapl, Julia Meyr & Amina Gabeljic
 

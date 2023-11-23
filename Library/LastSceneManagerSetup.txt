@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/DeepSpace/Demo/Scenes/VRPNTransformation.unity
+- path: Assets/DeepSpace/Demo/Scenes/WallFloorCombinedScene.unity
   isLoaded: 1
   isActive: 1
