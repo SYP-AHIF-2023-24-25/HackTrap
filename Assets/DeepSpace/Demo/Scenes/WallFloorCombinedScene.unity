@@ -330,7 +330,7 @@ GameObject:
   - component: {fileID: 96824969}
   - component: {fileID: 96824968}
   m_Layer: 0
-  m_Name: TextMeshPro Text (1)
+  m_Name: TextButtonNo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -344,15 +344,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 96824966}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.5999997}
+  m_LocalPosition: {x: 0, y: 0, z: -0.009999514}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 802029351}
-  m_RootOrder: 3
+  m_Father: {fileID: 1402130538}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.383, y: -0.40499985}
+  m_AnchoredPosition: {x: 0.14399998, y: -0.1940013}
   m_SizeDelta: {x: 0.5, y: 0.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &96824968
@@ -590,7 +590,7 @@ GameObject:
   - component: {fileID: 421581604}
   - component: {fileID: 421581603}
   m_Layer: 0
-  m_Name: TextMeshPro Text
+  m_Name: Question
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -833,7 +833,7 @@ GameObject:
   - component: {fileID: 667672998}
   - component: {fileID: 667672997}
   m_Layer: 0
-  m_Name: TextMeshPro Text
+  m_Name: TextButtonYes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1198,7 +1198,6 @@ RectTransform:
   - {fileID: 421581602}
   - {fileID: 2139823710}
   - {fileID: 1402130538}
-  - {fileID: 96824967}
   m_Father: {fileID: 1924169481}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2448,7 +2447,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.5900002}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 96824967}
   m_Father: {fileID: 802029351}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
