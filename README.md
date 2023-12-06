@@ -11,7 +11,7 @@ HackTrap is an AEC-DeepSpace-Game which teaches young children how to deal safel
 - [x] The User should be able to see a question after playing one round of the desired minigame.
 - [x] The User should be able to choose between a "yes" or "no" button for the question asked. Eather way choosen, the user gets to the next scene.
 
-### Future Sprints
+### Need to be done
 - [ ] The User should be able to play choose between all three minigames and play the chosen one one time before switching to the question.
 
 # Sprints
