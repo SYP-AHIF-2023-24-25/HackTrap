@@ -1,8 +1,22 @@
 # HackTrap
 HackTrap is an AEC-DeepSpace-Game which teaches young children how to deal safely with the digitized internet world by playing through an exciting hacker-attack and killing the virus.
 
+# Table of Contents
+ * [Sprint Userstories](#userstories)
+ * [Sprints Overview](#sprints)
+ * [Goal & Game Procedure](#2-goal)
+    * [Scene 1 - Ipad](#safari-3-games)
+    * [Scene 2 - MiniGame](#opening-an-app)
+    * [Scene 3 - Hacker Question](#question-to-continue-playing)
+    * [Scene 4 - Attack](#pop-up-attack)
+    * ...
+ * [Risk Analysis](#3-risk-analysis)
+ * [Project Workflow](#4-project-workflow)
 
 # Userstories
+### Need to be done
+Here you can see the progress of our Userstories: [HackTrap Userstory Backlog](https://github.com/orgs/SYP-AHIF-2023-24-25/projects/6/views/1)
+
 ### Sprint 2
 - [x] The User should be able to see a virtual ipad which will be projected on the main screen.
 - [x] The User should be able to use the ipad to click on one of the three cards each with a different minigame and get to the minigame.
@@ -10,9 +24,6 @@ HackTrap is an AEC-DeepSpace-Game which teaches young children how to deal safel
 - [x] The User should be able to play the desired minigame (tic-tac-toe) by clicking on the different fields.
 - [x] The User should be able to see a question after playing one round of the desired minigame.
 - [x] The User should be able to choose between a "yes" or "no" button for the question asked. Eather way choosen, the user gets to the next scene.
-
-### Need to be done
-- [ ] The User should be able to play choose between all three minigames and play the chosen one one time before switching to the question.
 
 # Sprints
 ### 1. Sprint - Project Initialisation
@@ -139,6 +150,7 @@ So the DeepSpace has been freed from the hacker viruses! Now the entire room tur
 ### Project Risks
 
 - Complications in the complex and new environment (Unity, etc.).
+  - Unity Version
 - Incorrect estimation of time requirements (time management).
 - Complications in collaboration with the AEC/DeepSpace.
 
