@@ -6,8 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Scene2.unity
+    path: Assets/Scenes/Scene01.unity
+    guid: 09a0b10e6157cf04797973d012f00a5c
+  - enabled: 1
+    path: Assets/Scenes/Scene02.unity
     guid: a99329fccf53b6d43a07ed2700dbdc86
+  - enabled: 1
+    path: Assets/Scenes/Scene03.unity
+    guid: c41bf8e06a3454c4ea9d0ec8a595d79e
+  - enabled: 1
+    path: Assets/Scenes/Scene04.unity
+    guid: b949ebc675db87f4d9f02e4de29d026e
   - enabled: 0
     path: Assets/DeepSpace/Demo/Scenes/PharusTuioScene.unity
     guid: 6d10150ce5a003847b472754dc08d4ad
@@ -15,12 +24,6 @@ EditorBuildSettings:
     path: Assets/DeepSpace/Demo/Scenes/PharusTracklinkScene.unity
     guid: 88481ed6e22ab6c43be02b614b302fee
   - enabled: 0
-    path: Assets/__DELETED_GUID_Trash/b949ebc675db87f4d9f02e4de29d026e
-    guid: b949ebc675db87f4d9f02e4de29d026e
-  - enabled: 1
-    path: Assets/Scenes/Scene3.unity
-    guid: c41bf8e06a3454c4ea9d0ec8a595d79e
-  - enabled: 1
-    path: Assets/Scenes/Scene4.unity
+    path: Assets/__DELETED_GUID_Trash/d1df353386af8be4097985c0d111b986
     guid: d1df353386af8be4097985c0d111b986
   m_configObjects: {}
