@@ -3,30 +3,32 @@ HackTrap is an AEC-DeepSpace-Game which teaches young children how to deal safel
 
 
 # Userstories
-- Die User sollen am Boden getracket werden.
-- Die User sollen in der Lage sein ein Ipad über Usertracking am Boden zu nutzen.
-  - Sie sollen zwischen Minispiele entscheiden können (eines auswählen können).
+### Sprint 2
+- [x] The User should be able to see a virtual ipad which will be projected on the main screen.
+- [x] The User should be able to use the ipad to click on one of the three cards each with a different minigame and get to the minigame.
+- [x] The user will be able to communicate with the ipad through clicking onto the cards.
+- [x] The User should be able to play the desired minigame (tic-tac-toe) by clicking on the different fields.
+- [x] The User should be able to see a question after playing one round of the desired minigame.
+- [x] The User should be able to choose between a "yes" or "no" button for the question asked. Eather way choosen, the user gets to the next scene.
 
-- Die User sollen das ausgewählte Minispiel spielen können (via Usertracking).
-  - Es soll auswählbar sein welches Feld sie besetzen wollen.
-- Die User sollen bei der "Hackerfrage" eine der Buttons (via Usertracking) auswählen können.
-
+### Future Sprints
+- [ ] The User should be able to play choose between all three minigames and play the chosen one one time before switching to the question.
 
 # Sprints
 ### 1. Sprint - Project Initialisation
-- Projektantrag
-- Feedback von Prof. Hasi - Userstories überarbeiten (nach AEC Meeting)
-- Horizon Template zum Laufen bringen (in Code einarbeiten)
-- Unity herunterladen (AEC Developer Kid)
-- Vorbereitung AEC Meeting (20.10)
+- Project proposal
+- Feedback from Prof. Hasi - revise user stories (after AEC meeting)
+- Get Horizon template up and running (incorporate into code)
+- Download Unity (AEC Developer Kid)
+- Preparation for AEC meeting (20.10)
 
-### 2. Sprint - Ipad & Minigames
+### 2. Sprint - Ipad & Minigame
 - Unity Tutorials
-- 3D Projekt aufsetzen (AEC Standards)
-- Ipad und Minispiele anzeigen
-- 1 Minispiel implementieren (TicTacToe)
-- Auswahl am Boden (Minispielauswahl, TicTacToe, Usertracking)
-- Hackerfrage + Minispiel Computer Intelligence
+- Set up a 3D project (AEC standards)
+- Ipad + MiniGame Gards UI
+- Implementation of first minigame (TicTacToe)
+- Scene (Configuration) Flow + Floor UI
+- Hacker question
 
 ## Our Team
 Christian Ekhator, Julian Kapl, Julia Meyr & Amina Gabeljic
