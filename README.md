@@ -4,6 +4,7 @@ HackTrap is an AEC-DeepSpace-Game which teaches young children how to deal safel
 # Table of Contents
  * [Sprint Userstories](#userstories)
  * [Sprints Overview](#sprints)
+ * [Initial Situation](#our-team)
  * [Goal & Game Procedure](#2-goal)
     * [Scene 1 - Ipad](#safari-3-games)
     * [Scene 2 - MiniGame](#opening-an-app)
