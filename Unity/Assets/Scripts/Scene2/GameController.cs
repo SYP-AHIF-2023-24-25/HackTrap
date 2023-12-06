@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -83,6 +84,7 @@ public class GameController : MonoBehaviour
         }
 
         //TODO: switch scene
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     private bool IsRowFilledWithOnePlayer(int row, string playerSymbol)
