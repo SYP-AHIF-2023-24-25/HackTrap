@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/DeepSpace/Demo/Scenes/WallFloorCombinedScene.unity
+- path: Assets/Scenes/Scene2.unity
   isLoaded: 1
   isActive: 1
