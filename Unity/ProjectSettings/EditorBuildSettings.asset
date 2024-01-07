@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/DeepSpace/Demo/Scenes/PharusTracklinkScene.unity
     guid: 88481ed6e22ab6c43be02b614b302fee
   - enabled: 0
-    path: Assets/__DELETED_GUID_Trash/d1df353386af8be4097985c0d111b986
+    path: 
     guid: d1df353386af8be4097985c0d111b986
+  - enabled: 1
+    path: Assets/Scenes/Scene05.unity
+    guid: 7e065b6068b626e43866c8b0789eee8f
   m_configObjects: {}

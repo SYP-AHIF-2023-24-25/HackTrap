@@ -1699,7 +1699,7 @@ VideoPlayer:
   m_TimeReference: 0
   m_TargetMaterialRenderer: {fileID: 1361286347}
   m_TargetMaterialProperty: _MainTex
-  m_RenderMode: 2
+  m_RenderMode: 1
   m_AspectRatio: 2
   m_DataSource: 0
   m_PlaybackSpeed: 1
@@ -3366,6 +3366,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a67ff75d1304114797e11a11bb5da5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneName: Scene05
+  timeout: 29
 --- !u!1 &1252652006
 GameObject:
   m_ObjectHideFlags: 0

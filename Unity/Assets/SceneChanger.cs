@@ -6,14 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour
 {
+    public string sceneName = "";
+    public float timeout;
     void Start()
     {
-        Invoke("changeScene", 5f);
+        Invoke("changeScene", timeout);
     }
 
     void changeScene()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(sceneName);
     }
 
     // Update is called once per frame

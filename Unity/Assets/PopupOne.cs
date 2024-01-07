@@ -36,7 +36,7 @@ public class PopupOne : MonoBehaviour
 
         UnityEngine.Debug.Log("Runtime: " + sceneRuntime);
 
-        if(sceneRuntime > 10.4f ) {
+        if(sceneRuntime > 11f ) {
             canvas.enabled = false;
         }
     }
