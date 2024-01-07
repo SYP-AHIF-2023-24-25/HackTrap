@@ -1939,6 +1939,7 @@ GameObject:
   - component: {fileID: 1405951586}
   - component: {fileID: 1405951585}
   - component: {fileID: 1405951584}
+  - component: {fileID: 1405951587}
   m_Layer: 0
   m_Name: ButtonNo
   m_TagString: Untagged
@@ -1963,7 +1964,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 202, y: -88.65901}
+  m_AnchoredPosition: {x: 164, y: -92}
   m_SizeDelta: {x: 0.35, y: 0.22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1405951584
@@ -1984,7 +1985,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 0.43902707, b: 0.3537736, a: 1}
     m_HighlightedColor: {r: 0.9339623, g: 0.4087042, b: 0.374466, a: 1}
@@ -2006,8 +2007,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1924169488}
-        m_MethodName: Sceneswitch
+      - m_Target: {fileID: 1405951587}
+        m_MethodName: SetText
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Yes
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1405951587}
+        m_MethodName: ChangeImage
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2039,7 +2051,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 7a458c9ac1fefd74fa8c0ad50e58d2af, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2056,6 +2068,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1405951582}
   m_CullTransparentMesh: 0
+--- !u!114 &1405951587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405951582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28b35e23b677812438148853367c46ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: a99466baa4c0b9a41b35a42d096b8814, type: 3}
+  btn: {fileID: 1405951584}
 --- !u!1 &1440913523
 GameObject:
   m_ObjectHideFlags: 0
@@ -3023,7 +3049,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.49236476, g: 0.8018868, b: 0.26855645, a: 1}
+    m_NormalColor: {r: 0.5589826, g: 0.9716981, b: 0.2520915, a: 1}
     m_HighlightedColor: {r: 0.09344961, g: 0.7924528, b: 0.20189892, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -3069,14 +3095,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.37356266, g: 0.9150943, b: 0.30647027, a: 1}
+  m_Color: {r: 0.5588421, g: 0.9622642, b: 0.503827, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: a99466baa4c0b9a41b35a42d096b8814, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
