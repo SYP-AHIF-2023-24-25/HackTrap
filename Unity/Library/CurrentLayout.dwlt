@@ -47,7 +47,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 498}
   m_MaxSize: {x: 14004, y: 14048}
   vertical: 0
-  controlID: 73
+  controlID: 117
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -218,7 +218,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 498}
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 86
+  controlID: 94
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 12
+  controlID: 95
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -336,34 +336,34 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts/SceneBarChart
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scripts/SceneBarChart
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\00_HTBLALeonding\4AHIF\SYP\HackTrap\Unity
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 324}
-    m_SelectedIDs: 54270000
-    m_LastClickedID: 10068
-    m_ExpandedIDs: 00000000202700005e2700008a270000a6270000ec2700003428000096280000ba280000a82c0000aa2c000000ca9a3b
+    m_SelectedIDs: 20290000
+    m_LastClickedID: 10528
+    m_ExpandedIDs: 00000000202700005e2700008a270000a6270000ec2700003428000096280000ba280000aa2c0000ac2c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Scenes
-      m_OriginalName: Scenes
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 10068
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 5}
     m_SearchString: 
@@ -377,7 +377,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000202700005e2700008a270000a6270000ec2700003428000096280000ba280000a82c0000aa2c0000
+    m_ExpandedIDs: 00000000202700005e2700008a270000a6270000ec2700003428000096280000ba280000aa2c0000ac2c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -496,23 +496,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: a8440000
-      m_LastClickedID: 17576
-      m_ExpandedIDs: 32ecffff3cecffff3eecffff44efffff4eefffff50efffff86f0ffff88f0ffff88f2ffff1ef6ffff80f8ffff0efaffff18faffffd4fbffff302d00005a2d0000ac2d0000ca2d0000fc2d00003e2e0000442e00006e3000008e300000e0300000fe300000503100005631000096330000b633000008340000263400004834000054340000783400007e340000a8340000963a0000b63a0000143b0000323b0000543b0000983b00009e3b0000c03d0000e03d0000363e0000543e0000763e0000ba3e0000c03e0000f2430000124400006844000086440000a8440000ec440000f2440000
+      m_SelectedIDs: 8a240000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 78faffff88faffffa8faffffb8faffffc8faffffcafaffffd4fbffffd82c0000f82c00004e2d00006c2d00008e2d0000d22d0000d82d0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: BarHolder
-        m_OriginalName: BarHolder
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -4274
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 4}
       m_SearchString: 
@@ -554,9 +554,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.269206, y: 1.3145142, z: 4.183935}
+    m_Target: {x: -0.7945722, y: 2.4761724, z: 4.013181}
     speed: 2
-    m_Value: {x: -1.269206, y: 1.3145142, z: 4.183935}
+    m_Value: {x: -0.7945722, y: 2.4761724, z: 4.013181}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -588,9 +588,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0.06442941, y: -0.028435757, z: 0.0018365517, w: -0.9975154}
   m_Size:
-    m_Target: 7.773011
+    m_Target: 9.414319
     speed: 2
-    m_Value: 7.773011
+    m_Value: 9.414319
   m_Ortho:
     m_Target: 0
     speed: 2
