@@ -16,7 +16,13 @@ EditorBuildSettings:
     guid: a99329fccf53b6d43a07ed2700dbdc86
   - enabled: 1
     path: Assets/Scenes/Scene03.unity
-    guid: c41bf8e06a3454c4ea9d0ec8a595d79e
+    guid: c88434c7cf87fff4ea13214b7dd8fe87
+  - enabled: 1
+    path: Assets/Scenes/Scene04.unity
+    guid: b949ebc675db87f4d9f02e4de29d026e
+  - enabled: 1
+    path: Assets/Scenes/Scene05.unity
+    guid: 7e065b6068b626e43866c8b0789eee8f
   - enabled: 1
     path: Assets/Scenes/SceneBarChart.unity
     guid: 2d6c2630b52293141bcbb8fc6100ba5c

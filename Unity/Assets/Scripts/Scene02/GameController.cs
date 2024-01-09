@@ -13,7 +13,6 @@ public class GameController : MonoBehaviour
     public Text[] buttonList;
     private string playerSide;
     private int turn;
-    public string matchresult;
 
     public void Awake()
     {
@@ -67,7 +66,7 @@ public class GameController : MonoBehaviour
     {
         if (IsTie() || IsGameOver(playerSide))
         {
-            GameOver();
+            GameOver(); 
         }
         else
         {
@@ -184,8 +183,6 @@ public class GameController : MonoBehaviour
             if (IsRowFilledWithOnePlayer(gridPart, playerSymbol)
                 || IsColumnFilledWithOnePlayer(gridPart, playerSymbol))
             {
-                this.matchresult = playerSymbol;
-                PlayerPrefs.SetString("matchResult", this.matchresult);
                 return true;
             }
         }
@@ -205,13 +202,14 @@ public class GameController : MonoBehaviour
         return true;
     }
 
+
     public string GetWinner(string result)
     {
-        if(result == "O")
+        if (result == "O")
         {
             return "YOU LOST! ";
         }
-        else if(result == "X")
+        else if (result == "X")
         {
             return "YOU WON! ";
         }

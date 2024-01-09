@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class TextWriter : MonoBehaviour
+public class TextWriter: MonoBehaviour
 {
     private static TextWriter instance;
     private List<TextWriterSingle> textWriterSingleList;

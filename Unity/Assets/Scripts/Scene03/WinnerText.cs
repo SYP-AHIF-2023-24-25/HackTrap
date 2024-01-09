@@ -25,6 +25,6 @@ public class WinnerText : MonoBehaviour
 
     private void Start()
     {
-        TextWriter.AddWriterStatic(messageText, this.result, .15f, false);
+        TextWriterScene03.AddWriterStatic(messageText, this.result, .15f, false);
     }
 }
