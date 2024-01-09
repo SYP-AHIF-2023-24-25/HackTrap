@@ -28,21 +28,39 @@ Here you can see the progress of our Userstories: [HackTrap Userstory Backlog](h
 - [x] The User should be able to see a question after playing one round of the desired minigame.
 - [x] The User should be able to choose between a "yes" or "no" button for the question asked. Eather way choosen, the user gets to the next scene.
 
+### Sprint 3
+- [x] The User should be able to see and experience the hacker attack (due to sounds and animation).
+- [x] The user should be able to see opening credits as long as not all users are inside the deepspace / the game doesn't start. 
+- [x] The User should be able to hear game sounds for all kind of activities.
+- [x] The User should be able to be inizialised as a player for a team (via Usertracking).
+- [x] The User should be able to pick up/collect viruses on the floor.
+- [x] The User should be able to dump his collected viruses in (only) his team container.
+
 # Sprints
 ### 1. Sprint - Project Initialisation
-- Project proposal
-- Feedback from Prof. Hasi - revise user stories (after AEC meeting)
-- Get Horizon template up and running (incorporate into code)
-- Download Unity (AEC Developer Kid)
-- Preparation for AEC meeting (20.10)
+- [x] Project proposal
+- [x] Feedback from Prof. Hasi - revise user stories (after AEC meeting)
+- [x] Get Horizon template up and running (incorporate into code)
+- [x] Download Unity (AEC Developer Kid)
+- [x] Preparation for AEC meeting (20.10)
 
 ### 2. Sprint - Ipad & Minigame
-- Unity Tutorials
-- Set up a 3D project (AEC standards)
-- Ipad + MiniGame Gards UI
-- Implementation of first minigame (TicTacToe)
-- Scene (Configuration) Flow + Floor UI
-- Hacker question
+- [x] Unity Tutorials
+- [x] Set up a 3D project (AEC standards)
+- [x] Ipad + MiniGame Gards UI
+- [x] Implementation of first minigame (TicTacToe)
+- [x] Scene (Configuration) Flow + Floor UI
+- [x] Hacker question
+
+### 3. Sprint - Usertracking, Main-Game & Animation
+- [x] Hacker Attack
+- [x] Welcome Scene
+- [x] Teamevaluation on the floor
+- [x] Maingame on the floor
+- [ ] Usertracking
+- [x] Teamresults in realtime
+- [x] Animations
+- [x] Scene Adaption on Wall and Floor Canvas
 
 ## Our Team
 Christian Ekhator, Julian Kapl, Julia Meyr & Amina Gabeljic
