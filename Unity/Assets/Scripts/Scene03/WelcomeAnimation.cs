@@ -11,20 +11,20 @@ public class WelcomeAnimation : MonoBehaviour
     private Text messageText;
 
     private GameController gameController;
-    private string matchResult;
-
-    string welcomeText = "Welcome to Deepspace! \n The game starts as soon as all players are on the floor. \n We hope you like it! Your HackTrap Team: Christian, Amina, Julian & Julia :) ";
+    private string matchresult;
+    private string result;
 
     private async void Awake()
     {
-        messageText = transform.Find("Message").Find("MessageText").GetComponent<Text>();
+        messageText = transform.Find("matchresult").GetComponent<Text>();
         Debug.Log(messageText);
         gameController = FindObjectOfType<GameController>();
-        this.matchResult = gameController.GetWinner();
+        this.matchresult = PlayerPrefs.GetString("matchResult");
+        this.result = gameController.GetWinner(this.matchresult);
     }
 
     private void Start()
     {
-        TextWriter.AddWriterStatic(messageText, this.matchResult, .15f, false);
+        TextWriter.AddWriterStatic(messageText, this.result, .15f, false);
     }
 }
