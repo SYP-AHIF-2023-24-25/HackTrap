@@ -201,4 +201,18 @@ public class GameController : MonoBehaviour
         }
         return true;
     }
+
+
+    public string GetWinner(string result)
+    {
+        if (result == "O")
+        {
+            return "YOU LOST! ";
+        }
+        else if (result == "X")
+        {
+            return "YOU WON! ";
+        }
+        return "DRAW! ";
+    }
 }
