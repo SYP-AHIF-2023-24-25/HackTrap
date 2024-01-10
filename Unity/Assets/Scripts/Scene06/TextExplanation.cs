@@ -90,7 +90,8 @@ public class TextWriterSingleExplanation
             if (characterIndex >= textToWrite.Length)
             {
                 //der ganze Text wurde angezeigt
-                uiText.text = "";                
+                uiText.text = "";
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 return true;
             }
         }
