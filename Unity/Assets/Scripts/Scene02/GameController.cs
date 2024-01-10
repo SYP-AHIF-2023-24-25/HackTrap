@@ -202,6 +202,8 @@ public class GameController : MonoBehaviour
                 return false;
             }
         }
+        this.matchresult = "";
+        PlayerPrefs.SetString("matchResult", this.matchresult);
         return true;
     }
 
