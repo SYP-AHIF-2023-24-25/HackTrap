@@ -4,39 +4,48 @@ using UnityEngine.SceneManagement;
 
 public class BackgroundMusicManager : MonoBehaviour
 {
-    public AudioClip firstThreeScenesMusic;
-    public AudioClip sceneSixMusic;
 
-    private AudioSource audioSource;
+    public static BackgroundMusicManager instance;
+    public AudioClip music7;
+
+    void Awake()
+    {
+        if (instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(this.gameObject);
+            int index = SceneManager.GetActiveScene().buildIndex;
+
+            if (index == 7)
+            {
+                instance.GetComponent<AudioSource>().clip = music7;
+            }
+
+        }
+    }
 
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        int index = SceneManager.GetActiveScene().buildIndex;
 
-        // Check the current scene and play the appropriate music
-        PlayMusicBasedOnScene();
+        if (index == 7)
+        {
+            instance.GetComponent<AudioSource>().Play();
+        }
     }
 
-    void PlayMusicBasedOnScene()
+    void Update()
     {
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        int index = SceneManager.GetActiveScene().buildIndex;
 
-        if (currentSceneIndex >= 0 && currentSceneIndex <= 2)
+        if (index > 3 && index <= 6)
         {
-            // Play music for the first three scenes
-            audioSource.clip = firstThreeScenesMusic;
-            audioSource.Play();
-        }
-        else if (currentSceneIndex >= 3 && currentSceneIndex <= 5)
-        {
-            // Stop music for scenes 4 and 5
-            audioSource.Stop();
-        }
-        else if (currentSceneIndex == 6)
-        {
-            // Play different music for scene 6
-            audioSource.clip = sceneSixMusic;
-            audioSource.Play();
+            instance.GetComponent<AudioSource>().Pause();
         }
     }
+
 }
