@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour
 {
-    public string sceneName = "";
     public float timeout;
     void Start()
     {
@@ -15,7 +14,7 @@ public class SceneChanger : MonoBehaviour
 
     void changeScene()
     {
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     // Update is called once per frame
