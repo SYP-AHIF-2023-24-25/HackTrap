@@ -21,11 +21,5 @@ public class ExplainGame : MonoBehaviour
     private void Start()
     {
         TextExplanation.AddWriterStatic(explanationText, explanation, .15f, false);
-        //for (int countDown = 3; countDown > 0; countDown--)
-        //{
-        //   TextExplanation.AddWriterStatic(explanationText, countDown.ToString(), .15f, false);
-        //}
-        //Thread.Sleep(1000);
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
