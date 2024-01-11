@@ -10,7 +10,7 @@ public class ExplainGame : MonoBehaviour
 {
     private Text explanationText;
 
-    string explanation = "Eliminate the viruses by collecting them to your teambase on the corners \n You can collect a maximum of 5! \n Good luck! \n 3 \n 2 \n 1 ";
+    string explanation = "Eliminate the viruses by collecting them to your teambase in the corners \n You can collect a maximum of five! \n Good luck! \n 3 \n 2 \n 1 ";
 
     private async void Awake()
     {

@@ -10,7 +10,7 @@ public class TeamAssignment : MonoBehaviour
 {
     private Text teamAssignment;
 
-    string assignmentText = "Let's move on to team assignments! \n Please spread out in the marked areas! ";
+    string assignmentText = "If you want to get your data back\n Split into teams of four! ";
 
     private async void Awake()
     {
