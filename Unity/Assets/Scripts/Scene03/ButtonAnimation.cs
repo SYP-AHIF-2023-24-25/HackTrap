@@ -12,7 +12,7 @@ public class ButtonAnimation : MonoBehaviour
     public Button btn;
     private void Start()
     {
-        btn.onClick.AddListener(delegate { ChangeImage(); });
+        //btn.onClick.AddListener(delegate { ChangeImage(); });
         btn.onClick.AddListener(delegate { Animation(); });
     }
     public void ChangeImage()
