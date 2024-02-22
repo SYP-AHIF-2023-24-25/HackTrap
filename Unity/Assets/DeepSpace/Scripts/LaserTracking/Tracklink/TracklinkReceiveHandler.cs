@@ -39,6 +39,8 @@ namespace DeepSpace.LaserTracking
 				_tracklinkSettings = loadedTracklinkSettings;
 			}
 			_udpReceiver.ActivateReceiver(_tracklinkSettings.UdpPort, _tracklinkSettings.UdpAddress, true);
+
+
 		}
 
 		private void Update()
