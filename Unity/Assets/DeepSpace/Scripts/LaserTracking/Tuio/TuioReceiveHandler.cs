@@ -18,6 +18,8 @@ namespace DeepSpace.LaserTracking
 
 		private bool _isRegisteredForTuioEvents = false;
 
+		public Context context;
+
 		public override TrackingSettings TrackingSettings
 		{
 			get { return _tuioSettings; }
@@ -201,7 +203,10 @@ namespace DeepSpace.LaserTracking
 
 			SaveTrackToDict(track, createIfNotYetExisting: true);
 
-			_updatedTrackIds.Add(track.trackID);
+			context.receiveEvents(track);
+
+
+            _updatedTrackIds.Add(track.trackID);
 		}
 
 		private void OnUpdateEchoInformation(TUIO.TuioObject tuioObject, TrackState state)
