@@ -9,6 +9,7 @@ public class OnCollision : MonoBehaviour
 {
     void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Collision");
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
         // Do something if tracker collides with this object

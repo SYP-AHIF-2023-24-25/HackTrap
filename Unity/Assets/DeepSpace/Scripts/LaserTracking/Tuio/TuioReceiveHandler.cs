@@ -207,7 +207,9 @@ namespace DeepSpace.LaserTracking
 
 			SaveTrackToDict(track, createIfNotYetExisting: true);
 
-			context.receiveEvents(track);
+			Debug.Log("Track received");
+			if(context != null)
+				context.receiveEvents(track);
 
 
             _updatedTrackIds.Add(track.trackID);
