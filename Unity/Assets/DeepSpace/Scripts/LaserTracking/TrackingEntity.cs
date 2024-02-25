@@ -83,7 +83,8 @@ namespace DeepSpace.LaserTracking
 
 		public virtual void SetPosition(Vector2 position)
 		{
-			this.transform.position = position;
+			this.transform.localPosition = position;
+			// this.transform.position = position;
 		}
 
 

@@ -37,6 +37,8 @@ namespace DeepSpace.LaserTracking
 			_eventProcessor = new TuioEventProcessor(_listener);
 
 			RegisterForTuioEvents();
+
+
 		}
 
 		private void Update()
@@ -187,7 +189,9 @@ namespace DeepSpace.LaserTracking
 		private void OnReceivedTrackInformation(TUIO.TuioCursor tuioCursor, TrackState state)
 		{
 			TrackRecord track = GetTrackById(tuioCursor.CursorID);
-			
+
+
+
 			track.state = state;
 			Vector2 absPos = TrackingSettings.GetScreenPositionFromRelativePosition(tuioCursor.Position.X, tuioCursor.Position.Y);
 			track.currentPos.x = absPos.x;
@@ -208,6 +212,34 @@ namespace DeepSpace.LaserTracking
 
             _updatedTrackIds.Add(track.trackID);
 		}
+
+		public float remapNow(float from, float fromMin, float fromMax, float toMin, float toMax)
+		{
+			var fromAbs = from - fromMin;
+			var fromMaxAbs = fromMax - fromMin;
+
+			var normal = fromAbs / fromMaxAbs;
+
+			var toMaxAbs = toMax - toMin;
+			var toAbs = toMaxAbs * normal;
+
+			var to = toAbs + toMin;
+
+			return to;
+		}
+
+
+		//custom
+		public float MetersToPixelsWidth(float meters)
+		{
+			return (3840 / 16) * meters;
+		}
+		//custom
+		public float MetersToPixelsHeight(float meters)
+		{
+			return (2160 / 9) * meters;
+		}
+
 
 		private void OnUpdateEchoInformation(TUIO.TuioObject tuioObject, TrackState state)
 		{

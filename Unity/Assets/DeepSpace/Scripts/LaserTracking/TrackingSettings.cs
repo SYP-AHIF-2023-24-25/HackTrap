@@ -6,21 +6,21 @@ namespace DeepSpace.LaserTracking
 	public class TrackingSettings
 	{
 		[SerializeField, Tooltip("Value in pixel.")]
-		protected int screenWidthPixel = 1920;
+		protected float screenWidthPixel = 19.2f;
 		[SerializeField, Tooltip("Value in pixel.")]
-		protected int screenHeightPixel = 1080;
+		protected float screenHeightPixel = 10.8f;
 		[SerializeField, Tooltip("Value in centimeter.")]
 		protected float stageWidth = 1600f;
 		[SerializeField, Tooltip("Value in centimeter.")]
 		protected float stageHeight = 900f;
 
-		public int ScreenWidthPixel
+		public float ScreenWidthPixel
 		{
 			get { return this.screenWidthPixel; }
 			set { this.screenWidthPixel = value; }
 		}
 
-		public int ScreenHeightPixel
+		public float ScreenHeightPixel
 		{
 			get { return this.screenHeightPixel; }
 			set { this.screenHeightPixel = value; }
@@ -40,7 +40,7 @@ namespace DeepSpace.LaserTracking
 
 		public Vector2 GetScreenPositionFromRelativePosition(float x, float y)
 		{
-			return new Vector2((int)Mathf.Round(x * screenWidthPixel), screenHeightPixel - (int)Mathf.Round(y * screenHeightPixel));
+			return new Vector2(/*(int)Mathf.Round*/(x * screenWidthPixel), screenHeightPixel - /*(int) Mathf.Round*/(y * screenHeightPixel));
 		}
 	}
 }

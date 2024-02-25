@@ -1,0 +1,17 @@
+﻿using DeepSpace.LaserTracking;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
+public class OnCollision : MonoBehaviour
+{
+    void OnTriggerEnter(Collider other)
+    {
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+        // Do something if tracker collides with this object
+
+    }
+}
