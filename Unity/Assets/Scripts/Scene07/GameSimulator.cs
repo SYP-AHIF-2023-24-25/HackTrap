@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameSimulator : MonoBehaviour
 {
+    private Team[] teams;
     public Image Team1;
     public Image Team2;
     public Image Team3;
@@ -21,7 +24,14 @@ public class GameSimulator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-            StartCoroutine(ExecuteFunctionAfterRandomTime());
+        teams = new Team[]
+        {
+            new Team("GREEN"),
+            new Team("ORANGE"),
+            new Team("PINK"),
+            new Team("BLUE")
+        };
+        StartCoroutine(ExecuteFunctionAfterRandomTime());
     }
 
     IEnumerator ExecuteFunctionAfterRandomTime()
@@ -38,6 +48,7 @@ public class GameSimulator : MonoBehaviour
 
             int index = Random.Range(0, teams.Length);
             Image randomTeam = teams[index];
+            this.teams[index].IncreaseScore();
             Animator loader = animators[index];
 
             // Wait for the random time
@@ -59,6 +70,19 @@ public class GameSimulator : MonoBehaviour
         if (team.fillAmount == 1)
         {
             winner = true;
+
+            //save fillamout of teams
+            PlayerPrefs.SetInt("teams_count", this.teams.Length);
+
+            for (int i = 0; i < this.teams.Length; i++)
+            {
+                PlayerPrefs.SetInt("team_" + i, this.teams[i].virusScore);
+                PlayerPrefs.SetString("team_" + i + "_name", this.teams[i].name);
+            }
+
+            //Scene Switch
+            Thread.Sleep(3000);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
         else
         {
@@ -68,7 +92,27 @@ public class GameSimulator : MonoBehaviour
             //team.fillAmount += 0.1f;
         }
 
+    }
 
+    public class Team
+    {
+        public string name;
+        public int virusScore;
 
+        public Team(string color)
+        {
+            this.name = color;
+            this.virusScore = 0;
+        }
+
+        public void IncreaseScore()
+        {
+            this.virusScore++;
+        }
+        
+        public void DecreaseScore()
+        {
+            this.virusScore--;
+        }
     }
 }
