@@ -94,14 +94,15 @@ public class GameSimulator : MonoBehaviour
 
     }
 
+
     public class Team
     {
         public string name;
         public int virusScore;
 
-        public Team(string color)
+        public Team(string name)
         {
-            this.name = color;
+            this.name = name;
             this.virusScore = 0;
         }
 

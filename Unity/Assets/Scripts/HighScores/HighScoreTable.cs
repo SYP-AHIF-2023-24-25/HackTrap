@@ -6,6 +6,11 @@ using UnityEngine.UI;
 
 public class HighScoreTable : MonoBehaviour
 {
+    private string COLOR_GREEN = "00FF01"; //Color.HSVToRGB(1, 255, 0);
+    private string COLOR_ORANGE = "FFBB00"; //Color.HSVToRGB(255, 187, 0);
+    private string COLOR_PINK = "FF0089"; //Color.HSVToRGB(255, 0, 137);
+    private string COLOR_BLUE = "0086FF"; //Color.HSVToRGB(0, 133, 255);
+
     private Transform entryContainer;
     private Transform entryTemplate;
 
@@ -50,6 +55,7 @@ public class HighScoreTable : MonoBehaviour
 
             int score = PlayerPrefs.GetInt("team_" + i) * 3;
             string name = PlayerPrefs.GetString("team_" + i + "_name");
+
             HighScoreEntry newEntry = new HighScoreEntry(score, name);
             highScoreEntryList.Add(newEntry);
         }
@@ -77,8 +83,30 @@ public class HighScoreTable : MonoBehaviour
         entryTransform.Find("RankText").GetComponent<Text>().text = rankString;
         entryTransform.Find("ScoreText").GetComponent<Text>().text = highscoreEntry.score.ToString();
         entryTransform.Find("TeamText").GetComponent<Text>().text = highscoreEntry.name;
+        entryTransform.Find("Background").GetComponent<Image>().color = SetRightColor(highscoreEntry.name);
 
         transformList.Add(entryTransform);
+    }
+
+    private Color SetRightColor(string color)
+    {
+        Color rightColor = Color.white;
+        switch (color.ToLower())
+        {
+            case "orange": rightColor = HexToColor(COLOR_ORANGE); break;
+            case "blue": rightColor = HexToColor(COLOR_BLUE);  break;
+            case "green": rightColor = HexToColor(COLOR_GREEN); break;
+            case "pink": rightColor = HexToColor(COLOR_PINK); break;
+        }
+        return rightColor;
+    }
+
+    Color HexToColor(string hex)
+    {
+        byte r = byte.Parse(hex.Substring(0, 2), System.Globalization.NumberStyles.HexNumber);
+        byte g = byte.Parse(hex.Substring(2, 2), System.Globalization.NumberStyles.HexNumber);
+        byte b = byte.Parse(hex.Substring(4, 2), System.Globalization.NumberStyles.HexNumber);
+        return new Color32(r, g, b, 255);
     }
 
     private class HighScoreEntry 
