@@ -24,4 +24,10 @@ public class ButtonAnimation : MonoBehaviour
     {
         GetComponent<Animator>().Play("ButtonAnimation");
     }
+
+    public void PlayAnimation()
+    {
+        Debug.Log("Test");
+        Animation();
+    }
 }

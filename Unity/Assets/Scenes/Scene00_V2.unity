@@ -1791,8 +1791,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00bab3e222d7ed3479c691ef9ac086e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  applicationType: 1
-  invertStereo: 0
+  applicationType: 0
+  invertStereo: 1
   udpAddress: 127.0.0.1
   udpReceivingPort: 5560
   udpSendingPort: 5561
