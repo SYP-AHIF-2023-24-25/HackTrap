@@ -32,15 +32,27 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene08.unity
     guid: 2d6c2630b52293141bcbb8fc6100ba5c
+  - enabled: 1
+    path: Assets/Scenes/Scene09.unity
+    guid: dec0e787ced5a0c438ecb6ceffe7e961
+  - enabled: 1
+    path: Assets/Scenes/Scene10.unity
+    guid: e39e7ca35e90e87469b57aea59f24186
+  - enabled: 1
+    path: Assets/Scenes/Scene11.unity
+    guid: 18dd6f0fab7b13e449831719a6f03282
+  - enabled: 1
+    path: Assets/Scenes/Scene12.unity
+    guid: ad03f7695c6dddd47af15d92c2a0e888
   - enabled: 0
-    path: Assets/__DELETED_GUID_Trash/3ca680e54e7e0dc4898de2e32680f02a
-    guid: 3ca680e54e7e0dc4898de2e32680f02a
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/__DELETED_GUID_Trash/9f94dee40ab6ebf489bfad7e46796d74
-    guid: 9f94dee40ab6ebf489bfad7e46796d74
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/__DELETED_GUID_Trash/09a0b10e6157cf04797973d012f00a5c
-    guid: 09a0b10e6157cf04797973d012f00a5c
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
@@ -50,16 +62,4 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/DeepSpace/Demo/Scenes/PharusTracklinkScene.unity
     guid: 88481ed6e22ab6c43be02b614b302fee
-  - enabled: 1
-    path: Assets/Scenes/Scene09.unity
-    guid: dec0e787ced5a0c438ecb6ceffe7e961
-  - enabled: 1
-    path: Assets/Scenes/Scene11.unity
-    guid: 18dd6f0fab7b13e449831719a6f03282
-  - enabled: 1
-    path: Assets/Scenes/Scene10.unity
-    guid: e39e7ca35e90e87469b57aea59f24186
-  - enabled: 1
-    path: Assets/Scenes/Scene12.unity
-    guid: ad03f7695c6dddd47af15d92c2a0e888
   m_configObjects: {}
