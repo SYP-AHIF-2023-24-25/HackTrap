@@ -2452,7 +2452,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 16b40f235cc08a74cb3279505736ff3b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 502c7791e84ead54eb0985a32eff2ceb, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2912,7 +2912,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: bbdb2ca344c8b1348bc48b15043f6163, type: 3}
+  m_audioClip: {fileID: 8300000, guid: fc763951e4c461041b06262c7965136e, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -5149,7 +5149,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 99
+  m_Text: 20
 --- !u!222 &1969148381
 CanvasRenderer:
   m_ObjectHideFlags: 0

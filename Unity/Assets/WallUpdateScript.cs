@@ -61,7 +61,7 @@ public class WallUpdateScript : MonoBehaviour
             {
                 timer.GetComponent<Text>().color = Color.red;
                 timeoutSound.Play();
-                backgroundAudio.Stop();
+                //backgroundAudio.Stop();
             }
             timeoutCounter++;
         }
