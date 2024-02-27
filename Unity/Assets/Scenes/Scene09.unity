@@ -1156,7 +1156,7 @@ MonoBehaviour:
   characterFour: {fileID: 1387590524}
   characterFive: {fileID: 43382747}
   timer: {fileID: 1969148378}
-  timeout: 20
+  timeout: 30
   timeoutSound: {fileID: 894177742}
   backgroundAudio: {fileID: 1130335661}
 --- !u!1 &550727863
@@ -5149,7 +5149,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 20
+  m_Text: '30
+
+'
 --- !u!222 &1969148381
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -1537,7 +1537,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4d770ccd14150524f91c9a07cc510d39, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 3de30a1549e0a7249aeb7592759f7b96, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1996,7 +1996,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ad77851c89c43e419b19745bf3ca76f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeout: 30
+  timeout: 8
   sceneIndex: 9
 --- !u!1 &1454730266 stripped
 GameObject:
