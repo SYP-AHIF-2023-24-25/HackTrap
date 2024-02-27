@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4947458586866771303}
   m_Layer: 0
   m_Name: TrackingSphere
-  m_TagString: Untagged
+  m_TagString: DPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

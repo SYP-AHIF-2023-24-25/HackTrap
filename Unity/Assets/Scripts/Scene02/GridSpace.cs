@@ -22,4 +22,13 @@ public class GridSpace : MonoBehaviour
     {
         gameController = controller;
     }
+
+    public void UpdateValue()
+    {
+        Debug.Log("Field Updated");
+        buttonText.text = gameController.GetPlayer();
+        buttonText.color = gameController.GetColor();
+        button.interactable = false;
+        gameController.EndTurn();
+    }
 }
