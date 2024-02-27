@@ -4,8 +4,10 @@ using UnityEngine;
 public class FieldController : MonoBehaviour
 {
     public static List<FieldController> AllFields = new List<FieldController>();
-    public Color highlightColor = Color.blue;
-    private Color originalColor;
+    public GameObject[] players; // Array to hold all player GameObjects
+    private GameObject currentMainPlayer; // Variable to hold the current main player
+    private List<GameObject> availablePlayers = new List<GameObject>(); // List to hold available players
+
 
     private void Start()
     {
