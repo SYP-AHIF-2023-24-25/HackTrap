@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,6 +14,7 @@ public class HighScoreTable : MonoBehaviour
 
     private Transform entryContainer;
     private Transform entryTemplate;
+    private Text entryContinueText;
 
     private List<HighScoreEntry> highScoreEntryList;
     private List<Transform> highScoreEntryTransformList;
@@ -20,18 +22,50 @@ public class HighScoreTable : MonoBehaviour
     private void Awake()
     {
         entryContainer = transform.Find("HighScoreEntryContainer");
-        entryTemplate = entryContainer.Find("HighScoreEntryTemplate");
-
+        entryTemplate = entryContainer.Find("HighScoreEntryTemplate");        
         entryTemplate.gameObject.SetActive(false);
+
+        entryContinueText = entryContainer.Find("ContinueTeamText").Find("Text").GetComponent<Text>();
+        entryContinueText.text = "";
+        entryContinueText.gameObject.SetActive(false);
 
         InitializeHighScoreList();
         highScoreEntryList.Sort(new HighScoreComparer());
 
         highScoreEntryTransformList = new List<Transform>();
-        foreach(HighScoreEntry entry in highScoreEntryList)
+        foreach (HighScoreEntry entry in highScoreEntryList)
         {
             CreateHighScoreEntryTransform(entry, entryContainer, highScoreEntryTransformList);
         }
+
+        StartCoroutine(WaitAndClearContainer());
+    }
+
+    private IEnumerator WaitAndClearContainer()
+    {
+        yield return new WaitForSeconds(5f); 
+
+        ClearHighScoreEntries(highScoreEntryTransformList.GetRange(1, highScoreEntryTransformList.Count - 2));
+        highScoreEntryList.RemoveRange(1, highScoreEntryList.Count - 2);
+
+        UpdateHighScoreEntries();
+    }
+
+    private void UpdateHighScoreEntries()
+    {
+        ClearHighScoreEntries(highScoreEntryTransformList);
+        CreateHighScoreEntryTransform(highScoreEntryList[0], entryContainer, highScoreEntryTransformList);
+
+        StartCoroutine(StartContinueText());
+    }
+
+    private IEnumerator StartContinueText()
+    {
+        yield return new WaitForSeconds(2f);
+
+        entryContinueText.gameObject.SetActive(true);
+        string continueText = "Congrats to team " + highScoreEntryList[0].name + "!\n Your team has now the honor to continue the game by encrypting the virus container. Good luck! ";
+        TextWriter.AddWriterStatic(entryContinueText, continueText, .15f, false);
     }
 
     private void InitializeHighScoreList()
@@ -61,6 +95,15 @@ public class HighScoreTable : MonoBehaviour
         }
     }
 
+    private void ClearHighScoreEntries(List<Transform> transformList)
+    {
+        foreach (Transform entryTransform in transformList)
+        {
+            Destroy(entryTransform.gameObject);
+        }
+        transformList.Clear();
+    }
+
     private void CreateHighScoreEntryTransform(HighScoreEntry highscoreEntry, Transform container, List<Transform> transformList)
     {
         float templateHeight = 280f;
@@ -84,6 +127,21 @@ public class HighScoreTable : MonoBehaviour
         entryTransform.Find("ScoreText").GetComponent<Text>().text = highscoreEntry.score.ToString();
         entryTransform.Find("TeamText").GetComponent<Text>().text = highscoreEntry.name;
         entryTransform.Find("Background").GetComponent<Image>().color = SetRightColor(highscoreEntry.name);
+
+        switch(rank)
+        {
+            default: entryTransform.Find("Trophy").gameObject.SetActive(false);
+                break;
+            case 1:
+                entryTransform.Find("Trophy").GetComponent<Image>().color = HexToColor("D4AF37");
+                break;
+            case 2:
+                entryTransform.Find("Trophy").GetComponent<Image>().color = HexToColor("C0C0C0");
+                break;
+            case 3:
+                entryTransform.Find("Trophy").GetComponent<Image>().color = HexToColor("CD7F32");
+                break;
+        }
 
         transformList.Add(entryTransform);
     }
