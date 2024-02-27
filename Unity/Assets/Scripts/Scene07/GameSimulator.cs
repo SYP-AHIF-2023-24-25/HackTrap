@@ -60,7 +60,6 @@ public class GameSimulator : MonoBehaviour
 
     }
 
-
     void MyFunction(Image team, Animator loader)
     {
        
@@ -91,7 +90,6 @@ public class GameSimulator : MonoBehaviour
             
             //team.fillAmount += 0.1f;
         }
-
     }
 
 
