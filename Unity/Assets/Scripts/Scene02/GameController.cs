@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
@@ -52,7 +51,7 @@ public class GameController : MonoBehaviour
 
     private IEnumerator ComputerTurn()
     {
-        
+
         yield return new WaitForSeconds(1f); //delay
 
         // minimax algorithm for computer's move
@@ -67,7 +66,7 @@ public class GameController : MonoBehaviour
     {
         if (IsTie() || IsGameOver(playerSide))
         {
-            GameOver(); 
+            GameOver();
         }
         else
         {
