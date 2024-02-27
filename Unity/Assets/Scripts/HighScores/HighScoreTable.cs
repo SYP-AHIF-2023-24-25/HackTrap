@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class HighScoreTable : MonoBehaviour
@@ -61,7 +62,7 @@ public class HighScoreTable : MonoBehaviour
 
     private IEnumerator StartContinueText()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
 
         entryContinueText.gameObject.SetActive(true);
         string continueText = "Congrats to team " + highScoreEntryList[0].name + "!\n Your team has now the honor to continue the game by encrypting the virus container. Good luck! ";
