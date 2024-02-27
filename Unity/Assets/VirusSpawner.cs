@@ -9,7 +9,7 @@ public class VirusSpawner: MonoBehaviour
     public int maxNumberOfObjectsToSpawn;
 
     public float minSpawnDelay = 1f;
-    public float maxSpawnDelay = 5f;
+    public float maxSpawnDelay = 2f;
 
     void Start()
     {
@@ -30,7 +30,7 @@ public class VirusSpawner: MonoBehaviour
         // Generate random position within the spawn area
         Vector3 randomPosition = new Vector3(
             Random.Range(transform.position.x - spawnAreaSize.x / 2, transform.position.x + spawnAreaSize.x / 2),
-            Random.Range(transform.position.y - spawnAreaSize.y / 2, transform.position.y + spawnAreaSize.y / 2),
+            -1.7f,
             Random.Range(transform.position.z - spawnAreaSize.z / 2, transform.position.z + spawnAreaSize.z / 2)
         );
 
