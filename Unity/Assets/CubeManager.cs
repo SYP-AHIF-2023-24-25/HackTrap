@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class CubeManager : MonoBehaviour
@@ -84,5 +85,6 @@ public class CubeManager : MonoBehaviour
     {
         yield return new WaitForSeconds(0.2f);
         Destroy(gameObject);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

@@ -53,7 +53,7 @@ public class WallUpdateScript : MonoBehaviour
     void executeTimeout()
     {
         if (timeoutCounter >= timeout)
-            SceneManager.LoadScene(7);
+            SceneManager.LoadScene(14);
         else
         {
             timer.GetComponent<Text>().text = (timeout - timeoutCounter) < 10 ? " " + (timeout - timeoutCounter) : (timeout - timeoutCounter) + "";
