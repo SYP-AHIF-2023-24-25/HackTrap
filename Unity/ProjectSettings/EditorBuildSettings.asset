@@ -16,7 +16,7 @@ EditorBuildSettings:
     guid: 8f3f48b1b6b493e4ab11b152c9511bdd
   - enabled: 1
     path: Assets/Scenes/Scene03.unity
-    guid: c88434c7cf87fff4ea13214b7dd8fe87
+    guid: 54f904543393cfc49bd7ebc5c01c5114
   - enabled: 1
     path: Assets/Scenes/Scene04.unity
     guid: b949ebc675db87f4d9f02e4de29d026e
@@ -26,12 +26,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene06.unity
     guid: c39ffeb4e6a6a3344bf1891086e678da
-  - enabled: 1
-    path: Assets/Scenes/Scene07.unity
+  - enabled: 0
+    path: Assets/__DELETED_GUID_Trash/59b984f5e04bece4ba573a72314ac921
     guid: 59b984f5e04bece4ba573a72314ac921
   - enabled: 1
+    path: Assets/Scenes/Scene07.unity
+    guid: 6bf535b4ee5c65b46be5a060ac2b91bc
+  - enabled: 0
     path: Assets/Scenes/Scene08.unity
     guid: 2d6c2630b52293141bcbb8fc6100ba5c
+  - enabled: 1
+    path: Assets/Scenes/Scene08_V2.unity
+    guid: a003fbe2523e1d24b82ef459b74b0d5c
   - enabled: 1
     path: Assets/Scenes/Highscores.unity
     guid: d22e89d576413fd4fa1e07578a63eeed
@@ -47,6 +53,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene12.unity
     guid: ad03f7695c6dddd47af15d92c2a0e888
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000

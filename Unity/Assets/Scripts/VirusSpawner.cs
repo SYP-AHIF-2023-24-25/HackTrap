@@ -11,6 +11,8 @@ public class VirusSpawner: MonoBehaviour
     public float minSpawnDelay = 1f;
     public float maxSpawnDelay = 2f;
 
+    public Vector3 rotationAngles;
+
     void Start()
     {
         // Start the spawning process
@@ -41,6 +43,8 @@ public class VirusSpawner: MonoBehaviour
             GameObject spawnedObject = Instantiate(objectToSpawn, randomPosition, Quaternion.identity);
             // Add movement script to the spawned object
             spawnedObject.AddComponent<ObjectMovement>();
+
+            spawnedObject.transform.rotation = Quaternion.Euler(rotationAngles);
         }
     }
 }

@@ -27,10 +27,10 @@ public class ObjectMovement : MonoBehaviour
     Vector3 GetRandomDirection()
     {
         // Generate a random direction excluding downwards
-        float x = Random.Range(-1f, 1f);
-        float y = Random.Range(0f, 1f); // Excluding downwards
+        float y = Random.Range(-1f, 1f);
+        float x = Random.Range(-1f, 1f); // Excluding downwards
         float z = Random.Range(-1f, 1f);
 
-        return new Vector3(x, 0, z);
+        return new Vector3(0, x, z);
     }
 }

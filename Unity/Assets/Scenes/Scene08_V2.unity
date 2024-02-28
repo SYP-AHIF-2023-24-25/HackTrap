@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 97637a2a763b7f24b8da4e139e4144ca, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4465785, g: 0.49641252, b: 0.574817, a: 1}
+  m_IndirectSpecularColor: {r: 0.00061816757, g: 0.0023196875, b: 0.0555418, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -624,9 +624,9 @@ MonoBehaviour:
     type: 3}
   spawnAreaSize: {x: 14.4141, y: 0.7373714, z: 8.468287}
   maxNumberOfObjectsToSpawn: 100
-  Radius: 1
   minSpawnDelay: 1
   maxSpawnDelay: 2
+  rotationAngles: {x: 0, y: 0, z: 90}
 --- !u!65 &395136788
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1255,14 +1255,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ab7002aafb00544ebf74aa0cc70639e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Team1: {fileID: 0}
-  Team2: {fileID: 0}
-  Team3: {fileID: 0}
-  Team4: {fileID: 0}
-  loader1: {fileID: 0}
-  loader2: {fileID: 0}
-  loader3: {fileID: 0}
-  loader4: {fileID: 0}
+  Team1: {fileID: 455879327}
+  Team2: {fileID: 1286479904}
+  Team3: {fileID: 1270296529}
+  Team4: {fileID: 1220870907}
+  loader1: {fileID: 455879325}
+  loader2: {fileID: 1286479902}
+  loader3: {fileID: 1270296527}
+  loader4: {fileID: 1220870905}
 --- !u!4 &693409475
 Transform:
   m_ObjectHideFlags: 0
@@ -2193,8 +2193,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00bab3e222d7ed3479c691ef9ac086e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  applicationType: 1
-  invertStereo: 0
+  applicationType: 0
+  invertStereo: 1
   udpAddress: 127.0.0.1
   udpReceivingPort: 5560
   udpSendingPort: 5561
@@ -3373,6 +3373,7 @@ MonoBehaviour:
     stageWidth: 1600
     stageHeight: 900
     udpPort: 3333
+  context: {fileID: 0}
 --- !u!1 &1857978808
 GameObject:
   m_ObjectHideFlags: 0
