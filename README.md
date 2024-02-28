@@ -36,6 +36,20 @@ Here you can see the progress of our Userstories: [HackTrap Userstory Backlog](h
 - [x] The User should be able to pick up/collect viruses on the floor.
 - [x] The User should be able to dump his collected viruses in (only) his team container.
 
+### Sprint 4
+- [x] The User should be able to pick up/collect viruses on the floor.
+- [x] The User should be able to dump his collected viruses in (only) his team container.
+- [x] The User should be able to enjoy an instruction to the "Encrypt The Virus-Box"-Game.
+- [x] The User should be able to see an animation where all the virus-cages of the teams fly into one virus-box.
+- [x] The User should be able to play the "Encrypt The Virus-Box"-Game under time pressure with a ticking timer.
+- [x] The user should be able to select letters on the floor in the “Encrypt The Box” game.
+- [x] The User should hear a "Correct"-sound and see the letter disappear from the floor, when selecting a correct letter in the correct order.
+- [x] The user should hear a "wrong" sound and see the letter on the floor in red color for 3 seconds.
+- [x] The User should be able to enjoy and see a Success/Failure Ceremony in the end of the game (depending on the result of the Encrypting Box Game).
+- [x] The User should be able to see an advertisment at the end of the game (Ars Electronica x HTL Leonding).
+- [x] The User should be able to see a game-evaluation with the main-game-results of each team, after all the viruses are collected.
+
+
 # Sprints
 ### 1. Sprint - Project Initialisation
 - [x] Project proposal
@@ -61,6 +75,19 @@ Here you can see the progress of our Userstories: [HackTrap Userstory Backlog](h
 - [x] Teamresults in realtime
 - [x] Animations
 - [x] Scene Adaption on Wall and Floor Canvas
+
+### 4. Sprint - Usertracking Testen & Rest vom Game
+- [x] Projekt mit neuer Unity-Version
+- [x] Container-Animation (Virus-Box)
+- [x] Game-Auswertung
+- [x] "Encrypt The Virus-Box"-Gameanleitung
+- [x] "Encrypt The Virus-Box"-Game (Wall + Floor)
+- [x] TicTacToe (Single Player Mode)
+- [x] Success & Failure Ceremony
+- [x] Advertisment (Ars Electronica x HTL Leonding)
+- [x] Main-Game with UserTracking
+- [x] Scenes-transformation with UserTracking
+
 
 ## Our Team
 Christian Ekhator, Julian Kapl, Julia Meyr & Amina Gabeljic
