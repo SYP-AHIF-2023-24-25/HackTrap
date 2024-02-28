@@ -37,8 +37,8 @@ Here you can see the progress of our Userstories: [HackTrap Userstory Backlog](h
 - [x] The User should be able to dump his collected viruses in (only) his team container.
 
 ### Sprint 4
-- [x] The User should be able to pick up/collect viruses on the floor.
-- [x] The User should be able to dump his collected viruses in (only) his team container.
+- [x] The User should be able to see viruses on the floor.
+- [x] The User should be able to see four team container.
 - [x] The User should be able to enjoy an instruction to the "Encrypt The Virus-Box"-Game.
 - [x] The User should be able to see an animation where all the virus-cages of the teams fly into one virus-box.
 - [x] The User should be able to play the "Encrypt The Virus-Box"-Game under time pressure with a ticking timer.
@@ -48,6 +48,8 @@ Here you can see the progress of our Userstories: [HackTrap Userstory Backlog](h
 - [x] The User should be able to enjoy and see a Success/Failure Ceremony in the end of the game (depending on the result of the Encrypting Box Game).
 - [x] The User should be able to see an advertisment at the end of the game (Ars Electronica x HTL Leonding).
 - [x] The User should be able to see a game-evaluation with the main-game-results of each team, after all the viruses are collected.
+- [x] The User should be able to see a game-evaluation with the main-game-results of each team, after all the viruses are collected.
+- [x] The User is able to play TicTacToe (SinglePlayerMode).
 
 
 # Sprints
