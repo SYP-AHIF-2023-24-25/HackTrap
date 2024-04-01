@@ -382,8 +382,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 84d267e5c5cb34f48ab5133ff4d475eb, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1156,7 +1156,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 647524449}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3389c187e0916f8489a5af2215a74449, type: 3}
   m_Name: 
@@ -1171,7 +1171,6 @@ MonoBehaviour:
   disabledSprite: {fileID: 0}
   animationDuration: 0.5
   audioSource: {fileID: 0}
-  audioClip: {fileID: 0}
 --- !u!1 &682926800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1402,6 +1401,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BackgroundMusic
       objectReference: {fileID: 0}
+    - target: {fileID: 4200861175942995012, guid: 056923e03c540b94fba2cb08973becad,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4200861175942995014, guid: 056923e03c540b94fba2cb08973becad,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1467,6 +1471,21 @@ PrefabInstance:
       propertyPath: sceneSixMusic
       value: 
       objectReference: {fileID: 8300000, guid: 6229892ba43d7554bb2f137c4a37c180, type: 3}
+    - target: {fileID: 3360362991688951435, guid: 056923e03c540b94fba2cb08973becad,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4200861175942995015, guid: 056923e03c540b94fba2cb08973becad,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8437ef3406baadc42bdc75fe1d5f3f99, type: 3}
+    - target: {fileID: 4200861175942995015, guid: 056923e03c540b94fba2cb08973becad,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 056923e03c540b94fba2cb08973becad, type: 3}
 --- !u!1 &970272897
@@ -1719,7 +1738,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 998823160}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3389c187e0916f8489a5af2215a74449, type: 3}
   m_Name: 
@@ -1734,7 +1753,6 @@ MonoBehaviour:
   disabledSprite: {fileID: 0}
   animationDuration: 0.5
   audioSource: {fileID: 0}
-  audioClip: {fileID: 0}
 --- !u!1 &1024337693
 GameObject:
   m_ObjectHideFlags: 0
@@ -1897,10 +1915,9 @@ MonoBehaviour:
   floorTictactoe: {fileID: 1896052263}
   floorMemory: {fileID: 884217764}
   floorPaperScissorsStone: {fileID: 1179170096}
-  disabledSprite: {fileID: 2800000, guid: 2d2c3046a9219c748b72d4a1d657e1fd, type: 3}
-  animationDuration: 2
+  disabledSprite: {fileID: 2800000, guid: c4e5571a45cd9104ba1ac81a1c77f698, type: 3}
+  animationDuration: 1
   audioSource: {fileID: 154734315}
-  audioClip: {fileID: 8300000, guid: 96a95e0f539e60c4dae2df0d4390d926, type: 3}
 --- !u!1 &1058428047
 GameObject:
   m_ObjectHideFlags: 0
@@ -2560,6 +2577,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sphere
+      objectReference: {fileID: 0}
+    - target: {fileID: 3493559332592990453, guid: ac518cec7ed73a140bb4793745b8d74e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8455878019749677277, guid: ac518cec7ed73a140bb4793745b8d74e,
         type: 3}
@@ -3382,7 +3404,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1977271448}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3389c187e0916f8489a5af2215a74449, type: 3}
   m_Name: 
@@ -3397,7 +3419,6 @@ MonoBehaviour:
   disabledSprite: {fileID: 0}
   animationDuration: 0.5
   audioSource: {fileID: 0}
-  audioClip: {fileID: 0}
 --- !u!61 &1977271453
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3405,7 +3426,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1977271448}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -3997,24 +4018,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aed4271cfa87d044f80dafa2449c8a50, type: 3}
---- !u!1 &2435604483434807195 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2435604483763557590, guid: aed4271cfa87d044f80dafa2449c8a50,
-    type: 3}
-  m_PrefabInstance: {fileID: 2435604483434807194}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2435604483434807196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2435604483434807195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f04a3e768b0c7a34287b7f982b2b406c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &5026429027690338616
 PrefabInstance:
   m_ObjectHideFlags: 0

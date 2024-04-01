@@ -38,7 +38,6 @@ public class OnSelection : MonoBehaviour
     private bool isAnimating = false;
 
     public AudioSource audioSource;
-    public AudioClip audioClip;
 
     void Start()
     {
@@ -48,27 +47,28 @@ public class OnSelection : MonoBehaviour
         floorMemoryRawImage = floorMemory.GetComponent<RawImage>();
         floorPaperScissorsStoneRawImage = floorPaperScissorsStone.GetComponent<RawImage>();
 
-        audioSource.clip = audioClip;
     }
 
     void Update()
     {
         if (Input.GetMouseButtonDown(0) && !isAnimating)
         {
+            
             // Cast a ray from the camera to the position of the mouse pointer
             Vector3 clickPosition = Input.mousePosition;
+            UnityEngine.Debug.Log(clickPosition.x);
 
-            if (clickPosition.x > 130 && clickPosition.x < 360)
+            if (clickPosition.x > 130 && clickPosition.x < 290)
             {
                 SceneManager.LoadScene(sceneIndex);
             }
-            else if (clickPosition.x > 390 && clickPosition.x < 614)
+            else if (clickPosition.x > 307 && clickPosition.x < 465)
             {
                 // Start fade animation
                 StartCoroutine(FadeAnimation(paperScissorsStoneRawImage));
                 StartCoroutine(FadeAnimation(floorPaperScissorsStoneRawImage));
             }
-            else if (clickPosition.x > 640 && clickPosition.x < 860)
+            else if (clickPosition.x > 481 && clickPosition.x < 645)
             {
                 // Start fade animation
                 StartCoroutine(FadeAnimation(memoryRawImage));

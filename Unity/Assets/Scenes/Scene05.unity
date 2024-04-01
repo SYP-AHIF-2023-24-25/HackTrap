@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.00061816757, g: 0.0023196875, b: 0.0555418, a: 1}
+  m_IndirectSpecularColor: {r: 0.00070116227, g: 0.0023195113, b: 0.055857606, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -430,6 +430,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BackgroundMusic
       objectReference: {fileID: 0}
+    - target: {fileID: 4200861175942995012, guid: 056923e03c540b94fba2cb08973becad,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4200861175942995014, guid: 056923e03c540b94fba2cb08973becad,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -495,6 +500,31 @@ PrefabInstance:
       propertyPath: sceneSixMusic
       value: 
       objectReference: {fileID: 8300000, guid: 6229892ba43d7554bb2f137c4a37c180, type: 3}
+    - target: {fileID: 3360362991688951435, guid: 056923e03c540b94fba2cb08973becad,
+        type: 3}
+      propertyPath: music7
+      value: 
+      objectReference: {fileID: 8300000, guid: 8437ef3406baadc42bdc75fe1d5f3f99, type: 3}
+    - target: {fileID: 3360362991688951435, guid: 056923e03c540b94fba2cb08973becad,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4200861175942995015, guid: 056923e03c540b94fba2cb08973becad,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4200861175942995015, guid: 056923e03c540b94fba2cb08973becad,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4200861175942995015, guid: 056923e03c540b94fba2cb08973becad,
+        type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 056923e03c540b94fba2cb08973becad, type: 3}
 --- !u!1 &682926800
