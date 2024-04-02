@@ -1096,6 +1096,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 592489952113595171, guid: c1ffd2ee90c3078419b71ca86a11408f,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1ffd2ee90c3078419b71ca86a11408f, type: 3}
 --- !u!1 &1004034057 stripped
@@ -1525,7 +1530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00bab3e222d7ed3479c691ef9ac086e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  applicationType: 0
+  applicationType: 1
   invertStereo: 0
   udpAddress: 127.0.0.1
   udpReceivingPort: 5560
@@ -2662,11 +2667,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1182003389}
     m_Modifications:
-    - target: {fileID: 3142849214832418886, guid: e9ec609d519b1e24eafd430b475b90ea,
-        type: 3}
-      propertyPath: m_Name
-      value: NetworkSetup
-      objectReference: {fileID: 0}
     - target: {fileID: 6510235590738851686, guid: e9ec609d519b1e24eafd430b475b90ea,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2727,6 +2727,11 @@ PrefabInstance:
       propertyPath: _debugStereoMgr
       value: 
       objectReference: {fileID: 148171633}
+    - target: {fileID: 3142849214832418886, guid: e9ec609d519b1e24eafd430b475b90ea,
+        type: 3}
+      propertyPath: m_Name
+      value: NetworkSetup
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9ec609d519b1e24eafd430b475b90ea, type: 3}
 --- !u!114 &497875654683791828 stripped
