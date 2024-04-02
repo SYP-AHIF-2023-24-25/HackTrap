@@ -9,6 +9,7 @@ public class StateManager: MonoBehaviour
     [SerializeField] private GameObject[] scenePrefabs; // Array of scene prefabs
     [SerializeField] private float sceneSwitchDelay = 3f; // Default delay before switching scenes
 
+
     private GameObject currentScenePrefab;
     private int currentSceneIndex = 0; // first scene is active
 

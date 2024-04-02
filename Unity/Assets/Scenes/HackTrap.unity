@@ -772,6 +772,9 @@ MonoBehaviour:
   - {fileID: 716298789}
   - {fileID: 1048731643}
   - {fileID: 423232593}
+  - {fileID: 1555630228}
+  - {fileID: 1608211116}
+  - {fileID: 905240761}
   sceneSwitchDelay: 3
 --- !u!4 &355096422
 Transform:
@@ -1632,6 +1635,12 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0
+--- !u!1 &905240761 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6610039374041655116, guid: ffa87ebf79713304eb1b8096cf7c8581,
+    type: 3}
+  m_PrefabInstance: {fileID: 1676060616}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &970272897
 GameObject:
   m_ObjectHideFlags: 0
@@ -2783,6 +2792,12 @@ Transform:
   m_Father: {fileID: 682926801}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1555630228 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6330300523607483997, guid: 617957f9a089fda458f076467c2d726c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1042113498}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1559130337
 GameObject:
   m_ObjectHideFlags: 0
@@ -2832,6 +2847,12 @@ MonoBehaviour:
     type: 3}
   addUnknownTrackOnUpdate: 1
   gridOffset: {x: 0, y: 0}
+--- !u!1 &1608211116 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9073938250753724264, guid: 7a909d155194e5740a4b8d9ffd06fdb5,
+    type: 3}
+  m_PrefabInstance: {fileID: 120524710}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1636196716
 GameObject:
   m_ObjectHideFlags: 0
@@ -3606,30 +3627,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1182003389}
     m_Modifications:
-    - target: {fileID: 11418816, guid: 237454293243dac4bb5ae4d0c9a2095e, type: 3}
-      propertyPath: _worldCameras.Array.data[0]
-      value: 
-      objectReference: {fileID: 837733151}
-    - target: {fileID: 11418816, guid: 237454293243dac4bb5ae4d0c9a2095e, type: 3}
-      propertyPath: _worldCameras.Array.data[1]
-      value: 
-      objectReference: {fileID: 68484682}
-    - target: {fileID: 11418816, guid: 237454293243dac4bb5ae4d0c9a2095e, type: 3}
-      propertyPath: _worldCameras.Array.data[2]
-      value: 
-      objectReference: {fileID: 1966069752}
-    - target: {fileID: 11418816, guid: 237454293243dac4bb5ae4d0c9a2095e, type: 3}
-      propertyPath: _worldCameras.Array.data[3]
-      value: 
-      objectReference: {fileID: 1271925279}
-    - target: {fileID: 11418816, guid: 237454293243dac4bb5ae4d0c9a2095e, type: 3}
-      propertyPath: _stereoCanvasScaler.Array.data[0]
-      value: 
-      objectReference: {fileID: 1325955697}
-    - target: {fileID: 11418816, guid: 237454293243dac4bb5ae4d0c9a2095e, type: 3}
-      propertyPath: _stereoCanvasScaler.Array.data[1]
-      value: 
-      objectReference: {fileID: 2074755467}
     - target: {fileID: 22447028, guid: 237454293243dac4bb5ae4d0c9a2095e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3702,6 +3699,30 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11418816, guid: 237454293243dac4bb5ae4d0c9a2095e, type: 3}
+      propertyPath: _worldCameras.Array.data[0]
+      value: 
+      objectReference: {fileID: 837733151}
+    - target: {fileID: 11418816, guid: 237454293243dac4bb5ae4d0c9a2095e, type: 3}
+      propertyPath: _worldCameras.Array.data[1]
+      value: 
+      objectReference: {fileID: 68484682}
+    - target: {fileID: 11418816, guid: 237454293243dac4bb5ae4d0c9a2095e, type: 3}
+      propertyPath: _worldCameras.Array.data[2]
+      value: 
+      objectReference: {fileID: 1966069752}
+    - target: {fileID: 11418816, guid: 237454293243dac4bb5ae4d0c9a2095e, type: 3}
+      propertyPath: _worldCameras.Array.data[3]
+      value: 
+      objectReference: {fileID: 1271925279}
+    - target: {fileID: 11418816, guid: 237454293243dac4bb5ae4d0c9a2095e, type: 3}
+      propertyPath: _stereoCanvasScaler.Array.data[0]
+      value: 
+      objectReference: {fileID: 1325955697}
+    - target: {fileID: 11418816, guid: 237454293243dac4bb5ae4d0c9a2095e, type: 3}
+      propertyPath: _stereoCanvasScaler.Array.data[1]
+      value: 
+      objectReference: {fileID: 2074755467}
     - target: {fileID: 22361346, guid: 237454293243dac4bb5ae4d0c9a2095e, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 1
@@ -3715,6 +3736,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1182003389}
     m_Modifications:
+    - target: {fileID: 3142849214832418886, guid: e9ec609d519b1e24eafd430b475b90ea,
+        type: 3}
+      propertyPath: m_Name
+      value: NetworkSetup
+      objectReference: {fileID: 0}
     - target: {fileID: 6510235590738851686, guid: e9ec609d519b1e24eafd430b475b90ea,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3775,11 +3801,6 @@ PrefabInstance:
       propertyPath: _debugStereoMgr
       value: 
       objectReference: {fileID: 148171633}
-    - target: {fileID: 3142849214832418886, guid: e9ec609d519b1e24eafd430b475b90ea,
-        type: 3}
-      propertyPath: m_Name
-      value: NetworkSetup
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9ec609d519b1e24eafd430b475b90ea, type: 3}
 --- !u!114 &497875654683791828 stripped
