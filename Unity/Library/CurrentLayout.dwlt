@@ -46,7 +46,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 498}
   m_MaxSize: {x: 14004, y: 14048}
   vertical: 1
-  controlID: 12
+  controlID: 16
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -138,7 +138,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 498}
   m_MaxSize: {x: 14004, y: 14048}
   vertical: 0
-  controlID: 13
+  controlID: 17
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 498}
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 14
+  controlID: 18
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -188,7 +188,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 15
+  controlID: 19
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -208,8 +208,8 @@ MonoBehaviour:
     y: 0
     width: 409
     height: 613
-  m_MinSize: {x: 202, y: 224}
-  m_MaxSize: {x: 4002, y: 4024}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -234,8 +234,8 @@ MonoBehaviour:
     y: 0
     width: 953
     height: 613
-  m_MinSize: {x: 204, y: 224}
-  m_MaxSize: {x: 4004, y: 4024}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 14}
@@ -433,23 +433,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: bcd8ffffb8daffff84dcffff0af4ffff54f8ffff28f9ffff6efaffff84faffffd4fbffff2a4500005045000056450000e4620000
+      m_SelectedIDs: 4e520000
+      m_LastClickedID: 21070
+      m_ExpandedIDs: 4e520000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: SceneManager
-        m_OriginalName: SceneManager
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -11178
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 9}
       m_SearchString: 
@@ -490,9 +490,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 6.4546947, y: -1.6810391, z: 2.762001}
+    m_Target: {x: 394.01242, y: 263.70493, z: -16.257}
     speed: 2
-    m_Value: {x: 6.4546947, y: -1.6810391, z: 2.762001}
+    m_Value: {x: 394.01242, y: 263.70493, z: -16.257}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -520,13 +520,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.18402472, y: 0.5713903, z: -0.1333347, w: 0.78858733}
+    m_Target: {x: 0.22857386, y: -0.6241719, z: 0.19805458, w: 0.72037345}
     speed: 2
-    m_Value: {x: 0.18402472, y: 0.5713903, z: -0.1333347, w: 0.78858733}
+    m_Value: {x: 0.22857386, y: -0.6241719, z: 0.19805458, w: 0.72037345}
   m_Size:
-    m_Target: 31.261993
+    m_Target: 2.5974295
     speed: 2
-    m_Value: 31.261993
+    m_Value: 2.5974295
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -657,34 +657,34 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Scene00
+    - Assets/ScenePrefabs
   m_ViewMode: 1
   m_StartGridSize: 57
   m_LastFolders:
-  - Assets/Scripts/Scene00
+  - Assets/ScenePrefabs
   m_LastFoldersGridSize: 57
   m_LastProjectPath: C:\School\4_class\SYP\Projects\HackTrap\Github\HackTrap\Unity
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: a2270000
-    m_LastClickedID: 10146
-    m_ExpandedIDs: 000000008c270000ee31000080320000b2320000f23200005a330000623300000c3400009a3d00005e4400006044000000ca9a3b
+    scrollPos: {x: 0, y: 163}
+    m_SelectedIDs: 8c320000
+    m_LastClickedID: 12940
+    m_ExpandedIDs: 0000000092270000f431000086320000ba320000fc320000643300006c33000016340000a43d0000244700002647000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: ScenePrefabs
-      m_OriginalName: ScenePrefabs
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 18408
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 11}
     m_SearchString: 
@@ -698,7 +698,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000008c270000ee31000080320000b2320000f23200005a3300000c340000403d00006c3d00009a3d00005e44000060440000
+    m_ExpandedIDs: 0000000092270000f431000086320000ba320000fc320000643300006c33000016340000a43d00002447000026470000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
