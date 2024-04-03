@@ -32,7 +32,7 @@ public class VirusSpawner: MonoBehaviour
         // Generate random position within the spawn area
         Vector3 randomPosition = new Vector3(
             Random.Range(transform.position.x - spawnAreaSize.x / 2, transform.position.x + spawnAreaSize.x / 2),
-            -1.7f,
+            -1.22f,
             Random.Range(transform.position.z - spawnAreaSize.z / 2, transform.position.z + spawnAreaSize.z / 2)
         );
 

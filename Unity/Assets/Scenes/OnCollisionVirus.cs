@@ -7,8 +7,6 @@ public class OnCollisionVirus : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         Debug.Log("Collision Virus");
-        this.gameObject.SetActive(false);
-        CollisionManager collision = new CollisionManager();
-        collision.CollectVirus();
+        CollisionManager.Instance.CollectVirus(this.gameObject);
     }
 }

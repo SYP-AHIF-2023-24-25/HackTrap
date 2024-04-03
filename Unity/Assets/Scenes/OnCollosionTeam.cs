@@ -7,10 +7,6 @@ public class OnCollosionTeam : MonoBehaviour
     private int virusCounter = 0;
     void OnTriggerEnter(Collider other)
     {
-         virusCounter = 0;
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        PlayerPrefs.SetInt("virusCubeCounter", virusCounter);
+        CollisionManager.Instance.ResetVirusCounter();
     }
 }
