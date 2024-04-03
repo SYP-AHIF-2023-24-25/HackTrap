@@ -12,7 +12,7 @@ public class WelcomeAnimation : MonoBehaviour
 
     string welcomeText = "Welcome to Deepspace! \n The game starts as soon as all players are on the floor. \n We hope you like it! Your HackTrap Team: Christian, Amina, Julian & Julia :) ";
 
-    private async void Awake()
+    private void Awake()
     {
         messageText = transform.Find("Message").Find("MessageText").GetComponent<Text>();
         Debug.Log(messageText);
