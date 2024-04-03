@@ -90,6 +90,20 @@ Here you can see the progress of our Userstories: [HackTrap Userstory Backlog](h
 - [x] Main-Game with UserTracking
 - [x] Scenes-transformation with UserTracking
 
+### 5. Sprint - Adjustments, Improvements
+- [x] Scene-StateManager (All Scenes into one)
+- [x] Make the SinglePlayer UserTracking clean
+- [x] Scene Transitions
+- [x] Welcome-Scene (New & Better Verison)
+- [x] Finish iPad-Scene (Adjustments on Wall + Floor)
+- [x] Improvements on Scene Designs
+- [x] Performance Improvement on two Hacking-Scenes
+- [x] Music & Sound Adjustments/Improvements
+- [x] Volume Adjustments
+- [x] Main-Game
+- [x] Unity Overall Template Redesign
+- [x] Success & Failure Animation
+
 
 ## Our Team
 Christian Ekhator, Julian Kapl, Julia Meyr & Amina Gabeljic
