@@ -5,52 +5,52 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Scene00.unity
     guid: 951cf08be44ebe041b74e5fdcfbbf706
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Scene01.unity
     guid: b84b4f54d2a627a4a87feb90e8ae0681
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Scene02.unity
     guid: 8f3f48b1b6b493e4ab11b152c9511bdd
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Scene03.unity
     guid: 54f904543393cfc49bd7ebc5c01c5114
-  - enabled: 1
-    path: Assets/Scenes/Scene04.unity
-    guid: b949ebc675db87f4d9f02e4de29d026e
   - enabled: 0
-    path: Assets/__DELETED_GUID_Trash/7e065b6068b626e43866c8b0789eee8f
-    guid: 7e065b6068b626e43866c8b0789eee8f
-  - enabled: 1
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
     path: Assets/Scenes/Scene06.unity
     guid: c39ffeb4e6a6a3344bf1891086e678da
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Scene07.unity
     guid: 6bf535b4ee5c65b46be5a060ac2b91bc
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Scene08.unity
     guid: a003fbe2523e1d24b82ef459b74b0d5c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Scene09.unity
     guid: d22e89d576413fd4fa1e07578a63eeed
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Scene11.unity
     guid: 8ccb35891593f82439a4f826eee76961
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Scene10.unity
     guid: 8879bf45cc33d2c43be56b37db5f0fdf
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Scene12.unity
     guid: dec0e787ced5a0c438ecb6ceffe7e961
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Success.unity
     guid: e39e7ca35e90e87469b57aea59f24186
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Failure.unity
     guid: 18dd6f0fab7b13e449831719a6f03282
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/End.unity
     guid: ad03f7695c6dddd47af15d92c2a0e888
   - enabled: 0
@@ -80,7 +80,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/DeepSpace/Demo/Scenes/PharusTracklinkScene.unity
     guid: 88481ed6e22ab6c43be02b614b302fee
-  - enabled: 1
-    path: Assets/Scenes/Scene05.unity
-    guid: ca092fccc284da24e90ba498746117d3
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}

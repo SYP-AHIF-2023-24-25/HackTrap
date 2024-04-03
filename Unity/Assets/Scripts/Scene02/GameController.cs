@@ -84,7 +84,7 @@ public class GameController : MonoBehaviour
         }
 
         //TODO: switch scene
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        StateManager.Instance.SwitchToNextScenePrefab();
     }
 
     private bool IsRowFilledWithOnePlayer(int row, string playerSymbol)
