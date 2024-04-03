@@ -57,6 +57,13 @@ Here you can see the progress of our Userstories: [HackTrap Userstory Backlog](h
 - [x] The User should in the iPad-Scene only be able to start the TicTacToe game (not the memory & rock-paper-scissors games).
 - [x] The User should be able to enjoy a nice background music with adjusted volume.
 - [x] The User should be able to enjoy music & sounds during the game which fit even from scene to scene together, and whose volume is adjusted for a pleasant game-experience.
+- [x] The User should be able to enjoy a cleaner SinglePlayer UserTracking.
+- [x] The User should be able to enjoy a new Scene Transition.
+- [x] The User should be able to enjoy a new and better Welcome Scene at the beginning of the HackTrap-Game.
+- [x] The User should enjoy a better and more uniform Scene Design over the whole game.
+- [x] The User should be able to enjoy a Success Animation.
+- [x] The User should be able to enjoy a Failure Animation.
+- [x] The User should be able to enjoy the Main-Game of HackTrap. 
 
 
 # Sprints
