@@ -1866,8 +1866,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00bab3e222d7ed3479c691ef9ac086e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  applicationType: 1
-  invertStereo: 1
+  applicationType: 0
+  invertStereo: 0
   udpAddress: 127.0.0.1
   udpReceivingPort: 5560
   udpSendingPort: 5561
@@ -2675,6 +2675,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4861563478406223800}
     m_Modifications:
+    - target: {fileID: 8390915197550359406, guid: e9ec609d519b1e24eafd430b475b90ea,
+        type: 3}
+      propertyPath: _debugStereoMgr
+      value: 
+      objectReference: {fileID: 4861563478799620921}
     - target: {fileID: 6510235590738851686, guid: e9ec609d519b1e24eafd430b475b90ea,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2730,11 +2735,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8390915197550359406, guid: e9ec609d519b1e24eafd430b475b90ea,
-        type: 3}
-      propertyPath: _debugStereoMgr
-      value: 
-      objectReference: {fileID: 4861563478799620921}
     - target: {fileID: 3142849214832418886, guid: e9ec609d519b1e24eafd430b475b90ea,
         type: 3}
       propertyPath: m_Name
@@ -2791,11 +2791,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4861563476986165985}
     m_Modifications:
-    - target: {fileID: 4200861175942995012, guid: 056923e03c540b94fba2cb08973becad,
-        type: 3}
-      propertyPath: m_Name
-      value: BackgroundMusic
-      objectReference: {fileID: 0}
     - target: {fileID: 4200861175942995014, guid: 056923e03c540b94fba2cb08973becad,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2850,6 +2845,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4200861175942995012, guid: 056923e03c540b94fba2cb08973becad,
+        type: 3}
+      propertyPath: m_Name
+      value: BackgroundMusic
       objectReference: {fileID: 0}
     - target: {fileID: 3360362991688951435, guid: 056923e03c540b94fba2cb08973becad,
         type: 3}

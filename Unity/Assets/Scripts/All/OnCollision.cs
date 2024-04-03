@@ -11,6 +11,7 @@ public class OnCollision : MonoBehaviour
     {
         Debug.Log("Collision");
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-
+        ButtonHandler buttonHandler = new ButtonHandler();
+        buttonHandler.switchToNextScene();
     }
 }
