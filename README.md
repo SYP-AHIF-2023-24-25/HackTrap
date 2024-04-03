@@ -51,6 +51,13 @@ Here you can see the progress of our Userstories: [HackTrap Userstory Backlog](h
 - [x] The User should be able to see a game-evaluation with the main-game-results of each team, after all the viruses are collected.
 - [x] The User is able to play TicTacToe (SinglePlayerMode).
 
+### Sprint 5
+- [x] The User should be able to enjoy the Hacking-Attack-Scene and the "You've been hacked!"-Scene in a better performance-quality than before.
+- [x] The User should be able to see a skull on the wall & floor and hear a sound after clicking onto the memory or rock-paper-scissors card.
+- [x] The User should in the iPad-Scene only be able to start the TicTacToe game (not the memory & rock-paper-scissors games).
+- [x] The User should be able to enjoy a nice background music with adjusted volume.
+- [x] The User should be able to enjoy music & sounds during the game which fit even from scene to scene together, and whose volume is adjusted for a pleasant game-experience.
+
 
 # Sprints
 ### 1. Sprint - Project Initialisation
@@ -89,6 +96,20 @@ Here you can see the progress of our Userstories: [HackTrap Userstory Backlog](h
 - [x] Advertisment (Ars Electronica x HTL Leonding)
 - [x] Main-Game with UserTracking
 - [x] Scenes-transformation with UserTracking
+
+### 5. Sprint - Adjustments, Improvements
+- [x] Scene-StateManager (All Scenes into one)
+- [x] Make the SinglePlayer UserTracking clean
+- [x] Scene Transitions
+- [x] Welcome-Scene (New & Better Verison)
+- [x] Finish iPad-Scene (Adjustments on Wall + Floor)
+- [x] Improvements on Scene Designs
+- [x] Performance Improvement on two Hacking-Scenes
+- [x] Music & Sound Adjustments/Improvements
+- [x] Volume Adjustments
+- [x] Main-Game
+- [x] Unity Overall Template Redesign
+- [x] Success & Failure Animation
 
 
 ## Our Team
