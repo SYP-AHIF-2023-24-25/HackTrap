@@ -12,7 +12,5 @@ public class OnCollision : MonoBehaviour
         Debug.Log("Collision");
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
-        // Do something if tracker collides with this object
-
     }
 }
