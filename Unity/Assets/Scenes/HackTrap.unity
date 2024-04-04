@@ -751,6 +751,7 @@ MonoBehaviour:
   - {fileID: 713628098}
   - {fileID: 1383777172}
   sceneSwitchDelay: 3
+  initialScene: 10
 --- !u!4 &355096422
 Transform:
   m_ObjectHideFlags: 0
@@ -851,6 +852,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SwitchScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051260244675085075, guid: e365ef2aef326594b897799cea22b07c,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2903130400087802170, guid: e365ef2aef326594b897799cea22b07c,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e365ef2aef326594b897799cea22b07c, type: 3}
@@ -1228,6 +1239,11 @@ PrefabInstance:
     - target: {fileID: 8455878019749677277, guid: ac518cec7ed73a140bb4793745b8d74e,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4382730012255015152, guid: ac518cec7ed73a140bb4793745b8d74e,
+        type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -2413,8 +2429,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00bab3e222d7ed3479c691ef9ac086e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  applicationType: 1
-  invertStereo: 0
+  applicationType: 0
+  invertStereo: 1
   udpAddress: 127.0.0.1
   udpReceivingPort: 5560
   udpSendingPort: 5561
@@ -2880,6 +2896,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6686379421430187905, guid: b56c735ead443ca4887f1f786b43cf35,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b56c735ead443ca4887f1f786b43cf35, type: 3}
 --- !u!1 &1536288991
@@ -3218,6 +3239,11 @@ PrefabInstance:
     - target: {fileID: 167805437543497508, guid: c7f7b76748628064cadaef8b65c3113e,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 167805438156145199, guid: c7f7b76748628064cadaef8b65c3113e,
+        type: 3}
+      propertyPath: applicationType
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

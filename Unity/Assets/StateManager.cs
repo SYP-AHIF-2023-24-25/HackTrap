@@ -9,6 +9,8 @@ public class StateManager: MonoBehaviour
     [SerializeField] private GameObject[] scenePrefabs; // Array of scene prefabs
     [SerializeField] private float sceneSwitchDelay = 3f; // Default delay before switching scenes
 
+    [SerializeField] private int initialScene = 0;
+
 
     private GameObject currentScenePrefab;
     private int currentSceneIndex = 0; // first scene is active
@@ -36,8 +38,9 @@ public class StateManager: MonoBehaviour
         }
 
         //Enable first scene prefab only
-        scenePrefabs[currentSceneIndex].SetActive(true);
-        currentScenePrefab = scenePrefabs[0];
+        scenePrefabs[initialScene].SetActive(true);
+        currentScenePrefab = scenePrefabs[initialScene];
+        currentSceneIndex = initialScene;
     }
 
     // Switch to a new scene prefab after a delay

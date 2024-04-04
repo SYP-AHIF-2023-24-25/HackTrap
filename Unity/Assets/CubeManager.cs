@@ -85,6 +85,6 @@ public class CubeManager : MonoBehaviour
     {
         yield return new WaitForSeconds(0.2f);
         Destroy(gameObject);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        StateManager.Instance.SwitchToNextScenePrefab();
     }
 }

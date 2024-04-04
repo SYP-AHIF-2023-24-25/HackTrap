@@ -1043,7 +1043,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00bab3e222d7ed3479c691ef9ac086e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  applicationType: 1
+  applicationType: 0
   invertStereo: 0
   udpAddress: 127.0.0.1
   udpReceivingPort: 5560
@@ -3232,16 +3232,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3360362991688951435, guid: 056923e03c540b94fba2cb08973becad,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3360362991688951435, guid: 056923e03c540b94fba2cb08973becad,
-        type: 3}
-      propertyPath: music7
-      value: 
-      objectReference: {fileID: 8300000, guid: 8437ef3406baadc42bdc75fe1d5f3f99, type: 3}
     - target: {fileID: 4200861175942995015, guid: 056923e03c540b94fba2cb08973becad,
         type: 3}
       propertyPath: Loop
@@ -3252,6 +3242,16 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 0.7
       objectReference: {fileID: 0}
+    - target: {fileID: 3360362991688951435, guid: 056923e03c540b94fba2cb08973becad,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360362991688951435, guid: 056923e03c540b94fba2cb08973becad,
+        type: 3}
+      propertyPath: music7
+      value: 
+      objectReference: {fileID: 8300000, guid: 8437ef3406baadc42bdc75fe1d5f3f99, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 056923e03c540b94fba2cb08973becad, type: 3}
 --- !u!4 &4042084926643625693 stripped

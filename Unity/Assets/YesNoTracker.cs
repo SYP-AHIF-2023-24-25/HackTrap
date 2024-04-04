@@ -15,7 +15,7 @@ public class YesNoTracker : MonoBehaviour
             noBtn.PlayAnimation();
         }else
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            StateManager.Instance.SwitchToNextScenePrefab();
         }
 
     }
