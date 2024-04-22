@@ -18,7 +18,8 @@ public class PopupOne : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SceneManager.activeSceneChanged += ChangedActiveScene;
+        //SceneManager.activeSceneChanged += ChangedActiveScene;
+
 
         UnityEngine.Debug.Log("Runtime debug: Start");
 
@@ -27,6 +28,7 @@ public class PopupOne : MonoBehaviour
         canvas.enabled = false;
 
         Invoke("showCanvas", time);
+
     }
 
     private void ChangedActiveScene(Scene current, Scene next)
@@ -40,6 +42,7 @@ public class PopupOne : MonoBehaviour
 
         canvas.enabled = true;
         GetComponent<Canvas>().GetComponent<RectTransform>().anchoredPosition = new Vector2(positionX, positionY);
+        //StateManager.Instance.SwitchToNextScenePrefab();
     }
 
     // Update is called once per frame
@@ -51,6 +54,7 @@ public class PopupOne : MonoBehaviour
 
         if(sceneRuntime > 10.1f ) {
             canvas.enabled = false;
+            StateManager.Instance.SwitchToNextScenePrefab();
         }
     }
 }

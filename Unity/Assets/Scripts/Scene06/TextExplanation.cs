@@ -91,7 +91,7 @@ public class TextWriterSingleExplanation
             {
                 //der ganze Text wurde angezeigt
                 uiText.text = "";
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                StateManager.Instance.SwitchToNextScenePrefab();
                 return true;
             }
         }

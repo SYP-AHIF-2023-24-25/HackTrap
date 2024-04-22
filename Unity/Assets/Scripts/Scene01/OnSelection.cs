@@ -60,7 +60,7 @@ public class OnSelection : MonoBehaviour
 
             if (clickPosition.x > 130 && clickPosition.x < 290)
             {
-                SceneManager.LoadScene(sceneIndex);
+                StateManager.Instance.SwitchToNextScenePrefab();
             }
             else if (clickPosition.x > 307 && clickPosition.x < 465)
             {

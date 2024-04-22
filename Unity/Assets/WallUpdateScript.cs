@@ -53,11 +53,11 @@ public class WallUpdateScript : MonoBehaviour
     void executeTimeout()
     {
         if (timeoutCounter >= timeout)
-            SceneManager.LoadScene(14);
+            StateManager.Instance.SwitchToNextScenePrefab();
         else
         {
             timer.GetComponent<Text>().text = (timeout - timeoutCounter) < 10 ? " " + (timeout - timeoutCounter) : (timeout - timeoutCounter) + "";
-            if(timeout - timeoutCounter < 11)
+            if (timeout - timeoutCounter < 11)
             {
                 timer.GetComponent<Text>().color = Color.red;
                 timeoutSound.Play();
