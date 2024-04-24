@@ -1,89 +1,50 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.EventSystems;
-
-using UnityEngine;
-using UnityEngine.UI;
-
-using UnityEngine.SceneManagement;
 
 public class OnSelection : MonoBehaviour
 {
-
-    public int sceneIndex;
-    public GameObject tictactoe;
-    public GameObject memory;
-    public GameObject paperScissorsStone;
-
-    public GameObject floorTictactoe;
-    public GameObject floorMemory;
-    public GameObject floorPaperScissorsStone;
-
-    public Texture2D disabledSprite;
-
     // Animation duration
     public float animationDuration = 0.5f;
 
     // Reference to the RawImage components
-    private RawImage memoryRawImage;
-    private RawImage paperScissorsStoneRawImage;
-    private RawImage floorMemoryRawImage;
-    private RawImage floorPaperScissorsStoneRawImage;
+    [SerializeField] private RawImage wallMemoryImage;
+    [SerializeField] private RawImage wallRPSImage;
+    [SerializeField] private RawImage floorMemoryImage;
+    [SerializeField] private RawImage floorRPSImage;
+    [SerializeField] private Texture2D disabledSprite;
 
     // Flag to prevent animation overlap
     private bool isAnimating = false;
 
     public AudioSource audioSource;
 
-    void Start()
-    {
-        // Get references to RawImage components
-        memoryRawImage = memory.GetComponent<RawImage>();
-        paperScissorsStoneRawImage = paperScissorsStone.GetComponent<RawImage>();
-        floorMemoryRawImage = floorMemory.GetComponent<RawImage>();
-        floorPaperScissorsStoneRawImage = floorPaperScissorsStone.GetComponent<RawImage>();
 
-    }
-
-    void Update()
+    public void StartAnimation(string field)
     {
-        if (Input.GetMouseButtonDown(0) && !isAnimating)
+        if (field == "TicTacToe" && !isAnimating)
         {
-            
-            // Cast a ray from the camera to the position of the mouse pointer
-            Vector3 clickPosition = Input.mousePosition;
-            UnityEngine.Debug.Log(clickPosition.x);
-
-            if (clickPosition.x > 130 && clickPosition.x < 290)
-            {
-                StateManager.Instance.SwitchToNextScenePrefab();
-            }
-            else if (clickPosition.x > 307 && clickPosition.x < 465)
-            {
-                // Start fade animation
-                StartCoroutine(FadeAnimation(paperScissorsStoneRawImage));
-                StartCoroutine(FadeAnimation(floorPaperScissorsStoneRawImage));
-            }
-            else if (clickPosition.x > 481 && clickPosition.x < 645)
-            {
-                // Start fade animation
-                StartCoroutine(FadeAnimation(memoryRawImage));
-                StartCoroutine(FadeAnimation(floorMemoryRawImage));
-            }
+            StateManager.Instance.SwitchToNextScenePrefab();
+        }
+        else if(field == "RockPaperScissors" && !isAnimating)
+        {
+            // Start fade animation
+            StartCoroutine(FadeAnimation(wallRPSImage));
+            StartCoroutine(FadeAnimation(floorRPSImage));
+        }
+        else if (field == "Memory" && !isAnimating)
+        {
+            // Start fade animation
+            StartCoroutine(FadeAnimation(wallMemoryImage));
+            StartCoroutine(FadeAnimation(floorMemoryImage));
         }
     }
+
 
     IEnumerator FadeAnimation(RawImage rawImage)
     {
         audioSource.Play();
         isAnimating = true;
-
-        // Store initial aspect ratio
-        float initialAspectRatio = (float)rawImage.texture.width / rawImage.texture.height;
 
         // Fade out
         float elapsedTime = 0f;
@@ -101,9 +62,6 @@ public class OnSelection : MonoBehaviour
         // Set texture and reset color
         rawImage.texture = disabledSprite;
         rawImage.color = startColor;
-
-        // Adjust aspect ratio
-        //rawImage.rectTransform.sizeDelta = new Vector2(1500, 1500);
 
         isAnimating = false;
     }
