@@ -300,8 +300,8 @@ MonoBehaviour:
   _udpReceiver: {fileID: 889209808}
   _jsonConfigFileName: DeepSpaceConfig\tracklinkConfig.json
   _tracklinkSettings:
-    screenWidthPixel: 1920
-    screenHeightPixel: 1080
+    screenWidthPixel: 38
+    screenHeightPixel: 21
     stageWidth: 1600
     stageHeight: 900
     udpAddress: 239.1.1.1
@@ -388,6 +388,7 @@ MonoBehaviour:
     stageWidth: 1600
     stageHeight: 900
     udpPort: 3333
+  context: {fileID: 0}
 --- !u!1 &1184412381
 GameObject:
   m_ObjectHideFlags: 0

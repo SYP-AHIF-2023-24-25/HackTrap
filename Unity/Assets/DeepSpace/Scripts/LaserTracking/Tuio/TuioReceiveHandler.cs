@@ -18,8 +18,6 @@ namespace DeepSpace.LaserTracking
 
 		private bool _isRegisteredForTuioEvents = false;
 
-		public Context context;
-
 		public override TrackingSettings TrackingSettings
 		{
 			get { return _tuioSettings; }
@@ -207,12 +205,7 @@ namespace DeepSpace.LaserTracking
 
 			SaveTrackToDict(track, createIfNotYetExisting: true);
 
-			Debug.Log("Track received");
-			if(context != null)
-				context.receiveEvents(track);
-
-
-            _updatedTrackIds.Add(track.trackID);
+			_updatedTrackIds.Add(track.trackID);
 		}
 
 		public float remapNow(float from, float fromMin, float fromMax, float toMin, float toMax)

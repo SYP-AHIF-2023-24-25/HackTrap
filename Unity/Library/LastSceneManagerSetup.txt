@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/NewHackTrap.unity
+- path: Assets/DeepSpace/Demo/Scenes/PharusTracklinkScene.unity
   isLoaded: 1
   isActive: 1
