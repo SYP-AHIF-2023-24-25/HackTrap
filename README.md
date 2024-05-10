@@ -63,7 +63,9 @@ Here you can see the progress of our Userstories: [HackTrap Userstory Backlog](h
 - [x] The User should enjoy a better and more uniform Scene Design over the whole game.
 - [x] The User should be able to enjoy a Success Animation.
 - [x] The User should be able to enjoy a Failure Animation.
-- [x] The User should be able to enjoy the Main-Game of HackTrap. 
+- [x] The User should be able to enjoy the Main-Game of HackTrap.
+
+### Sprint 6
 
 
 # Sprints
