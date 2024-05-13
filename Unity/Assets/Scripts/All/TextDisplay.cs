@@ -78,12 +78,25 @@ public class TextDisplay : MonoBehaviour
 
                             if (isSwitch)
                             {
-                                StateManager.Instance.SwitchToNextScenePrefab();
+                                LoadScene();
                             }
                         }
                     }
                 }
             }
         }
+    }
+
+
+    public void LoadScene()
+    {
+        //animator.SetTrigger("End");
+        StateManager.Instance.SwitchSceneWithTransitionAfterDelay(1, 2f, StartNextSceneAnimation);
+    }
+
+    public void StartNextSceneAnimation()
+    {
+        // Start the "Start" animation after the scene switch
+        //animator.SetTrigger("Start");
     }
 }

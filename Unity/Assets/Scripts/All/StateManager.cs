@@ -10,6 +10,7 @@ public class StateManager : MonoBehaviour
     [SerializeField] private float sceneSwitchDelay = 3f; // Default delay before switching scenes
 
     [SerializeField] private int initialScene = 0;
+    //[SerializeField] private Animator animator;
 
 
     private GameObject currentScenePrefab;
@@ -49,6 +50,25 @@ public class StateManager : MonoBehaviour
         StartCoroutine(SwitchSceneCoroutine(sceneIndex, delay));
     }
 
+    public void SwitchSceneWithTransitionAfterDelay(int sceneIndex, float delay = -1, System.Action onSceneSwitched = null)
+    {
+        StartCoroutine(SwitchSceneCoroutine2(sceneIndex, delay, onSceneSwitched));
+    }
+
+    // Coroutine for switching scene after a delay
+    private IEnumerator SwitchSceneCoroutine2(int sceneIndex, float delay, System.Action onSceneSwitched)
+    {
+        if (delay < 0)
+            delay = sceneSwitchDelay;
+
+        yield return new WaitForSeconds(delay);
+
+        SwitchToScenePrefab(sceneIndex);
+
+        // Call the callback function if provided
+        onSceneSwitched?.Invoke();
+    }
+
     // Coroutine for switching scene after a delay
     private IEnumerator SwitchSceneCoroutine(int sceneIndex, float delay)
     {
@@ -81,4 +101,5 @@ public class StateManager : MonoBehaviour
         Debug.Log("YourMethod is being called!");
         Debug.Log(System.Environment.StackTrace);
     }
+
 }
