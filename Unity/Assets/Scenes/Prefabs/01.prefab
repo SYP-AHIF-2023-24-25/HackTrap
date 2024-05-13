@@ -599,7 +599,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1009879748059557560}
-  - component: {fileID: 526919984575185937}
+  - component: {fileID: 974213900490433701}
   m_Layer: 0
   m_Name: Tracking
   m_TagString: Untagged
@@ -624,7 +624,7 @@ Transform:
   m_Father: {fileID: 156891116342298749}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &526919984575185937
+--- !u!114 &974213900490433701
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -633,7 +633,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3862199461032728044}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3389c187e0916f8489a5af2215a74449, type: 3}
+  m_Script: {fileID: 11500000, guid: 3c95d824de2d32a4a921db0991dc0532, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animationDuration: 0.5
@@ -655,7 +655,7 @@ GameObject:
   - component: {fileID: 3944625374448045416}
   - component: {fileID: 7787258855062143962}
   - component: {fileID: 4898172133638456320}
-  - component: {fileID: 2158174727340229005}
+  - component: {fileID: 3015693630866807012}
   m_Layer: 0
   m_Name: Memory
   m_TagString: Untagged
@@ -752,7 +752,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2158174727340229005
+--- !u!114 &3015693630866807012
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -761,11 +761,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4533613248456213635}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a2cbea82b5b8e64291ef0e4d260759a, type: 3}
+  m_Script: {fileID: 11500000, guid: 4728c91d0ec976c4c9bc4bd70df6b69e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   parameter: Memory
-  scriptReference: {fileID: 526919984575185937}
+  scriptReference: {fileID: 974213900490433701}
 --- !u!1 &4601123616579955567
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,7 +778,7 @@ GameObject:
   - component: {fileID: 783313577288499819}
   - component: {fileID: 1275753969294498755}
   - component: {fileID: 3290021220441934298}
-  - component: {fileID: 7942935496520631192}
+  - component: {fileID: 8740380666081387132}
   m_Layer: 0
   m_Name: RockPaperScissors
   m_TagString: Untagged
@@ -875,7 +875,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7942935496520631192
+--- !u!114 &8740380666081387132
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -884,11 +884,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4601123616579955567}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a2cbea82b5b8e64291ef0e4d260759a, type: 3}
+  m_Script: {fileID: 11500000, guid: 4728c91d0ec976c4c9bc4bd70df6b69e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   parameter: RockPaperScissors
-  scriptReference: {fileID: 526919984575185937}
+  scriptReference: {fileID: 974213900490433701}
 --- !u!1 &4972705598433983557
 GameObject:
   m_ObjectHideFlags: 0
@@ -1045,7 +1045,7 @@ GameObject:
   - component: {fileID: 8287370850890477415}
   - component: {fileID: 1320013277328691954}
   - component: {fileID: 1955229656692535511}
-  - component: {fileID: 6128555895613144676}
+  - component: {fileID: 7352810701045592520}
   m_Layer: 0
   m_Name: TicTacToe
   m_TagString: Untagged
@@ -1142,7 +1142,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6128555895613144676
+--- !u!114 &7352810701045592520
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1151,11 +1151,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7213919741875572328}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a2cbea82b5b8e64291ef0e4d260759a, type: 3}
+  m_Script: {fileID: 11500000, guid: 4728c91d0ec976c4c9bc4bd70df6b69e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   parameter: TicTacToe
-  scriptReference: {fileID: 526919984575185937}
+  scriptReference: {fileID: 974213900490433701}
 --- !u!1 &7459747311945588430
 GameObject:
   m_ObjectHideFlags: 0
