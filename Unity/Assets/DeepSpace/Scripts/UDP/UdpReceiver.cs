@@ -45,7 +45,7 @@ namespace DeepSpace.Udp
 		// This should be called from outside. Without calling this, the receiver will not receive anything.
 		public void ActivateReceiver()
 		{
-			EndPoint ipEndPoint = new IPEndPoint(IPAddress.Any, Port);
+			EndPoint ipEndPoint = new IPEndPoint(IPAddress.Any, 3333);
 			_socket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
 			_socket.Blocking = false;
 
