@@ -1865,7 +1865,7 @@ MonoBehaviour:
   - {fileID: 3282571944139932443}
   - {fileID: 7902452632372016947}
   sceneSwitchDelay: 100
-  initialScene: 0
+  initialScene: 6
 --- !u!4 &1167879953
 Transform:
   m_ObjectHideFlags: 0
@@ -1937,7 +1937,7 @@ PrefabInstance:
     - target: {fileID: 408911173628469758, guid: 82efd181276184c42b1f062048dbd11c,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4784446378829517336, guid: 82efd181276184c42b1f062048dbd11c,
         type: 3}
