@@ -1,8 +1,12 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class TextDisplay : MonoBehaviour
 {
+    [SerializeField]
+    public Animator animator;
+
     [SerializeField]
     private Text textUI;
 
@@ -78,7 +82,8 @@ public class TextDisplay : MonoBehaviour
 
                             if (isSwitch)
                             {
-                                LoadScene();
+                                animator.SetTrigger("End");
+                                StartCoroutine(SwitchSceneAfterAnimation());
                             }
                         }
                     }
@@ -87,16 +92,17 @@ public class TextDisplay : MonoBehaviour
         }
     }
 
-
-    public void LoadScene()
+    private IEnumerator SwitchSceneAfterAnimation()
     {
-        //animator.SetTrigger("End");
-        StateManager.Instance.SwitchSceneWithTransitionAfterDelay(1, 2f, StartNextSceneAnimation);
-    }
+        // Wait for the end animation to complete
+        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        while (stateInfo.normalizedTime < 1.0f)
+        {
+            yield return null;
+            stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        }
 
-    public void StartNextSceneAnimation()
-    {
-        // Start the "Start" animation after the scene switch
-        //animator.SetTrigger("Start");
+        // Optionally switch the scene after the animation completes
+        StateManager.Instance.SwitchSceneAfterDelay(1, 2f);
     }
 }
