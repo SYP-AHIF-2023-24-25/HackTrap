@@ -83,7 +83,7 @@ public class TextDisplay : MonoBehaviour
                             if (isSwitch)
                             {
                                 animator.SetTrigger("End");
-                                StartCoroutine(SwitchSceneAfterAnimation());
+                                StartCoroutine(StateManager.Instance.SwitchSceneAfterAnimation(animator));
                             }
                         }
                     }
@@ -92,17 +92,5 @@ public class TextDisplay : MonoBehaviour
         }
     }
 
-    private IEnumerator SwitchSceneAfterAnimation()
-    {
-        // Wait for the end animation to complete
-        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
-        while (stateInfo.normalizedTime < 1.0f)
-        {
-            yield return null;
-            stateInfo = animator.GetCurrentAnimatorStateInfo(0);
-        }
-
-        // Optionally switch the scene after the animation completes
-        StateManager.Instance.SwitchSceneAfterDelay(1, 2f);
-    }
+    
 }

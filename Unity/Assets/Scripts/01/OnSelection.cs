@@ -4,6 +4,9 @@ using UnityEngine.UI;
 
 public class OnSelection : MonoBehaviour
 {
+    [SerializeField]
+    public Animator animator;
+
     // Animation duration
     public float animationDuration = 0.5f;
 
@@ -24,7 +27,8 @@ public class OnSelection : MonoBehaviour
     {
         if (field == "TicTacToe" && !isAnimating)
         {
-            StateManager.Instance.SwitchToNextScenePrefab();
+            animator.SetTrigger("End");
+            StateManager.Instance.SwitchSceneAfterAnimation(animator);
         }
         else if (field == "RockPaperScissors" && !isAnimating)
         {

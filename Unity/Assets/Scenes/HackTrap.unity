@@ -547,11 +547,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 974213900490433701, guid: eb66562be9b147845995ad45e55bdffc,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 198071027}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb66562be9b147845995ad45e55bdffc, type: 3}
 --- !u!1 &173069690 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8928302882784214111, guid: eb66562be9b147845995ad45e55bdffc,
+    type: 3}
+  m_PrefabInstance: {fileID: 173069689}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &198071027 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2495494687788086754, guid: eb66562be9b147845995ad45e55bdffc,
     type: 3}
   m_PrefabInstance: {fileID: 173069689}
   m_PrefabAsset: {fileID: 0}
@@ -1870,7 +1881,7 @@ MonoBehaviour:
   - {fileID: 3282571944139932443}
   - {fileID: 7902452632372016947}
   sceneSwitchDelay: 100
-  initialScene: 0
+  initialScene: 1
 --- !u!4 &1167879953
 Transform:
   m_ObjectHideFlags: 0
@@ -3731,6 +3742,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1182003389}
     m_Modifications:
+    - target: {fileID: 11418816, guid: 237454293243dac4bb5ae4d0c9a2095e, type: 3}
+      propertyPath: _worldCameras.Array.data[0]
+      value: 
+      objectReference: {fileID: 837733151}
+    - target: {fileID: 11418816, guid: 237454293243dac4bb5ae4d0c9a2095e, type: 3}
+      propertyPath: _worldCameras.Array.data[1]
+      value: 
+      objectReference: {fileID: 68484682}
+    - target: {fileID: 11418816, guid: 237454293243dac4bb5ae4d0c9a2095e, type: 3}
+      propertyPath: _worldCameras.Array.data[2]
+      value: 
+      objectReference: {fileID: 1966069752}
+    - target: {fileID: 11418816, guid: 237454293243dac4bb5ae4d0c9a2095e, type: 3}
+      propertyPath: _worldCameras.Array.data[3]
+      value: 
+      objectReference: {fileID: 1271925279}
+    - target: {fileID: 11418816, guid: 237454293243dac4bb5ae4d0c9a2095e, type: 3}
+      propertyPath: _stereoCanvasScaler.Array.data[0]
+      value: 
+      objectReference: {fileID: 1325955697}
+    - target: {fileID: 11418816, guid: 237454293243dac4bb5ae4d0c9a2095e, type: 3}
+      propertyPath: _stereoCanvasScaler.Array.data[1]
+      value: 
+      objectReference: {fileID: 2074755467}
     - target: {fileID: 22447028, guid: 237454293243dac4bb5ae4d0c9a2095e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3803,30 +3838,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11418816, guid: 237454293243dac4bb5ae4d0c9a2095e, type: 3}
-      propertyPath: _worldCameras.Array.data[0]
-      value: 
-      objectReference: {fileID: 837733151}
-    - target: {fileID: 11418816, guid: 237454293243dac4bb5ae4d0c9a2095e, type: 3}
-      propertyPath: _worldCameras.Array.data[1]
-      value: 
-      objectReference: {fileID: 68484682}
-    - target: {fileID: 11418816, guid: 237454293243dac4bb5ae4d0c9a2095e, type: 3}
-      propertyPath: _worldCameras.Array.data[2]
-      value: 
-      objectReference: {fileID: 1966069752}
-    - target: {fileID: 11418816, guid: 237454293243dac4bb5ae4d0c9a2095e, type: 3}
-      propertyPath: _worldCameras.Array.data[3]
-      value: 
-      objectReference: {fileID: 1271925279}
-    - target: {fileID: 11418816, guid: 237454293243dac4bb5ae4d0c9a2095e, type: 3}
-      propertyPath: _stereoCanvasScaler.Array.data[0]
-      value: 
-      objectReference: {fileID: 1325955697}
-    - target: {fileID: 11418816, guid: 237454293243dac4bb5ae4d0c9a2095e, type: 3}
-      propertyPath: _stereoCanvasScaler.Array.data[1]
-      value: 
-      objectReference: {fileID: 2074755467}
     - target: {fileID: 22361346, guid: 237454293243dac4bb5ae4d0c9a2095e, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 1

@@ -83,4 +83,19 @@ public class StateManager : MonoBehaviour
         Debug.Log(System.Environment.StackTrace);
     }
 
+    public IEnumerator SwitchSceneAfterAnimation(Animator animator)
+    {
+        Debug.Log("Switch scene");
+        // Wait for the end animation to complete
+        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        while (stateInfo.normalizedTime < 1.0f)
+        {
+            yield return null;
+            stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        }
+
+        // Optionally switch the scene after the animation completes
+        SwitchSceneAfterDelay(1, 2f);
+    }
+
 }
