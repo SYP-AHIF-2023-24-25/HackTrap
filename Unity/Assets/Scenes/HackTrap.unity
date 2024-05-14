@@ -3851,11 +3851,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1182003389}
     m_Modifications:
-    - target: {fileID: 3142849214832418886, guid: e9ec609d519b1e24eafd430b475b90ea,
+    - target: {fileID: 8390915197550359406, guid: e9ec609d519b1e24eafd430b475b90ea,
         type: 3}
-      propertyPath: m_Name
-      value: NetworkSetup
-      objectReference: {fileID: 0}
+      propertyPath: _debugStereoMgr
+      value: 
+      objectReference: {fileID: 148171633}
     - target: {fileID: 6510235590738851686, guid: e9ec609d519b1e24eafd430b475b90ea,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3911,11 +3911,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8390915197550359406, guid: e9ec609d519b1e24eafd430b475b90ea,
+    - target: {fileID: 3142849214832418886, guid: e9ec609d519b1e24eafd430b475b90ea,
         type: 3}
-      propertyPath: _debugStereoMgr
-      value: 
-      objectReference: {fileID: 148171633}
+      propertyPath: m_Name
+      value: NetworkSetup
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9ec609d519b1e24eafd430b475b90ea, type: 3}
 --- !u!1001 &344013166767807345
