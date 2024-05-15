@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 8160284369223149020}
   - component: {fileID: 2095252288818344376}
   m_Layer: 5
-  m_Name: Mask
+  m_Name: Team1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -391,7 +391,7 @@ GameObject:
   - component: {fileID: 8464047883952508013}
   - component: {fileID: 7027526684403121871}
   m_Layer: 5
-  m_Name: Mask
+  m_Name: Team2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1057,14 +1057,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ab7002aafb00544ebf74aa0cc70639e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Team1: {fileID: 0}
-  Team2: {fileID: 0}
-  Team3: {fileID: 0}
-  Team4: {fileID: 0}
-  loader1: {fileID: 0}
-  loader2: {fileID: 0}
-  loader3: {fileID: 0}
-  loader4: {fileID: 0}
+  Team1: {fileID: 2870463319805371067}
+  Team2: {fileID: 1511283200178824189}
+  Team3: {fileID: 953463969200732901}
+  Team4: {fileID: 8618607450577169709}
+  loader1: {fileID: 2095252288818344376}
+  loader2: {fileID: 7027526684403121871}
+  loader3: {fileID: 973929883197332374}
+  loader4: {fileID: 288217617462212530}
 --- !u!1 &5549022591767051090
 GameObject:
   m_ObjectHideFlags: 0
@@ -1079,7 +1079,7 @@ GameObject:
   - component: {fileID: 331432478759334169}
   - component: {fileID: 973929883197332374}
   m_Layer: 5
-  m_Name: Mask
+  m_Name: Team3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2349,7 +2349,7 @@ GameObject:
   - component: {fileID: 8627516265311114684}
   - component: {fileID: 288217617462212530}
   m_Layer: 5
-  m_Name: Mask
+  m_Name: Team4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

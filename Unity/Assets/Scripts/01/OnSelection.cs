@@ -28,7 +28,7 @@ public class OnSelection : MonoBehaviour
         if (field == "TicTacToe" && !isAnimating)
         {
             animator.SetTrigger("End");
-            StartCoroutine(StateManager.Instance.SwitchSceneAfterAnimation(animator));
+            StateManager.Instance.SwitchSceneAfterAnimation(animator);
         }
         else if (field == "RockPaperScissors" && !isAnimating)
         {

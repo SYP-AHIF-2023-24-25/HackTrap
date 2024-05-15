@@ -11,11 +11,6 @@ public class OnCollisionPlayerCounter : MonoBehaviour
     // Methode, die aufgerufen wird, wenn ein Spieler den Collider betritt
     void OnTriggerEnter(Collider other)
     {
-        //if (other.CompareTag("Player"))
-        //{
-        //    // Spieler wird gezählt
-
-        //}
         playerCount++;
         Debug.Log("Spieler betreten den Bereich. Anzahl: " + playerCount);
         UpdatePlayerCountText();
@@ -23,7 +18,7 @@ public class OnCollisionPlayerCounter : MonoBehaviour
     void UpdatePlayerCountText()
     {
         // Aktualisiere den Text, um die aktuelle Spieleranzahl anzuzeigen
-        playerCountTextField.text = "Spieler im Bereich: " + playerCount;
+        playerCountTextField.text = "PLayers on field: " + playerCount;
     }
 }
 

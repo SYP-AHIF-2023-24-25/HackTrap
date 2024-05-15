@@ -8,18 +8,37 @@ using UnityEngine.UI;
 public class GameSimulator : MonoBehaviour
 {
     private Team[] teams;
-    public Image Team1;
-    public Image Team2;
-    public Image Team3;
-    public Image Team4;
 
-    public Animator loader1;
-    public Animator loader2;
-    public Animator loader3;
-    public Animator loader4;
+    [SerializeField]
+    private Image Team1;
+
+    [SerializeField]
+    private Image Team2;
+
+    [SerializeField]
+    private Image Team3;
+
+    [SerializeField]
+    private Image Team4;
+
+    [SerializeField]
+    private Animator loader1;
+
+    [SerializeField]
+    private Animator loader2;
+
+    [SerializeField]
+    private Animator loader3;
+
+    [SerializeField]
+    private Animator loader4;
 
 
     private bool winner = false;
+    string changeToRightTeam = "";
+    int teamIndex = 0;
+    int virusCounter = 0;
+
 
     // Start is called before the first frame update
     void Start()
@@ -31,38 +50,28 @@ public class GameSimulator : MonoBehaviour
             new Team("PINK"),
             new Team("BLUE")
         };
-        StartCoroutine(ExecuteFunctionAfterRandomTime());
     }
 
-    IEnumerator ExecuteFunctionAfterRandomTime()
+    public void ExecuteFunctionAfterRandomTime()
     {
-        // Generate a random time between 1 and 4 seconds
-
-        for (int i = 0; i < 40 && !winner;  i++)
+        changeToRightTeam = PlayerPrefs.GetString("team");
+        Image[] teams = { Team1, Team2, Team3, Team4 };
+        Animator[] animators = { loader1, loader2, loader3, loader4 };
+        for (int i = 0; i < teams.Length && teamIndex == 0; i++)
         {
-            float randomTime = Random.Range(1f, 4f);
-
-            // Choose a random team between Team1 and Team4
-            Image[] teams = { Team1, Team2, Team3, Team4 };
-            Animator[] animators = { loader1, loader2, loader3, loader4 };
-
-            int index = Random.Range(0, teams.Length);
-            Image randomTeam = teams[index];
-            this.teams[index].IncreaseScore();
-            Animator loader = animators[index];
-
-            // Wait for the random time
-            yield return new WaitForSeconds(randomTime);
-
-            // Execute the function with the chosen team
-            MyFunction(randomTeam, loader);
+            if(changeToRightTeam.Equals(teams[i].name))
+            {
+                teamIndex = i;
+                MyFunction(teams[teamIndex], animators[teamIndex]);
+            }
         }
-
     }
 
     void MyFunction(Image team, Animator loader)
     {
-       
+        //PlayerPrefs.SetInt("virusCounter", virusCounter);
+        //PlayerPrefs.SetString("team", teamName);
+        virusCounter = PlayerPrefs.GetInt("virusCounter");
         Debug.Log($"Executing function on {team.name}");
 
 

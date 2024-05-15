@@ -219,6 +219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11ebc7fd3b9e4a8449aa920dcf251e4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   textUI: {fileID: 7764635591088587542}
   letterDelay: 0.2
   lineDelay: 1
@@ -508,7 +509,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: 'Players on field: 0'
 --- !u!1001 &6167787737259275615
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -605,6 +606,46 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 416.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233903632013550505, guid: 7e02e755c9ec9c14ca15de86901ec246,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233903632013550505, guid: 7e02e755c9ec9c14ca15de86901ec246,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233903632013550505, guid: 7e02e755c9ec9c14ca15de86901ec246,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8233903632013550505, guid: 7e02e755c9ec9c14ca15de86901ec246,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9039982625034819350, guid: 7e02e755c9ec9c14ca15de86901ec246,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9039982625034819350, guid: 7e02e755c9ec9c14ca15de86901ec246,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9039982625034819350, guid: 7e02e755c9ec9c14ca15de86901ec246,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9039982625034819350, guid: 7e02e755c9ec9c14ca15de86901ec246,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7926407822903549962, guid: 7e02e755c9ec9c14ca15de86901ec246,
         type: 3}

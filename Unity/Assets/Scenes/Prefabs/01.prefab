@@ -793,7 +793,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c95d824de2d32a4a921db0991dc0532, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 2495494687788086754}
   animationDuration: 0.5
   wallMemoryImage: {fileID: 3829954031149473729}
   wallRPSImage: {fileID: 2717321982862152053}
