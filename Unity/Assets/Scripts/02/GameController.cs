@@ -88,7 +88,7 @@ public class GameController : MonoBehaviour
 
         //switch scene
         animator.SetTrigger("End");
-        StateManager.Instance.SwitchSceneAfterAnimation(animator);
+        StartCoroutine(StateManager.Instance.SwitchSceneAfterAnimation(animator));
     }
 
     private bool IsRowFilledWithOnePlayer(int row, string playerSymbol)
