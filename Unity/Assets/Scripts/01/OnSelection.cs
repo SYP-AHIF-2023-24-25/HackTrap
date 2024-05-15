@@ -28,7 +28,7 @@ public class OnSelection : MonoBehaviour
         if (field == "TicTacToe" && !isAnimating)
         {
             animator.SetTrigger("End");
-            StateManager.Instance.SwitchSceneAfterAnimation(animator);
+            StateManager.Instance.SwitchToNextScenePrefab();
         }
         else if (field == "RockPaperScissors" && !isAnimating)
         {
