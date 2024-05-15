@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class YesNoTracker : MonoBehaviour
 {
+    
     public ButtonAnimation noBtn;
 
     void OnTriggerEnter(Collider other)
@@ -20,4 +21,5 @@ public class YesNoTracker : MonoBehaviour
         }
 
     }
+    
 }

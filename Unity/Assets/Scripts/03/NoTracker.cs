@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class NoTracker : MonoBehaviour
 {
+    
     public ButtonAnimation noBtn;
 
     void OnTriggerEnter(Collider other)
@@ -21,4 +22,6 @@ public class NoTracker : MonoBehaviour
         // Code here will execute after the delay
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+
+    
 }

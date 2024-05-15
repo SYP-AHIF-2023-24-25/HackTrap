@@ -23,7 +23,7 @@ namespace DeepSpace.Udp
 		}
 
 		[SerializeField]
-		protected int _localPort = 5610;
+		protected int _localPort = 5560;
 		public int Port
 		{
 			get

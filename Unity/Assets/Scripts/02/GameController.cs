@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
+    [SerializeField]
+    private Animator animator;
+
     private static int GRID_LENGTH = 3;
     private static Color COLOR_O = Color.HSVToRGB(198, 0, 0); //red
     private static Color COLOR_X = Color.HSVToRGB(34, 113, 231); //blue
@@ -83,8 +86,9 @@ public class GameController : MonoBehaviour
             currentButton.interactable = false;
         }
 
-        //TODO: switch scene
-        StateManager.Instance.SwitchToNextScenePrefab();
+        //switch scene
+        animator.SetTrigger("End");
+        StartCoroutine(StateManager.Instance.SwitchSceneAfterAnimation(animator));
     }
 
     private bool IsRowFilledWithOnePlayer(int row, string playerSymbol)

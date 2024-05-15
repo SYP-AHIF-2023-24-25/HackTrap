@@ -8,12 +8,13 @@ using System.Threading;
 
 public class ButtonAnimation : MonoBehaviour
 {
+    
     public Sprite sprite;
     public Button btn;
     private void Start()
     {
         //btn.onClick.AddListener(delegate { ChangeImage(); });
-        btn.onClick.AddListener(delegate { Animation(); });
+        //btn.onClick.AddListener(delegate { Animation(); });
     }
     public void ChangeImage()
     {
@@ -30,4 +31,5 @@ public class ButtonAnimation : MonoBehaviour
         Debug.Log("Test");
         Animation();
     }
+    
 }
