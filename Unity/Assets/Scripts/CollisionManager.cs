@@ -46,9 +46,9 @@ public class CollisionManager : MonoBehaviour
     private void Start()
     {
         // Get the renderer component of the sphere
-        playerRenderer = player.GetComponent<Renderer>();
+        //playerRenderer = player.GetComponent<Renderer>();
         // Store the original color of the sphere
-        originalColor = playerRenderer.material.color;
+        //originalColor = playerRenderer.material.color;
     }
 
     public void CollectVirus(GameObject virus)

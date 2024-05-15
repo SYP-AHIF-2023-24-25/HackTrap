@@ -21,10 +21,13 @@ public class ScaleImage : MonoBehaviour
 
     void Start()
     {
+        /*
         outline = GetComponent<Outline>();
         outline.effectColor = normalOutlineColor;
         originalScale = transform.localScale;
         rectTransform = GetComponent<RectTransform>();
+
+        */
     }
 
     public void OnPointerEnter(PointerEventData eventData)
