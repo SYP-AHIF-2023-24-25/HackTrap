@@ -95,7 +95,7 @@ public class StateManager : MonoBehaviour
         }
 
         // Optionally switch the scene after the animation completes
-        SwitchSceneAfterDelay(1, 2f);
+        SwitchSceneAfterDelay(currentSceneIndex + 1, 2f);
     }
 
 }
