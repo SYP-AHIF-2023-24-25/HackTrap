@@ -1594,6 +1594,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1045206727}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1045441144 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1489932695554515112, guid: d93a3d7330b0586478ecc69f4c737183,
+    type: 3}
+  m_PrefabInstance: {fileID: 1663703093}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1058428047
 GameObject:
   m_ObjectHideFlags: 0
@@ -1881,7 +1887,7 @@ MonoBehaviour:
   - {fileID: 3282571944139932443}
   - {fileID: 7902452632372016947}
   sceneSwitchDelay: 100
-  initialScene: 0
+  initialScene: 2
 --- !u!4 &1167879953
 Transform:
   m_ObjectHideFlags: 0
@@ -2886,6 +2892,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4552620602370950736, guid: d93a3d7330b0586478ecc69f4c737183,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1045441144}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d93a3d7330b0586478ecc69f4c737183, type: 3}
 --- !u!1 &1663703094 stripped
@@ -3851,6 +3862,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1182003389}
     m_Modifications:
+    - target: {fileID: 3142849214832418886, guid: e9ec609d519b1e24eafd430b475b90ea,
+        type: 3}
+      propertyPath: m_Name
+      value: NetworkSetup
+      objectReference: {fileID: 0}
     - target: {fileID: 8390915197550359406, guid: e9ec609d519b1e24eafd430b475b90ea,
         type: 3}
       propertyPath: _debugStereoMgr
@@ -3910,11 +3926,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3142849214832418886, guid: e9ec609d519b1e24eafd430b475b90ea,
-        type: 3}
-      propertyPath: m_Name
-      value: NetworkSetup
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9ec609d519b1e24eafd430b475b90ea, type: 3}
