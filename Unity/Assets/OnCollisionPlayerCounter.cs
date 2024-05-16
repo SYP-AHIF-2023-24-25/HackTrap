@@ -12,6 +12,11 @@ public class OnCollisionPlayerCounter : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         playerCount++;
+
+        if (playerCount == 4)
+        {
+            StateManager.Instance.SwitchToNextScenePrefab();
+        }
         Debug.Log("Spieler betreten den Bereich. Anzahl: " + playerCount);
         UpdatePlayerCountText();
     }
@@ -21,4 +26,3 @@ public class OnCollisionPlayerCounter : MonoBehaviour
         playerCountTextField.text = "PLayers on field: " + playerCount;
     }
 }
-
