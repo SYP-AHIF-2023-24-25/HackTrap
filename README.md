@@ -65,6 +65,23 @@ Here you can see the progress of our Userstories: [HackTrap Userstory Backlog](h
 - [x] The User should be able to enjoy a Failure Animation.
 - [x] The User should be able to enjoy the Main-Game of HackTrap. 
 
+### Sprint 6
+- [x] The User should be able to enjoy a nice flowing-transition by moving from one scene to another.
+- [x] The User should be able to enjoy the HackTrap game with a better performance by playing with the new HackTrap-template.
+- [x] The User should be able to enjoy the HackTrap game in a better game-quality & resolution by playing with the new HackTrap-template.
+- [x] The User should see in the team-assignment-procedure how many players are already on the DeepSpace floor.
+- [x] The User should be able to see the team-virus-score of his/her team during the game on the wall.
+- [x] The User should be able to get assigned to a team by stepping onto the DeepSpace floor.
+- [x] The User should be able to enjoy a new and better Welcome Scene at the beginning of the HackTrap-Game.
+- [x] The User should see a fluent transition (animation) from the Ipad Cards to the desired minigame. 
+- [x] The User should be able to collect a maximum of four viruses into/with the Select-Virus-Box.
+- [x] The User should be able to drop the viruses into it's team Drop-Virus-Off-Container only.
+- [x] The User should be able to see in the Select-Virus-Box a ring in his/her assigned team-color. 
+- [x] The User should be able to see one part of the Select-Virus-Box getting red by collecting a virus.
+- [x] The User should be able to see the Selected-Virus-Box split into four parts, which represents the number of free spaces for viruses. 
+- [x] The User should not be able to drop the viruses into anothers team Drop-Virus-Off-Container. 
+- [x] The User should be able to collect a maximum of four viruses into/with the Select-Virus-Box.
+- [x] The User should be able to see a Select-Virus-Box under his/her feet by stepping onto the DeepSpace floor. 
 
 # Sprints
 ### 1. Sprint - Project Initialisation
