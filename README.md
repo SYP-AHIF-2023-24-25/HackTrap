@@ -135,6 +135,18 @@ Here you can see the progress of our Userstories: [HackTrap Userstory Backlog](h
 - [x] Unity Overall Template Redesign
 - [x] Success & Failure Animation
 
+### 6. Sprint - Fixes
+- [x] Transitions (Übergänge)
+- [x] Verbesserung der Ordnerstruktur
+- [x] Neues DeepSpace-SetUp
+- [x] 3D-Modelle mit Blender (Virus, Select-Virus-Box, 4x Drop-Virus-Off-Container)
+- [x] Integration & Anpassung der 3D-Modelle in das Main-Game
+- [x] Testen der 3D-Modelle (Main-Game); ("Skelett"-Demo)
+- [x] Code Refactoring
+- [x] Connection mit Wall & Floor im Main-Game
+- [x] Anpassung der Hacking-Scene
+- [x] Team-Assignment
+
 
 ## Our Team
 Christian Ekhator, Julian Kapl, Julia Meyr & Amina Gabeljic
