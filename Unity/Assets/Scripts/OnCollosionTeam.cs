@@ -9,6 +9,6 @@ public class OnCollosionTeam : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         UnityEngine.Debug.Log("Entered collision with " + gameObject.name);
-        CollisionManager.Instance.ResetVirusCounter();
+        //CollisionManager.Instance.ResetVirusCounter();
     }
 }

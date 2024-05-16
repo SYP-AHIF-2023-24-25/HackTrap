@@ -66,26 +66,26 @@ public class CollisionManager : MonoBehaviour
             playerRenderer.material.color = lerpedColor;
         }
     }
-    public int ResetVirusCounter()
-    {
-        int gameCounter = collectedViruses;
-        StartCoroutine(ResetColorAndCounter());
-        return gameCounter;
-    }
+    //public int ResetVirusCounter()
+    //{
+    //    int gameCounter = collectedViruses;
+    //    StartCoroutine(ResetColorAndCounter());
+    //    return gameCounter;
+    //}
 
-    private IEnumerator ResetColorAndCounter()
-    {
-        for (int i = 4; i >= 0; i--)
-        {
-            float fillAmount = (float)i / 4f; // Reverse the fill amount
-            Color lerpedColor = Color.Lerp(originalColor, targetColor, fillAmount);
-            playerRenderer.material.color = lerpedColor;
-            collectedViruses--; // Decrement collectedViruses
-            Debug.Log("Viruses left: " + collectedViruses);
-            yield return new WaitForSeconds(1f); // Wait for 1 second
-        }
+    //private IEnumerator ResetColorAndCounter()
+    //{
+    //    for (int i = 4; i >= 0; i--)
+    //    {
+    //        float fillAmount = (float)i / 4f; // Reverse the fill amount
+    //        Color lerpedColor = Color.Lerp(originalColor, targetColor, fillAmount);
+    //        playerRenderer.material.color = lerpedColor;
+    //        collectedViruses--; // Decrement collectedViruses
+    //        Debug.Log("Viruses left: " + collectedViruses);
+    //        yield return new WaitForSeconds(1f); // Wait for 1 second
+    //    }
 
-        collectedViruses = 0;
-        playerRenderer.material.color = originalColor;
-    }
+    //    collectedViruses = 0;
+    //    playerRenderer.material.color = originalColor;
+    //}
 }
