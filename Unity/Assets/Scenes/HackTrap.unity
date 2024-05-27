@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 97637a2a763b7f24b8da4e139e4144ca, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.00061816757, g: 0.0023196875, b: 0.0555418, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1593,6 +1593,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 05
       objectReference: {fileID: 0}
+    - target: {fileID: 452046673854499908, guid: c84b51d372f873e4b8dd4eb2d37d5b1c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8924558781487177860, guid: c84b51d372f873e4b8dd4eb2d37d5b1c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2507,12 +2512,12 @@ MonoBehaviour:
   - {fileID: 1663703094}
   - {fileID: 1045206728}
   - {fileID: 1212794313}
-  - {fileID: 668380968}
   - {fileID: 1691025377}
   - {fileID: 109379762}
   - {fileID: 1545279259}
+  - {fileID: 668380968}
   sceneSwitchDelay: 100
-  initialScene: 0
+  initialScene: 1
 --- !u!4 &1167879953
 Transform:
   m_ObjectHideFlags: 0
@@ -2548,7 +2553,7 @@ PrefabInstance:
     - target: {fileID: 408911173628469758, guid: 82efd181276184c42b1f062048dbd11c,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4784446378829517336, guid: 82efd181276184c42b1f062048dbd11c,
         type: 3}
@@ -3028,7 +3033,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _trackingReceiveHandler: {fileID: 1231290877}
   trackSpawnParent: {fileID: 1675305074}
-  TrackingEntityPrefab: {fileID: 408911173628469758, guid: 82efd181276184c42b1f062048dbd11c,
+  TrackingEntityPrefab: {fileID: 5241581141970623100, guid: 9d8825629b050e04689107be91c0b83c,
     type: 3}
   addUnknownTrackOnUpdate: 1
   gridOffset: {x: 0, y: 0}
