@@ -20,7 +20,7 @@ public class NoTracker : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         // Code here will execute after the delay
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        StateManager.Instance.SwitchToNextScenePrefab();
     }
 
     
