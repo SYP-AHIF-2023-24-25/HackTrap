@@ -63,7 +63,7 @@ VideoPlayer:
   m_EnabledAudioTracks: 
   m_DirectAudioMutes: 
   m_ControlledAudioTrackCount: 0
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_SkipOnDrop: 1
   m_Looping: 1
   m_WaitForFirstFrame: 0
@@ -131,7 +131,7 @@ VideoPlayer:
   m_EnabledAudioTracks: 
   m_DirectAudioMutes: 
   m_ControlledAudioTrackCount: 0
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_SkipOnDrop: 1
   m_Looping: 1
   m_WaitForFirstFrame: 0
@@ -150,6 +150,7 @@ GameObject:
   - component: {fileID: 148558678555402310}
   - component: {fileID: 6101714285151841708}
   - component: {fileID: 8042354671646860655}
+  - component: {fileID: 469530180679871975}
   m_Layer: 0
   m_Name: FloorCanvas
   m_TagString: Untagged
@@ -278,6 +279,35 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &469530180679871975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328347557315292820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c26c0ade62f1d014c80fe0d2f846c896, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  videoContainers:
+  - container: {fileID: 5789381523401877165}
+    videoPlayer: {fileID: 6612675717844945277}
+    startDelay: 0
+  - container: {fileID: 7894053089607845648}
+    videoPlayer: {fileID: 3971539756365552176}
+    startDelay: 4
+  - container: {fileID: 8240727365646409025}
+    videoPlayer: {fileID: 2054750628703696181}
+    startDelay: 8
+  - container: {fileID: 4758278068998501441}
+    videoPlayer: {fileID: 610272220189416297}
+    startDelay: 12
+  - container: {fileID: 2017262049385718629}
+    videoPlayer: {fileID: 4939607234191373872}
+    startDelay: 16
+  videoDuration: 23
 --- !u!1 &1540695922320046857
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,7 +371,7 @@ VideoPlayer:
   m_EnabledAudioTracks: 
   m_DirectAudioMutes: 
   m_ControlledAudioTrackCount: 0
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_SkipOnDrop: 1
   m_Looping: 1
   m_WaitForFirstFrame: 0
@@ -358,7 +388,7 @@ GameObject:
   - component: {fileID: 1703747257368301764}
   - component: {fileID: 1205928995616546091}
   m_Layer: 0
-  m_Name: script-01Container
+  m_Name: script-01WContainer
   m_TagString: popup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -382,7 +412,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1610, y: 551}
+  m_AnchoredPosition: {x: 1872, y: 551}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1703747257368301764
@@ -900,7 +930,7 @@ VideoPlayer:
   m_EnabledAudioTracks: 
   m_DirectAudioMutes: 
   m_ControlledAudioTrackCount: 0
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_SkipOnDrop: 1
   m_Looping: 1
   m_WaitForFirstFrame: 0
@@ -919,6 +949,7 @@ GameObject:
   - component: {fileID: 2915240809175522129}
   - component: {fileID: 1314292221946786618}
   - component: {fileID: 4192426546854896024}
+  - component: {fileID: 2021704570610010020}
   m_Layer: 0
   m_Name: WallCanvas
   m_TagString: Untagged
@@ -1047,6 +1078,35 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &2021704570610010020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3582536073964977190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c26c0ade62f1d014c80fe0d2f846c896, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  videoContainers:
+  - container: {fileID: 1689657292612231507}
+    videoPlayer: {fileID: 9016102159276970164}
+    startDelay: 0
+  - container: {fileID: 7197832268928481838}
+    videoPlayer: {fileID: 4474686040512391229}
+    startDelay: 4
+  - container: {fileID: 8438891856271996253}
+    videoPlayer: {fileID: 5049509915348195982}
+    startDelay: 8
+  - container: {fileID: 4404953900791200797}
+    videoPlayer: {fileID: 7005416775117269305}
+    startDelay: 12
+  - container: {fileID: 7285955294078974347}
+    videoPlayer: {fileID: 2493531078575885206}
+    startDelay: 16
+  videoDuration: 23
 --- !u!1 &3693634769437271017
 GameObject:
   m_ObjectHideFlags: 0
@@ -1110,7 +1170,7 @@ VideoPlayer:
   m_EnabledAudioTracks: 
   m_DirectAudioMutes: 
   m_ControlledAudioTrackCount: 0
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_SkipOnDrop: 1
   m_Looping: 1
   m_WaitForFirstFrame: 0
@@ -1178,7 +1238,7 @@ VideoPlayer:
   m_EnabledAudioTracks: 
   m_DirectAudioMutes: 
   m_ControlledAudioTrackCount: 0
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_SkipOnDrop: 1
   m_Looping: 1
   m_WaitForFirstFrame: 0
@@ -1195,7 +1255,7 @@ GameObject:
   - component: {fileID: 1359289447168605534}
   - component: {fileID: 2263285857019693369}
   m_Layer: 0
-  m_Name: script-04Container
+  m_Name: script-04WContainer
   m_TagString: popup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1323,7 +1383,7 @@ VideoPlayer:
   m_EnabledAudioTracks: 
   m_DirectAudioMutes: 
   m_ControlledAudioTrackCount: 0
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_SkipOnDrop: 1
   m_Looping: 1
   m_WaitForFirstFrame: 0
@@ -1468,7 +1528,7 @@ VideoPlayer:
   m_EnabledAudioTracks: 
   m_DirectAudioMutes: 
   m_ControlledAudioTrackCount: 0
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_SkipOnDrop: 1
   m_Looping: 1
   m_WaitForFirstFrame: 0
@@ -1581,7 +1641,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1937, y: 519}
+  m_AnchoredPosition: {x: -1937, y: 313}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &6805317247683437526
@@ -1685,7 +1745,7 @@ VideoPlayer:
   m_EnabledAudioTracks: 
   m_DirectAudioMutes: 
   m_ControlledAudioTrackCount: 0
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_SkipOnDrop: 1
   m_Looping: 1
   m_WaitForFirstFrame: 0
@@ -1753,7 +1813,7 @@ VideoPlayer:
   m_EnabledAudioTracks: 
   m_DirectAudioMutes: 
   m_ControlledAudioTrackCount: 0
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_SkipOnDrop: 1
   m_Looping: 1
   m_WaitForFirstFrame: 0
@@ -1986,7 +2046,7 @@ GameObject:
   - component: {fileID: 7256149843079106916}
   - component: {fileID: 97410212082453331}
   m_Layer: 0
-  m_Name: script-02Container
+  m_Name: script-02WContainer
   m_TagString: popup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2001,7 +2061,7 @@ RectTransform:
   m_GameObject: {fileID: 7197832268928481838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 11.375665, y: 11.375665, z: 11.375665}
+  m_LocalScale: {x: 18.90375, y: 18.90375, z: 18.90375}
   m_Children:
   - {fileID: 610000011827893492}
   - {fileID: 3881014004280161932}
@@ -2010,7 +2070,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1955, y: 1051}
+  m_AnchoredPosition: {x: -2305, y: 890}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &7256149843079106916
@@ -2063,7 +2123,7 @@ GameObject:
   - component: {fileID: 5359784021917730701}
   - component: {fileID: 2584131676381047476}
   m_Layer: 0
-  m_Name: script-05Container
+  m_Name: script-05WContainer
   m_TagString: popup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2281,7 +2341,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7894053089607845648}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 29.204542, y: 29.204542, z: 29.204542}
   m_Children:
   - {fileID: 8256508830067930772}
@@ -2440,7 +2500,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1042, y: 922}
+  m_AnchoredPosition: {x: 1595, y: 318}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &3332915502093565857
@@ -2493,7 +2553,7 @@ GameObject:
   - component: {fileID: 8449230373825059882}
   - component: {fileID: 3451977724286125692}
   m_Layer: 0
-  m_Name: script-03Container
+  m_Name: script-03WContainer
   m_TagString: popup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2517,7 +2577,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -166, y: -177}
+  m_AnchoredPosition: {x: -166, y: 158}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &8449230373825059882
