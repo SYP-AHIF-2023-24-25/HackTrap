@@ -1734,6 +1734,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1489932695554515112}
+  gridSpaces:
+  - {fileID: 7481961770813461556}
+  - {fileID: 2265111289311489868}
+  - {fileID: 6036386940897739414}
+  - {fileID: 4612102088213137204}
+  - {fileID: 6505256604353796696}
+  - {fileID: 8504653932319466236}
+  - {fileID: 1439406940989563039}
+  - {fileID: 2357918595984435087}
+  - {fileID: 5866484816985325487}
   buttonList:
   - {fileID: 1358670726964605337}
   - {fileID: 7665401384823589601}
@@ -3234,16 +3244,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -882.05005
       objectReference: {fileID: 0}
-    - target: {fileID: 8634338016708716916, guid: 2aff19283e86dca4b829da107424b7c6,
-        type: 3}
-      propertyPath: button
-      value: 
-      objectReference: {fileID: 2622858182032356216}
-    - target: {fileID: 8634338016708716916, guid: 2aff19283e86dca4b829da107424b7c6,
-        type: 3}
-      propertyPath: buttonText
-      value: 
-      objectReference: {fileID: 2622858182492428802}
     - target: {fileID: 206294669329491363, guid: 2aff19283e86dca4b829da107424b7c6,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -3254,6 +3254,16 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8634338016708716916, guid: 2aff19283e86dca4b829da107424b7c6,
+        type: 3}
+      propertyPath: button
+      value: 
+      objectReference: {fileID: 2622858182032356216}
+    - target: {fileID: 8634338016708716916, guid: 2aff19283e86dca4b829da107424b7c6,
+        type: 3}
+      propertyPath: buttonText
+      value: 
+      objectReference: {fileID: 2622858182492428802}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2aff19283e86dca4b829da107424b7c6, type: 3}
 --- !u!114 &2622858182032356216 stripped
