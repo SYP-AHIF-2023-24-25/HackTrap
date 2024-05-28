@@ -9,6 +9,7 @@ public class FloorCubeScript : MonoBehaviour
     {
         if (other.CompareTag("DPlayer"))
         {
+            gameObject.SetActive(false); //disable grid space on floor
             wallCube.UpdateValue();
         }
     }
