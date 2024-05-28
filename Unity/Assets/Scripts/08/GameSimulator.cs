@@ -90,7 +90,7 @@ public class GameSimulator : MonoBehaviour
 
             //Scene Switch
             Thread.Sleep(3000);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            StateManager.Instance.SwitchToNextScenePrefab();
         }
         else
         {

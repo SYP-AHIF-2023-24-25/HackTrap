@@ -1000,6 +1000,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &301699899 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6056033207782415155, guid: ab19c174a9b027d4ab31802d7d579903,
+    type: 3}
+  m_PrefabInstance: {fileID: 1923395075}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &315405512
 GameObject:
   m_ObjectHideFlags: 0
@@ -1655,12 +1661,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c84b51d372f873e4b8dd4eb2d37d5b1c, type: 3}
---- !u!1 &668380968 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 452046673854499908, guid: c84b51d372f873e4b8dd4eb2d37d5b1c,
-    type: 3}
-  m_PrefabInstance: {fileID: 668380967}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &693553540
 GameObject:
   m_ObjectHideFlags: 0
@@ -1738,6 +1738,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 693553540}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &716667276 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1859924143404328888, guid: f1f7af6cf21bf664f984633b95d92735,
+    type: 3}
+  m_PrefabInstance: {fileID: 147201760}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &724530398
 GameObject:
   m_ObjectHideFlags: 0
@@ -2013,6 +2019,12 @@ Transform:
   m_Father: {fileID: 159820919}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &913731495 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7770213244378132658, guid: 4e45f96a97a42b44ab15c83fa43f7547,
+    type: 3}
+  m_PrefabInstance: {fileID: 3282571944139932442}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &928578609
 GameObject:
   m_ObjectHideFlags: 0
@@ -2515,9 +2527,12 @@ MonoBehaviour:
   - {fileID: 1691025377}
   - {fileID: 109379762}
   - {fileID: 1545279259}
-  - {fileID: 668380968}
+  - {fileID: 2109596985}
+  - {fileID: 301699899}
+  - {fileID: 716667276}
+  - {fileID: 913731495}
   sceneSwitchDelay: 100
-  initialScene: 2
+  initialScene: 8
 --- !u!4 &1167879953
 Transform:
   m_ObjectHideFlags: 0
@@ -2553,7 +2568,7 @@ PrefabInstance:
     - target: {fileID: 408911173628469758, guid: 82efd181276184c42b1f062048dbd11c,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4784446378829517336, guid: 82efd181276184c42b1f062048dbd11c,
         type: 3}
@@ -4004,6 +4019,12 @@ MonoBehaviour:
     stageWidth: 1600
     stageHeight: 900
     udpPort: 3333
+--- !u!1 &2109596985 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7902452632372016947, guid: 65fb429cd12faba40b97eb6f217175f7,
+    type: 3}
+  m_PrefabInstance: {fileID: 344013166767807345}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &344013166767807345
 PrefabInstance:
   m_ObjectHideFlags: 0

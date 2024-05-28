@@ -60,14 +60,14 @@ public class GameController : MonoBehaviour
     {
         yield return new WaitForSeconds(1f); //delay
 
-        SetStateForAllGridspaces(false);
+        //SetStateForAllGridspaces(false);
 
         // minimax algorithm for computer's move
         int bestMove = Minimax(playerSide);
         buttonList[bestMove].text = playerSide;
         buttonList[bestMove].GetComponentInParent<Button>().interactable = false;
 
-        SetStateForAllGridspaces(true);
+        //SetStateForAllGridspaces(true);
 
         EndTurn();
     }
