@@ -2726,7 +2726,7 @@ MonoBehaviour:
   - {fileID: 716667276}
   - {fileID: 913731495}
   sceneSwitchDelay: 100
-  initialScene: 6
+  initialScene: 2
 --- !u!4 &1167879953
 Transform:
   m_ObjectHideFlags: 0
