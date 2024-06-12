@@ -1,11 +1,12 @@
 ﻿using System.Collections;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class TextDisplay : MonoBehaviour
 {
     [SerializeField]
-    public Animator animator;
+    private Animator animator;
 
     [SerializeField]
     private Text textUI;
@@ -14,11 +15,18 @@ public class TextDisplay : MonoBehaviour
     private float letterDelay = 0.1f; // Delay between each letter
 
     [SerializeField]
-    public float lineDelay = 0.5f;   // Delay after each line
+    private float lineDelay = 0.5f;   // Delay after each line
 
 
     [SerializeField]
-    public bool isSwitch = true;
+    private bool isSwitch = true;
+
+
+    [SerializeField]
+    private int index = 0;
+
+    [SerializeField]
+    private int delayBeforeSwitch = 0;
 
 
     private string displayText = "Default Text";
@@ -83,7 +91,16 @@ public class TextDisplay : MonoBehaviour
                             if (isSwitch)
                             {
                                 animator.SetTrigger("End");
-                                StartCoroutine(StateManager.Instance.SwitchSceneAfterAnimation(animator));
+                                Thread.Sleep(delayBeforeSwitch * 1000);
+
+                                if (index == 0)
+                                {
+                                    StartCoroutine(StateManager.Instance.SwitchSceneAfterAnimation(animator));
+                                }
+                                else
+                                {
+                                    StateManager.Instance.SwitchToScenePrefab(index);
+                                }
                             }
                         }
                     }

@@ -402,7 +402,8 @@ MonoBehaviour:
   letterDelay: 0.5
   lineDelay: 0.5
   isSwitch: 1
-  delay: 3000
+  index: 14
+  delayBeforeSwitch: 5
 --- !u!1 &5120775891137959141
 GameObject:
   m_ObjectHideFlags: 0

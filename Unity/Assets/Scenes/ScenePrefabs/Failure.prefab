@@ -767,4 +767,4 @@ MonoBehaviour:
   letterDelay: 0.5
   lineDelay: 0.5
   isSwitch: 1
-  delay: 3000
+  delayBeforeSwitch: 5

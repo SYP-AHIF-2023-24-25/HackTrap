@@ -669,6 +669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28b35e23b677812438148853367c46ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sprite: {fileID: 0}
   btn: {fileID: 8020734523381886079}
 --- !u!95 &8615381222265532745
 Animator:
@@ -743,8 +744,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 696.0345, z: 1}
+  m_Center: {x: 0, y: -235.1655, z: -0.0000000144350105}
 --- !u!23 &9004222855679913015
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1097,8 +1098,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 634.43024, z: 1}
+  m_Center: {x: 0, y: -178.8734, z: -0.000000011095244}
 --- !u!23 &1657125650199344270
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1167,6 +1168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28b35e23b677812438148853367c46ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sprite: {fileID: 0}
   btn: {fileID: 8020734523381886079}
 --- !u!114 &2632452720161533910
 MonoBehaviour:
