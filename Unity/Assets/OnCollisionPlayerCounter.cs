@@ -13,7 +13,7 @@ public class OnCollisionPlayerCounter : MonoBehaviour
     {
         playerCount++;
 
-        if (playerCount  > 20)
+        if (playerCount == 4)
         {
             StateManager.Instance.SwitchToNextScenePrefab();
         }

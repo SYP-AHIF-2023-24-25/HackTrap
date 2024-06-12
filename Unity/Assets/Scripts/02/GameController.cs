@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -8,9 +7,6 @@ public class GameController : MonoBehaviour
 {
     [SerializeField]
     private Animator animator;
-
-    [SerializeField]
-    private List<GridSpace> gridSpaces;
 
     private static int GRID_LENGTH = 3;
     private static Color COLOR_O = Color.HSVToRGB(198, 0, 0); //red
@@ -58,37 +54,15 @@ public class GameController : MonoBehaviour
 
     private IEnumerator ComputerTurn()
     {
-        yield return new WaitForSeconds(1f); //delay
 
-        //SetStateForAllGridspaces(false);
+        yield return new WaitForSeconds(1f); //delay
 
         // minimax algorithm for computer's move
         int bestMove = Minimax(playerSide);
         buttonList[bestMove].text = playerSide;
         buttonList[bestMove].GetComponentInParent<Button>().interactable = false;
 
-        //SetStateForAllGridspaces(true);
-
         EndTurn();
-    }
-
-    public void SetStateForAllGridspaces(bool state)
-    {
-        for (int i = 0; i < gridSpaces.Count; i++)
-        {
-            GridSpace gridSpace = gridSpaces[i];
-            if (gridSpace != null)
-            {
-                if (buttonList[i].text == "")
-                {
-                    gridSpace.gameObject.SetActive(!state);
-                }
-                else
-                {
-                    gridSpace.gameObject.SetActive(state);
-                }
-            }
-        }
     }
 
     public void EndTurn()

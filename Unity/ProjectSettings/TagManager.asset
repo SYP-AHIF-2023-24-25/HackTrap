@@ -5,6 +5,16 @@ TagManager:
   serializedVersion: 2
   tags:
   - DPlayer
+  - Cube
+  - Chest
+  - noBtn
+  - SpawnedObject
+  - popup
+  - Container1
+  - Container2
+  - Container3
+  - Container4
+  - Container5
   layers:
   - Default
   - TransparentFX

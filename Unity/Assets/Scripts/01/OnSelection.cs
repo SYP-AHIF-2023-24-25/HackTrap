@@ -22,9 +22,6 @@ public class OnSelection : MonoBehaviour
 
     public AudioSource audioSource;
 
-    private bool animatedRPS = false;
-    private bool animatedMemory = false;
-
 
     public void StartAnimation(string field)
     {
@@ -33,19 +30,17 @@ public class OnSelection : MonoBehaviour
             animator.SetTrigger("End");
             StartCoroutine(StateManager.Instance.SwitchSceneAfterAnimation(animator));
         }
-        else if (field == "RockPaperScissors" && !isAnimating && !animatedRPS)
+        else if (field == "RockPaperScissors" && !isAnimating)
         {
             // Start fade animation
             StartCoroutine(FadeAnimation(wallRPSImage));
             StartCoroutine(FadeAnimation(floorRPSImage));
-            animatedRPS = true;
         }
-        else if (field == "Memory" && !isAnimating && !animatedMemory)
+        else if (field == "Memory" && !isAnimating)
         {
             // Start fade animation
             StartCoroutine(FadeAnimation(wallMemoryImage));
             StartCoroutine(FadeAnimation(floorMemoryImage));
-            animatedMemory = true;
         }
     }
 
