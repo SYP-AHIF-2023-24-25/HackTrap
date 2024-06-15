@@ -29,30 +29,37 @@ public class VirusSpawner : MonoBehaviour
             return;
         }
 
-        // Generate random position within the spawn area
         Vector3 randomPosition = new Vector3(
             Random.Range(transform.position.x - spawnAreaSize.x / 2, transform.position.x + spawnAreaSize.x / 2),
-            -1.22f,
+            -1.22f, // Fixed y-axis value
             Random.Range(transform.position.z - spawnAreaSize.z / 2, transform.position.z + spawnAreaSize.z / 2)
         );
 
-        // Check if the random position is inside the spawn area
-        if (spawnAreaCollider.bounds.Contains(randomPosition))
+        // Ensure the random position is inside the spawn area
+        if (spawnAreaCollider.bounds.Contains(new Vector3(randomPosition.x, spawnAreaCollider.bounds.center.y, randomPosition.z)))
         {
             // Spawn the object at the random position
-            GameObject spawnedObject = Instantiate(objectToSpawn, randomPosition, Quaternion.identity);
+            GameObject spawnedObject = Instantiate(objectToSpawn, new Vector3(randomPosition.x, spawnAreaCollider.bounds.center.y, randomPosition.z), Quaternion.identity);
+
             // Add movement script to the spawned object
             spawnedObject.AddComponent<ObjectMovement>();
 
             // Add a BoxCollider to the spawned object
             BoxCollider collider = spawnedObject.AddComponent<BoxCollider>();
             collider.isTrigger = true;
+
             // Adjust the size of the collider if needed
             collider.size = spawnedObject.transform.localScale;
+
+            // Add a Rigidbody to the spawned object
             Rigidbody rigidbody = spawnedObject.AddComponent<Rigidbody>();
             rigidbody.useGravity = false;
+
+            // Set the rotation of the spawned object
             spawnedObject.transform.rotation = Quaternion.Euler(rotationAngles);
         }
+
+
     }
 }
 

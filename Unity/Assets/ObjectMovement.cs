@@ -2,7 +2,7 @@
 
 public class ObjectMovement : MonoBehaviour
 {
-    public float moveSpeed = 1f;
+    public float moveSpeed = 0.65f;
     Vector3 randomDirection;
 
     void Start()

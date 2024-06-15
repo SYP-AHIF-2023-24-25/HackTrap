@@ -321,6 +321,8 @@ GameObject:
   - component: {fileID: 5020533127099929115}
   - component: {fileID: 6226711799614930865}
   - component: {fileID: 5559940200351332883}
+  - component: {fileID: 3749317989341149814}
+  - component: {fileID: 3077214293869023577}
   m_Layer: 0
   m_Name: crosshair_new
   m_TagString: DPlayer
@@ -425,6 +427,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3749317989341149814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5241581141970623100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67daf3542f89a34e9ac6aea779dbe1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colors:
+  - {r: 0.20334363, g: 1, b: 0, a: 0}
+  - {r: 1, g: 0, b: 0, a: 0}
+  - {r: 1, g: 0, b: 0, a: 0}
+  - {r: 1, g: 0, b: 0, a: 0}
+  - {r: 1, g: 0, b: 0, a: 0}
+  teamName: Team1
+--- !u!114 &3077214293869023577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5241581141970623100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71198079e4849744981d368c01371ed4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7876905968515814727
 GameObject:
   m_ObjectHideFlags: 0
