@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7241554297649090046
 Transform:
   m_ObjectHideFlags: 0
@@ -302,6 +302,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8449900675517063354}
+  - component: {fileID: 3340997244011352419}
   m_Layer: 0
   m_Name: 08
   m_TagString: Untagged
@@ -330,6 +331,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3340997244011352419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2006188426515570679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c4bcbf6be95b6c44818c796fc046bee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneAudioClips:
+  - {fileID: 8300000, guid: 21473090b9f449e499f1f0652a8a6d11, type: 3}
 --- !u!1 &2383787548473253429
 GameObject:
   m_ObjectHideFlags: 0

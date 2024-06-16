@@ -269,6 +269,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3611020885976157119}
+  - component: {fileID: 2470727356174850004}
   m_Layer: 0
   m_Name: 00
   m_TagString: Untagged
@@ -292,6 +293,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2470727356174850004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3611020885976157120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c4bcbf6be95b6c44818c796fc046bee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneAudioClips:
+  - {fileID: 8300000, guid: 8437ef3406baadc42bdc75fe1d5f3f99, type: 3}
 --- !u!1 &3732624262615146832
 GameObject:
   m_ObjectHideFlags: 0
@@ -471,6 +486,8 @@ MonoBehaviour:
   letterDelay: 0.1
   lineDelay: 0.5
   isSwitch: 1
+  index: 0
+  delayBeforeSwitch: 0
 --- !u!1 &6032638755446395657
 GameObject:
   m_ObjectHideFlags: 0
