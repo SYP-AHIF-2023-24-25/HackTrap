@@ -10,12 +10,14 @@ public class AudioManager : MonoBehaviour
     private AudioSource audioSource;
     private Coroutine fadeOutCoroutine;
 
+    [SerializeField] private bool loop = true;
+
     private void Awake()
     {
         // Ensure there is an AudioSource component attached to the prefab
         audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.playOnAwake = false;
-        audioSource.loop = true; // Loop the audio clip
+        audioSource.loop = loop; // Loop the audio clip
     }
 
     private void OnEnable()

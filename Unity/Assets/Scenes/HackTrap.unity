@@ -1545,6 +1545,11 @@ PrefabInstance:
       propertyPath: m_FontData.m_MinSize
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7927730726960004567, guid: deb7ed25db4bce2448a2209bee314a1b,
+        type: 3}
+      propertyPath: sceneAudioClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: f234a016c3f76ce42992e575e0997372, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: deb7ed25db4bce2448a2209bee314a1b, type: 3}
 --- !u!1 &659830714
@@ -2611,7 +2616,7 @@ MonoBehaviour:
   - {fileID: 620192866}
   - {fileID: 743782448}
   sceneSwitchDelay: 100
-  initialScene: 3
+  initialScene: 10
 --- !u!4 &1167879953
 Transform:
   m_ObjectHideFlags: 0
@@ -3327,7 +3332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00bab3e222d7ed3479c691ef9ac086e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  applicationType: 1
+  applicationType: 0
   invertStereo: 0
   udpAddress: 127.0.0.1
   udpReceivingPort: 5560

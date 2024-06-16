@@ -71,10 +71,10 @@ public class CubeManager : MonoBehaviour
     {
         chest.gameObject.SetActive(true);
 
-        float scaleSpeed = 0.05f;
+        float scaleSpeed = 0.03f;
 
         Vector3 originalScale = chest.localScale;
-        Vector3 targetScale = originalScale * 100f;
+        Vector3 targetScale = originalScale * 200f;
 
         chest.localScale = Vector3.Lerp(chest.localScale, targetScale, Time.deltaTime * scaleSpeed);
 
@@ -83,7 +83,7 @@ public class CubeManager : MonoBehaviour
 
     private IEnumerator DestroyAnimation()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(1f);
         Destroy(gameObject);
         StateManager.Instance.SwitchToNextScenePrefab();
     }

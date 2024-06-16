@@ -4,11 +4,10 @@ using UnityEngine.UI;
 
 public class OnSelection : MonoBehaviour
 {
-    [SerializeField]
-    public Animator animator;
+    [SerializeField] private Animator animator;
 
     // Animation duration
-    public float animationDuration = 0.5f;
+    [SerializeField] private float animationDuration = 0.5f;
 
     // Reference to the RawImage components
     [SerializeField] private RawImage wallMemoryImage;
@@ -20,8 +19,10 @@ public class OnSelection : MonoBehaviour
     // Flag to prevent animation overlap
     private bool isAnimating = false;
 
-    public AudioSource audioSource;
+    [SerializeField] private AudioSource audioSource;
 
+    private const int MAX_ITERATION = 1;
+    private int[] iterationCounter = new int[2];
 
     public void StartAnimation(string field)
     {
@@ -30,17 +31,19 @@ public class OnSelection : MonoBehaviour
             animator.SetTrigger("End");
             StartCoroutine(StateManager.Instance.SwitchSceneAfterAnimation(animator));
         }
-        else if (field == "RockPaperScissors" && !isAnimating)
+        else if (field == "RockPaperScissors" && !isAnimating && iterationCounter[0] < MAX_ITERATION)
         {
             // Start fade animation
             StartCoroutine(FadeAnimation(wallRPSImage));
             StartCoroutine(FadeAnimation(floorRPSImage));
+            iterationCounter[0]++;
         }
-        else if (field == "Memory" && !isAnimating)
+        else if (field == "Memory" && !isAnimating && iterationCounter[1] < MAX_ITERATION)
         {
             // Start fade animation
             StartCoroutine(FadeAnimation(wallMemoryImage));
             StartCoroutine(FadeAnimation(floorMemoryImage));
+            iterationCounter[1]++;
         }
     }
 

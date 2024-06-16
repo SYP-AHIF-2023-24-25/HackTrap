@@ -273,6 +273,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8924558781487177860}
   - component: {fileID: 5490611766529308407}
+  - component: {fileID: 7522022883189662245}
   m_Layer: 0
   m_Name: 05
   m_TagString: Untagged
@@ -309,8 +310,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneIndex: 6
-  delay: 23
+  delay: 15
   animator: {fileID: 0}
+--- !u!114 &7522022883189662245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452046673854499908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c4bcbf6be95b6c44818c796fc046bee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneAudioClips:
+  - {fileID: 8300000, guid: bebffd273fbe05446b65d891908d9296, type: 3}
+  loop: 0
 --- !u!1 &849356666335776386
 GameObject:
   m_ObjectHideFlags: 0

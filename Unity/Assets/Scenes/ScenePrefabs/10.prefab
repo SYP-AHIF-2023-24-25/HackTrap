@@ -527,18 +527,18 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 9918099d2b4f83046bbb9fdf6e4dc0e3, type: 3}
-    m_FontSize: 120
+    m_FontSize: 250
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 300
+    m_MaxSize: 250
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Please have the winning team come into the field!\r\nYou have successfully
+  m_Text: "Please have the winning team come into the field!\r\n\nYou have successfully
     captured all viruses\r\nTo now free yourself from the virus, \nrearrange the letters
     in the correct order to \nform a word and kill the Virus!\r\nBut be careful\r\nThe
     virus will free itself after 30 sec\r\n3\r\n2\r\n1\r"
@@ -559,3 +559,6 @@ MonoBehaviour:
   letterDelay: 0.1
   lineDelay: 1
   isSwitch: 1
+  index: 0
+  delayBeforeSwitch: 0
+  displayText: Default Text
