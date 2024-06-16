@@ -12,9 +12,9 @@ public class GameController : MonoBehaviour
     private static Color COLOR_O = Color.HSVToRGB(198, 0, 0); //red
     private static Color COLOR_X = Color.HSVToRGB(34, 113, 231); //blue
 
+    public GameObject[] floorFields;
     public Text[] buttonList;
     private string playerSide;
-    private int turn;
     public string matchresult;
 
     public void Awake()
@@ -48,6 +48,7 @@ public class GameController : MonoBehaviour
 
         if (playerSide == "O") // Computer's turn
         {
+            SetAllFloorCubesActive(false);
             StartCoroutine(ComputerTurn());
         }
     }
@@ -62,7 +63,18 @@ public class GameController : MonoBehaviour
         buttonList[bestMove].text = playerSide;
         buttonList[bestMove].GetComponentInParent<Button>().interactable = false;
 
+        SetAllFloorCubesActive(true);
+
         EndTurn();
+    }
+
+    private void SetAllFloorCubesActive(bool active)
+    {
+        for (int i = 0; i < floorFields.Length; i++)
+        {
+            bool isButtonEmpty = buttonList[i].text == "";
+            floorFields[i].SetActive(active && isButtonEmpty);
+        }
     }
 
     public void EndTurn()
