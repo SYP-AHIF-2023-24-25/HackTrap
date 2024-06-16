@@ -10,14 +10,6 @@ public class GridSpace : MonoBehaviour
 
     private GameController gameController;
 
-    public void SetSpace()
-    {
-        buttonText.text = gameController.GetPlayer();
-        buttonText.color = gameController.GetColor();
-        button.interactable = false;
-        gameController.EndTurn();
-    }
-
     public void SetGameControllerReference(GameController controller)
     {
         gameController = controller;
@@ -26,9 +18,13 @@ public class GridSpace : MonoBehaviour
     public void UpdateValue()
     {
         Debug.Log("Field Updated");
-        buttonText.text = gameController.GetPlayer();
-        buttonText.color = gameController.GetColor();
-        button.interactable = false;
-        gameController.EndTurn();
+
+        if(button.interactable)
+        {
+            buttonText.text = gameController.GetPlayer();
+            buttonText.color = gameController.GetColor();
+            button.interactable = false;
+            gameController.EndTurn();
+        }
     }
 }

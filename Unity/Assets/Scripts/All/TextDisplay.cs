@@ -17,6 +17,8 @@ public class TextDisplay : MonoBehaviour
     [SerializeField]
     private float lineDelay = 0.5f;   // Delay after each line
 
+    private GameController ticTacToeGameController;
+
 
     [SerializeField]
     private bool isSwitch = true;
@@ -28,8 +30,10 @@ public class TextDisplay : MonoBehaviour
     [SerializeField]
     private int delayBeforeSwitch = 0;
 
-
+    [SerializeField]
     private string displayText = "Default Text";
+
+
     private string[] lines;
     private string currentLine = "";
     private int currentLineIndex = 0;
@@ -44,10 +48,19 @@ public class TextDisplay : MonoBehaviour
         {
             Debug.LogError("Text UI not assigned!");
             enabled = false;
-            return;
+        } 
+        
+        if(textUI.text == "" || textUI.text == null)
+        {
+            var matchResult = PlayerPrefs.GetString("matchResult");
+            ticTacToeGameController = FindObjectOfType<GameController>();
+            displayText = ticTacToeGameController.GetWinner(matchResult);
+        }
+        else
+        {
+            displayText = textUI.text;
         }
 
-        displayText = textUI.text;
         lines = displayText.Split('\n');
         isDisplayingText = true;
     }

@@ -12,8 +12,6 @@ GameObject:
   - component: {fileID: 8366300927668531412}
   - component: {fileID: 8970630523071315094}
   - component: {fileID: 456088898720426209}
-  - component: {fileID: 5015845426371013511}
-  - component: {fileID: 8291717715976309736}
   m_Layer: 0
   m_Name: WallCanvas
   m_TagString: Untagged
@@ -103,33 +101,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &5015845426371013511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1011258947294861968}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6f549da023dd11478524fd0820754e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &8291717715976309736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1011258947294861968}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2a5c81e72a062f42aead70dfa96ba1c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  buttonList: []
-  matchresult: 
 --- !u!1 &1176485049068426510
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,8 +290,10 @@ GameObject:
   - component: {fileID: 8596063195753109089}
   - component: {fileID: 5984089651589649256}
   - component: {fileID: 7943847048124721717}
+  - component: {fileID: 1388575280575099923}
+  - component: {fileID: 4222169028119164825}
   m_Layer: 0
-  m_Name: matchresult
+  m_Name: MatchResult
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -386,7 +359,43 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Matchresult
+  m_Text: 
+--- !u!114 &1388575280575099923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558494767894758424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11ebc7fd3b9e4a8449aa920dcf251e4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  textUI: {fileID: 7943847048124721717}
+  letterDelay: 0.1
+  lineDelay: 0.5
+  isSwitch: 1
+  index: 0
+  delayBeforeSwitch: 0
+  displayText: Default Text
+--- !u!114 &4222169028119164825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558494767894758424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2a5c81e72a062f42aead70dfa96ba1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  floorFields: []
+  buttonList: []
+  matchresult: 
 --- !u!1 &2373003376286993429
 GameObject:
   m_ObjectHideFlags: 0

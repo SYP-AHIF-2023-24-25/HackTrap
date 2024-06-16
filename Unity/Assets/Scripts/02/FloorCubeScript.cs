@@ -10,8 +10,7 @@ public class FloorCubeScript : MonoBehaviour
         if (other.CompareTag("DPlayer"))
         {
             wallCube.UpdateValue();
+            gameObject.SetActive(false);
         }
     }
-
-
 }
