@@ -15,7 +15,7 @@ public class GameController : MonoBehaviour
     public GameObject[] floorFields;
     public Text[] buttonList;
     private string playerSide;
-    public string matchresult;
+    private string matchresult;
 
     public void Awake()
     {
