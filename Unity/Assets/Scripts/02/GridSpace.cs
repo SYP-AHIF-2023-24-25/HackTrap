@@ -17,8 +17,6 @@ public class GridSpace : MonoBehaviour
 
     public void UpdateValue()
     {
-        Debug.Log("Field Updated");
-
         if(button.interactable)
         {
             buttonText.text = gameController.GetPlayer();

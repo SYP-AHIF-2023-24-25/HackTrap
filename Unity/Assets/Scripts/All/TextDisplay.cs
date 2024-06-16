@@ -19,10 +19,8 @@ public class TextDisplay : MonoBehaviour
 
     private GameController ticTacToeGameController;
 
-
     [SerializeField]
     private bool isSwitch = true;
-
 
     [SerializeField]
     private int index = 0;
@@ -46,7 +44,7 @@ public class TextDisplay : MonoBehaviour
     {
         if (textUI == null)
         {
-            Debug.LogError("Text UI not assigned!");
+            //Debug.LogError("Text UI not assigned!");
             enabled = false;
         } 
         
@@ -99,7 +97,6 @@ public class TextDisplay : MonoBehaviour
                         else // No more lines, stop displaying text
                         {
                             isDisplayingText = false;
-                            Debug.Log("Text Display Complete");
 
                             if (isSwitch)
                             {

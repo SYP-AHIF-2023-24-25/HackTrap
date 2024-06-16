@@ -192,7 +192,11 @@ public class GameController : MonoBehaviour
     private bool IsGameOver(string playerSymbol)
     {
         if (IsDiagonalFilledWithOnePlayer(playerSymbol))
+        {
+            this.matchresult = playerSymbol;
+            PlayerPrefs.SetString("matchResult", this.matchresult);
             return true;
+        }
 
         for (int gridPart = 0; gridPart < GRID_LENGTH; gridPart++)
         {
