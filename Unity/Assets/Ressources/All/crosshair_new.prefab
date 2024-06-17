@@ -394,7 +394,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5241581141970623100}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.97113883
@@ -439,9 +439,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e67daf3542f89a34e9ac6aea779dbe1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colors:
-  - {r: 0.20334363, g: 1, b: 0, a: 0}
-  - {r: 1, g: 0, b: 0, a: 0}
+  teamsColor:
+  - {r: 0.09066844, g: 1, b: 0, a: 0}
+  - {r: 1, g: 0.7416481, b: 0, a: 0}
+  - {r: 1, g: 0, b: 0.746696, a: 0}
+  - {r: 0, g: 0.44552898, b: 1, a: 0}
+  teamNames:
+  - Team1
+  - Team2
+  - Team3
+  - Team4
+  collectingColor:
+  - {r: 0.9622642, g: 0.031772893, b: 0.031772893, a: 0}
   - {r: 1, g: 0, b: 0, a: 0}
   - {r: 1, g: 0, b: 0, a: 0}
   - {r: 1, g: 0, b: 0, a: 0}
