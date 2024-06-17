@@ -74,6 +74,8 @@ public class GameSimulator : MonoBehaviour
         virusCounter = PlayerPrefs.GetInt("virusCounter");
         Debug.Log($"Executing function on {team.name}");
 
+        Debug.Log(team.fillAmount);
+        loader.SetTrigger($"trigger{team.fillAmount * 10}");
 
         if (team.fillAmount == 1)
         {
@@ -90,14 +92,7 @@ public class GameSimulator : MonoBehaviour
 
             //Scene Switch
             Thread.Sleep(3000);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
-        else
-        {
-            Debug.Log(team.fillAmount);
-            loader.SetTrigger($"trigger{team.fillAmount * 10}");
-            
-            //team.fillAmount += 0.1f;
+            StateManager.Instance.SwitchToNextScenePrefab();
         }
     }
 

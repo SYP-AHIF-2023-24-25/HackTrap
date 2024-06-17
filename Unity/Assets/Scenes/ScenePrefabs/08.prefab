@@ -345,6 +345,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneAudioClips:
   - {fileID: 8300000, guid: 21473090b9f449e499f1f0652a8a6d11, type: 3}
+  loop: 1
 --- !u!1 &2383787548473253429
 GameObject:
   m_ObjectHideFlags: 0
@@ -2814,7 +2815,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100010, guid: 19515aadd1dd2884682e1ead83488e1e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 19515aadd1dd2884682e1ead83488e1e, type: 3}
       propertyPath: m_LocalPosition.x

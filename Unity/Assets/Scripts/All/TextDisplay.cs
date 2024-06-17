@@ -46,17 +46,25 @@ public class TextDisplay : MonoBehaviour
         {
             //Debug.LogError("Text UI not assigned!");
             enabled = false;
-        } 
-        
-        if(textUI.text == "" || textUI.text == null)
+        }
+
+        if (PlayerPrefs.GetString("WinnerText") != "")
         {
-            var matchResult = PlayerPrefs.GetString("matchResult");
-            ticTacToeGameController = FindObjectOfType<GameController>();
-            displayText = ticTacToeGameController.GetWinner(matchResult);
+            displayText = PlayerPrefs.GetString("WinnerText");
         }
         else
         {
-            displayText = textUI.text;
+            if (textUI.text == "" || textUI.text == null)
+            {
+                var matchResult = PlayerPrefs.GetString("matchResult");
+                ticTacToeGameController = FindObjectOfType<GameController>();
+                displayText = ticTacToeGameController.GetWinner(matchResult);
+            }
+            else
+            {
+                displayText = textUI.text;
+            }
+
         }
 
         lines = displayText.Split('\n');
