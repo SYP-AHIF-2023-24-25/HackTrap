@@ -15,6 +15,7 @@ TagManager:
   - Container3
   - Container4
   - Container5
+  - PLayerSpace
   layers:
   - Default
   - TransparentFX

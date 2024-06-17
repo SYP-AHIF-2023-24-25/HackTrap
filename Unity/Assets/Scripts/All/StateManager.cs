@@ -98,4 +98,8 @@ public class StateManager : MonoBehaviour
         SwitchSceneAfterDelay(currentSceneIndex + 1, 2f);
     }
 
+    public int GetCurrentIndex()
+    {
+        return currentSceneIndex;
+    }
 }

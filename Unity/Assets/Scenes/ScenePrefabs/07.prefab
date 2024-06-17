@@ -68,6 +68,7 @@ GameObject:
   - component: {fileID: 6330790779062593527}
   - component: {fileID: 1382408456828739545}
   - component: {fileID: 5185855590022003896}
+  - component: {fileID: 3178303705894720761}
   m_Layer: 0
   m_Name: FloorCanvas
   m_TagString: Untagged
@@ -154,6 +155,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &3178303705894720761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2774843142409224287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0229f7c7fa9195f4580ed4e8e59ecc0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3994729555987646602
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,6 +364,8 @@ MonoBehaviour:
   letterDelay: 0.2
   lineDelay: 1
   isSwitch: 1
+  index: 0
+  delayBeforeSwitch: 0
 --- !u!1 &6942045657761984262
 GameObject:
   m_ObjectHideFlags: 0

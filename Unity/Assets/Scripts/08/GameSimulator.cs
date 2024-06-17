@@ -57,7 +57,7 @@ public class GameSimulator : MonoBehaviour
         changeToRightTeam = PlayerPrefs.GetString("team");
         Image[] teams = { Team1, Team2, Team3, Team4 };
         Animator[] animators = { loader1, loader2, loader3, loader4 };
-        for (int i = 0; i < teams.Length && teamIndex == 0; i++)
+        for (int i = 0; i < teams.Length; i++)
         {
             if(changeToRightTeam.Equals(teams[i].name))
             {
@@ -69,14 +69,8 @@ public class GameSimulator : MonoBehaviour
 
     void MyFunction(Image team, Animator loader)
     {
-        //PlayerPrefs.SetInt("virusCounter", virusCounter);
-        //PlayerPrefs.SetString("team", teamName);
         virusCounter = PlayerPrefs.GetInt("virusCounter");
-        Debug.Log($"Executing function on {team.name}");
-
-        Debug.Log(team.fillAmount);
         loader.SetTrigger($"trigger{team.fillAmount * 10}");
-
         if (team.fillAmount == 1)
         {
             winner = true;

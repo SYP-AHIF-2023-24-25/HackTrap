@@ -4,40 +4,55 @@ using UnityEngine;
 
 public class ColorChanger : MonoBehaviour
 {
-    public Color[] colors; // Array of colors for each mesh
+    public Color[] teamsColor;
+    public string[] teamNames;
+    public Color[] collectingColor; // Array of colors for each mesh
     private MeshRenderer[] meshRenderers;
     private int nextColorIndex = 0; // Index of the next color to use
-    public string teamName;
-
+    private static List<List<GameObject>> teams = new List<List<GameObject>>();
     int virusCounter = 0;
 
-    GameSimulator gameSimulatorInstance; // Instanz der GameSimulator-Klasse
+    private static GameSimulator gameSimulatorInstance; // Instanz der GameSimulator-Klasse
 
     void Start()
     {
         // Get all MeshRenderers of the circleObject's children
         meshRenderers = GetComponentsInChildren<MeshRenderer>();
+    }
+    public void InitializeTeams()
+    {
+        // Erstelle eine Instanz von TeamDivider
+        OnCollisionPlayerCounter teamDivider = new OnCollisionPlayerCounter();
 
-        // Ensure the number of colors matches the number of MeshRenderers
-        if (colors.Length != meshRenderers.Length)
+        // Rufe die Methode DividePlayersIntoTeams auf und erhalte die Teams
+        teams = teamDivider.DividePlayersIntoTeams();
+        for(int i = 0; i < teams.Count;i++)
         {
-            Debug.LogError("Number of colors does not match the number of MeshRenderers.");
-            return;
+            foreach (GameObject player in teams[i])
+            {
+                MeshRenderer[] currentMeshRenderer = player.GetComponentsInChildren<MeshRenderer>();
+                currentMeshRenderer[1].material.color = teamsColor[i];
+            }
         }
 
-        // Instanz der GameSimulator-Klasse holen
-        gameSimulatorInstance = GameObject.FindObjectOfType<GameSimulator>();
     }
-
+    private void Update()
+    {
+        if (StateManager.Instance.GetCurrentIndex() == 8)
+        {
+            OnCollisionPlayerCounter playerSpace = GameObject.FindObjectOfType<OnCollisionPlayerCounter>();
+            playerSpace.enabled = false;
+        }
+    }
     void OnTriggerEnter(Collider other)
     {
         // Check if the collided object name starts with "virus"
         if (other.gameObject.name.StartsWith("virus", System.StringComparison.OrdinalIgnoreCase))
         {
-            if (virusCounter < 5)
+            if (virusCounter < 4)
             {
                 // Change the color of the next mesh
-                meshRenderers[nextColorIndex].material.color = colors[nextColorIndex];
+                this.meshRenderers[nextColorIndex + 2].material.color = collectingColor[nextColorIndex];
 
                 // Move to the next color index (loop back to 0 if reached the end)
                 nextColorIndex = (nextColorIndex + 1) % meshRenderers.Length;
@@ -48,26 +63,35 @@ public class ColorChanger : MonoBehaviour
             }
         }
 
-        if (other.gameObject.name.Equals(teamName, System.StringComparison.OrdinalIgnoreCase))
+        for(int i = 0; i < teamNames.Length;i++)
         {
-            PlayerPrefs.SetInt("virusCounter", virusCounter);
-            PlayerPrefs.SetString("team", teamName);
+            if(this.meshRenderers[1].material.color == teamsColor[i] && virusCounter == 4)
+            {
+                if (other.gameObject.name.Equals(teamNames[i], System.StringComparison.OrdinalIgnoreCase))
+                {
+                    
+                    PlayerPrefs.SetInt("virusCounter", virusCounter);
+                    PlayerPrefs.SetString("team", teamNames[i]);
+                    gameSimulatorInstance = GameObject.FindObjectOfType<GameSimulator>();
+                    // Aufrufen der Methode ExecuteFunctionAfterRandomTime in der GameSimulator-Klasse
+                    if (gameSimulatorInstance != null)
+                    {
+                        gameSimulatorInstance.ExecuteFunctionAfterRandomTime();
+                    }
+                    else
+                    {
+                        Debug.LogError("GameSimulator instance not found.",gameSimulatorInstance);
+                    }
 
-            // Aufrufen der Methode ExecuteFunctionAfterRandomTime in der GameSimulator-Klasse
-            if (gameSimulatorInstance != null)
-            {
-                gameSimulatorInstance.ExecuteFunctionAfterRandomTime();
-            }
-            else
-            {
-                Debug.LogError("GameSimulator instance not found.");
-            }
-
-            virusCounter = 0;
-            for (int i = 1; i < meshRenderers.Length; i++)
-            {
-                UnityEngine.Debug.Log("Resetting colors");
-                meshRenderers[i].material.color = Color.white;
+                    virusCounter = 0;
+                    for (int x = 2; x < meshRenderers.Length; x++)
+                    {
+                        UnityEngine.Debug.Log("Resetting colors");
+                        meshRenderers[x].material.color = Color.white;
+                    }
+                }
+                nextColorIndex = 0;
+                break;
             }
         }
     }
