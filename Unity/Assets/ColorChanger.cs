@@ -18,15 +18,6 @@ public class ColorChanger : MonoBehaviour
     {
         // Get all MeshRenderers of the circleObject's children
         meshRenderers = GetComponentsInChildren<MeshRenderer>();
-
-        // Ensure the number of colors matches the number of MeshRenderers
-        if (collectingColor.Length != meshRenderers.Length)
-        {
-            Debug.LogError("Number of colors does not match the number of MeshRenderers.");
-            return;
-        }
-
-        // Instanz der GameSimulator-Klasse hole
     }
     public void InitializeTeams()
     {

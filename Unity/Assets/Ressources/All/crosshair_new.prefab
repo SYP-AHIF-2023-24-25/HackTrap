@@ -440,10 +440,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teamsColor:
-  - {r: 0.09066844, g: 1, b: 0, a: 0}
-  - {r: 1, g: 0.7416481, b: 0, a: 0}
-  - {r: 1, g: 0, b: 0.746696, a: 0}
-  - {r: 0, g: 0.44552898, b: 1, a: 0}
+  - {r: 0.007843138, g: 1, b: 0, a: 0}
+  - {r: 1, g: 0.7529412, b: 0, a: 0}
+  - {r: 1, g: 0, b: 0.54901963, a: 0}
+  - {r: 0, g: 0.5254902, b: 1, a: 0}
   teamNames:
   - Team1
   - Team2
@@ -454,7 +454,6 @@ MonoBehaviour:
   - {r: 1, g: 0, b: 0, a: 0}
   - {r: 1, g: 0, b: 0, a: 0}
   - {r: 1, g: 0, b: 0, a: 0}
-  teamName: Team1
 --- !u!114 &3077214293869023577
 MonoBehaviour:
   m_ObjectHideFlags: 0
