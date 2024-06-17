@@ -78,10 +78,10 @@ public class ColorChanger : MonoBehaviour
             {
                 if (other.gameObject.name.Equals(teamNames[i], System.StringComparison.OrdinalIgnoreCase))
                 {
-                    gameSimulatorInstance = GameObject.FindObjectOfType<GameSimulator>();
+                    
                     PlayerPrefs.SetInt("virusCounter", virusCounter);
                     PlayerPrefs.SetString("team", teamNames[i]);
-
+                    gameSimulatorInstance = GameObject.FindObjectOfType<GameSimulator>();
                     // Aufrufen der Methode ExecuteFunctionAfterRandomTime in der GameSimulator-Klasse
                     if (gameSimulatorInstance != null)
                     {
@@ -100,6 +100,7 @@ public class ColorChanger : MonoBehaviour
                     }
                 }
                 nextColorIndex = 0;
+                break;
             }
         }
     }
