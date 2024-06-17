@@ -273,7 +273,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8924558781487177860}
   - component: {fileID: 5490611766529308407}
-  - component: {fileID: 7522022883189662245}
+  - component: {fileID: 6287856794594858470}
   m_Layer: 0
   m_Name: 05
   m_TagString: Untagged
@@ -312,7 +312,7 @@ MonoBehaviour:
   sceneIndex: 6
   delay: 15
   animator: {fileID: 0}
---- !u!114 &7522022883189662245
+--- !u!114 &6287856794594858470
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -326,7 +326,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneAudioClips:
   - {fileID: 8300000, guid: bebffd273fbe05446b65d891908d9296, type: 3}
-  loop: 0
+  loop: 1
 --- !u!1 &849356666335776386
 GameObject:
   m_ObjectHideFlags: 0

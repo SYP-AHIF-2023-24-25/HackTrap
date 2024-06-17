@@ -108,12 +108,14 @@ public class TextDisplay : MonoBehaviour
 
                             if (isSwitch)
                             {
-                                animator.SetTrigger("End");
+                                
                                 Thread.Sleep(delayBeforeSwitch * 1000);
 
                                 if (index == 0)
                                 {
+                                    animator.SetTrigger("End");
                                     StartCoroutine(StateManager.Instance.SwitchSceneAfterAnimation(animator));
+            
                                 }
                                 else
                                 {

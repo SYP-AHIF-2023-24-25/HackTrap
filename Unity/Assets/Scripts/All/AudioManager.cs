@@ -37,7 +37,7 @@ public class AudioManager : MonoBehaviour
         {
             StopCoroutine(fadeOutCoroutine);
         }
-        fadeOutCoroutine = StartCoroutine(FadeOutAndStop(1f)); // Adjust fade duration as needed
+        //fadeOutCoroutine = StartCoroutine(FadeOutAndStop(1f)); // Adjust fade duration as needed
     }
 
     private IEnumerator FadeOutAndStop(float fadeDuration)
