@@ -2382,7 +2382,7 @@ MonoBehaviour:
   objectToSpawn: {fileID: 2627533300698091257, guid: af28631c419d88148ad3e48a34ddb080,
     type: 3}
   spawnAreaSize: {x: 10.0306, y: 0.03188, z: 6.08319}
-  maxNumberOfObjectsToSpawn: 100
+  maxNumberOfObjectsToSpawn: 150
   minSpawnDelay: 1
   maxSpawnDelay: 1
   rotationAngles: {x: 0, y: 0, z: 90}

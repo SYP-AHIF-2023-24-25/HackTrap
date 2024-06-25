@@ -23,7 +23,7 @@ public class OnCollisionPlayerCounter : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
 
-        if (StateManager.Instance.GetCurrentIndex() == 6)
+        if (true)
         {
             foreach (GameObject player in players)
             {

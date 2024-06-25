@@ -40,6 +40,7 @@ public class VideoManager : MonoBehaviour
             if (elapsedTime >= videoDuration)
             {
                 videosStarted = true;
+                StateManager.Instance.SwitchToNextScenePrefab();
             }
         }
     }

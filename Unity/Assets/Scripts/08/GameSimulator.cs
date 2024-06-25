@@ -71,7 +71,7 @@ public class GameSimulator : MonoBehaviour
     {
         virusCounter = PlayerPrefs.GetInt("virusCounter");
         loader.SetTrigger($"trigger{team.fillAmount * 10}");
-        if (team.fillAmount == 1)
+        if (team.fillAmount == 0.9)
         {
             winner = true;
 

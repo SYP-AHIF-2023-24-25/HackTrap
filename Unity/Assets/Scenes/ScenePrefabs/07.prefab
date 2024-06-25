@@ -346,7 +346,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Eliminate the viruses by collecting them to your teambase in the corners\r\nYou
-    can collect a maximum of five\r\nGood luck\n\r3\r\n2\r\n1"
+    have to collect a min of four\nGood luck\n\r3\r\n2\r\n1"
 --- !u!114 &7804875446222429961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -366,6 +366,7 @@ MonoBehaviour:
   isSwitch: 1
   index: 0
   delayBeforeSwitch: 0
+  displayText: Default Text
 --- !u!1 &6942045657761984262
 GameObject:
   m_ObjectHideFlags: 0
