@@ -18,26 +18,31 @@ public class OnCollisionPlayerCounter : MonoBehaviour
     public AudioSource timeoutSound;
     private int switchOnes = 0;
 
+
     // Methode, die aufgerufen wird, wenn ein Spieler den Collider betritt
     void OnTriggerEnter(Collider other)
     {
-        foreach(GameObject player in players)
+
+        if (StateManager.Instance.GetCurrentIndex() == 6)
         {
-            if(player.name == other.name)
+            foreach (GameObject player in players)
             {
-                playerExist = true;
+                if(player.name == other.name)
+                {
+                    playerExist = true;
+                }
             }
-        }
-        if(!playerExist)
-        {
-            players.Add(other.gameObject);
-            playerCount++;
-            playerExist = false;
-            timeout = 15;
-            timeoutCounter = 0;
-            timer.GetComponent<Text>().color = Color.white;
-            Debug.Log("Spieler betreten den Bereich. Anzahl: " + playerCount);
-            UpdatePlayerCountText();
+            if(!playerExist)
+            {
+                players.Add(other.gameObject);
+                playerCount++;
+                playerExist = false;
+                timeout = 15;
+                timeoutCounter = 0;
+                timer.GetComponent<Text>().color = Color.white;
+                Debug.Log("Spieler betreten den Bereich. Anzahl: " + playerCount);
+                UpdatePlayerCountText();
+            }
         }
     }
     void UpdatePlayerCountText()
@@ -83,20 +88,24 @@ public class OnCollisionPlayerCounter : MonoBehaviour
     }
     void executeTimeout()
     {
-        if (timeoutCounter >= timeout)
+        if(StateManager.Instance.GetCurrentIndex() == 6)
         {
-            switchOnes++;
-            StateManager.Instance.SwitchToNextScenePrefab();
-        }
-        else
-        {
-            timer.GetComponent<Text>().text = (timeout - timeoutCounter) < 10 ? " " + (timeout - timeoutCounter) : (timeout - timeoutCounter) + "";
-            if (timeout - timeoutCounter < 5)
+            if (timeoutCounter >= timeout)
             {
-                timer.GetComponent<Text>().color = Color.red;
-                timeoutSound.Play();
+                switchOnes++;
+                StateManager.Instance.SwitchToNextScenePrefab();
             }
-            timeoutCounter++;
+            else
+            {
+                timer.GetComponent<Text>().text = (timeout - timeoutCounter) < 10 ? " " + (timeout - timeoutCounter) : (timeout - timeoutCounter) + "";
+                if (timeout - timeoutCounter < 5)
+                {
+                    timer.GetComponent<Text>().color = Color.red;
+                    timeoutSound.Play();
+                }
+                timeoutCounter++;
+            }
         }
+        
     }
 }

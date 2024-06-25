@@ -3112,7 +3112,7 @@ MonoBehaviour:
   - {fileID: 620192866}
   - {fileID: 743782448}
   sceneSwitchDelay: 100
-  initialScene: 5
+  initialScene: 0
 --- !u!4 &1167879953
 Transform:
   m_ObjectHideFlags: 0
@@ -3494,7 +3494,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2405580989353733173, guid: d70e1394954e4a544a940042f8ebb765, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d70e1394954e4a544a940042f8ebb765, type: 3}
 --- !u!1 &1396172005
 GameObject:
