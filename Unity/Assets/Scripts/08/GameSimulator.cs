@@ -71,7 +71,7 @@ public class GameSimulator : MonoBehaviour
     {
         virusCounter = PlayerPrefs.GetInt("virusCounter");
         loader.SetTrigger($"trigger{team.fillAmount * 10}");
-        if (team.fillAmount == 0.9)
+        if (team.fillAmount == 1)
         {
             winner = true;
 
@@ -85,8 +85,9 @@ public class GameSimulator : MonoBehaviour
             }
 
             //Scene Switch
-            Thread.Sleep(3000);
+            Thread.Sleep(1000);
             StateManager.Instance.SwitchToNextScenePrefab();
+            
         }
     }
 
@@ -110,6 +111,26 @@ public class GameSimulator : MonoBehaviour
         public void DecreaseScore()
         {
             this.virusScore--;
+        }
+    }
+
+    public void ResetColours()
+    {
+        // Find all GameObjects with the tag "Dplayer"
+        GameObject[] dplayerObjects = GameObject.FindGameObjectsWithTag("Dplayer");
+
+        // Iterate through each object found
+        foreach (GameObject obj in dplayerObjects)
+        {
+            // Get all MeshRenderer components attached to the GameObject
+            MeshRenderer[] meshRenderers = obj.GetComponentsInChildren<MeshRenderer>();
+
+            // Loop through each MeshRenderer starting from index 2
+            for (int x = 2; x < meshRenderers.Length; x++)
+            {
+                UnityEngine.Debug.Log("Resetting colors");
+                meshRenderers[x].material.color = Color.white;
+            }
         }
     }
 }
