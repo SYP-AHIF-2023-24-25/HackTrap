@@ -16,6 +16,10 @@ TagManager:
   - Container4
   - Container5
   - PLayerSpace
+  - TeamCounter4
+  - TeamCounter3
+  - TeamCounter2
+  - TeamCounter1
   layers:
   - Default
   - TransparentFX

@@ -282,8 +282,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   textUI: {fileID: 7764635591088587542}
-  letterDelay: 0.2
-  lineDelay: 1
+  letterDelay: 0.35
+  lineDelay: 2
   isSwitch: 0
   index: 0
   delayBeforeSwitch: 0

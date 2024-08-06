@@ -361,7 +361,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 9074132820466563059}
   textUI: {fileID: 2968526058881003387}
-  letterDelay: 0.2
+  letterDelay: 0.35
   lineDelay: 1
   isSwitch: 1
   index: 0
