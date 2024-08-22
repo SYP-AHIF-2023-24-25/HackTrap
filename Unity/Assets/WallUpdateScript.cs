@@ -53,7 +53,7 @@ public class WallUpdateScript : MonoBehaviour
     void executeTimeout()
     {
         if (timeoutCounter >= timeout)
-            StateManager.Instance.SwitchToScenePrefab(13);
+            StateManager.Instance.SwitchToScenePrefab(12);
         else
         {
             timer.GetComponent<Text>().text = (timeout - timeoutCounter) < 10 ? " " + (timeout - timeoutCounter) : (timeout - timeoutCounter) + "";

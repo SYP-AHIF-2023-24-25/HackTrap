@@ -69,12 +69,22 @@ public class CubeManager : MonoBehaviour
 
     void StartBigContainerAnimation()
     {
+
+        GameObject[] cubes = GameObject.FindGameObjectsWithTag("Cube");
+
+        // Loop through the array and destroy each GameObject
+        foreach (GameObject cube in cubes)
+        {
+            Destroy(cube);
+        }
+
+
         chest.gameObject.SetActive(true);
 
-        float scaleSpeed = 0.03f;
+        float scaleSpeed = 0.05f;
 
         Vector3 originalScale = chest.localScale;
-        Vector3 targetScale = originalScale * 200f;
+        Vector3 targetScale = originalScale * 30f;
 
         chest.localScale = Vector3.Lerp(chest.localScale, targetScale, Time.deltaTime * scaleSpeed);
 

@@ -1718,7 +1718,7 @@ Transform:
   m_GameObject: {fileID: 1361286345}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 8.57}
-  m_LocalScale: {x: 6.3654737, y: 6.3654747, z: 6.3654747}
+  m_LocalScale: {x: 7.851812, y: 7.851813, z: 7.851813}
   m_Children: []
   m_Father: {fileID: 1586748805}
   m_RootOrder: 0
@@ -2701,30 +2701,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1182003389}
     m_Modifications:
-    - target: {fileID: 11418816, guid: 237454293243dac4bb5ae4d0c9a2095e, type: 3}
-      propertyPath: _worldCameras.Array.data[0]
-      value: 
-      objectReference: {fileID: 837733151}
-    - target: {fileID: 11418816, guid: 237454293243dac4bb5ae4d0c9a2095e, type: 3}
-      propertyPath: _worldCameras.Array.data[1]
-      value: 
-      objectReference: {fileID: 68484682}
-    - target: {fileID: 11418816, guid: 237454293243dac4bb5ae4d0c9a2095e, type: 3}
-      propertyPath: _worldCameras.Array.data[2]
-      value: 
-      objectReference: {fileID: 1966069752}
-    - target: {fileID: 11418816, guid: 237454293243dac4bb5ae4d0c9a2095e, type: 3}
-      propertyPath: _worldCameras.Array.data[3]
-      value: 
-      objectReference: {fileID: 1271925279}
-    - target: {fileID: 11418816, guid: 237454293243dac4bb5ae4d0c9a2095e, type: 3}
-      propertyPath: _stereoCanvasScaler.Array.data[0]
-      value: 
-      objectReference: {fileID: 1325955697}
-    - target: {fileID: 11418816, guid: 237454293243dac4bb5ae4d0c9a2095e, type: 3}
-      propertyPath: _stereoCanvasScaler.Array.data[1]
-      value: 
-      objectReference: {fileID: 2074755467}
     - target: {fileID: 22447028, guid: 237454293243dac4bb5ae4d0c9a2095e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2797,6 +2773,30 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11418816, guid: 237454293243dac4bb5ae4d0c9a2095e, type: 3}
+      propertyPath: _worldCameras.Array.data[0]
+      value: 
+      objectReference: {fileID: 837733151}
+    - target: {fileID: 11418816, guid: 237454293243dac4bb5ae4d0c9a2095e, type: 3}
+      propertyPath: _worldCameras.Array.data[1]
+      value: 
+      objectReference: {fileID: 68484682}
+    - target: {fileID: 11418816, guid: 237454293243dac4bb5ae4d0c9a2095e, type: 3}
+      propertyPath: _worldCameras.Array.data[2]
+      value: 
+      objectReference: {fileID: 1966069752}
+    - target: {fileID: 11418816, guid: 237454293243dac4bb5ae4d0c9a2095e, type: 3}
+      propertyPath: _worldCameras.Array.data[3]
+      value: 
+      objectReference: {fileID: 1271925279}
+    - target: {fileID: 11418816, guid: 237454293243dac4bb5ae4d0c9a2095e, type: 3}
+      propertyPath: _stereoCanvasScaler.Array.data[0]
+      value: 
+      objectReference: {fileID: 1325955697}
+    - target: {fileID: 11418816, guid: 237454293243dac4bb5ae4d0c9a2095e, type: 3}
+      propertyPath: _stereoCanvasScaler.Array.data[1]
+      value: 
+      objectReference: {fileID: 2074755467}
     - target: {fileID: 22361346, guid: 237454293243dac4bb5ae4d0c9a2095e, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 1

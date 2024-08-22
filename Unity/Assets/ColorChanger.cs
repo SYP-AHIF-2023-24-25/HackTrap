@@ -22,10 +22,10 @@ public class ColorChanger : MonoBehaviour
     public void InitializeTeams()
     {
         // Erstelle eine Instanz von TeamDivider
-        OnCollisionPlayerCounter teamDivider = new OnCollisionPlayerCounter();
+        //PlayerCounterController teamDivider = new PlayerCounterController();
 
         // Rufe die Methode DividePlayersIntoTeams auf und erhalte die Teams
-        teams = teamDivider.DividePlayersIntoTeams();
+        //teams = teamDivider.DividePlayersIntoTeams();
         for(int i = 0; i < teams.Count;i++)
         {
             foreach (GameObject player in teams[i])
@@ -40,7 +40,7 @@ public class ColorChanger : MonoBehaviour
     {
         if (StateManager.Instance.GetCurrentIndex() == 8)
         {
-            OnCollisionPlayerCounter playerSpace = GameObject.FindObjectOfType<OnCollisionPlayerCounter>();
+            PlayerCounterController playerSpace = GameObject.FindObjectOfType<PlayerCounterController>();
             playerSpace.enabled = false;
         }
     }

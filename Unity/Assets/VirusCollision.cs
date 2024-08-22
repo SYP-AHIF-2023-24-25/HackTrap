@@ -20,18 +20,18 @@ public class VirusCollision : MonoBehaviour
     // Gets called when the object enters the collider area 
     void OnTriggerEnter(Collider objectName)
     {
-        UnityEngine.Debug.Log("Entered collision with " + objectName.gameObject.name);
+        //UnityEngine.Debug.Log("Entered collision with " + objectName.gameObject.name);
     }
 
     // Gets called during the stay of object inside the collider area
     void OnTriggerStay(Collider objectName)
     {
-        UnityEngine.Debug.Log("Colliding with " + objectName.gameObject.name);
+        //UnityEngine.Debug.Log("Colliding with " + objectName.gameObject.name);
     }
 
     // Gets called when the object exits the collider area
     void OnTriggerExit(Collider objectName)
     {
-        UnityEngine.Debug.Log("Exited collision with " + objectName.gameObject.name);
+        //UnityEngine.Debug.Log("Exited collision with " + objectName.gameObject.name);
     }
 }

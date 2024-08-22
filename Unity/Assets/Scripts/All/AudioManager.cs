@@ -7,6 +7,9 @@ public class AudioManager : MonoBehaviour
     [SerializeField]
     private AudioClip[] sceneAudioClips; // Array of audio clips to choose from
 
+    [SerializeField]
+    private float volume;
+
     private AudioSource audioSource;
     private Coroutine fadeOutCoroutine;
 
@@ -17,40 +20,60 @@ public class AudioManager : MonoBehaviour
         // Ensure there is an AudioSource component attached to the prefab
         audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.playOnAwake = false;
+        if (volume == 0.0f)
+        {
+            volume = 1.0f;
+        }
         audioSource.loop = loop; // Loop the audio clip
     }
 
     private void OnEnable()
     {
-        // Pick a random audio clip from the array
-        if (sceneAudioClips.Length > 0)
-        {
-            audioSource.clip = sceneAudioClips[Random.Range(0, sceneAudioClips.Length)];
-            audioSource.Play();
-        }
+        PlayRandomAudio();
     }
 
-    private void OnDisable()
+    // Method to handle switching prefabs with fade-out effect
+    public void SwitchAudio(float fadeDuration)
     {
-        // Stop the audio with a fade-out effect when the prefab is disabled
         if (fadeOutCoroutine != null)
         {
             StopCoroutine(fadeOutCoroutine);
         }
-        //fadeOutCoroutine = StartCoroutine(FadeOutAndStop(1f)); // Adjust fade duration as needed
+        //fadeOutCoroutine = StartCoroutine(FadeOutAndSwitch(fadeDuration));
     }
 
-    private IEnumerator FadeOutAndStop(float fadeDuration)
+    // Coroutine to fade out the current audio and then switch to a new one
+    private IEnumerator FadeOutAndSwitch(float fadeDuration)
     {
         float startVolume = audioSource.volume;
+        float elapsedTime = 0f;
 
-        for (float t = 0; t < fadeDuration; t += Time.deltaTime)
+        while (elapsedTime < fadeDuration)
         {
-            audioSource.volume = Mathf.Lerp(startVolume, 0, t / fadeDuration);
+            // Increment elapsedTime by the time passed since last frame
+            elapsedTime += Time.deltaTime;
+
+            // Calculate the new volume
+            float newVolume = Mathf.Lerp(startVolume, 0, elapsedTime / fadeDuration);
+            audioSource.volume = newVolume;
+
+            // Wait until the next frame
             yield return null;
         }
 
+        // Ensure volume is set to 0 at the end
+        audioSource.volume = 0;
         audioSource.Stop();
-        audioSource.volume = startVolume; // Reset volume for next use
+    }
+
+    // Method to play a random audio clip from the array
+    private void PlayRandomAudio()
+    {
+        if (sceneAudioClips.Length > 0)
+        {
+            audioSource.clip = sceneAudioClips[Random.Range(0, sceneAudioClips.Length)];
+            audioSource.volume = volume;
+            audioSource.Play();
+        }
     }
 }

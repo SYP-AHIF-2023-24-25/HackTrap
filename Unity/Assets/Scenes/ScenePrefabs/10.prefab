@@ -538,10 +538,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Please have the winning team come into the field!\r\n\nYou have successfully
-    captured all viruses\r\nTo now free yourself from the virus, \nrearrange the letters
-    in the correct order to \nform a word and kill the Virus!\r\nBut be careful\r\nThe
-    virus will free itself after 30 sec\r\n3\r\n2\r\n1\r"
+  m_Text: "Congratulations! Your team has captured all the viruses.\r\n\r\nRearrange
+    the letters to form the correct word and destroy the virus. \r\nYou have 30 seconds
+    before it escapes!\r\nOther teams, please exit the field to allow the winners
+    to finish their mission.\r\n3...\r\n2...\r\n1...\r\n\n"
 --- !u!114 &8294061575623516940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -556,7 +556,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 486033097039160708}
   textUI: {fileID: 5915234622009884884}
-  letterDelay: 0.1
+  letterDelay: 0.2
   lineDelay: 1
   isSwitch: 1
   index: 0

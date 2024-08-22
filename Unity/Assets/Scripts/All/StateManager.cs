@@ -57,8 +57,8 @@ public class StateManager : MonoBehaviour
             delay = sceneSwitchDelay;
 
         yield return new WaitForSeconds(delay);
-
         SwitchToScenePrefab(sceneIndex);
+
     }
 
     // Switch to a new scene prefab immediately
@@ -66,7 +66,7 @@ public class StateManager : MonoBehaviour
     {
         if (currentScenePrefab != null)
         {
-            currentScenePrefab.SetActive(false);
+            Destroy(currentScenePrefab);
         }
 
         currentScenePrefab = scenePrefabs[sceneIndex];
@@ -77,10 +77,9 @@ public class StateManager : MonoBehaviour
     // Switch to the next scene prefab
     public void SwitchToNextScenePrefab()
     {
+
         currentSceneIndex = (currentSceneIndex + 1) % scenePrefabs.Length;
         SwitchToScenePrefab(currentSceneIndex);
-        Debug.Log("YourMethod is being called!");
-        Debug.Log(System.Environment.StackTrace);
     }
 
     public IEnumerator SwitchSceneAfterAnimation(Animator animator)

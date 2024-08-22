@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/School/4_class/SYP/Projects/HackTrap/Builds/Build_170624_V4/DeepSpaceDevKit.exe
+C:/School/4_class/SYP/Projects/HackTrap/Builds/Build_21_08_24_V1/DeepSpaceDevKit.exe
 SceneListBegin?
 Assets/Scenes/HackTrap.unity
 SceneListEnd?
@@ -59,6 +59,7 @@ fc108ce7d98c40ac0907e8ca7f500c76 UnityEngine.UI.dll:UnityEngine.UI.Text
 abf1930d8126d0b2e00e9449129a0190 UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 64e54c0cbb0177c5ea26f340efb9ff85 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
 98ad81e9f689a492509f07e75b810aaa Unity.TextMeshPro.dll:TMPro.TMP_InputField
+735147f2ee7307da7bb94c8c762d823e Assembly-CSharp.dll:.ProgressBarCircle
 cf9f5cf2c3145a37ac07f00e50e460f9 UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 5fc094978ce3e3591a7500ed380d854a UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -110,7 +111,6 @@ e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.P
 201e3fde670b00545944bb3db215c80a UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 00274a21279f5cb831ce20f895049e38 Unity.TextMeshPro.dll:TMPro.TMP_SubMeshUI
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.scri
-8992f1b2f2362991536c1a5136b5a1d6 Assembly-CSharp.dll:.VirusSpawn
 e6ae40841db498b6e673877ac45ad208 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
 1dcb82730d983b77cec736c6ef19f814 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkDiscovery
@@ -130,22 +130,25 @@ d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.Spa
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:DeepSpace.LaserTracking.TrackingEntity
 5182a3a0a7d9e2ecc80dd8e97e810667 Assembly-CSharp.dll:.ScaleImage
 1341d73b34be1c15d553a9517deb0034 Assembly-CSharp.dll:.OnSelection
+babcddaca0e075af60191ddd2b395059 Assembly-CSharp.dll:.ProgressBar
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.OnCollosionTeam
 303ad70ce203ad874efe2965d0fbcff9 Unity.Analytics.Tracker.dll:UnityEngine.Analytics.AnalyticsEventTracker
 7fb9de8dcf73854b6b328eca1f7a6e6d Unity.Analytics.Tracker.dll:UnityEngine.Analytics.AnalyticsTracker
 73b073683f64efd5ec715c0fded0a48b Assembly-CSharp.dll:.Bar
 94017dcc9f00fe671ea7dc427b4da011 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
 ea750c9ca76ce11b302b49b6588b2f55 Assembly-CSharp.dll:.ColorChanger
+13f1815b0c3c4e2c282b6148b93f10c6 Assembly-CSharp.dll:.ContainerChoiceController
 22b3057ecc9f3a5467d4460f4bee456e Assembly-CSharp.dll:.StereoCanvasScaler
-71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.SwitchScene01
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.SwitchSceneController
 fa7cea9bb3d32f209a6fdbb5544e1579 Assembly-CSharp.dll:UnityVRPN.TrackerHostSettings
 83fd5f9b8d209a0c64cc017894c1dce3 Assembly-CSharp.dll:DeepSpace.Udp.UdpReceiver
 0a528d9296ebdb49d2ed477d9684a606 Assembly-CSharp.dll:DeepSpace.MobileControlTcpManager
+cadcefd2110e80d416376f100be3f296 Assembly-CSharp.dll:.LoaderManager
 b3ab2106268377ffe25dd18ac23dca28 Unity.TextMeshPro.dll:TMPro.TMP_Asset
 f324cecacb66b2081f373ba25ca1b941 Assembly-CSharp.dll:.Context
-7ba2c46c15b45b18cbeb69a86a9e8c64 Assembly-CSharp.dll:.NoTracker
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:DeepSpace.WallNetworkHandler
-63adbf4b78f4401faef4dbbe138d1d42 Assembly-CSharp.dll:.AudioManager
+b8705185c66c3d2820a03fe0a268f2fd Assembly-CSharp.dll:.TextLoader
+0515feaacd942b451b0f84be15fd9435 Assembly-CSharp.dll:.AudioManager
 c44ed5e938c011d71078d1511c5d6ceb Assembly-CSharp.dll:.BarChart
 10ee66654e61f7aeb3f670376ec38fa3 Assembly-CSharp.dll:DeepSpace.LaserTracking.TrackingEntityManager
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.Analytics.Editor.dll:UnityEditor.Analytics.AnalyticsEventTrackerEditor
@@ -156,17 +159,20 @@ e52d5f48a50fcf6b504e203104939dd3 Assembly-CSharp.dll:DeepSpace.Udp.UdpSender
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.TeamInitialize
 24a2916a3dd0374ab2895faceff69f6a Assembly-CSharp.dll:.DemoJsonConverter
 e7e3b498dd20ae06b6ee39d228ce614b Assembly-CSharp.dll:.DummyPharus
+618026221e9ca7a0b94a4b4ae1c98a4c Assembly-CSharp.dll:.DisplayWinners
 24a2916a3dd0374ab2895faceff69f6a Assembly-CSharp.dll:DeepSpace.JsonProtocol.JsonConverter
 1d8743d581d602d712b2dffe721151c5 Assembly-CSharp.dll:DeepSpace.FloorNetworkHandler
 56a6c50ad1776ea35af1da6f484ed23a Assembly-CSharp.dll:.OnCollisionPlayerCounter
 4fd8bf02e3089425d3502e26c44ba31a Unity.TextMeshPro.dll:TMPro.TextContainer
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.OnCollisionSwitch
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.TextExplanation
-71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.OnCollision
+66276115fa53deb6a438032219018c62 Assembly-CSharp.dll:.NewLoaderManager
+7e0a4d1832fe2b946ebcf4634007c04d Assembly-CSharp.dll:.AnimateController
 2b751a34d2233a6a926471c5fb00c9f5 Assembly-CSharp.dll:DeepSpace.WallFloorStarter
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.OnCollisionVirus
 2087b4fcf64e1b3bbb60b12bc2f7d40b Assembly-CSharp.dll:DeepSpace.CameraController
 fdd8598cf46b670fd5d70bb39c7a1949 Assembly-CSharp.dll:DeepSpace.TouchView
+ea750c9ca76ce11b302b49b6588b2f55 Assembly-CSharp.dll:.MainPlayerController
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.VirusCollision
 e6ae40841db498b6e673877ac45ad208 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
@@ -183,6 +189,7 @@ ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networki
 9b895dcabbc1faf095c000c32d471fd0 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 5887ef1bc706b22b773d253fd443ceef UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.HighScoreTable
+de0e43d5d0989eda835b8ad6c34c0f73 Assembly-CSharp.dll:.PlayerCounterController
 510fefd6a544e16a3ffefa557ddcba39 Unity.TextMeshPro.dll:TMPro.PackageResourceImporterWindow
 b78f09ac38e48519c645816044b9eac7 Assembly-CSharp.dll:.GameSimulator
 aa82b3ce4c0c9b227036c0337315c5d3 Unity.TextMeshPro.dll:TMPro.TMP_FontAsset
@@ -204,10 +211,11 @@ fb6a1ea36b4f6ef5948d283d93760765 UnityEngine.GoogleAudioSpatializer.dll:UnityEng
 5b0391b7e3d9ea9db6c0a8fbd0ca23f6 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
 5b0391b7e3d9ea9db6c0a8fbd0ca23f6 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSourceExtension
 8e065544ed546f15712ee88b32dd7f35 Assembly-CSharp.dll:DeepSpace.Udp.UdpBase
+7ba2c46c15b45b18cbeb69a86a9e8c64 Assembly-CSharp.dll:.NoBtnController
 67372f1823fe8293ab2c79fc853578a1 Assembly-CSharp.dll:.CameraOffAxisProjection
 fa459a2d52b534fc8e7d94f9a595ba3f Assembly-CSharp.dll:.DemoWallFloorStarter
 a4f0a4f62100f1a4fb5cbe0e00dde83f Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
-2842b39cc13f79b667da79c059d646c5 Assembly-CSharp.dll:.FloorCubeScript
+2842b39cc13f79b667da79c059d646c5 Assembly-CSharp.dll:.FloorCubeController
 f2c6041520ce0c64273cf45b1661eb1a Assembly-CSharp.dll:DeepSpace.InputFieldFocusHandler
 5fc094978ce3e3591a7500ed380d854a Unity.Analytics.DataPrivacy.dll:UnityEngine.Analytics.DataPrivacyButton
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.TeamAssignment
@@ -215,29 +223,29 @@ f2c6041520ce0c64273cf45b1661eb1a Assembly-CSharp.dll:DeepSpace.InputFieldFocusHa
 f6e3601f3f88e3a500f5b4ce26ef406c Assembly-CSharp.dll:DeepSpace.CmdConfigManager
 e2a474f1b425cb9bca5dd7f73ddb078e Assembly-CSharp.dll:.PlayerManager
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
-e12c733fd6fa6fb12135d69e84eabe32 Assembly-CSharp.dll:.VirusSpawner
+049da38e04b44d779517153fb9e33896 Assembly-CSharp.dll:.Demo
+1acf6baef5578ab0db83468944dbffd5 Assembly-CSharp.dll:.GameSimulatorController
 ee4d36b432c8b42a6f61f5f47e15f544 Assembly-CSharp.dll:.VRPNTransformationDemo
-7e0a4d1832fe2b946ebcf4634007c04d Assembly-CSharp.dll:.OnCollisionAnimate
 83e769eee07fc231384c812eedbb8224 Assembly-CSharp.dll:.CollisionManager
 e01d659b149cc161a0c34b076008a444 Assembly-CSharp.dll:.GridSpace
 01271b3fddc8a4070697da39c51f34ea Assembly-CSharp.dll:DeepSpace.LaserTracking.TracklinkReceiveHandler
-e12c733fd6fa6fb12135d69e84eabe32 Assembly-CSharp.dll:.VirusSpawner
+d2a659ac0ac4466e27b0d0c71c802625 Assembly-CSharp.dll:.VirusSpawner
 d791aa6007fa3640be1164ea75bb087d Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 78459f8a7d1fe309697bd7f323ceeafd Assembly-CSharp.dll:.TextDisplay
 1fdf16d4b5a4d08b0fe89d3edf2f8eb7 Assembly-CSharp.dll:.GameController
 13f1815b0c3c4e2c282b6148b93f10c6 Assembly-CSharp.dll:.OnCollisionWithContainer1
-7ba2c46c15b45b18cbeb69a86a9e8c64 Assembly-CSharp.dll:.YesNoTracker
 c6666661329916e218bee7f5e79e60f5 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 3165968ba45c74472d279ba04455fccb Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
-84880f6fa40e3c0fb68f1adfea31e8d3 Assembly-CSharp.dll:.ProgressBar
+6a12e9df96c2f00ff682d72a9232b48e Assembly-CSharp.dll:.TriggerFieldDelay
 0d698488d22963c379761756698c103c Assembly-CSharp.dll:.VideoManager
 17b9a99fc67579a80fc5fbc80962c12a Assembly-CSharp.dll:DeepSpace.FpsCounter
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.OnCollisionNext
 b41cf6e14b3ce6f3b3462066c62134d3 Assembly-CSharp.dll:DeepSpace.DebugStereoManager
 5c04f03a7539cae7aaeb8ee9d7407979 Assembly-CSharp.dll:.Mover
-459b50185a167c1d210a783633c72823 Assembly-CSharp.dll:.ObjectMovement
+459b50185a167c1d210a783633c72823 Assembly-CSharp.dll:.VirusMovement
 bf2c3cd839882919d3365cb62cdd8f33 Assembly-CSharp.dll:.DemoEnableDisableViews
 949c9d7bef6856227531da05f95b2dd5 Assembly-CSharp.dll:.VirusDeSpawn
 60990d72713937ff29cf779c258ddd93 Assembly-CSharp.dll:DeepSpace.MobileControlManager
 4fd54b619a94a996a475bb6e9d646f2e Assembly-CSharp.dll:.DemoTouchView
+c9fcb65ed26531c91e550a13497a0af5 Assembly-CSharp.dll:.GetColor

@@ -5,69 +5,70 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
-    [SerializeField]
-    private Animator animator;
+    [SerializeField] private Animator animator; // Reference to scene transition animator
+    [SerializeField] private GameObject[] floorFields; // Floor fields for enabling/disabling
+    [SerializeField] private Text[] buttonList; // UI buttons representing the grid
 
-    private static int GRID_LENGTH = 3;
-    private static Color COLOR_O = Color.HSVToRGB(198, 0, 0); //red
-    private static Color COLOR_X = Color.HSVToRGB(34, 113, 231); //blue
+    private static readonly int GRID_LENGTH = 3;
+    private static readonly Color COLOR_O = Color.blue; // Color for 'O'
+    private static readonly Color COLOR_X = Color.red; // Color for 'X'
 
-    public GameObject[] floorFields;
-    public Text[] buttonList;
-    private string playerSide;
-    private string matchresult;
+    private string playerSide = "X"; // Player's current side ('X' or 'O')
+    private string matchResult; // Result of the match
 
-    public void Awake()
+    private void Awake()
     {
         SetGameControllerReferenceOnButtons();
-        playerSide = "X";
     }
 
-    public Color GetColor()
+    // Set the GameController reference on each button's GridSpace component
+    private void SetGameControllerReferenceOnButtons()
     {
-        return playerSide == "X" ? Color.red : Color.blue;
-    }
-
-    public void SetGameControllerReferenceOnButtons()
-    {
-        for (int i = 0; i < buttonList.Length; i++)
+        foreach (Text button in buttonList)
         {
-            GridSpace currentGridSpace = buttonList[i].GetComponentInParent<GridSpace>();
-            currentGridSpace.SetGameControllerReference(this);
+            GridSpace gridSpace = button.GetComponentInParent<GridSpace>();
+            gridSpace.SetGameControllerReference(this);
         }
     }
 
+    // Returns the current player's color
+    public Color GetColor()
+    {
+        return playerSide == "X" ? COLOR_X : COLOR_O;
+    }
+
+    // Returns the current player's symbol
     public string GetPlayer()
     {
         return playerSide;
     }
 
+    // Switches the active player and triggers the computer's turn if necessary
     public void ChangePlayer()
     {
         playerSide = playerSide == "X" ? "O" : "X";
 
-        if (playerSide == "O") // Computer's turn
+        if (playerSide == "O")
         {
             SetAllFloorCubesActive(false);
             StartCoroutine(ComputerTurn());
         }
     }
 
+    // Handles the computer's move using the Minimax algorithm
     private IEnumerator ComputerTurn()
     {
+        yield return new WaitForSeconds(1f); // Delay before the computer moves
 
-        yield return new WaitForSeconds(1f); //delay
-
-        // minimax algorithm for computer's move
         int bestMove = Minimax(playerSide);
         buttonList[bestMove].text = playerSide;
         buttonList[bestMove].GetComponentInParent<Button>().interactable = false;
 
         SetAllFloorCubesActive(true);
-
         EndTurn();
     }
 
+    // Activates/deactivates floor cubes based on the state of the game
     private void SetAllFloorCubesActive(bool active)
     {
         for (int i = 0; i < floorFields.Length; i++)
@@ -77,6 +78,7 @@ public class GameController : MonoBehaviour
         }
     }
 
+    // Ends the current turn, checking for game over conditions
     public void EndTurn()
     {
         if (IsTie() || IsGameOver(playerSide))
@@ -89,37 +91,37 @@ public class GameController : MonoBehaviour
         }
     }
 
-    public void GameOver()
+    // Handles game over state, disables interaction and triggers scene transition
+    private void GameOver()
     {
-        //disable all buttons
-        for (int i = 0; i < buttonList.Length; i++)
+        foreach (Text button in buttonList)
         {
-            Button currentButton = buttonList[i].GetComponentInParent<Button>();
-            currentButton.interactable = false;
+            button.GetComponentInParent<Button>().interactable = false;
         }
 
-        //switch scene
         animator.SetTrigger("End");
         StartCoroutine(StateManager.Instance.SwitchSceneAfterAnimation(animator));
     }
 
+    // Checks if a specific row is filled with one player's symbol
     private bool IsRowFilledWithOnePlayer(int row, string playerSymbol)
     {
-        int startIndex = row * 3;
+        int startIndex = row * GRID_LENGTH;
 
-        // Check if all buttons in the specified row have the player's symbol
         return buttonList[startIndex].text == playerSymbol &&
                buttonList[startIndex + 1].text == playerSymbol &&
                buttonList[startIndex + 2].text == playerSymbol;
     }
 
+    // Checks if a specific column is filled with one player's symbol
     private bool IsColumnFilledWithOnePlayer(int column, string playerSymbol)
     {
         return buttonList[column].text == playerSymbol &&
-               buttonList[column + 3].text == playerSymbol &&
-               buttonList[column + 6].text == playerSymbol;
+               buttonList[column + GRID_LENGTH].text == playerSymbol &&
+               buttonList[column + 2 * GRID_LENGTH].text == playerSymbol;
     }
 
+    // Checks if either diagonal is filled with one player's symbol
     private bool IsDiagonalFilledWithOnePlayer(string playerSymbol)
     {
         return (buttonList[0].text == playerSymbol &&
@@ -130,7 +132,7 @@ public class GameController : MonoBehaviour
                 buttonList[6].text == playerSymbol);
     }
 
-    // Minimax algorithm for computer's move
+    // Minimax algorithm to determine the best move for the computer
     private int Minimax(string currentPlayer)
     {
         int bestScore = int.MinValue;
@@ -140,9 +142,9 @@ public class GameController : MonoBehaviour
         {
             if (buttonList[i].text == "")
             {
-                buttonList[i].text = currentPlayer;
-                int score = MinimaxScore(currentPlayer, false);
-                buttonList[i].text = ""; // undo the move
+                buttonList[i].text = currentPlayer; // Make the move
+                int score = MinimaxScore(currentPlayer == "O" ? "X" : "O", false); // Get score
+                buttonList[i].text = ""; // Undo the move
 
                 if (score > bestScore)
                 {
@@ -151,60 +153,61 @@ public class GameController : MonoBehaviour
                 }
             }
         }
+
         return bestMove;
     }
 
+    // Recursive function to evaluate the score of the board
     private int MinimaxScore(string currentPlayer, bool isMaximizing)
     {
         if (IsGameOver("X"))
             return -1;
-
         if (IsGameOver("O"))
             return 1;
-
         if (IsTie())
             return 0;
 
-        int score = isMaximizing ? int.MinValue : int.MaxValue;
+        int bestScore = isMaximizing ? int.MinValue : int.MaxValue;
 
         for (int i = 0; i < buttonList.Length; i++)
         {
             if (buttonList[i].text == "")
             {
-                buttonList[i].text = currentPlayer;
+                buttonList[i].text = currentPlayer; // Make the move
+                int score = MinimaxScore(currentPlayer == "O" ? "X" : "O", !isMaximizing);
+                buttonList[i].text = ""; // Undo the move
 
                 if (isMaximizing)
                 {
-                    score = Mathf.Max(score, MinimaxScore("O", !isMaximizing));
+                    bestScore = Mathf.Max(score, bestScore);
                 }
                 else
                 {
-                    score = Mathf.Min(score, MinimaxScore("X", !isMaximizing));
+                    bestScore = Mathf.Min(score, bestScore);
                 }
-
-                buttonList[i].text = ""; // undo the move
             }
         }
-        return score;
+
+        return bestScore;
     }
 
-    //check rows, columns and diagonals
+    // Checks if the game is over for the given player
     private bool IsGameOver(string playerSymbol)
     {
         if (IsDiagonalFilledWithOnePlayer(playerSymbol))
         {
-            this.matchresult = playerSymbol;
-            PlayerPrefs.SetString("matchResult", this.matchresult);
+            matchResult = playerSymbol;
+            PlayerPrefs.SetString("matchResult", matchResult);
             return true;
         }
 
         for (int gridPart = 0; gridPart < GRID_LENGTH; gridPart++)
         {
-            if (IsRowFilledWithOnePlayer(gridPart, playerSymbol)
-                || IsColumnFilledWithOnePlayer(gridPart, playerSymbol))
+            if (IsRowFilledWithOnePlayer(gridPart, playerSymbol) ||
+                IsColumnFilledWithOnePlayer(gridPart, playerSymbol))
             {
-                this.matchresult = playerSymbol;
-                PlayerPrefs.SetString("matchResult", this.matchresult);
+                matchResult = playerSymbol;
+                PlayerPrefs.SetString("matchResult", matchResult);
                 return true;
             }
         }
@@ -212,31 +215,33 @@ public class GameController : MonoBehaviour
         return false;
     }
 
+    // Checks if the game has ended in a tie
     private bool IsTie()
     {
-        for (int i = 0; i < buttonList.Length; i++)
+        foreach (Text button in buttonList)
         {
-            if (buttonList[i].text == "")
+            if (button.text == "")
             {
                 return false;
             }
         }
-        this.matchresult = "";
-        PlayerPrefs.SetString("matchResult", this.matchresult);
+
+        matchResult = "";
+        PlayerPrefs.SetString("matchResult", matchResult);
         return true;
     }
 
-
+    // Returns the result of the match
     public string GetWinner(string result)
     {
-        if (result == "O")
+        switch (result)
         {
-            return "YOU LOST! ";
+            case "O":
+                return "YOU LOST!";
+            case "X":
+                return "YOU WON!";
+            default:
+                return "DRAW!";
         }
-        else if (result == "X")
-        {
-            return "YOU WON! ";
-        }
-        return "DRAW! ";
     }
 }

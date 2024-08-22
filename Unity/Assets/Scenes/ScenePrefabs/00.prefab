@@ -290,6 +290,7 @@ Transform:
   m_Children:
   - {fileID: 1844110686900015165}
   - {fileID: 95262821833559776}
+  - {fileID: 4514077696801279936}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -307,6 +308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneAudioClips:
   - {fileID: 8300000, guid: 8437ef3406baadc42bdc75fe1d5f3f99, type: 3}
+  loop: 1
 --- !u!1 &3732624262615146832
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,11 +485,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 5333719874220803409}
   textUI: {fileID: 5558986539113935557}
-  letterDelay: 0.1
-  lineDelay: 0.5
-  isSwitch: 1
+  letterDelay: 0.2
+  lineDelay: 1
+  isSwitch: 0
   index: 0
   delayBeforeSwitch: 0
+  displayText: Default Text
 --- !u!1 &6032638755446395657
 GameObject:
   m_ObjectHideFlags: 0
@@ -674,7 +677,7 @@ GameObject:
   - component: {fileID: 6307116048258985754}
   - component: {fileID: 2922798509159544849}
   - component: {fileID: 4904446210602069232}
-  - component: {fileID: 5413312972901011702}
+  - component: {fileID: 4532837964341726588}
   m_Layer: 0
   m_Name: TrackingField
   m_TagString: Untagged
@@ -770,7 +773,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5413312972901011702
+--- !u!114 &4532837964341726588
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -779,7 +782,67 @@ MonoBehaviour:
   m_GameObject: {fileID: 8663980062943233207}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6674efa82f9754544b346fdcdcd44436, type: 3}
+  m_Script: {fileID: 11500000, guid: 13176b8eab6db7846812326eca250ae5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activationDelay: 2
+  onTriggerEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1886640773956313110}
+        m_MethodName: SwitchScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!1 &8741763262906723338
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4514077696801279936}
+  - component: {fileID: 1886640773956313110}
+  m_Layer: 0
+  m_Name: SwitchScene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4514077696801279936
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8741763262906723338}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 703.5, y: 175.5457, z: 0.00071299076}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3611020885976157119}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1886640773956313110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8741763262906723338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b373d855006b5c498f85fb09e6414bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &9151288854977488837

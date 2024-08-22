@@ -276,7 +276,8 @@ GameObject:
   - component: {fileID: 5080952768609131316}
   - component: {fileID: 964582506481010483}
   - component: {fileID: 1927749237640493579}
-  - component: {fileID: 2385649207281037702}
+  - component: {fileID: 8625025652679480623}
+  - component: {fileID: 170153349809005380}
   m_Layer: 0
   m_Name: CharacterThree
   m_TagString: Container3
@@ -358,7 +359,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 657.4373, y: 714.3906, z: 0.2515357}
   m_Center: {x: -328.2187, y: 218.51566, z: 0.010823785}
---- !u!114 &2385649207281037702
+--- !u!114 &8625025652679480623
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -367,7 +368,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 423293760091509783}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffc11d2ede0e94647921e06c5ddb7ddd, type: 3}
+  m_Script: {fileID: 11500000, guid: 13176b8eab6db7846812326eca250ae5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activationDelay: 2
+  onTriggerEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 170153349809005380}
+        m_MethodName: ChooseContainer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &170153349809005380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423293760091509783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bd3b245c9b5ea449a520c66b3006421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   contextScript: {fileID: 4333435470185215714}
@@ -1327,7 +1357,8 @@ GameObject:
   - component: {fileID: 6389423370988123775}
   - component: {fileID: 5857218682625993902}
   - component: {fileID: 771313037956620728}
-  - component: {fileID: 4637090543636450903}
+  - component: {fileID: 419125460465650183}
+  - component: {fileID: 2560552950153590549}
   m_Layer: 0
   m_Name: CharacterTwo
   m_TagString: Container2
@@ -1409,7 +1440,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 657.4373, y: 714.3906, z: 0.2515357}
   m_Center: {x: -328.2187, y: 218.51566, z: 0.010823785}
---- !u!114 &4637090543636450903
+--- !u!114 &419125460465650183
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1418,7 +1449,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 4505455011295988930}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffc11d2ede0e94647921e06c5ddb7ddd, type: 3}
+  m_Script: {fileID: 11500000, guid: 13176b8eab6db7846812326eca250ae5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activationDelay: 2
+  onTriggerEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2560552950153590549}
+        m_MethodName: ChooseContainer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &2560552950153590549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4505455011295988930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bd3b245c9b5ea449a520c66b3006421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   contextScript: {fileID: 4333435470185215714}
@@ -1874,7 +1934,8 @@ GameObject:
   - component: {fileID: 6297809635264010955}
   - component: {fileID: 8450896809166526708}
   - component: {fileID: 3149216291899281107}
-  - component: {fileID: 131511495069400301}
+  - component: {fileID: 1963910824831127299}
+  - component: {fileID: 7929264563602287912}
   m_Layer: 0
   m_Name: CharacterFive
   m_TagString: Container5
@@ -1958,7 +2019,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 657.4373, y: 714.3906, z: 0.2515357}
   m_Center: {x: -328.2187, y: 218.51566, z: 0.010823785}
---- !u!114 &131511495069400301
+--- !u!114 &1963910824831127299
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1967,7 +2028,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 5546092082778199205}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffc11d2ede0e94647921e06c5ddb7ddd, type: 3}
+  m_Script: {fileID: 11500000, guid: 13176b8eab6db7846812326eca250ae5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activationDelay: 2
+  onTriggerEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7929264563602287912}
+        m_MethodName: ChooseContainer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &7929264563602287912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5546092082778199205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bd3b245c9b5ea449a520c66b3006421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   contextScript: {fileID: 4333435470185215714}
@@ -2220,7 +2310,8 @@ GameObject:
   - component: {fileID: 8953981320723721985}
   - component: {fileID: 4877653055349529694}
   - component: {fileID: 1531245044649842325}
-  - component: {fileID: 7339462712991384567}
+  - component: {fileID: 8377012923790638088}
+  - component: {fileID: 3934281423057547909}
   m_Layer: 0
   m_Name: CharacterOne
   m_TagString: Container1
@@ -2302,7 +2393,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 657.4373, y: 714.3906, z: 0.2515357}
   m_Center: {x: -328.2187, y: 218.51566, z: 0.010823785}
---- !u!114 &7339462712991384567
+--- !u!114 &8377012923790638088
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2311,7 +2402,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 6759935920607359784}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffc11d2ede0e94647921e06c5ddb7ddd, type: 3}
+  m_Script: {fileID: 11500000, guid: 13176b8eab6db7846812326eca250ae5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activationDelay: 2
+  onTriggerEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3934281423057547909}
+        m_MethodName: ChooseContainer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &3934281423057547909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6759935920607359784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bd3b245c9b5ea449a520c66b3006421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   contextScript: {fileID: 4333435470185215714}
@@ -2327,7 +2447,8 @@ GameObject:
   - component: {fileID: 6127303131387312678}
   - component: {fileID: 4891394970938263031}
   - component: {fileID: 7187901541160583667}
-  - component: {fileID: 3920330290156531620}
+  - component: {fileID: 3825390620251297343}
+  - component: {fileID: 361604511941242267}
   m_Layer: 0
   m_Name: CharacterFour
   m_TagString: Container4
@@ -2409,7 +2530,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 657.4373, y: 714.3906, z: 0.2515357}
   m_Center: {x: -328.2187, y: 218.51566, z: 0.010823785}
---- !u!114 &3920330290156531620
+--- !u!114 &3825390620251297343
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2418,7 +2539,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 6795887751042188103}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffc11d2ede0e94647921e06c5ddb7ddd, type: 3}
+  m_Script: {fileID: 11500000, guid: 13176b8eab6db7846812326eca250ae5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activationDelay: 2
+  onTriggerEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 361604511941242267}
+        m_MethodName: ChooseContainer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &361604511941242267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6795887751042188103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bd3b245c9b5ea449a520c66b3006421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   contextScript: {fileID: 4333435470185215714}

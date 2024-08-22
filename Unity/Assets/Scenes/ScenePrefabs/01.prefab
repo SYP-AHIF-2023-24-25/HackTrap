@@ -72,6 +72,51 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
+--- !u!1 &1920813712032435444
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7044331807023698305}
+  - component: {fileID: 3000291921936410394}
+  m_Layer: 0
+  m_Name: AnimateMemory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7044331807023698305
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1920813712032435444}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.6677923, y: 1.3465832, z: -1.645895}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2060612479629437550}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3000291921936410394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1920813712032435444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c77b1ce8e91e48b4293f17ee20d541af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parameter: Memory
+  scriptReference: {fileID: 974213900490433701}
 --- !u!1 &2694354873986521183
 GameObject:
   m_ObjectHideFlags: 0
@@ -801,6 +846,51 @@ MonoBehaviour:
   floorRPSImage: {fileID: 581013792674061283}
   disabledSprite: {fileID: 2800000, guid: 0e9f390d1ec99a8429a675e60c3d31f6, type: 3}
   audioSource: {fileID: 7464305108145025202}
+--- !u!1 &3917489933407334986
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 726038775050184951}
+  - component: {fileID: 1047866937522710166}
+  m_Layer: 0
+  m_Name: AnimateTicTacToe
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &726038775050184951
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3917489933407334986}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.6677923, y: 1.3465832, z: -1.645895}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2060612479629437550}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1047866937522710166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3917489933407334986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c77b1ce8e91e48b4293f17ee20d541af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parameter: TicTacToe
+  scriptReference: {fileID: 974213900490433701}
 --- !u!1 &4228513045985654696
 GameObject:
   m_ObjectHideFlags: 0
@@ -887,7 +977,7 @@ GameObject:
   - component: {fileID: 3944625374448045416}
   - component: {fileID: 7787258855062143962}
   - component: {fileID: 4898172133638456320}
-  - component: {fileID: 3015693630866807012}
+  - component: {fileID: 3107569800809215724}
   m_Layer: 0
   m_Name: Memory
   m_TagString: Untagged
@@ -984,7 +1074,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3015693630866807012
+--- !u!114 &3107569800809215724
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -993,11 +1083,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 4533613248456213635}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4728c91d0ec976c4c9bc4bd70df6b69e, type: 3}
+  m_Script: {fileID: 11500000, guid: 13176b8eab6db7846812326eca250ae5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parameter: Memory
-  scriptReference: {fileID: 974213900490433701}
+  activationDelay: 2
+  onTriggerEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3000291921936410394}
+        m_MethodName: PlayAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &4601123616579955567
 GameObject:
   m_ObjectHideFlags: 0
@@ -1010,7 +1115,7 @@ GameObject:
   - component: {fileID: 783313577288499819}
   - component: {fileID: 1275753969294498755}
   - component: {fileID: 3290021220441934298}
-  - component: {fileID: 8740380666081387132}
+  - component: {fileID: 3576297745054730250}
   m_Layer: 0
   m_Name: RockPaperScissors
   m_TagString: Untagged
@@ -1107,7 +1212,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8740380666081387132
+--- !u!114 &3576297745054730250
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1116,7 +1221,67 @@ MonoBehaviour:
   m_GameObject: {fileID: 4601123616579955567}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4728c91d0ec976c4c9bc4bd70df6b69e, type: 3}
+  m_Script: {fileID: 11500000, guid: 13176b8eab6db7846812326eca250ae5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activationDelay: 2
+  onTriggerEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4319830884689773163}
+        m_MethodName: PlayAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!1 &4776025233568381611
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8158665406080400928}
+  - component: {fileID: 4319830884689773163}
+  m_Layer: 0
+  m_Name: AnimateRPS
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8158665406080400928
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4776025233568381611}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.6677923, y: 1.3465832, z: -1.645895}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2060612479629437550}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4319830884689773163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4776025233568381611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c77b1ce8e91e48b4293f17ee20d541af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   parameter: RockPaperScissors
@@ -1407,7 +1572,7 @@ GameObject:
   - component: {fileID: 8287370850890477415}
   - component: {fileID: 1320013277328691954}
   - component: {fileID: 1955229656692535511}
-  - component: {fileID: 7352810701045592520}
+  - component: {fileID: 7264086308542324470}
   m_Layer: 0
   m_Name: TicTacToe
   m_TagString: Untagged
@@ -1504,7 +1669,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7352810701045592520
+--- !u!114 &7264086308542324470
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1513,11 +1678,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 7213919741875572328}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4728c91d0ec976c4c9bc4bd70df6b69e, type: 3}
+  m_Script: {fileID: 11500000, guid: 13176b8eab6db7846812326eca250ae5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parameter: TicTacToe
-  scriptReference: {fileID: 974213900490433701}
+  activationDelay: 2
+  onTriggerEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1047866937522710166}
+        m_MethodName: PlayAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &7459747311945588430
 GameObject:
   m_ObjectHideFlags: 0
@@ -1890,6 +2070,9 @@ Transform:
   m_Children:
   - {fileID: 1155165101062975294}
   - {fileID: 156891116342298749}
+  - {fileID: 8158665406080400928}
+  - {fileID: 726038775050184951}
+  - {fileID: 7044331807023698305}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

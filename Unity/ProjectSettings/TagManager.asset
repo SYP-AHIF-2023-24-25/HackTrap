@@ -20,6 +20,16 @@ TagManager:
   - TeamCounter3
   - TeamCounter2
   - TeamCounter1
+  - Virus
+  - Team1
+  - Team2
+  - Team3
+  - Team4
+  - Winner
+  - displayWinners
+  - TeamLoader
+  - Scene08
+  - playerTracker
   layers:
   - Default
   - TransparentFX

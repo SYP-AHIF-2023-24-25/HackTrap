@@ -8,25 +8,28 @@ public class OnCollisionWithContainer1 : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (gameObject.CompareTag("Container1"))
+        if (other.CompareTag("Winner"))
         {
-            contextScript.OnCollisionWithContainer1();
-        }
-        else if (gameObject.CompareTag("Container2"))
-        {
-            contextScript.OnCollisionWithContainer2();
-        }
-        else if (gameObject.CompareTag("Container3"))
-        {
-            contextScript.OnCollisionWithContainer3();
-        }
-        else if (gameObject.CompareTag("Container4"))
-        {
-            contextScript.OnCollisionWithContainer4();
-        }
-        else if (gameObject.CompareTag("Container5"))
-        {
-            contextScript.OnCollisionWithContainer5();
+            if (gameObject.CompareTag("Container1"))
+            {
+                contextScript.OnCollisionWithContainer1();
+            }
+            else if (gameObject.CompareTag("Container2"))
+            {
+                contextScript.OnCollisionWithContainer2();
+            }
+            else if (gameObject.CompareTag("Container3"))
+            {
+                contextScript.OnCollisionWithContainer3();
+            }
+            else if (gameObject.CompareTag("Container4"))
+            {
+                contextScript.OnCollisionWithContainer4();
+            }
+            else if (gameObject.CompareTag("Container5"))
+            {
+                contextScript.OnCollisionWithContainer5();
+            }
         }
     }
 }

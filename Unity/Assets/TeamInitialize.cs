@@ -7,7 +7,7 @@ public class TeamInitialize : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ColorChanger game = FindObjectOfType<ColorChanger>();
-        game.InitializeTeams();
+        //ColorChanger game = FindObjectOfType<ColorChanger>();
+        //game.InitializeTeams();
     }
 }
