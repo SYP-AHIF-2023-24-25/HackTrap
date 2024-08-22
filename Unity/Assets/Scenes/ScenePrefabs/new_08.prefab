@@ -106,8 +106,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToSpawn: {fileID: 2627533300698091257, guid: af28631c419d88148ad3e48a34ddb080,
     type: 3}
-  maxNumberOfObjectsToSpawn: 300
-  minSpawnDelay: 1
+  maxNumberOfObjectsToSpawn: 600
+  minSpawnDelay: 0.5
   maxSpawnDelay: 1
   rotationAngles: {x: 0, y: 0, z: 0}
   virusTag: Virus
@@ -287,7 +287,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99cadde12572f2b439885f3b0f19dcd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCounterController: {fileID: 0}
 --- !u!1 &2132553297113673031
 GameObject:
   m_ObjectHideFlags: 0

@@ -26,15 +26,6 @@ public class PlayerCounterController : MonoBehaviour
         new List<GameObject>()
     };
 
-    void Update()
-    {
-
-        if (StateManager.Instance.GetCurrentIndex() > 7)
-        {
-           GameObject.FindGameObjectWithTag("Scene08").SetActive(false);
-        }
-    }
-
     void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("DPlayer") && !players.Contains(other.gameObject))

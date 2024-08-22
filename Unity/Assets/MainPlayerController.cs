@@ -25,15 +25,6 @@ public class MainPlayerController : MonoBehaviour
     {
         int currentState = StateManager.Instance.GetCurrentIndex();
 
-        if (currentState == 8 && !isState8Handled)
-        {
-            if (playerCounterController != null)
-            {
-                playerCounterController.enabled = false;
-            }
-            isState8Handled = true; // Ensure this block runs only once
-        }
-
         if (currentState == 7)
         {
             string[] winners = LoaderManager.Instance.IsWinner();
