@@ -2599,7 +2599,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 190774096, guid: f994a5618125ee140b3b2abba715936e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1198491098, guid: f994a5618125ee140b3b2abba715936e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2653,6 +2653,10 @@ PrefabInstance:
       propertyPath: playerCounterController
       value: 
       objectReference: {fileID: 666407324}
+    - target: {fileID: 190774097, guid: f994a5618125ee140b3b2abba715936e, type: 3}
+      propertyPath: collectingColor.Array.data[0].r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f994a5618125ee140b3b2abba715936e, type: 3}
 --- !u!4 &1198491098 stripped

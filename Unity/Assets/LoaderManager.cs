@@ -7,8 +7,6 @@ public class LoaderManager : MonoBehaviour
 {
     // Singleton instance
     public static LoaderManager Instance { get; private set; }
-
-    [SerializeField] private Image[] loaderImages;
     private float[] loaderProgress;
 
     private void Awake()
@@ -29,19 +27,11 @@ public class LoaderManager : MonoBehaviour
 
     void Start()
     {
-        loaderProgress = new float[loaderImages.Length];
+        loaderProgress = new float[4];
         for (int i = 0; i < loaderProgress.Length; i++)
         {
             loaderProgress[i] = 0f;
-            loaderImages[i].fillAmount = 0f;
         }
-    }
-
-
-    void Update()
-    {
-        IsWinner();
-        UpdateAllLoaders();
     }
 
 
@@ -50,16 +40,7 @@ public class LoaderManager : MonoBehaviour
     {
         if (teamIndex >= 0 && teamIndex < loaderProgress.Length)
         {
-            StartCoroutine(UpdateLoaderCoroutine(teamIndex, progress, duration));
-            UpdateAllLoaders();
-        }
-    }
-
-    private void UpdateAllLoaders()
-    {
-        for (int i = 0; i < loaderProgress.Length; i++)
-        {
-            loaderImages[i].fillAmount = loaderProgress[i];
+            loaderProgress[teamIndex] = progress;
         }
     }
 
@@ -78,38 +59,29 @@ public class LoaderManager : MonoBehaviour
         }
     }
 
-    // Private coroutine to handle the smooth update of the loader progress
-    private IEnumerator UpdateLoaderCoroutine(int teamIndex, float targetProgress, float duration)
-    {
-        float startProgress = loaderProgress[teamIndex];
-        float elapsedTime = 0f;
-
-        while (elapsedTime < duration)
-        {
-            elapsedTime += Time.deltaTime;
-            float t = elapsedTime / duration;
-            loaderProgress[teamIndex] = Mathf.Lerp(startProgress, targetProgress, t);
-            loaderImages[teamIndex].fillAmount = loaderProgress[teamIndex];
-            yield return null;
-        }
-
-        loaderProgress[teamIndex] = targetProgress;
-        loaderImages[teamIndex].fillAmount = loaderProgress[teamIndex];
-    }
-
-
     public string[] IsWinner()
     {
         List<string> winnerTeams = new List<string>();
+        float highestScore = float.MinValue;
 
         for (int i = 0; i < loaderProgress.Length; i++)
         {
-            if (loaderProgress[i] >= 1f)
+            if (loaderProgress[i] > highestScore)
             {
-                winnerTeams.Add("Team" + (i + 1));  // Assuming team names are "Team 0", "Team 1", etc.
+                // Found a new highest score, clear the list and update the highest score
+                highestScore = loaderProgress[i];
+                winnerTeams.Clear();
+                winnerTeams.Add("Team" + (i + 1));
+            }
+            else if (loaderProgress[i] == highestScore)
+            {
+                // Found another team with the same highest score
+                winnerTeams.Add("Team" + (i + 1));
             }
         }
 
         return winnerTeams.ToArray();
     }
+
+
 }

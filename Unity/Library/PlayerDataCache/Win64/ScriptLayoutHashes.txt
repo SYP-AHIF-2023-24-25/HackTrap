@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/School/4_class/SYP/Projects/HackTrap/Builds/Build_21_08_24_V1/DeepSpaceDevKit.exe
+C:/School/4_class/SYP/Projects/HackTrap/Builds/Build_Alternate/DeepSpaceDevKit.exe
 SceneListBegin?
 Assets/Scenes/HackTrap.unity
 SceneListEnd?
@@ -26,6 +26,7 @@ e9f542f0034ddd5528a3b1fa5c5b9e3c Assembly-CSharp.dll:.WallUpdateScript
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:DeepSpace.LaserTracking.TrackingReceiveHandler
 1d13468cb41a98a051516e48cf35fdf4 Assembly-CSharp.dll:DeepSpace.Udp.UdpFieldOfViewSync
 8431fcb5f5a0366cd78ed8d5c0911d46 Assembly-CSharp.dll:.DemoNavigationView
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.GetColor
 cf9f5cf2c3145a37ac07f00e50e460f9 UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 5fc094978ce3e3591a7500ed380d854a UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -143,7 +144,7 @@ ea750c9ca76ce11b302b49b6588b2f55 Assembly-CSharp.dll:.ColorChanger
 fa7cea9bb3d32f209a6fdbb5544e1579 Assembly-CSharp.dll:UnityVRPN.TrackerHostSettings
 83fd5f9b8d209a0c64cc017894c1dce3 Assembly-CSharp.dll:DeepSpace.Udp.UdpReceiver
 0a528d9296ebdb49d2ed477d9684a606 Assembly-CSharp.dll:DeepSpace.MobileControlTcpManager
-cadcefd2110e80d416376f100be3f296 Assembly-CSharp.dll:.LoaderManager
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.LoaderManager
 b3ab2106268377ffe25dd18ac23dca28 Unity.TextMeshPro.dll:TMPro.TMP_Asset
 f324cecacb66b2081f373ba25ca1b941 Assembly-CSharp.dll:.Context
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:DeepSpace.WallNetworkHandler
@@ -248,4 +249,4 @@ bf2c3cd839882919d3365cb62cdd8f33 Assembly-CSharp.dll:.DemoEnableDisableViews
 949c9d7bef6856227531da05f95b2dd5 Assembly-CSharp.dll:.VirusDeSpawn
 60990d72713937ff29cf779c258ddd93 Assembly-CSharp.dll:DeepSpace.MobileControlManager
 4fd54b619a94a996a475bb6e9d646f2e Assembly-CSharp.dll:.DemoTouchView
-c9fcb65ed26531c91e550a13497a0af5 Assembly-CSharp.dll:.GetColor
+8562c5b78cc2e713fe10fcba7589c688 Assembly-CSharp.dll:.WallUpdaterMain

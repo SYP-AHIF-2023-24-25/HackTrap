@@ -23,31 +23,17 @@ public class MainPlayerController : MonoBehaviour
 
     private void Update()
     {
-        int currentState = StateManager.Instance.GetCurrentIndex();
-
-        if (currentState == 8 && !isState8Handled)
-        {
-            if (playerCounterController != null)
-            {
-                playerCounterController.enabled = false;
-            }
-            isState8Handled = true; // Ensure this block runs only once
-        }
-
-        if (currentState == 7)
+        if (PlayerPrefs.GetInt("gameOver") == 1 && StateManager.Instance.GetCurrentIndex() == 7)
         {
             string[] winners = LoaderManager.Instance.IsWinner();
+            ResetColors();
 
-            if (winners.Length > 0)
+            if (!new List<string>(winners).Contains(this.gameObject.tag))
             {
-                ResetColors();
-
-                if (!new List<string>(winners).Contains(this.gameObject.tag))
-                {
-                    this.gameObject.SetActive(false);
-                }
+                this.gameObject.SetActive(false);
             }
         }
+
     }
 
     void OnTriggerEnter(Collider other)

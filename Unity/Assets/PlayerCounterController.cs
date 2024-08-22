@@ -26,13 +26,9 @@ public class PlayerCounterController : MonoBehaviour
         new List<GameObject>()
     };
 
-    void Update()
+    void Start()
     {
-
-        if (StateManager.Instance.GetCurrentIndex() > 7)
-        {
-           GameObject.FindGameObjectWithTag("Scene08").SetActive(false);
-        }
+        PlayerPrefs.SetInt("gameOver", 0);
     }
 
     void OnTriggerStay(Collider other)
