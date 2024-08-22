@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+
 
 public class MainPlayerController : MonoBehaviour
 {
@@ -10,8 +12,8 @@ public class MainPlayerController : MonoBehaviour
     private int nextColorIndex = 0;
     private int virusCounter = 0;
 
-    private static GameSimulator gameSimulatorInstance;
     private PlayerCounterController playerCounterController;
+    private bool isState8Handled = false;
 
     void Start()
     {
@@ -19,19 +21,20 @@ public class MainPlayerController : MonoBehaviour
         playerCounterController = FindObjectOfType<PlayerCounterController>();
     }
 
-
     private void Update()
     {
-        if (StateManager.Instance.GetCurrentIndex() == 8)
+        int currentState = StateManager.Instance.GetCurrentIndex();
+
+        if (currentState == 8 && !isState8Handled)
         {
-            PlayerCounterController playerCounter = FindObjectOfType<PlayerCounterController>();
-            if (playerCounter != null)
+            if (playerCounterController != null)
             {
-                playerCounter.enabled = false;
+                playerCounterController.enabled = false;
             }
+            isState8Handled = true; // Ensure this block runs only once
         }
 
-        if (StateManager.Instance.GetCurrentIndex() == 7)
+        if (currentState == 7)
         {
             string[] winners = LoaderManager.Instance.IsWinner();
 
@@ -43,7 +46,6 @@ public class MainPlayerController : MonoBehaviour
                 {
                     this.gameObject.SetActive(false);
                 }
-
             }
         }
     }
@@ -54,12 +56,9 @@ public class MainPlayerController : MonoBehaviour
         {
             HandleVirusCollision(other);
         }
-        else
+        else if (other.gameObject.tag.Contains("Container"))
         {
-            if (other.gameObject.tag.Contains("Container"))
-            {
-                HandleTeamCollision(other);
-            }
+            HandleTeamCollision(other);
         }
     }
 
@@ -78,17 +77,16 @@ public class MainPlayerController : MonoBehaviour
     {
         for (int i = 0; i < teamNames.Length; i++)
         {
-
-                if (other.gameObject.name.Equals(teamNames[i], System.StringComparison.OrdinalIgnoreCase) && this.tag.Equals(teamNames[i], System.StringComparison.OrdinalIgnoreCase) && (virusCounter > 0 && virusCounter <= 4))
-                {
-                    float progress = LoaderManager.Instance.GetCurrentLoaderProgress(i) + (0.5f * (virusCounter / 4.0f));
-                    LoaderManager.Instance.UpdateLoaderProgress(i, progress, 2f);
-                    ResetColors();
-                }
-
+            if (other.gameObject.name.Equals(teamNames[i], System.StringComparison.OrdinalIgnoreCase) &&
+                this.tag.Equals(teamNames[i], System.StringComparison.OrdinalIgnoreCase) &&
+                (virusCounter > 0 && virusCounter <= 4))
+            {
+                float progress = LoaderManager.Instance.GetCurrentLoaderProgress(i) + (0.5f * (virusCounter / 4.0f));
+                LoaderManager.Instance.UpdateLoaderProgress(i, progress, 2f);
+                ResetColors();
+            }
         }
     }
-
 
     private void ResetColors()
     {

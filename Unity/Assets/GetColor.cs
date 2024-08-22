@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class GetColor : MonoBehaviour
 {
-    [SerializeField] private PlayerCounterController playerCounterController;
+    private PlayerCounterController playerCounterController;
 
-
-    void OnTriggerEnter(Collision other)
+    private void Start()
     {
-        if (other.gameObject.CompareTag("DPlayer"))
+        playerCounterController = FindObjectOfType<PlayerCounterController>();
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("DPlayer"))
         {
             playerCounterController.AssignPlayerToTeam(other.gameObject);
         }
