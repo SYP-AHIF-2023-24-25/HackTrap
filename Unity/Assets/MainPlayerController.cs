@@ -72,7 +72,7 @@ public class MainPlayerController : MonoBehaviour
                 this.tag.Equals(teamNames[i], System.StringComparison.OrdinalIgnoreCase) &&
                 (virusCounter > 0 && virusCounter <= 4))
             {
-                float progress = LoaderManager.Instance.GetCurrentLoaderProgress(i) + (0.5f * (virusCounter / 4.0f));
+                float progress = LoaderManager.Instance.GetCurrentLoaderProgress(i) + (0.1f * (virusCounter / 4.0f));
                 LoaderManager.Instance.UpdateLoaderProgress(i, progress, 2f);
                 ResetColors();
             }
