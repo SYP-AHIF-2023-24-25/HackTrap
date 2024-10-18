@@ -30,6 +30,7 @@ TagManager:
   - TeamLoader
   - Scene08
   - playerTracker
+  - DeadZone
   layers:
   - Default
   - TransparentFX
