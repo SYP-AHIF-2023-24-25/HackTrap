@@ -22,8 +22,6 @@ public class PlayerCounterController : MonoBehaviour
     {
         new List<GameObject>(),
         new List<GameObject>(),
-        new List<GameObject>(),
-        new List<GameObject>()
     };
 
     void Start()
@@ -60,7 +58,7 @@ public class PlayerCounterController : MonoBehaviour
                 {
                     MeshRenderer[] currentMeshRenderers = player.GetComponentsInChildren<MeshRenderer>();
                     currentMeshRenderers[1].material.color = teamsColor[i];
-                    player.tag = "Team" + (i + 1);
+                    //player.tag = "Team" + (i + 1);  -> später ändern für MainGame
                 }
             }
     }

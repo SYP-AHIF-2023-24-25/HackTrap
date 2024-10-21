@@ -2663,6 +2663,10 @@ PrefabInstance:
       propertyPath: collectingColor.Array.data[0].r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 190774097, guid: f994a5618125ee140b3b2abba715936e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f994a5618125ee140b3b2abba715936e, type: 3}
 --- !u!4 &1198491098 stripped
@@ -2868,11 +2872,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 190774096, guid: f994a5618125ee140b3b2abba715936e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1198491098, guid: f994a5618125ee140b3b2abba715936e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.439
+      value: 1.31
       objectReference: {fileID: 0}
     - target: {fileID: 1198491098, guid: f994a5618125ee140b3b2abba715936e, type: 3}
       propertyPath: m_LocalPosition.y
