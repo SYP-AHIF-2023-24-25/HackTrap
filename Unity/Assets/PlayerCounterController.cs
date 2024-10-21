@@ -35,7 +35,7 @@ public class PlayerCounterController : MonoBehaviour
     {
         if (other.CompareTag("DPlayer") && !players.Contains(other.gameObject))
         {
-            if (StateManager.Instance.GetCurrentIndex() == 6 || StateManager.Instance.GetCurrentIndex() == 7)
+            if (StateManager.Instance.GetCurrentIndex() == 0)
             { 
                 players.Add(other.gameObject);
                 playerCount++;
@@ -43,7 +43,7 @@ public class PlayerCounterController : MonoBehaviour
             }
         }
 
-        if (StateManager.Instance.GetCurrentIndex() > 7 && !other.gameObject.CompareTag("DPlayer"))
+        if (StateManager.Instance.GetCurrentIndex() > 8 && !other.gameObject.CompareTag("DPlayer"))
         {
             other.tag = "Winner";
         }
@@ -61,7 +61,7 @@ public class PlayerCounterController : MonoBehaviour
                     MeshRenderer[] currentMeshRenderers = player.GetComponentsInChildren<MeshRenderer>();
                     currentMeshRenderers[1].material.color = teamsColor[i];
                     player.tag = "Team" + (i + 1);
-            }
+                }
             }
     }
 

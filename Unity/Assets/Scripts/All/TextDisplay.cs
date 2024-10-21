@@ -19,10 +19,10 @@ public class TextDisplay : MonoBehaviour
     private GameController ticTacToeGameController; // Reference to the game controller for determining the winner
 
     [SerializeField]
-    private bool isSwitch = true;  // Whether to switch scenes after text is displayed
-
-    [SerializeField]
     private int index = 0;  // Index used for scene switching
+    [SerializeField]
+    private bool switchScene = false;  // Whether to switch scenes after text is displayed
+
 
     [SerializeField]
     private int delayBeforeSwitch = 0;  // Delay in seconds before switching scenes
@@ -118,8 +118,11 @@ public class TextDisplay : MonoBehaviour
                     else
                     {
                         // All lines have been displayed, handle scene switch
-                        isDisplayingText = false;
-                        HandleSceneSwitch();
+                        if(switchScene)
+                        {
+                            isDisplayingText = false;
+                            HandleSceneSwitch();
+                        }
                     }
                 }
             }
@@ -129,10 +132,7 @@ public class TextDisplay : MonoBehaviour
     // Method to handle scene switching after text display is complete
     private void HandleSceneSwitch()
     {
-        if (isSwitch)
-        {
-            StartCoroutine(SwitchSceneAfterDelay());
-        }
+        StartCoroutine(SwitchSceneAfterDelay());
     }
 
     // Coroutine to switch scenes after a specified delay

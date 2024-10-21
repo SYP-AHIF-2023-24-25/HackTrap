@@ -308,6 +308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneAudioClips:
   - {fileID: 8300000, guid: 8437ef3406baadc42bdc75fe1d5f3f99, type: 3}
+  volume: 0
   loop: 1
 --- !u!1 &3732624262615146832
 GameObject:
@@ -487,8 +488,8 @@ MonoBehaviour:
   textUI: {fileID: 5558986539113935557}
   letterDelay: 0.2
   lineDelay: 1
-  isSwitch: 0
   index: 0
+  switchScene: 0
   delayBeforeSwitch: 0
   displayText: Default Text
 --- !u!1 &6032638755446395657
@@ -693,7 +694,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8663980062943233207}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.17}
+  m_LocalPosition: {x: 0, y: 0, z: -0.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2857510320140575711}
@@ -701,7 +702,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -4.3621e-10}
+  m_AnchoredPosition: {x: 0, y: -0.15}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6307116048258985754
