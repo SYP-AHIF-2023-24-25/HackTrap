@@ -12,11 +12,10 @@ public class PlayerCounterController : MonoBehaviour
     [SerializeField] private int timeout = 15;
     [SerializeField] private Color[] teamsColor;
 
-
-
     private int playerCount = 0;
-    private List<GameObject> players = new List<GameObject>();
-    
+    private List<GameObject> playerObjects = new List<GameObject>();
+
+    private List<Player> players = new List<Player>();
 
     private List<List<GameObject>> teams = new List<List<GameObject>>()
     {
@@ -31,16 +30,16 @@ public class PlayerCounterController : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("DPlayer") && !players.Contains(other.gameObject))
+        if (other.CompareTag("DPlayer") && !playerObjects.Contains(other.gameObject))
         {
             if (StateManager.Instance.GetCurrentIndex() == 0)
             { 
-                players.Add(other.gameObject);
+                playerObjects.Add(other.gameObject);
                 playerCount++;
                 AssignPlayerToTeam(other.gameObject);
             }
         }
-
+        
         if (StateManager.Instance.GetCurrentIndex() > 8 && !other.gameObject.CompareTag("DPlayer"))
         {
             other.tag = "Winner";
@@ -54,13 +53,18 @@ public class PlayerCounterController : MonoBehaviour
         List<List<GameObject>> teams = GetTeams();
             for (int i = 0; i < teams.Count; i++)
             {
-                foreach (GameObject player in teams[i])
+                foreach (GameObject playerObject in teams[i])
                 {
-                    MeshRenderer[] currentMeshRenderers = player.GetComponentsInChildren<MeshRenderer>();
+                    MeshRenderer[] currentMeshRenderers = playerObject.GetComponentsInChildren<MeshRenderer>();
                     currentMeshRenderers[1].material.color = teamsColor[i];
-                    //player.tag = "Team" + (i + 1);  -> später ändern für MainGame
+
+                    Player player = playerObject.GetComponent<Player>();
+                    player.team = (Player.Team)i;
+                    players.Add(player);
                 }
+                //player.tag = "Team" + (i + 1);  -> später ändern für MainGame
             }
+      
     }
 
 
@@ -88,6 +92,11 @@ public class PlayerCounterController : MonoBehaviour
         playerCountTextField.text = "Players on field: " + playerCount;
     }
     */
+
+    public List<Player> GetAllPlayers()
+    {
+        return players;
+    }
 
     public List<List<GameObject>> GetTeams()
     {
