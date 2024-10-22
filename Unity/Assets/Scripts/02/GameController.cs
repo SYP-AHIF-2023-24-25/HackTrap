@@ -16,9 +16,33 @@ public class GameController : MonoBehaviour
     private string playerSide = "X"; // Player's current side ('X' or 'O')
     private string matchResult; // Result of the match
 
+    private PlayerCounterController playerCounterController;
+
+
     private void Awake()
     {
         SetGameControllerReferenceOnButtons();
+    }
+
+    private void Update()
+    {
+        if(BothPlayersOnStartButton())
+        {
+
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("DPlayer"))
+        {
+            playerCounterController.AssignPlayerToTeam(other.gameObject);
+        }
+    }
+
+    private bool BothPlayersOnStartButton()
+    {
+        return false;
     }
 
     // Set the GameController reference on each button's GridSpace component

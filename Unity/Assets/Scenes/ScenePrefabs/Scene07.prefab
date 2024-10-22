@@ -797,10 +797,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "System Message:\nWelcome, operatives.\nYou\u2019ve been assigned to a team,
-    marked by the color beneath your feet.\nLocate your teammates. Collaboration is
-    key.\nYour mission: Gather and transport viruses to your team base in the arena
-    corners.\nEach container holds up to 4 viruses.\nGood luck.\nMission begins in...\n3...\n2...\n1...\n\n\n"
+  m_Text: "System Message:\nWelcome, operatives.\nYour mission is to gather and transport
+    viruses to your team base.\nEach of you can hold up to 4 viruses, before needing
+    to drop them off to collect new ones.\nThe better team wins! \nGood luck.\n\n"
 --- !u!114 &363044417256673470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -815,7 +814,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 8260644861016644349}
   textUI: {fileID: 5308235888988206244}
-  letterDelay: 0.2
+  letterDelay: 0.13
   lineDelay: 1
   index: 0
   switchScene: 0
