@@ -813,8 +813,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11ebc7fd3b9e4a8449aa920dcf251e4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  textUI: {fileID: 0}
+  animator: {fileID: 8260644861016644349}
+  textUI: {fileID: 5308235888988206244}
   letterDelay: 0.2
   lineDelay: 1
   index: 0

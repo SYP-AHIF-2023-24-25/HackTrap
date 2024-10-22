@@ -188,7 +188,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3611020885976157119
 Transform:
   m_ObjectHideFlags: 0
@@ -331,7 +331,7 @@ GameObject:
   - component: {fileID: 9197992155006101039}
   - component: {fileID: 7826425795262040911}
   - component: {fileID: 4238335584892733481}
-  - component: {fileID: 4905105796562260549}
+  - component: {fileID: 7804875446222429961}
   m_Layer: 0
   m_Name: ExplanationText
   m_TagString: Untagged
@@ -415,12 +415,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11ebc7fd3b9e4a8449aa920dcf251e4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 9074132820466563059}
-  textUI: {fileID: 2968526058881003387}
+  animator: {fileID: 0}
+  textUI: {fileID: 0}
   letterDelay: 0.2
   lineDelay: 1
-  isSwitch: 0
   index: 0
+  switchScene: 0
   delayBeforeSwitch: 0
   displayText: Default Text
 --- !u!1 &8068913742910744843
