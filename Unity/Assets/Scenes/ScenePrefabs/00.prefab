@@ -341,8 +341,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3484571118317119518}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.28521287, z: -0.002876499}
-  m_LocalScale: {x: 854.0086, y: 854.00854, z: 0.2289871}
+  m_LocalPosition: {x: 1766, y: -925, z: -0.002876499}
+  m_LocalScale: {x: 553.3976, y: 553.3975, z: 0.14838365}
   m_Children:
   - {fileID: 3504002561641892115}
   m_Father: {fileID: 95262821833559776}
@@ -679,7 +679,7 @@ MonoBehaviour:
   letterDelay: 0.2
   lineDelay: 1
   index: 0
-  switchScene: 0
+  switchScene: 1
   delayBeforeSwitch: 0
   displayText: Default Text
 --- !u!1 &6032638755446395657

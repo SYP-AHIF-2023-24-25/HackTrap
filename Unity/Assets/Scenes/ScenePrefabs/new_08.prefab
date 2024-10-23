@@ -437,7 +437,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8293055474638570558
 Transform:
   m_ObjectHideFlags: 0
@@ -674,8 +674,8 @@ MonoBehaviour:
   textUI: {fileID: 6902083817129239153}
   letterDelay: 0.2
   lineDelay: 0.5
-  isSwitch: 1
   index: 8
+  switchScene: 0
   delayBeforeSwitch: 5
   displayText: Default Text
 --- !u!1 &4602798046236333016

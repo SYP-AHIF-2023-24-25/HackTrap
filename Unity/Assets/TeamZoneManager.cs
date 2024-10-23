@@ -7,6 +7,8 @@ public class TeamZoneManager : MonoBehaviour
     public static TeamZoneManager Instance;
 
     [SerializeField] public GameObject startButton;
+    [SerializeField] public bool switchScene;
+
     private PlayerCounterController playerCounterController;
 
     private List<Player> allPlayers = new List<Player>();
@@ -30,5 +32,11 @@ public class TeamZoneManager : MonoBehaviour
             }
         }
         startButton.SetActive(true);
+
+        Debug.Log("Alle da");
+        if(switchScene)
+        {
+            StateManager.Instance.SwitchToNextScenePrefab();
+        }
     }
 }
