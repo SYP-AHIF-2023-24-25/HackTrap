@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -8,41 +9,37 @@ public class GameController : MonoBehaviour
     [SerializeField] private Animator animator; // Reference to scene transition animator
     [SerializeField] private GameObject[] floorFields; // Floor fields for enabling/disabling
     [SerializeField] private Text[] buttonList; // UI buttons representing the grid
+    //[SerializeField] private GameObject startTriggerFieldRed, startTriggerFieldBlue; // StartTriggerFields for players
 
     private static readonly int GRID_LENGTH = 3;
     private static readonly Color COLOR_O = Color.blue; // Color for 'O'
     private static readonly Color COLOR_X = Color.red; // Color for 'X'
 
-    private string playerSide = "X"; // Player's current side ('X' or 'O')
+    private string playerSide; // Player's current side ('X' or 'O')
     private string matchResult; // Result of the match
 
     private PlayerCounterController playerCounterController;
+    private Player.Team currentTeam;
+    private List<Player> players = new List<Player>();
 
+
+    /*private void Update()
+    {
+        CheckPlayersOnTrigger();
+    }*/
 
     private void Awake()
     {
+        SetAllFloorCubesActive(false);
+
         SetGameControllerReferenceOnButtons();
-    }
+        currentTeam = Player.Team.Red;
+        playerSide = "X";
 
-    private void Update()
-    {
-        if(BothPlayersOnStartButton())
-        {
+        playerCounterController = FindObjectOfType<PlayerCounterController>();
+        players.AddRange(playerCounterController.GetAllPlayers());
 
-        }
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("DPlayer"))
-        {
-            playerCounterController.AssignPlayerToTeam(other.gameObject);
-        }
-    }
-
-    private bool BothPlayersOnStartButton()
-    {
-        return false;
+        SetAllFloorCubesActiveForTeam(currentTeam);
     }
 
     // Set the GameController reference on each button's GridSpace component
@@ -70,17 +67,80 @@ public class GameController : MonoBehaviour
     // Switches the active player and triggers the computer's turn if necessary
     public void ChangePlayer()
     {
-        playerSide = playerSide == "X" ? "O" : "X";
+        currentTeam = currentTeam == Player.Team.Red ? Player.Team.Blue : Player.Team.Red;
+        playerSide = currentTeam == Player.Team.Red ? "X" : "O";
+        SetAllFloorCubesActiveForTeam(currentTeam);
 
-        if (playerSide == "O")
+        /*if (playerSide == "O")
         {
             SetAllFloorCubesActive(false);
             StartCoroutine(ComputerTurn());
-        }
+        }*/
     }
 
+    private int startTicTacToeCollider = 0;
+
+    /*public void CheckPlayersOnTrigger()
+    {
+        Collider[] collidersRed = Physics.OverlapBox(startTriggerFieldRed.transform.position, startTriggerFieldRed.transform.localScale / 2);
+        foreach (Collider collider in collidersRed)
+        {
+            Player player = collider.GetComponent<Player>();
+
+            if (collider.CompareTag("DPlayer") && player.team == Player.Team.Red)
+            {
+                startTicTacToeCollider++;
+                Debug.Log("Player red assigned.");
+                break;
+            }
+        }
+
+        Collider[] collidersBlue = Physics.OverlapBox(startTriggerFieldBlue.transform.position, startTriggerFieldBlue.transform.localScale / 2);
+        foreach (Collider collider in collidersBlue)
+        {
+            Player player = collider.GetComponent<Player>();
+
+            if (collider.CompareTag("DPlayer") && player.team == Player.Team.Blue)
+            {
+                startTicTacToeCollider++;
+                Debug.Log("Player blue assigned.");
+                break;
+            }
+        }
+
+        if(startTicTacToeCollider == 2)
+        {
+            SetAllFloorCubesActive(true);
+            startTriggerFieldBlue.SetActive(false);
+            startTriggerFieldRed.SetActive(false);
+        }
+    }*/
+
+    private void SetAllFloorCubesActiveForTeam(Player.Team currentTeam)
+    {
+        foreach (Player player in players)
+        {
+            if (player.team == currentTeam)
+            {
+                EnablePlayerTicTacToe(player, true);
+            }
+            else
+            {
+                EnablePlayerTicTacToe(player, false);
+            }
+        }
+
+        SetAllFloorCubesActive(true);
+    }
+
+    private void EnablePlayerTicTacToe(Player player, bool isEnabled)
+    {
+        player.GetComponent<Collider>().enabled = isEnabled;
+    }
+
+
     // Handles the computer's move using the Minimax algorithm
-    private IEnumerator ComputerTurn()
+    /*private IEnumerator ComputerTurn()
     {
         yield return new WaitForSeconds(1f); // Delay before the computer moves
 
@@ -90,15 +150,15 @@ public class GameController : MonoBehaviour
 
         SetAllFloorCubesActive(true);
         EndTurn();
-    }
+    }*/
 
     // Activates/deactivates floor cubes based on the state of the game
-    private void SetAllFloorCubesActive(bool active)
+    private void SetAllFloorCubesActive(bool isActive)
     {
         for (int i = 0; i < floorFields.Length; i++)
         {
             bool isButtonEmpty = buttonList[i].text == "";
-            floorFields[i].SetActive(active && isButtonEmpty);
+            floorFields[i].SetActive(isActive && isButtonEmpty);
         }
     }
 
@@ -157,7 +217,7 @@ public class GameController : MonoBehaviour
     }
 
     // Minimax algorithm to determine the best move for the computer
-    private int Minimax(string currentPlayer)
+    /*private int Minimax(string currentPlayer)
     {
         int bestScore = int.MinValue;
         int bestMove = -1;
@@ -214,7 +274,7 @@ public class GameController : MonoBehaviour
 
         return bestScore;
     }
-
+    */
     // Checks if the game is over for the given player
     private bool IsGameOver(string playerSymbol)
     {
@@ -261,9 +321,9 @@ public class GameController : MonoBehaviour
         switch (result)
         {
             case "O":
-                return "YOU LOST!";
+                return "TEAM BLUE WON!";
             case "X":
-                return "YOU WON!";
+                return "TEAM RED WON!";
             default:
                 return "DRAW!";
         }

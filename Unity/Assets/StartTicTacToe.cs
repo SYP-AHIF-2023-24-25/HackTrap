@@ -4,21 +4,7 @@ using UnityEngine;
 
 public class StartTicTacToe : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    private int playerStart;
-
-    public void OnTriggerEnter()
+    void OnTriggerEnter()
     {
 
     }
