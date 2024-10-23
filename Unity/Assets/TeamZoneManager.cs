@@ -1,13 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TeamZoneManager : MonoBehaviour
 {
     public static TeamZoneManager Instance;
 
-    [SerializeField] public GameObject startButton;
-    [SerializeField] public bool switchScene;
+    [SerializeField] private GameObject startButton;
 
     private PlayerCounterController playerCounterController;
 
@@ -31,12 +31,14 @@ public class TeamZoneManager : MonoBehaviour
                 return;
             }
         }
-        startButton.SetActive(true);
-
-        Debug.Log("Alle da");
-        if(switchScene)
+        if(startButton is null)
         {
             StateManager.Instance.SwitchToNextScenePrefab();
         }
+        else
+        {
+            startButton.SetActive(true);
+        }
+        Debug.Log("Alle da");
     }
 }

@@ -8,6 +8,7 @@ public class TriggerTeamzone : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Enter");
         Player player = other.GetComponent<Player>();
         if (player != null && player.team == expectedTeam)
         {
@@ -18,6 +19,8 @@ public class TriggerTeamzone : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
+        Debug.Log("Exit");
+
         Player player = other.GetComponent<Player>();
         if (player != null && player.team == expectedTeam)
         {
