@@ -1633,7 +1633,7 @@ MonoBehaviour:
   timeoutSound: {fileID: 0}
   timeout: 15
   teamsColor:
-  - {r: 0.78431374, g: 0, b: 0.047058824, a: 0}
+  - {r: 0.1098111, g: 0.8867924, b: 0.09620863, a: 1}
   - {r: 0.10980392, g: 0.29411766, b: 0.9254902, a: 0}
 --- !u!65 &666407325
 BoxCollider:
@@ -2703,7 +2703,7 @@ MonoBehaviour:
   - {fileID: 620192866}
   - {fileID: 743782448}
   sceneSwitchDelay: 100
-  initialScene: 0
+  initialScene: 4
 --- !u!4 &1167879953
 Transform:
   m_ObjectHideFlags: 0

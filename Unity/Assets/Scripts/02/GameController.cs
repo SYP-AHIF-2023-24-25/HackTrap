@@ -13,7 +13,7 @@ public class GameController : MonoBehaviour
 
     private static readonly int GRID_LENGTH = 3;
     private static readonly Color COLOR_O = Color.blue; // Color for 'O'
-    private static readonly Color COLOR_X = Color.red; // Color for 'X'
+    private static readonly Color COLOR_X = Color.green; // Color for 'X'
 
     private string playerSide; // Player's current side ('X' or 'O')
     private string matchResult; // Result of the match
@@ -33,7 +33,7 @@ public class GameController : MonoBehaviour
         SetAllFloorCubesActive(false);
 
         SetGameControllerReferenceOnButtons();
-        currentTeam = Player.Team.Red;
+        currentTeam = Player.Team.Green;
         playerSide = "X";
 
         playerCounterController = FindObjectOfType<PlayerCounterController>();
@@ -67,8 +67,8 @@ public class GameController : MonoBehaviour
     // Switches the active player and triggers the computer's turn if necessary
     public void ChangePlayer()
     {
-        currentTeam = currentTeam == Player.Team.Red ? Player.Team.Blue : Player.Team.Red;
-        playerSide = currentTeam == Player.Team.Red ? "X" : "O";
+        currentTeam = currentTeam == Player.Team.Green ? Player.Team.Blue : Player.Team.Green;
+        playerSide = currentTeam == Player.Team.Green ? "X" : "O";
         SetAllFloorCubesActiveForTeam(currentTeam);
 
         /*if (playerSide == "O")

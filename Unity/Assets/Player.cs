@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public enum Team { Red, Blue }
+    public enum Team { Green, Blue }
 
     public Team team;
     private bool isOnCorrectField = false;
