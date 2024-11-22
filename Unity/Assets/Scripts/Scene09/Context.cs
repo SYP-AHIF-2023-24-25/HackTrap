@@ -44,8 +44,6 @@ public class Context : MonoBehaviour
     public AudioSource invalidSelectionAudio;
     public AudioSource validSelectionAudio;
 
-    public int timeout = 0;
-
     public void setCorrectWord(string word)
     {
         Debug.Log(word + " set as correct word");

@@ -345,7 +345,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: R
+  m_Text: 
 --- !u!65 &1927749237640493579
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1426,7 +1426,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: I
+  m_Text: 
 --- !u!65 &771313037956620728
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1560,9 +1560,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '30
-
-'
+  m_Text: 60
 --- !u!1 &4894444222797577353
 GameObject:
   m_ObjectHideFlags: 0
@@ -1919,7 +1917,7 @@ MonoBehaviour:
   characterFour: {fileID: 4894444222797577353}
   characterFive: {fileID: 4345930274555548362}
   timer: {fileID: 4809949034241219101}
-  timeout: 30
+  timeout: 60
   timeoutSound: {fileID: 6349512655172476817}
   backgroundAudio: {fileID: 3815349111660373006}
 --- !u!1 &5546092082778199205
@@ -2003,9 +2001,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'S
-
-'
+  m_Text: 
 --- !u!65 &3149216291899281107
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2379,7 +2375,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: V
+  m_Text: 
 --- !u!65 &1531245044649842325
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2516,7 +2512,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: U
+  m_Text: 
 --- !u!65 &7187901541160583667
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2633,7 +2629,6 @@ MonoBehaviour:
   text5: {fileID: 5546092082778199205}
   invalidSelectionAudio: {fileID: 9049818777516341178}
   validSelectionAudio: {fileID: 2117182076447263167}
-  timeout: 30
 --- !u!1 &7141718644439074443
 GameObject:
   m_ObjectHideFlags: 0
