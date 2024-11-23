@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/00_HTBLALeonding/5AHIF/SYP/Build_231024/DeepSpaceDevKit.exe
+C:/00_HTBLALeonding/5AHIF/SYP/Build_211124/DeepSpaceDevKit.exe
 SceneListBegin?
 Assets/Scenes/HackTrap.unity
 SceneListEnd?
@@ -201,6 +201,7 @@ b78f09ac38e48519c645816044b9eac7 Assembly-CSharp.dll:.GameSimulator
 aa82b3ce4c0c9b227036c0337315c5d3 Unity.TextMeshPro.dll:TMPro.TMP_FontAsset
 e51c09a4cc447f11db225afcd8e3e490 Unity.TextMeshPro.dll:TMPro.TMP_Settings
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:DeepSpace.ControllerInputManager
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.PfeilSceneManager
 cf96e5f7b3d069bab453925bd41be04e UnityEngine.TestRunner.dll:UnityEngine.TestTools.EnumerableSetUpTearDownCommandState
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback
 259d013faac28e8ba0aa2a7542273735 UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.PlaymodeTestsController
@@ -220,7 +221,7 @@ fb6a1ea36b4f6ef5948d283d93760765 UnityEngine.GoogleAudioSpatializer.dll:UnityEng
 8e065544ed546f15712ee88b32dd7f35 Assembly-CSharp.dll:DeepSpace.Udp.UdpBase
 7ba2c46c15b45b18cbeb69a86a9e8c64 Assembly-CSharp.dll:.NoBtnController
 67372f1823fe8293ab2c79fc853578a1 Assembly-CSharp.dll:.CameraOffAxisProjection
-94171b6f49fe374fea125f9ed6502629 Assembly-CSharp.dll:.TeamZoneManager
+55468db752bb93732c323fde22138898 Assembly-CSharp.dll:.TeamZoneManager
 fa459a2d52b534fc8e7d94f9a595ba3f Assembly-CSharp.dll:.DemoWallFloorStarter
 a4f0a4f62100f1a4fb5cbe0e00dde83f Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
 2842b39cc13f79b667da79c059d646c5 Assembly-CSharp.dll:.FloorCubeController
@@ -231,6 +232,7 @@ f2c6041520ce0c64273cf45b1661eb1a Assembly-CSharp.dll:DeepSpace.InputFieldFocusHa
 f6e3601f3f88e3a500f5b4ce26ef406c Assembly-CSharp.dll:DeepSpace.CmdConfigManager
 e2a474f1b425cb9bca5dd7f73ddb078e Assembly-CSharp.dll:.PlayerManager
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.PlayerTriggerCheck
 049da38e04b44d779517153fb9e33896 Assembly-CSharp.dll:.Demo
 1acf6baef5578ab0db83468944dbffd5 Assembly-CSharp.dll:.GameSimulatorController
 ee4d36b432c8b42a6f61f5f47e15f544 Assembly-CSharp.dll:.VRPNTransformationDemo
@@ -242,6 +244,7 @@ d791aa6007fa3640be1164ea75bb087d Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 ea71d9a39ff6e84f450c5fa35a7889f9 Assembly-CSharp.dll:.TextDisplay
 1fdf16d4b5a4d08b0fe89d3edf2f8eb7 Assembly-CSharp.dll:.GameController
 13f1815b0c3c4e2c282b6148b93f10c6 Assembly-CSharp.dll:.OnCollisionWithContainer1
+9f92d8433ef102d879f76579ea9202a2 Assembly-CSharp.dll:.PfeilSceneTrigger
 c6666661329916e218bee7f5e79e60f5 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 3165968ba45c74472d279ba04455fccb Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
 6a12e9df96c2f00ff682d72a9232b48e Assembly-CSharp.dll:.TriggerFieldDelay

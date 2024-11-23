@@ -158,6 +158,12 @@ public class GameController : MonoBehaviour
         for (int i = 0; i < floorFields.Length; i++)
         {
             bool isButtonEmpty = buttonList[i].text == "";
+
+            var parentObject = floorFields[i].transform.parent;
+            var textComponent = parentObject.GetComponentInChildren<Text>();
+            textComponent.text = buttonList[i].text;
+            textComponent.color = buttonList[i].text == "X" ? COLOR_X : COLOR_O;
+
             floorFields[i].SetActive(isActive && isButtonEmpty);
         }
     }
@@ -323,7 +329,7 @@ public class GameController : MonoBehaviour
             case "O":
                 return "TEAM BLUE WON!";
             case "X":
-                return "TEAM RED WON!";
+                return "TEAM GREEN WON!";
             default:
                 return "DRAW!";
         }
