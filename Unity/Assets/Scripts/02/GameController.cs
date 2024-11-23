@@ -9,6 +9,9 @@ public class GameController : MonoBehaviour
     [SerializeField] private Animator animator; // Reference to scene transition animator
     [SerializeField] private GameObject[] floorFields; // Floor fields for enabling/disabling
     [SerializeField] private Text[] buttonList; // UI buttons representing the grid
+    [SerializeField] private Text turnSignGreen; // UI Player Green - X Turn
+    [SerializeField] private Text turnSignBlue; // UI Player Blue - O Turn
+
     //[SerializeField] private GameObject startTriggerFieldRed, startTriggerFieldBlue; // StartTriggerFields for players
 
     private static readonly int GRID_LENGTH = 3;
@@ -35,6 +38,7 @@ public class GameController : MonoBehaviour
         SetGameControllerReferenceOnButtons();
         currentTeam = Player.Team.Green;
         playerSide = "X";
+        turnSignBlue.color = Color.gray;
 
         playerCounterController = FindObjectOfType<PlayerCounterController>();
         players.AddRange(playerCounterController.GetAllPlayers());
@@ -69,6 +73,18 @@ public class GameController : MonoBehaviour
     {
         currentTeam = currentTeam == Player.Team.Green ? Player.Team.Blue : Player.Team.Green;
         playerSide = currentTeam == Player.Team.Green ? "X" : "O";
+
+        if(currentTeam == Player.Team.Green)
+        {
+            turnSignBlue.color = Color.gray;
+            turnSignGreen.color = COLOR_X;
+        }
+        else
+        {
+            turnSignBlue.color = COLOR_O;
+            turnSignGreen.color = Color.gray;
+        }
+
         SetAllFloorCubesActiveForTeam(currentTeam);
 
         /*if (playerSide == "O")

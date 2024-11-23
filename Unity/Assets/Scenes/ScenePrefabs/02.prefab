@@ -3692,6 +3692,8 @@ MonoBehaviour:
   - {fileID: 7419257871771878706}
   - {fileID: 6176318816044270114}
   - {fileID: 2622858182492428802}
+  turnSignGreen: {fileID: 3361953609560008257}
+  turnSignBlue: {fileID: 7437724868273517401}
 --- !u!1 &6446410558094284049
 GameObject:
   m_ObjectHideFlags: 0
