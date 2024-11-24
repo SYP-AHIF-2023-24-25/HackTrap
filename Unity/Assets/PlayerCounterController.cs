@@ -96,6 +96,12 @@ public class PlayerCounterController : MonoBehaviour
 
     public List<Player> GetAllPlayers()
     {
+        foreach (Player player in players)
+        {
+            player.GetComponent<Collider>().enabled = true;
+            player.SetOnCorrectField(false);
+        }
+
         return players;
     }
 

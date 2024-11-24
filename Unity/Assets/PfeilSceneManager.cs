@@ -15,6 +15,8 @@ public class PfeilSceneManager : MonoBehaviour
         Instance = this;
         playerCounterController = FindObjectOfType<PlayerCounterController>();
         allPlayers.AddRange(playerCounterController.GetAllPlayers());
+
+
     }
 
     public void CheckIfAllPlayersAreOnCorrectField()
