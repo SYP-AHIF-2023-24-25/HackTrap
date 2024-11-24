@@ -2048,6 +2048,12 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &849248694 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3472666038399430221, guid: 35d50b3d05d00b141ba1a74a8aca8bdc,
+    type: 3}
+  m_PrefabInstance: {fileID: 3875978603569730198}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &853255049
 GameObject:
   m_ObjectHideFlags: 0
@@ -2424,12 +2430,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 8291717715976309736, guid: e04b40f0046fbff4db03de151ad5935f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e04b40f0046fbff4db03de151ad5935f, type: 3}
---- !u!1 &1049906881 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 452046673854499908, guid: c84b51d372f873e4b8dd4eb2d37d5b1c,
-    type: 3}
-  m_PrefabInstance: {fileID: 668380967}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1087264164 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 86953819638617231, guid: e9ec609d519b1e24eafd430b475b90ea,
@@ -2606,15 +2606,17 @@ MonoBehaviour:
   - {fileID: 7120628419616932411}
   - {fileID: 596690481}
   - {fileID: 983684103}
-  - {fileID: 1049906881}
   - {fileID: 4503516412518021970}
+  - {fileID: 849248694}
   - {fileID: 7881151535172904776}
   - {fileID: 428754693}
   - {fileID: 1170711860}
   - {fileID: 620192866}
   - {fileID: 743782448}
+  - {fileID: 620192866}
+  - {fileID: 743782448}
   sceneSwitchDelay: 100
-  initialScene: 10
+  initialScene: 0
 --- !u!4 &1167879953
 Transform:
   m_ObjectHideFlags: 0

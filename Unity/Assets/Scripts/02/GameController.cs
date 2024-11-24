@@ -38,8 +38,10 @@ public class GameController : MonoBehaviour
         SetGameControllerReferenceOnButtons();
         currentTeam = Player.Team.Green;
         playerSide = "X";
-        turnSignBlue.color = Color.gray;
-
+        if (turnSignBlue != null)
+        {
+            turnSignBlue.color = Color.gray;
+        }
         playerCounterController = FindObjectOfType<PlayerCounterController>();
         players.AddRange(playerCounterController.GetAllPlayers());
 
