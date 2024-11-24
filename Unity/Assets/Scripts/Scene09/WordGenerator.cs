@@ -15,13 +15,9 @@ public class WordGenerator : MonoBehaviour
 
     public Context context;
 
-    List<string> words = new List<string>
+    public List<string> words = new List<string>
     {
-        "VIRUS",
-        "CLICK",
-        "CRYPT",
-        "PHISH",
-        "CYBER"
+
     };
 
 
