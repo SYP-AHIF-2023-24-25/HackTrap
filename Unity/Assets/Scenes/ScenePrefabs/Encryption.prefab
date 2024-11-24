@@ -2617,6 +2617,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wallUpdateScript: {fileID: 4865951498267194145}
+  wallUpdaterTrialScript: {fileID: 0}
   container1: {fileID: 7200749597868062513}
   container2: {fileID: 2488495995807221263}
   container3: {fileID: 7155275080228722270}
@@ -3169,6 +3170,12 @@ MonoBehaviour:
   characterFour: {fileID: 6795887751042188103}
   characterFive: {fileID: 5546092082778199205}
   context: {fileID: 4333435470185215714}
+  words:
+  - VIRUS
+  - CLICK
+  - CRYPT
+  - PHISH
+  - CYBER
 --- !u!1 &8624004137589353347
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,6 +14,7 @@ public class Context : MonoBehaviour
     string shuffledWord;
 
     public WallUpdateScript wallUpdateScript;
+    public WallUpdaterTrialScript wallUpdaterTrialScript;
 
     bool character1Selected;
     bool character2Selected;
@@ -64,7 +65,14 @@ public class Context : MonoBehaviour
 
         if (selectionIndex < 5 && correctWord.ToCharArray()[selectionIndex] == c)
         {
-            wallUpdateScript.updateCharacter(selectionIndex, correctWord.ToCharArray()[selectionIndex]);
+            if(wallUpdaterTrialScript != null)
+            {
+                wallUpdaterTrialScript.updateCharacter(selectionIndex, correctWord.ToCharArray()[selectionIndex]);
+            }
+            else
+            {
+                wallUpdateScript.updateCharacter(selectionIndex, correctWord.ToCharArray()[selectionIndex]);
+            }
             Debug.Log("Selected " + c);
             selectionIndex++;
             if (selectionIndex == 5)
