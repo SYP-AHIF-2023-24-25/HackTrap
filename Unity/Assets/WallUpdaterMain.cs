@@ -15,7 +15,6 @@ public class WallUpdaterMain : MonoBehaviour
 
     public AudioSource timeoutSound;
 
-    [SerializeField] private LoaderManager loaderManager;
     [SerializeField] private DisplayWinners displayWinners;
     [SerializeField] private VirusSpawner virusSpawner;
 
@@ -25,17 +24,11 @@ public class WallUpdaterMain : MonoBehaviour
         if (timeoutCounter >= timeout)
         {
             timeoutSound.Stop();
-            string[] winners = loaderManager.IsWinner();
             PlayerPrefs.SetInt("gameOver", 1);
 
-            if (winners.Length != 0)
-            {
-                displayWinners.ShowWinners();
-                virusSpawner.StopSpawningObjects();
-                DestroyAllViruses();
-            }
-
-            
+            displayWinners.ShowWinners();
+            virusSpawner.StopSpawningObjects();
+            DestroyAllViruses();
         }
         else
         {

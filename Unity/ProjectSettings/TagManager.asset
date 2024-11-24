@@ -32,6 +32,8 @@ TagManager:
   - playerTracker
   - DeadZone
   - StartTrigger
+  - VirusCounterTeamGreen
+  - VirusCounterTeamBlue
   layers:
   - Default
   - TransparentFX

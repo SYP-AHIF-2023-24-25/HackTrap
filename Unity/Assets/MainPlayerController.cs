@@ -24,13 +24,14 @@ public class MainPlayerController : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("gameOver") == 1 && StateManager.Instance.GetCurrentIndex() == 7)
         {
-            string[] winners = LoaderManager.Instance.IsWinner();
+            string winner = TeamVirusCounter.Instance.IsWinner();
             ResetColors();
 
-            if (!new List<string>(winners).Contains(this.gameObject.tag))
+            //TODO: alle nicht winner inaktiv setzen:
+            /*if (!new List<string>(winners).Contains(this.gameObject.tag))
             {
                 this.gameObject.SetActive(false);
-            }
+            }*/
         }
 
     }
@@ -74,10 +75,12 @@ public class MainPlayerController : MonoBehaviour
                 ("Team" + player.team.ToString()).Equals(teamNames[i], System.StringComparison.OrdinalIgnoreCase) &&
                 (virusCounter > 0 && virusCounter <= 4))
             {
-                float progress = LoaderManager.Instance.GetCurrentLoaderProgress(i) + (0.5f * (virusCounter / 4.0f));
-                LoaderManager.Instance.UpdateLoaderProgress(i, progress, 2f);
-
                 Debug.Log("viruses dispensed");
+
+                TeamVirusCounter.Instance.UpdateTeamCount(teamNames[i], virusCounter);
+                //float progress = LoaderManager.Instance.GetCurrentLoaderProgress(i) + (0.5f * (virusCounter / 4.0f));
+                //LoaderManager.Instance.UpdateLoaderProgress(i, progress, 2f);
+
 
                 ResetColors();
             }
