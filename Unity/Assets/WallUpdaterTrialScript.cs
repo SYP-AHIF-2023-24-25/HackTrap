@@ -15,11 +15,6 @@ public class WallUpdaterTrialScript : MonoBehaviour
 
     public GameObject timer;
 
-    public int timeout = 0;
-
-    private int timeoutCounter = 0;
-
-    private int timeoutCounterSecond = 0;
 
     public AudioSource timeoutSound;
     public AudioSource backgroundAudio;
@@ -45,35 +40,6 @@ public class WallUpdaterTrialScript : MonoBehaviour
         if (index == 4)
         {
             characterFive.GetComponent<Text>().text = character + "";
-        }
-    }
-
-    void executeTimeout()
-    {
-        timer.GetComponent<Text>().text = (timeout - timeoutCounter) < 10 ? " " + (timeout - timeoutCounter) : (timeout - timeoutCounter) + "";
-        if (timeout - timeoutCounter < 11)
-        {
-            timer.GetComponent<Text>().color = Color.red;
-            timeoutSound.Play();
-            //backgroundAudio.Stop();
-        }
-        timeoutCounter++;
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        timeoutCounter = 0;
-        timeoutCounterSecond = DateTime.UtcNow.Second;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (DateTime.UtcNow.Second != timeoutCounterSecond)
-        {
-            executeTimeout();
-            timeoutCounterSecond = DateTime.UtcNow.Second;
         }
     }
 }

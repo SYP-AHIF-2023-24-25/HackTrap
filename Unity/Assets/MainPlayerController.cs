@@ -12,7 +12,7 @@ public class MainPlayerController : MonoBehaviour
     private int virusCounter = 0;
 
     private PlayerCounterController playerCounterController;
-    private bool isState8Handled = false;
+    private bool allWinnerPLayerReady = false;
 
     void Start()
     {
@@ -22,11 +22,19 @@ public class MainPlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (PlayerPrefs.GetInt("gameOver") == 1 && StateManager.Instance.GetCurrentIndex() == 7)
+        if (PlayerPrefs.GetInt("gameOver") == 1 && StateManager.Instance.GetCurrentIndex() == 11 && allWinnerPLayerReady == false)
         {
             string winner = TeamVirusCounter.Instance.IsWinner();
             ResetColors();
-
+            var players = playerCounterController.GetAllPlayers();
+            foreach(var player in players)
+            {
+                if (winner.ToLower().Contains(player.team.ToString().ToLower()))
+                {
+                    player.tag = "Winner";
+                }
+            }
+            allWinnerPLayerReady = true;
             //TODO: alle nicht winner inaktiv setzen:
             /*if (!new List<string>(winners).Contains(this.gameObject.tag))
             {

@@ -15,7 +15,6 @@ public class WallUpdaterMain : MonoBehaviour
 
     public AudioSource timeoutSound;
 
-    [SerializeField] private DisplayWinners displayWinners;
     [SerializeField] private VirusSpawner virusSpawner;
 
 
@@ -25,10 +24,10 @@ public class WallUpdaterMain : MonoBehaviour
         {
             timeoutSound.Stop();
             PlayerPrefs.SetInt("gameOver", 1);
-
-            displayWinners.ShowWinners();
             virusSpawner.StopSpawningObjects();
             DestroyAllViruses();
+            PlayerPrefs.SetString("MainGameWinner", TeamVirusCounter.Instance.IsWinner());
+            StateManager.Instance.SwitchToNextScenePrefab();
         }
         else
         {

@@ -48,9 +48,9 @@ public class TextDisplay : MonoBehaviour
         }
 
         // Get the display text from PlayerPrefs if available
-        if (!string.IsNullOrEmpty(PlayerPrefs.GetString("WinnerText")))
+        if (!string.IsNullOrEmpty(PlayerPrefs.GetString("MainGameWinner")) && StateManager.Instance.GetCurrentIndex() == 10)
         {
-            displayText = PlayerPrefs.GetString("WinnerText");
+            displayText = PlayerPrefs.GetString("MainGameWinner") + " is the Winner!";
         }
         else
         {

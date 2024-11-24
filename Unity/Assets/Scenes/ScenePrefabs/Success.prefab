@@ -399,10 +399,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 8105062431978579251}
   textUI: {fileID: 2537415810018290128}
-  letterDelay: 0.5
+  letterDelay: 0.3
   lineDelay: 0.5
-  isSwitch: 1
-  index: 13
+  index: 17
+  switchScene: 1
   delayBeforeSwitch: 5
   displayText: Default Text
 --- !u!1 &5120775891137959141
