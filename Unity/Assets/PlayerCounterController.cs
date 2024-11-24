@@ -40,10 +40,11 @@ public class PlayerCounterController : MonoBehaviour
             }
         }
         
-        if (StateManager.Instance.GetCurrentIndex() > 8 && !other.gameObject.CompareTag("DPlayer"))
+        //wenn maingame fertig ist
+        /*if (StateManager.Instance.GetCurrentIndex() > 8 && !other.gameObject.CompareTag("DPlayer"))
         {
             other.tag = "Winner";
-        }
+        }*/
     }
 
 

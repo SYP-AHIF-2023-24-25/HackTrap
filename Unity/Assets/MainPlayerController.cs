@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class MainPlayerController : MonoBehaviour
 {
-    [SerializeField] private Color[] teamsColor;
     [SerializeField] private string[] teamNames;
     [SerializeField] private Color[] collectingColor;
     private MeshRenderer[] meshRenderers;
@@ -40,10 +39,12 @@ public class MainPlayerController : MonoBehaviour
     {
         if (other.CompareTag("Virus"))
         {
+            //Debug.Log("Touched virus");
             HandleVirusCollision(other);
         }
         else if (other.gameObject.tag.Contains("Container"))
         {
+            Debug.Log("Touched container");
             HandleTeamCollision(other);
         }
     }
@@ -57,18 +58,27 @@ public class MainPlayerController : MonoBehaviour
             virusCounter++;
             Destroy(other.gameObject);
         }
+        //Debug.Log("viruses:" + virusCounter);
     }
 
     private void HandleTeamCollision(Collider other)
     {
         for (int i = 0; i < teamNames.Length; i++)
         {
+            var player = this.gameObject.GetComponent<Player>();
+            Debug.Log(player.team);
+            Debug.Log(player.team.ToString());
+            Debug.Log(teamNames[i]);
+
             if (other.gameObject.name.Equals(teamNames[i], System.StringComparison.OrdinalIgnoreCase) &&
-                this.tag.Equals(teamNames[i], System.StringComparison.OrdinalIgnoreCase) &&
+                ("Team" + player.team.ToString()).Equals(teamNames[i], System.StringComparison.OrdinalIgnoreCase) &&
                 (virusCounter > 0 && virusCounter <= 4))
             {
                 float progress = LoaderManager.Instance.GetCurrentLoaderProgress(i) + (0.5f * (virusCounter / 4.0f));
                 LoaderManager.Instance.UpdateLoaderProgress(i, progress, 2f);
+
+                Debug.Log("viruses dispensed");
+
                 ResetColors();
             }
         }

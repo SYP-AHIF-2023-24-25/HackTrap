@@ -11,10 +11,8 @@ public class DisplayWinners : MonoBehaviour
     // Dictionary to map team numbers to team color names
     private readonly Dictionary<string, string> teamColors = new Dictionary<string, string>
     {
-        { "Team1", "Team Red" },
-        { "Team2", "Team Green" },
-        { "Team3", "Team Blue" },
-        { "Team4", "Team Yellow" }
+        { "Team1", "Team Green" },
+        { "Team2", "Team Blue" },
     };
 
     public void ShowWinners()

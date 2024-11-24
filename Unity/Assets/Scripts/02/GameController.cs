@@ -132,8 +132,12 @@ public class GameController : MonoBehaviour
         }
     }*/
 
+    //private List<Player> disabledPlayers = new List<Player>();
+
+
     private void SetAllFloorCubesActiveForTeam(Player.Team currentTeam)
     {
+        //disabledPlayers.Clear();
         foreach (Player player in players)
         {
             if (player.team == currentTeam)
@@ -143,6 +147,7 @@ public class GameController : MonoBehaviour
             else
             {
                 EnablePlayerTicTacToe(player, false);
+                //disabledPlayers.Add(player);
             }
         }
 
