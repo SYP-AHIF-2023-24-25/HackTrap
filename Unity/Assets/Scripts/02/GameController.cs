@@ -161,20 +161,6 @@ public class GameController : MonoBehaviour
         player.GetComponent<Collider>().enabled = isEnabled;
     }
 
-
-    // Handles the computer's move using the Minimax algorithm
-    /*private IEnumerator ComputerTurn()
-    {
-        yield return new WaitForSeconds(1f); // Delay before the computer moves
-
-        int bestMove = Minimax(playerSide);
-        buttonList[bestMove].text = playerSide;
-        buttonList[bestMove].GetComponentInParent<Button>().interactable = false;
-
-        SetAllFloorCubesActive(true);
-        EndTurn();
-    }*/
-
     // Activates/deactivates floor cubes based on the state of the game
     private void SetAllFloorCubesActive(bool isActive)
     {
@@ -194,6 +180,7 @@ public class GameController : MonoBehaviour
     // Ends the current turn, checking for game over conditions
     public void EndTurn()
     {
+        SetAllFloorCubesActive(true);
         if (IsTie() || IsGameOver(playerSide))
         {
             GameOver();
@@ -245,65 +232,6 @@ public class GameController : MonoBehaviour
                 buttonList[6].text == playerSymbol);
     }
 
-    // Minimax algorithm to determine the best move for the computer
-    /*private int Minimax(string currentPlayer)
-    {
-        int bestScore = int.MinValue;
-        int bestMove = -1;
-
-        for (int i = 0; i < buttonList.Length; i++)
-        {
-            if (buttonList[i].text == "")
-            {
-                buttonList[i].text = currentPlayer; // Make the move
-                int score = MinimaxScore(currentPlayer == "O" ? "X" : "O", false); // Get score
-                buttonList[i].text = ""; // Undo the move
-
-                if (score > bestScore)
-                {
-                    bestScore = score;
-                    bestMove = i;
-                }
-            }
-        }
-
-        return bestMove;
-    }
-
-    // Recursive function to evaluate the score of the board
-    private int MinimaxScore(string currentPlayer, bool isMaximizing)
-    {
-        if (IsGameOver("X"))
-            return -1;
-        if (IsGameOver("O"))
-            return 1;
-        if (IsTie())
-            return 0;
-
-        int bestScore = isMaximizing ? int.MinValue : int.MaxValue;
-
-        for (int i = 0; i < buttonList.Length; i++)
-        {
-            if (buttonList[i].text == "")
-            {
-                buttonList[i].text = currentPlayer; // Make the move
-                int score = MinimaxScore(currentPlayer == "O" ? "X" : "O", !isMaximizing);
-                buttonList[i].text = ""; // Undo the move
-
-                if (isMaximizing)
-                {
-                    bestScore = Mathf.Max(score, bestScore);
-                }
-                else
-                {
-                    bestScore = Mathf.Min(score, bestScore);
-                }
-            }
-        }
-
-        return bestScore;
-    }
-    */
     // Checks if the game is over for the given player
     private bool IsGameOver(string playerSymbol)
     {
