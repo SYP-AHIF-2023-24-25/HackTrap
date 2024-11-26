@@ -274,6 +274,49 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contextScript: {fileID: 3398802929732186241}
+--- !u!1 &242034606044802784
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 67026052674312768}
+  - component: {fileID: 2330470504356205975}
+  m_Layer: 0
+  m_Name: SwitchScene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &67026052674312768
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242034606044802784}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.9110203, y: 1.102432, z: -8.794666}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4036523280308015361}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2330470504356205975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242034606044802784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b373d855006b5c498f85fb09e6414bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &448867023682568009
 GameObject:
   m_ObjectHideFlags: 0
@@ -629,7 +672,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5598732131175229815
 Transform:
   m_ObjectHideFlags: 0
@@ -638,8 +681,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1245293059947529430}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.28499678, z: -0.00921157}
-  m_LocalScale: {x: 852.901, y: 852.9846, z: 0.22898819}
+  m_LocalPosition: {x: 2682, y: -1187, z: -0.01}
+  m_LocalScale: {x: 523.5021, y: 523.5534, z: 0.14055066}
   m_Children:
   - {fileID: 7849778517621888832}
   m_Father: {fileID: 870848724503005351}
@@ -2360,6 +2403,7 @@ Transform:
   m_Children:
   - {fileID: 2395590285114646339}
   - {fileID: 870848724503005351}
+  - {fileID: 67026052674312768}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2375,6 +2419,7 @@ GameObject:
   - component: {fileID: 2416070052974665736}
   - component: {fileID: 6917702421626758308}
   - component: {fileID: 8296100290205275854}
+  - component: {fileID: 8219702251254985799}
   m_Layer: 0
   m_Name: TrackingField
   m_TagString: Untagged
@@ -2470,6 +2515,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8219702251254985799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8034498996121843542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13176b8eab6db7846812326eca250ae5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activationDelay: 2
+  onTriggerEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2330470504356205975}
+        m_MethodName: SwitchScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &8526030520955113139
 GameObject:
   m_ObjectHideFlags: 0
@@ -2810,7 +2884,6 @@ MonoBehaviour:
   characterFour: {fileID: 8570087400697806756}
   characterFive: {fileID: 4293232859982220330}
   timer: {fileID: 0}
-  timeout: 0
   timeoutSound: {fileID: 6948910574474883077}
   backgroundAudio: {fileID: 3765938360293542835}
 --- !u!1 &8766086697733677093
