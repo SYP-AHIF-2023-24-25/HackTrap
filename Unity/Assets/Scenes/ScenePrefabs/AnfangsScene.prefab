@@ -221,8 +221,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1831024624141517023}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -1.6}
-  m_LocalScale: {x: 1.4, y: 8.701611, z: 0.21743034}
+  m_LocalPosition: {x: 0, y: 0, z: -1.77}
+  m_LocalScale: {x: 1.4, y: 9.030641, z: 0.21743034}
   m_Children: []
   m_Father: {fileID: 5023568018617103760}
   m_RootOrder: 1
@@ -440,7 +440,7 @@ MonoBehaviour:
   onTriggerEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 7705438063781355879}
         m_MethodName: SwitchScene
         m_Mode: 1
         m_Arguments:
@@ -1269,8 +1269,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8125632409727534924}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -1.63}
-  m_LocalScale: {x: 1.4, y: 8.701611, z: 0.21743022}
+  m_LocalPosition: {x: 0, y: 0, z: -1.8}
+  m_LocalScale: {x: 1.4, y: 9.030641, z: 0.21743022}
   m_Children: []
   m_Father: {fileID: 5023568018617103760}
   m_RootOrder: 0

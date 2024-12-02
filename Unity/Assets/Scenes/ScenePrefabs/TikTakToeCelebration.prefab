@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 5231482301054325999}
   - component: {fileID: 3868606263397631121}
   - component: {fileID: 6818291809059710486}
-  - component: {fileID: 3501369980569950653}
+  - component: {fileID: 192136220864231924}
   m_Layer: 0
   m_Name: TeamRed
   m_TagString: Untagged
@@ -340,7 +340,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &3501369980569950653
+--- !u!114 &192136220864231924
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -349,7 +349,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1518643359312178247}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e592705e74f911c4fbe36cdc19adace1, type: 3}
+  m_Script: {fileID: 11500000, guid: 2961c9f5c702d924f92e3e41341b57ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   expectedTeam: 0
@@ -365,7 +365,7 @@ GameObject:
   - component: {fileID: 6898846194601857943}
   - component: {fileID: 6938749301333738128}
   - component: {fileID: 5292776472655841978}
-  - component: {fileID: 7160631800130869783}
+  - component: {fileID: 481346621588680496}
   m_Layer: 0
   m_Name: TeamBlau
   m_TagString: Untagged
@@ -442,7 +442,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &7160631800130869783
+--- !u!114 &481346621588680496
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -451,7 +451,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1922688880944022284}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e592705e74f911c4fbe36cdc19adace1, type: 3}
+  m_Script: {fileID: 11500000, guid: 2961c9f5c702d924f92e3e41341b57ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   expectedTeam: 1

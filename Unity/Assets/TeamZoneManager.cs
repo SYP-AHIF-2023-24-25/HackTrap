@@ -34,13 +34,16 @@ public class TeamZoneManager : MonoBehaviour
             }
         }
 
-        if(startButton is null)
+        Debug.Log("Alle auf korrektem Teamfeld!");
+        Debug.Log(startButton);
+        if (startButton == null)
         {
+            Debug.Log("Switch scene");
             StateManager.Instance.SwitchToNextScenePrefab();
         }
         else
         {
-            Debug.Log("Alle auf korrektem Teamfeld!");
+            Debug.Log("enable button");
             startButton.SetActive(true);
         }
     }

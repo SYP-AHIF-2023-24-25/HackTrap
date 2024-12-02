@@ -48,7 +48,7 @@ public class PlayerCounterController : MonoBehaviour
     public void InitializeTeamColor(GameObject playerObject)
     {
         List<List<GameObject>> teams = GetTeams();
-       
+        Debug.Log(teams.Count);
         for (int i = 0; i < teams.Count; i++)
         {
             foreach (GameObject playerObj in teams[i])
@@ -64,7 +64,7 @@ public class PlayerCounterController : MonoBehaviour
     public void AssignPlayerToTeam(GameObject playerObject)
     {
         var smallestTeam = teams
-            .OrderByDescending(team => team.Value.Count) 
+            .OrderBy(team => team.Value.Count) 
             .First();
         var smallestTeamList = smallestTeam.Value;
         smallestTeamList.Add(playerObject);
