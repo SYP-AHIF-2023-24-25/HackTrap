@@ -57,17 +57,17 @@ public class TriggerFieldDelay : MonoBehaviour
     public void EnableAllContainers()
     {
 
-            // Iterate through the list of disabled GameObjects and re-enable them
-            foreach (GameObject obj in disabledGameObjects)
+        // Iterate through the list of disabled GameObjects and re-enable them
+        foreach (GameObject obj in disabledGameObjects)
+        {
+            if (obj != null) // Check if the GameObject still exists
             {
-                if (obj != null) // Check if the GameObject still exists
-                {
-                    obj.SetActive(true);
-                }
+                obj.SetActive(true);
             }
+        }
 
-            // Clear the list after re-enabling
-            disabledGameObjects.Clear();
+        // Clear the list after re-enabling
+        disabledGameObjects.Clear();
         
     }
 

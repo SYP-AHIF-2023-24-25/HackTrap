@@ -26,19 +26,22 @@ public class TeamZoneManager : MonoBehaviour
     {
         foreach (Player player in allPlayers)
         {
+            Debug.Log($"Spieler von Team {player.team} auf korrektem Teamfeld: {player.IsOnCorrectField()}");
             if (!player.IsOnCorrectField())
             {
+                Debug.Log("Nicht alle auf korrektem Teamfeld!");
                 return;
             }
         }
+
         if(startButton is null)
         {
             StateManager.Instance.SwitchToNextScenePrefab();
         }
         else
         {
+            Debug.Log("Alle auf korrektem Teamfeld!");
             startButton.SetActive(true);
         }
-        Debug.Log("Alle da");
     }
 }

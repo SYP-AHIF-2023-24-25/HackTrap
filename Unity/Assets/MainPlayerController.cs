@@ -41,17 +41,17 @@ public class MainPlayerController : MonoBehaviour
                 this.gameObject.SetActive(false);
             }*/
         }
-
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Virus"))
         {
-            //Debug.Log("Touched virus");
+            Debug.Log("Touched virus");
             HandleVirusCollision(other);
         }
-        else if (other.gameObject.tag.Contains("Container"))
+        
+        if (other.gameObject.tag.Contains("Container"))
         {
             Debug.Log("Touched container");
             HandleTeamCollision(other);
@@ -65,6 +65,8 @@ public class MainPlayerController : MonoBehaviour
             meshRenderers[nextColorIndex + 2].material.color = collectingColor[nextColorIndex];
             nextColorIndex = (nextColorIndex + 1) % (meshRenderers.Length - 2);
             virusCounter++;
+
+            Debug.Log("Vire wurde eingefangen");
             Destroy(other.gameObject);
         }
         //Debug.Log("viruses:" + virusCounter);
@@ -83,12 +85,11 @@ public class MainPlayerController : MonoBehaviour
                 ("Team" + player.team.ToString()).Equals(teamNames[i], System.StringComparison.OrdinalIgnoreCase) &&
                 (virusCounter > 0 && virusCounter <= 4))
             {
-                Debug.Log("viruses dispensed");
+                Debug.Log($"{virusCounter} Viren wurden abgeladen");
 
                 TeamVirusCounter.Instance.UpdateTeamCount(teamNames[i], virusCounter);
                 //float progress = LoaderManager.Instance.GetCurrentLoaderProgress(i) + (0.5f * (virusCounter / 4.0f));
                 //LoaderManager.Instance.UpdateLoaderProgress(i, progress, 2f);
-
 
                 ResetColors();
             }
@@ -97,6 +98,7 @@ public class MainPlayerController : MonoBehaviour
 
     private void ResetColors()
     {
+        Debug.Log("Viruscounter wieder auf 0");
         virusCounter = 0;
         for (int i = 2; i < meshRenderers.Length; i++)
         {

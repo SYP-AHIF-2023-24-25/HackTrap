@@ -17,10 +17,10 @@ public class PlayerCounterController : MonoBehaviour
 
     private List<Player> players = new List<Player>();
 
-    private List<List<GameObject>> teams = new List<List<GameObject>>()
+    private Dictionary<string, List<GameObject>> teams = new Dictionary<string, List<GameObject>>()
     {
-        new List<GameObject>(),
-        new List<GameObject>(),
+        { "Green", new List<GameObject>() },
+        { "Blue", new List<GameObject>() },
     };
 
     void Start()
@@ -32,12 +32,9 @@ public class PlayerCounterController : MonoBehaviour
     {
         if (other.CompareTag("DPlayer") && !playerObjects.Contains(other.gameObject))
         {
-            if (StateManager.Instance.GetCurrentIndex() == 0)
-            { 
-                playerObjects.Add(other.gameObject);
-                playerCount++;
-                AssignPlayerToTeam(other.gameObject);
-            }
+            playerObjects.Add(other.gameObject);
+            playerCount++;
+            AssignPlayerToTeam(other.gameObject);
         }
         
         //wenn maingame fertig ist
@@ -48,37 +45,40 @@ public class PlayerCounterController : MonoBehaviour
     }
 
 
-    public void InitializeTeams()
+    public void InitializeTeamColor(GameObject playerObject)
     {
-
         List<List<GameObject>> teams = GetTeams();
-            for (int i = 0; i < teams.Count; i++)
+       
+        for (int i = 0; i < teams.Count; i++)
+        {
+            foreach (GameObject playerObj in teams[i])
             {
-                foreach (GameObject playerObject in teams[i])
-                {
-                    MeshRenderer[] currentMeshRenderers = playerObject.GetComponentsInChildren<MeshRenderer>();
-                    currentMeshRenderers[1].material.color = teamsColor[i];
-
-                    Player player = playerObject.GetComponent<Player>();
-                    player.team = (Player.Team)i;
-                    players.Add(player);
-                }
-                //player.tag = "Team" + (i + 1);  -> später ändern für MainGame
+                MeshRenderer[] currentMeshRenderers = playerObj.GetComponentsInChildren<MeshRenderer>();
+                currentMeshRenderers[1].material.color = teamsColor[i];
             }
-      
+            //player.tag = "Team" + (i + 1);  -> später ändern für MainGame
+        }
     }
 
 
-    public void AssignPlayerToTeam(GameObject player)
+    public void AssignPlayerToTeam(GameObject playerObject)
     {
-        // Find the team with the least number of members
-        if (true)
-        {
-            List<GameObject> smallestTeam = teams.OrderBy(t => t.Count).First();
-            smallestTeam.Add(player);
-            player.name = smallestTeam[0].name;
-            InitializeTeams();
-        }
+        var smallestTeam = teams
+            .OrderByDescending(team => team.Value.Count) 
+            .First();
+        var smallestTeamList = smallestTeam.Value;
+        smallestTeamList.Add(playerObject);
+
+        Player player = playerObject.GetComponent<Player>();
+        player.team = (Player.Team)Enum.Parse(typeof(Player.Team), smallestTeam.Key);
+        players.Add(player);
+
+        Debug.Log($"Playerobjects: {playerObjects.Count}");
+        Debug.Log($"Team 0: {teams["Green"].Count}");
+        Debug.Log($"Team 1: {teams["Blue"].Count}");
+        Debug.Log($"Players: {players.Count}");
+
+        InitializeTeamColor(playerObject);
     }
 
     /*
@@ -107,7 +107,7 @@ public class PlayerCounterController : MonoBehaviour
 
     public List<List<GameObject>> GetTeams()
     {
-        return teams;
+        return teams.Select(t => t.Value).ToList();
     }
 
     /*

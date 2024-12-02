@@ -17,10 +17,8 @@ public class VirusSpawner : MonoBehaviour
     {
         spawnAreaCollider = SpawnArea.GetComponent<BoxCollider>();
 
-
         // Start spawning objects
         InvokeRepeating(nameof(SpawnObject), Random.Range(minSpawnDelay, maxSpawnDelay), Random.Range(minSpawnDelay, maxSpawnDelay));
-        
     }
 
     void Update()
@@ -30,6 +28,7 @@ public class VirusSpawner : MonoBehaviour
         {
             if (!spawnAreaCollider.bounds.Contains(obj.transform.localPosition))
             {
+                Debug.Log("Virus außerhalb Spawnarea gelöscht");
                 Destroy(obj);
             }
         }

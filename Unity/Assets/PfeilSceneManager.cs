@@ -15,21 +15,21 @@ public class PfeilSceneManager : MonoBehaviour
         Instance = this;
         playerCounterController = FindObjectOfType<PlayerCounterController>();
         allPlayers.AddRange(playerCounterController.GetAllPlayers());
-
-
     }
 
     public void CheckIfAllPlayersAreOnCorrectField()
     {
         foreach (Player player in allPlayers)
         {
+            Debug.Log($"Spieler von Team {player.team} auf korrektem Teamfeld: {player.IsOnCorrectField()}");
             if (!player.IsOnCorrectField())
             {
+                Debug.Log("Nicht alle auf korrektem Teamfeld!");
                 return;
             }
         }
 
-        Debug.Log("Alle da");
+        Debug.Log("Alle auf korrektem Teamfeld!");
         StateManager.Instance.SwitchToNextScenePrefab();
     }
 }
