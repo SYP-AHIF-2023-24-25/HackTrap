@@ -70,8 +70,10 @@ public class PlayerCounterController : MonoBehaviour
         smallestTeamList.Add(playerObject);
 
         Player player = playerObject.GetComponent<Player>();
+        Debug.Log("New player to add:" + player);
         player.team = (Player.Team)Enum.Parse(typeof(Player.Team), smallestTeam.Key);
         players.Add(player);
+        Debug.Log("Added player");
 
         Debug.Log($"Playerobjects: {playerObjects.Count}");
         Debug.Log($"Team 0: {teams["Green"].Count}");
