@@ -1389,7 +1389,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 60
+  m_Text: 200
 --- !u!1 &4890100203920942314
 GameObject:
   m_ObjectHideFlags: 0
@@ -1571,7 +1571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 4815928353684690159}
-  timeout: 20
+  timeout: 200
   timeoutSound: {fileID: 6925784243852414542}
   virusSpawner: {fileID: 4280258322834223864}
 --- !u!1 &5842563376713283221

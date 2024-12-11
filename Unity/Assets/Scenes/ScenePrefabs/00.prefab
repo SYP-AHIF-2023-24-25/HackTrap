@@ -185,6 +185,7 @@ GameObject:
   - component: {fileID: 1929191348514705579}
   - component: {fileID: 6194441592378085143}
   - component: {fileID: 3675576172769945421}
+  - component: {fileID: 508342476611440341}
   m_Layer: 0
   m_Name: TeamRed
   m_TagString: Untagged
@@ -261,6 +262,19 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &508342476611440341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200073279817828195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2961c9f5c702d924f92e3e41341b57ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expectedTeam: 0
 --- !u!1 &3319046500585818987
 GameObject:
   m_ObjectHideFlags: 0
@@ -1106,6 +1120,7 @@ GameObject:
   - component: {fileID: 5924160039942860338}
   - component: {fileID: 3099373791355911636}
   - component: {fileID: 2882253196049105649}
+  - component: {fileID: 1521019838717463120}
   m_Layer: 0
   m_Name: TeamBlau
   m_TagString: Untagged
@@ -1182,6 +1197,19 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &1521019838717463120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8634428201532866089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2961c9f5c702d924f92e3e41341b57ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expectedTeam: 1
 --- !u!1 &8663980062943233207
 GameObject:
   m_ObjectHideFlags: 0
