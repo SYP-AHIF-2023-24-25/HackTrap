@@ -44,6 +44,17 @@ public class PlayerCounterController : MonoBehaviour
         }*/
     }
 
+    /*void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("DPlayer") && !playerObjects.Contains(other.gameObject))
+        {
+            playerObjects.Add(other.gameObject);
+            playerCount++;
+            AssignPlayerToTeam(other.gameObject);
+        }
+    }
+    */
+
 
     public void InitializeTeamColor(GameObject playerObject)
     {

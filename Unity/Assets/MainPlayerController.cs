@@ -50,8 +50,9 @@ public class MainPlayerController : MonoBehaviour
             Debug.Log("Touched virus");
             HandleVirusCollision(other);
         }
-        
-        if (other.gameObject.tag.Contains("Container"))
+
+        Debug.Log("Collider tag name: " + other.gameObject.tag.ToString());
+        if (other.gameObject.tag.ToString().Contains("Container"))
         {
             Debug.Log("Touched container");
             HandleTeamCollision(other);
@@ -81,7 +82,7 @@ public class MainPlayerController : MonoBehaviour
             Debug.Log(player.team.ToString());
             Debug.Log(teamNames[i]);
 
-            if (other.gameObject.name.Equals(teamNames[i], System.StringComparison.OrdinalIgnoreCase) &&
+            if (other.gameObject.name.ToString().Equals(teamNames[i], System.StringComparison.OrdinalIgnoreCase) &&
                 ("Team" + player.team.ToString()).Equals(teamNames[i], System.StringComparison.OrdinalIgnoreCase) &&
                 (virusCounter > 0 && virusCounter <= 4))
             {
