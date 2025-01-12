@@ -50,7 +50,21 @@ public class TextDisplay : MonoBehaviour
         // Get the display text from PlayerPrefs if available
         if (!string.IsNullOrEmpty(PlayerPrefs.GetString("MainGameWinner")) && StateManager.Instance.GetCurrentIndex() == 10)
         {
-            displayText = PlayerPrefs.GetString("MainGameWinner") + " is the Winner!";
+            string winner = PlayerPrefs.GetString("MainGameWinner");
+            if(winner == "TeamBlue")
+            {
+                winner = $"<color=blue>{winner}</color> ";
+                displayText = $"{winner} is the Winner!";
+            }
+            if(winner == "TeamGreen")
+            {
+                winner = $"<color=green>{winner}</color> ";
+                displayText = $"{winner} is the Winner!";
+            }
+            else
+            {
+                displayText = "Everybody wins";
+            }
         }
         else
         {

@@ -139,6 +139,8 @@ MonoBehaviour:
   - {r: 1, g: 0, b: 0, a: 0}
   - {r: 1, g: 0, b: 0, a: 0}
   - {r: 1, g: 0, b: 0, a: 0}
+  clickSoundSlurp: {fileID: 8300000, guid: ec8725b665501d24385236b8ef36b57c, type: 3}
+  clickSoundDump: {fileID: 8300000, guid: e9d5bbdd044f85b41829cb1dfef058bb, type: 3}
 --- !u!114 &6390490237264034502
 MonoBehaviour:
   m_ObjectHideFlags: 0

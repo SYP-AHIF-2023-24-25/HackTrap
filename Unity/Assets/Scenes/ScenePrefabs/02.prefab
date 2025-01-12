@@ -3862,6 +3862,7 @@ MonoBehaviour:
   - {fileID: 2622858182492428802}
   turnSignGreen: {fileID: 3361953609560008257}
   turnSignBlue: {fileID: 7437724868273517401}
+  clickSound: {fileID: 8300000, guid: 4b22eaaa2551cf5448a190565997a0e2, type: 3}
 --- !u!1 &6446410558094284049
 GameObject:
   m_ObjectHideFlags: 0

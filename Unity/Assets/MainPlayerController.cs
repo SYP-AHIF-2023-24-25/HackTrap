@@ -7,6 +7,10 @@ public class MainPlayerController : MonoBehaviour
 {
     [SerializeField] private string[] teamNames;
     [SerializeField] private Color[] collectingColor;
+    [SerializeField] private AudioClip clickSoundSlurp; // Der Soundclip für das Setzen eines Symbols
+    private AudioSource audioSourceSlurp; // AudioSource für den Sound
+    [SerializeField] private AudioClip clickSoundDump; // Der Soundclip für das Setzen eines Symbols
+    private AudioSource audioSourceDump; // AudioSource für den Sound
     private MeshRenderer[] meshRenderers;
     private int nextColorIndex = 0;
     private int virusCounter = 0;
@@ -16,6 +20,12 @@ public class MainPlayerController : MonoBehaviour
 
     void Start()
     {
+        audioSourceSlurp = gameObject.AddComponent<AudioSource>();
+        audioSourceSlurp.clip = clickSoundSlurp;
+        audioSourceSlurp.playOnAwake = false;
+        audioSourceDump = gameObject.AddComponent<AudioSource>();
+        audioSourceDump.clip = clickSoundDump;
+        audioSourceDump.playOnAwake = false;
         meshRenderers = GetComponentsInChildren<MeshRenderer>();
         playerCounterController = FindObjectOfType<PlayerCounterController>();
     }
@@ -49,6 +59,7 @@ public class MainPlayerController : MonoBehaviour
         {
             Debug.Log("Touched virus");
             HandleVirusCollision(other);
+            audioSourceSlurp.Play();
         }
 
         Debug.Log("Collider tag name: " + other.gameObject.tag.ToString());
@@ -87,8 +98,8 @@ public class MainPlayerController : MonoBehaviour
                 (virusCounter > 0 && virusCounter <= 4))
             {
                 Debug.Log($"{virusCounter} Viren wurden abgeladen");
-
                 TeamVirusCounter.Instance.UpdateTeamCount(teamNames[i], virusCounter);
+                audioSourceDump.Play();
                 //float progress = LoaderManager.Instance.GetCurrentLoaderProgress(i) + (0.5f * (virusCounter / 4.0f));
                 //LoaderManager.Instance.UpdateLoaderProgress(i, progress, 2f);
 

@@ -11,6 +11,8 @@ public class GameController : MonoBehaviour
     [SerializeField] private Text[] buttonList; // UI buttons representing the grid
     [SerializeField] private Text turnSignGreen; // UI Player Green - X Turn
     [SerializeField] private Text turnSignBlue; // UI Player Blue - O Turn
+    [SerializeField] private AudioClip clickSound; // Der Soundclip für das Setzen eines Symbols
+    private AudioSource audioSource; // AudioSource für den Sound
 
     //[SerializeField] private GameObject startTriggerFieldRed, startTriggerFieldBlue; // StartTriggerFields for players
 
@@ -33,6 +35,9 @@ public class GameController : MonoBehaviour
 
     private void Awake()
     {
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.clip = clickSound;
+        audioSource.playOnAwake = false;
         SetAllFloorCubesActive(false);
 
         SetGameControllerReferenceOnButtons();
@@ -142,6 +147,7 @@ public class GameController : MonoBehaviour
         //disabledPlayers.Clear();
         foreach (Player player in players)
         {
+            Debug.Log($"Player:{player} CurrentTeam {currentTeam}");
             if (player.team == currentTeam)
             {
                 EnablePlayerTicTacToe(player, true);
@@ -172,7 +178,10 @@ public class GameController : MonoBehaviour
             var textComponent = parentObject.GetComponentInChildren<Text>();
             textComponent.text = buttonList[i].text;
             textComponent.color = buttonList[i].text == "X" ? COLOR_X : COLOR_O;
-
+            if (audioSource != null && clickSound != null && !isButtonEmpty)
+            {
+                audioSource.Play();
+            }// Sound
             floorFields[i].SetActive(isActive && isButtonEmpty);
         }
     }
@@ -273,6 +282,7 @@ public class GameController : MonoBehaviour
     }
 
     // Returns the result of the match
+    //<color=green>{winner} is the Winner!</color>
     public string GetWinner(string result)
     {
         switch (result)

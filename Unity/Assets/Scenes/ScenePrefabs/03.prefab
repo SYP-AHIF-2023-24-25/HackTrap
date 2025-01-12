@@ -1247,6 +1247,7 @@ GameObject:
   - component: {fileID: 1657125650199344270}
   - component: {fileID: 1323074806084293587}
   - component: {fileID: 3364031902765365973}
+  - component: {fileID: 7039871874494109195}
   m_Layer: 0
   m_Name: NoCube
   m_TagString: noBtn
@@ -1374,6 +1375,19 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &7039871874494109195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4433445166549385986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10e5d2d206c13b24c9b4849a11ee12ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundClip: {fileID: 8300000, guid: b88a85fe1c0d18a4f8e9c6e6eb0f48d1, type: 3}
 --- !u!1 &4539128889508098687
 GameObject:
   m_ObjectHideFlags: 0

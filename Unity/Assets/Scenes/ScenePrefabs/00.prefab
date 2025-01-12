@@ -410,7 +410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneAudioClips:
-  - {fileID: 8300000, guid: 8437ef3406baadc42bdc75fe1d5f3f99, type: 3}
+  - {fileID: 8300000, guid: bd0fd8a412ce872479fc17bda5c6910b, type: 3}
   volume: 0
   loop: 1
 --- !u!1 &3732624262615146832

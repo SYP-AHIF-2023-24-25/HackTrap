@@ -10761,6 +10761,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7104397189001512294}
+  - component: {fileID: 9065398726473054619}
   m_Layer: 0
   m_Name: TikTakToeCelebration
   m_TagString: Untagged
@@ -10786,6 +10787,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9065398726473054619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7120628419616932411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c4bcbf6be95b6c44818c796fc046bee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneAudioClips:
+  - {fileID: 8300000, guid: 9db9f5e16f42b39479d33a1369c75e5e, type: 3}
+  volume: 2
+  loop: 0
 --- !u!1 &7561820609473140022
 GameObject:
   m_ObjectHideFlags: 0
