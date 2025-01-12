@@ -288,9 +288,9 @@ public class GameController : MonoBehaviour
         switch (result)
         {
             case "O":
-                return "TEAM BLUE WON!";
+                return $"TEAM <color=blue>BLUE</color> WON!";
             case "X":
-                return "TEAM GREEN WON!";
+                return $"TEAM <color=green>GREEN</color> WON!";
             default:
                 return "DRAW!";
         }

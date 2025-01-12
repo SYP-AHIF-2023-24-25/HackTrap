@@ -1423,9 +1423,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "That was the test run, now it's really about freeing deep space from the
-    virus.\r\nYou have 60 seconds.\r\nIt's all up to you!\r\nTurn back to your team
-    base to start!"
+  m_Text: "That was the test run, now it's really about freeing the deep space from
+    the virus.\r\nYou have 60 seconds.\r\nIt's all up to you!\r\nTurn back to your
+    team base to start!\r\nGood luck!"
 --- !u!114 &8987025706441294386
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -53,17 +53,17 @@ public class TextDisplay : MonoBehaviour
             string winner = PlayerPrefs.GetString("MainGameWinner");
             if(winner == "TeamBlue")
             {
-                winner = $"<color=blue>{winner}</color> ";
-                displayText = $"{winner} is the Winner!";
+                winner = $"Team <color=blue>Blue</color>";
+                displayText = $"{winner} is the winner!";
             }
             if(winner == "TeamGreen")
             {
-                winner = $"<color=green>{winner}</color> ";
-                displayText = $"{winner} is the Winner!";
+                winner = $"Team <color=green>Green</color>";
+                displayText = $"{winner} is the winner!";
             }
-            else
+            if(winner == "Draw")
             {
-                displayText = "Everybody wins";
+                displayText = "Everybody wins!";
             }
         }
         else
@@ -104,44 +104,72 @@ public class TextDisplay : MonoBehaviour
         {
             string line = lines[currentLineIndex];
 
-            // Display the current line letter by letter
-            if (currentLetterIndex < line.Length)
+            // Prüfen, ob die Zeile den Gewinner-Text enthält und mit <color> formatiert ist
+            if (line.Contains("<color="))
             {
-                letterTimer -= Time.deltaTime;
-                if (letterTimer <= 0f)
-                {
-                    textUI.text = line.Substring(0, currentLetterIndex + 1); // Display text up to the current letter
-                    currentLetterIndex++;
-                    letterTimer = letterDelay;
-                }
+                // Den gesamten farblich formatierten Text sofort anzeigen
+                textUI.text = line;
+                currentLineIndex++; // Direkt zur nächsten Zeile wechseln
+                currentLetterIndex = 0; // Zurücksetzen der Buchstaben-Index
+                lineTimer = lineDelay; // Warten auf die nächste Zeile
             }
             else
             {
-                // Move to the next line after the delay
-                lineTimer -= Time.deltaTime;
-                if (lineTimer <= 0f)
+                // Standard: Buchstabenweise Ausgabe
+                if (currentLetterIndex < line.Length)
                 {
-                    currentLineIndex++;
-                    if (currentLineIndex < lines.Length)
+                    letterTimer -= Time.deltaTime;
+                    if (letterTimer <= 0f)
                     {
-                        // Reset letter index and timer for the new line
-                        currentLetterIndex = 0;
+                        // Zeigt den Text bis zum aktuellen Buchstaben
+                        textUI.text = line.Substring(0, currentLetterIndex + 1);
+                        currentLetterIndex++;
                         letterTimer = letterDelay;
-                        lineTimer = lineDelay;
                     }
-                    else
+                }
+                else
+                {
+                    // Wenn die aktuelle Zeile vollständig angezeigt wurde
+                    lineTimer -= Time.deltaTime;
+                    if (lineTimer <= 0f)
                     {
-                        // All lines have been displayed, handle scene switch
-                        if(switchScene)
+                        // Wenn es einen Zeilenumbruch gibt, der durch \n erkannt wird
+                        if (line.Contains("\n"))
                         {
-                            isDisplayingText = false;
-                            HandleSceneSwitch();
+                            string[] subLines = line.Split(new[] { '\n' }, 2);
+                            // Zeilenumbruch nach der ersten Zeile durchführen
+                            textUI.text = subLines[0] + "\n";
+                            currentLetterIndex = 0;
+                            currentLineIndex++;
+                            lines[currentLineIndex] = subLines.Length > 1 ? subLines[1] : ""; // Setze den Text nach dem \n für die nächste Zeile
+                            lineTimer = lineDelay;
+                        }
+                        else
+                        {
+                            // Keine Zeilenumbrüche, einfach zur nächsten Zeile wechseln
+                            currentLineIndex++;
+                            if (currentLineIndex < lines.Length)
+                            {
+                                currentLetterIndex = 0;
+                                letterTimer = letterDelay;
+                                lineTimer = lineDelay;
+                            }
+                            else
+                            {
+                                // Alle Zeilen wurden angezeigt, handle scene switch
+                                isDisplayingText = false;
+                                if (switchScene)
+                                {
+                                    HandleSceneSwitch();
+                                }
+                            }
                         }
                     }
                 }
             }
         }
     }
+
 
     // Method to handle scene switching after text display is complete
     private void HandleSceneSwitch()

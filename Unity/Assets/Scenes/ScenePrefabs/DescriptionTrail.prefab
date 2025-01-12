@@ -351,10 +351,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Congratulations! Your team has captured all the viruses.\r\n\r\nRearrange
-    the letters to form the correct word and destroy the virus. \r\nYou have a Trail
-    run to see how it works!\nThe other team, please exit the field to allow the winners
-    to finish their mission.\r\n\n\n"
+  m_Text: "Congratulations! Your team has captured the most viruses.\r\n\r\nYour next
+    challenge is to rearrange the letters to form the correct word and destroy all
+    left over viruses. \r\nThis is a trail run for you to see how it works!"
 --- !u!114 &5427585959963654064
 MonoBehaviour:
   m_ObjectHideFlags: 0

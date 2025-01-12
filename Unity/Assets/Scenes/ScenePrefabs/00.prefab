@@ -669,14 +669,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Welcome to Deepspace!
-
-
-    The game starts as soon as all players are on the floor.
-
-    We hope you like it!
-
-    Your HackTrap Team: Christian, Amina, Julian & Julia :)'
+  m_Text: "Welcome to Deepspace!\r\n\r\nThe game starts as soon as all players are
+    in their bases.\r\nWe hope you like it!\r\nYour HackTrap Team: Christian, Amina,
+    Julian & Julia :)"
 --- !u!114 &4588192001874724736
 MonoBehaviour:
   m_ObjectHideFlags: 0
