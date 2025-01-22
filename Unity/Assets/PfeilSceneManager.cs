@@ -31,5 +31,6 @@ public class PfeilSceneManager : MonoBehaviour
 
         Debug.Log("Alle auf korrektem Teamfeld!");
         StateManager.Instance.SwitchToNextScenePrefab();
+
     }
 }

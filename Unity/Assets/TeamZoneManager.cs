@@ -16,7 +16,11 @@ public class TeamZoneManager : MonoBehaviour
     void Start()
     {
         Instance = this;
-        startButton.SetActive(false);
+
+        if (startButton != null)
+        {
+            startButton.SetActive(false);
+        }
 
         playerCounterController = FindObjectOfType<PlayerCounterController>();
         allPlayers.AddRange(playerCounterController.GetAllPlayers());
