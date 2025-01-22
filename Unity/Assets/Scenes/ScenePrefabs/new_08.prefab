@@ -1571,7 +1571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 4815928353684690159}
-  timeout: 40
+  timeout: 200
   timeoutSound: {fileID: 6925784243852414542}
   virusSpawner: {fileID: 4280258322834223864}
 --- !u!1 &5842563376713283221
