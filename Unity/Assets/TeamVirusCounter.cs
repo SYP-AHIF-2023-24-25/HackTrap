@@ -58,7 +58,7 @@ public class TeamVirusCounter
 
     public string IsWinner()
     {
-        string winningTeam = "Unentschieden";
+        string winningTeam = "";
         int maxCount = 0;
         bool isTie = false;
 
@@ -76,7 +76,7 @@ public class TeamVirusCounter
             }
         }
 
-        return isTie ? "Unentschieden" : winningTeam;
+        return isTie ? "Draw" : winningTeam;
     }
 
 }

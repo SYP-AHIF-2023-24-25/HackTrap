@@ -68,5 +68,7 @@ public class WallUpdaterMain : MonoBehaviour
         {
             Destroy(virus);
         }
+
+        //TODO: Clear all players
     }
 }

@@ -35,9 +35,13 @@ public class MainPlayerController : MonoBehaviour
         if (PlayerPrefs.GetInt("gameOver") == 1 && StateManager.Instance.GetCurrentIndex() == 11 && allWinnerPLayerReady == false)
         {
             string winner = TeamVirusCounter.Instance.IsWinner();
-            ResetColors();
+            winner = winner == "Draw" ? "TeamBlue" : winner;
+
+
             var players = playerCounterController.GetAllPlayers();
-            foreach(var player in players)
+            ResetColors();
+
+            foreach (var player in players)
             {
                 if (winner.ToLower().Contains(player.team.ToString().ToLower()))
                 {
@@ -63,9 +67,9 @@ public class MainPlayerController : MonoBehaviour
         }
 
         Debug.Log("Collider tag name: " + other.gameObject.tag.ToString());
-        if (other.gameObject.tag.ToString().Contains("Container"))
+        if (other.CompareTag("Container1") || other.CompareTag("Container2"))
         {
-            Debug.Log("Touched container");
+            Debug.Log("Touched a team container");
             HandleTeamCollision(other);
         }
     }
@@ -78,8 +82,12 @@ public class MainPlayerController : MonoBehaviour
             nextColorIndex = (nextColorIndex + 1) % (meshRenderers.Length - 2);
             virusCounter++;
 
-            Debug.Log("Vire wurde eingefangen");
-            Destroy(other.gameObject);
+            audioSourceDump.Play();
+            Player p = GetComponent<Player>();
+
+
+            Debug.Log(p.team.ToString() + " Vire wurde eingefangen (" + virusCounter + ")");
+            Destroy(other);
         }
         //Debug.Log("viruses:" + virusCounter);
     }
@@ -89,17 +97,26 @@ public class MainPlayerController : MonoBehaviour
         for (int i = 0; i < teamNames.Length; i++)
         {
             var player = this.gameObject.GetComponent<Player>();
-            Debug.Log(player.team);
-            Debug.Log(player.team.ToString());
+            //Debug.Log(player.team);
+            //Debug.Log(player.team.ToString());
             Debug.Log(teamNames[i]);
 
             if (other.gameObject.name.ToString().Equals(teamNames[i], System.StringComparison.OrdinalIgnoreCase) &&
                 ("Team" + player.team.ToString()).Equals(teamNames[i], System.StringComparison.OrdinalIgnoreCase) &&
                 (virusCounter > 0 && virusCounter <= 4))
             {
+
+                string containerName = other.gameObject.name;
+                string playerName = "Team" + player.team.ToString();
+
+                containerName = containerName.ToLower();
+                playerName = playerName.ToLower();
+
+                Debug.Log(playerName + " == " + containerName);
+
+    
                 Debug.Log($"{virusCounter} Viren wurden abgeladen");
                 TeamVirusCounter.Instance.UpdateTeamCount(teamNames[i], virusCounter);
-                audioSourceDump.Play();
                 //float progress = LoaderManager.Instance.GetCurrentLoaderProgress(i) + (0.5f * (virusCounter / 4.0f));
                 //LoaderManager.Instance.UpdateLoaderProgress(i, progress, 2f);
 

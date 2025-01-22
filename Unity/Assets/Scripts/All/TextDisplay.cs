@@ -63,7 +63,7 @@ public class TextDisplay : MonoBehaviour
             }
             if(winner == "Draw")
             {
-                displayText = "Everybody wins!";
+                displayText = "Draw! But Team <color=blue>Blue</color> wins!";
             }
         }
         else

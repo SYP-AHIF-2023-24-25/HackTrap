@@ -13,11 +13,6 @@ public class WallUpdaterTrialScript : MonoBehaviour
     public GameObject characterFour;
     public GameObject characterFive;
 
-    public GameObject timer;
-
-
-    public AudioSource timeoutSound;
-    public AudioSource backgroundAudio;
 
     public void updateCharacter(int index, char character)
     {
