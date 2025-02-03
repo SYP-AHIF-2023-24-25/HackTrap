@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using DeepSpace.Udp;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,6 +13,7 @@ public class WordGenerator : MonoBehaviour
     public GameObject characterThree;
     public GameObject characterFour;
     public GameObject characterFive;
+    [SerializeField] UdpSender udpSender;
 
     public Context context;
 
@@ -57,7 +59,9 @@ public class WordGenerator : MonoBehaviour
         word = ShuffleString(word);
 
         context.setShuffledWord(word);
+        string jsonData = JsonUtility.ToJson(word);
 
+        udpSender.AddMessage(jsonData); // Position per UDP senden
 
         characterOne.GetComponent<Text>().text = word[0] + "";
         characterTwo.GetComponent<Text>().text = word[1] + "";

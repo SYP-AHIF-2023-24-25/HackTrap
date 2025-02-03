@@ -698,6 +698,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1073751306036275258}
   - component: {fileID: 4543350001678669428}
+  - component: {fileID: 5306686156625270345}
   m_Layer: 0
   m_Name: WordManager
   m_TagString: Untagged
@@ -742,9 +743,23 @@ MonoBehaviour:
   characterThree: {fileID: 6265962709336835798}
   characterFour: {fileID: 5785124021991802404}
   characterFive: {fileID: 110452273347719940}
+  udpSender: {fileID: 2776698989848595691, guid: 1e17b4e8a9629d44394347f9ec813792,
+    type: 3}
   context: {fileID: 3398802929732186241}
   words:
   - START
+--- !u!114 &5306686156625270345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662864489780782192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 263febd275dd83e478433f44a4bf1918, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1746245504578326150
 GameObject:
   m_ObjectHideFlags: 0
@@ -2883,9 +2898,6 @@ MonoBehaviour:
   characterThree: {fileID: 4896766032668447285}
   characterFour: {fileID: 8570087400697806756}
   characterFive: {fileID: 4293232859982220330}
-  timer: {fileID: 0}
-  timeoutSound: {fileID: 6948910574474883077}
-  backgroundAudio: {fileID: 3765938360293542835}
 --- !u!1 &8766086697733677093
 GameObject:
   m_ObjectHideFlags: 0
