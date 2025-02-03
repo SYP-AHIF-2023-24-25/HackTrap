@@ -87,7 +87,13 @@ public class MainPlayerController : MonoBehaviour
 
 
             Debug.Log(p.team.ToString() + " Vire wurde eingefangen (" + virusCounter + ")");
-            Destroy(other);
+            foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Virus"))
+            {
+                if(obj.transform.localPosition == other.transform.localPosition)
+                {
+                    Destroy(obj);
+                }
+            }
         }
         //Debug.Log("viruses:" + virusCounter);
     }

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using DeepSpace.Udp;
+using UnityEngine;
 
 public class VirusSpawner : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class VirusSpawner : MonoBehaviour
     [SerializeField] private Vector3 rotationAngles;
     [SerializeField] private string virusTag = "Virus";
     [SerializeField] private GameObject SpawnArea;
+    [SerializeField] private UdpSender udpSender; // UDP Sender für Netzwerkkommunikation
+
 
     private BoxCollider spawnAreaCollider;
 
@@ -48,18 +51,23 @@ public class VirusSpawner : MonoBehaviour
         }
 
         Vector3 randomPosition = GetRandomPositionWithinBounds();
+        // JSON-Daten für UDP vorbereiten
+        VirusData virusData = new VirusData(randomPosition, rotationAngles);
+        string jsonData = JsonUtility.ToJson(virusData);
+
+        udpSender.AddMessage(jsonData); // Position per UDP senden
 
         // Instantiate the object at the random position
         GameObject spawnedObject = Instantiate(objectToSpawn, randomPosition, Quaternion.Euler(rotationAngles));
 
-        var collider = spawnedObject.AddComponent<BoxCollider>();
-        collider.isTrigger = true;
-        collider.size = spawnedObject.transform.localScale;
+        //var collider = spawnedObject.AddComponent<BoxCollider>();
+        //collider.isTrigger = true;
+        //collider.size = spawnedObject.transform.localScale;
 
-        var rigidbody = spawnedObject.AddComponent<Rigidbody>();
-        rigidbody.useGravity = false;
+        //var rigidbody = spawnedObject.AddComponent<Rigidbody>();
+        //rigidbody.useGravity = false;
 
-        spawnedObject.tag = virusTag; // Ensure the spawned object is tagged appropriately
+        //spawnedObject.tag = virusTag; // Ensure the spawned object is tagged appropriately
 
         VirusMovement virusMovement = spawnedObject.AddComponent<VirusMovement>();
         virusMovement.Initialize(spawnAreaCollider);
@@ -78,5 +86,17 @@ public class VirusSpawner : MonoBehaviour
             midpointY, // Assuming you want to spawn at the bottom of the collider
             Random.Range(minBounds.z, maxBounds.z)
         );
+    }
+    [System.Serializable]
+    private class VirusData
+    {
+        public Vector3 Position;
+        public Vector3 Rotation;
+
+        public VirusData(Vector3 pos, Vector3 rot)
+        {
+            Position = pos;
+            Rotation = rot;
+        }
     }
 }
