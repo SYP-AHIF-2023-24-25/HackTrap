@@ -1,5 +1,6 @@
 ﻿using DeepSpace.Udp;
 using UnityEngine;
+using DeepSpace;
 
 public class VirusSpawner : MonoBehaviour
 {
@@ -10,29 +11,40 @@ public class VirusSpawner : MonoBehaviour
     [SerializeField] private Vector3 rotationAngles;
     [SerializeField] private string virusTag = "Virus";
     [SerializeField] private GameObject SpawnArea;
-    [SerializeField] private UdpSender udpSender; // UDP Sender für Netzwerkkommunikation
+    private UdpSender udpSender; // UDP Sender für Netzwerkkommunikation
 
 
     private BoxCollider spawnAreaCollider;
+    private UdpCmdConfigMgr _configMgr;
 
 
     void Start()
     {
-        spawnAreaCollider = SpawnArea.GetComponent<BoxCollider>();
+        _configMgr = CmdConfigManager.Instance as UdpCmdConfigMgr;
 
-        // Start spawning objects
-        InvokeRepeating(nameof(SpawnObject), Random.Range(minSpawnDelay, maxSpawnDelay), Random.Range(minSpawnDelay, maxSpawnDelay));
+        if (_configMgr.applicationType == CmdConfigManager.AppType.WALL)
+        {
+            udpSender = GameObject.Find("UdpSenderToFloor").GetComponent<UdpSender>();
+
+            spawnAreaCollider = SpawnArea.GetComponent<BoxCollider>();
+
+            // Start spawning objects
+            InvokeRepeating(nameof(SpawnObject), Random.Range(minSpawnDelay, maxSpawnDelay), Random.Range(minSpawnDelay, maxSpawnDelay));
+        }
     }
 
     void Update()
     {
-        // Destroy objects outside bounds using collider bounds check
-        foreach (GameObject obj in GameObject.FindGameObjectsWithTag(virusTag))
+        if (_configMgr.applicationType == CmdConfigManager.AppType.WALL)
         {
-            if (!spawnAreaCollider.bounds.Contains(obj.transform.localPosition))
+            // Destroy objects outside bounds using collider bounds check
+            foreach (GameObject obj in GameObject.FindGameObjectsWithTag(virusTag))
             {
-                Debug.Log("Virus außerhalb Spawnarea gelöscht");
-                Destroy(obj);
+                if (!spawnAreaCollider.bounds.Contains(obj.transform.localPosition))
+                {
+                    Debug.Log("Virus außerhalb Spawnarea gelöscht");
+                    Destroy(obj);
+                }
             }
         }
     }
@@ -52,10 +64,7 @@ public class VirusSpawner : MonoBehaviour
 
         Vector3 randomPosition = GetRandomPositionWithinBounds();
         // JSON-Daten für UDP vorbereiten
-        VirusData virusData = new VirusData(randomPosition, rotationAngles);
-        string jsonData = JsonUtility.ToJson(virusData);
-
-        udpSender.AddMessage(jsonData); // Position per UDP senden
+       
 
         // Instantiate the object at the random position
         GameObject spawnedObject = Instantiate(objectToSpawn, randomPosition, Quaternion.Euler(rotationAngles));
@@ -68,9 +77,15 @@ public class VirusSpawner : MonoBehaviour
         //rigidbody.useGravity = false;
 
         //spawnedObject.tag = virusTag; // Ensure the spawned object is tagged appropriately
-
         VirusMovement virusMovement = spawnedObject.AddComponent<VirusMovement>();
-        virusMovement.Initialize(spawnAreaCollider);
+        virusMovement.randomDirection = virusMovement.GetRandomDirection();
+        VirusData virusData = new VirusData(randomPosition, rotationAngles, virusMovement.randomDirection);
+        string jsonData = JsonUtility.ToJson(virusData);
+        Debug.Log($" JsonData Wall: {jsonData}");
+        Debug.Log($" JsonData Wall länge: {jsonData.Length}");
+
+        udpSender.AddMessage(jsonData); // Position per UDP senden
+
     }
 
     Vector3 GetRandomPositionWithinBounds()
@@ -92,11 +107,13 @@ public class VirusSpawner : MonoBehaviour
     {
         public Vector3 Position;
         public Vector3 Rotation;
+        public Vector3 Movement;
 
-        public VirusData(Vector3 pos, Vector3 rot)
+        public VirusData(Vector3 pos, Vector3 rot, Vector3 mov)
         {
             Position = pos;
             Rotation = rot;
+            Movement = mov;
         }
     }
 }
