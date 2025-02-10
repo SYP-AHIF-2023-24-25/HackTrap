@@ -1,4 +1,5 @@
-﻿using DeepSpace.Udp;
+﻿using DeepSpace;
+using DeepSpace.Udp;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,7 +14,8 @@ public class WordGenerator : MonoBehaviour
     public GameObject characterThree;
     public GameObject characterFour;
     public GameObject characterFive;
-    [SerializeField] UdpSender udpSender;
+    private UdpSender udpSender;
+    private UdpCmdConfigMgr _configMgr;
 
     public Context context;
 
@@ -55,9 +57,12 @@ public class WordGenerator : MonoBehaviour
         string word = words[index];
 
         context.setCorrectWord(word);
-
+        _configMgr = CmdConfigManager.Instance as UdpCmdConfigMgr;
         word = ShuffleString(word);
-
+        if (_configMgr.applicationType == CmdConfigManager.AppType.WALL)
+        {
+            udpSender = GameObject.Find("UdpSenderToFloor").GetComponent<UdpSender>();
+        }
         context.setShuffledWord(word);
         string jsonData = JsonUtility.ToJson(word);
 

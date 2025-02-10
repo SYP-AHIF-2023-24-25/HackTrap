@@ -1,4 +1,5 @@
-﻿using DeepSpace.Udp;
+﻿using DeepSpace;
+using DeepSpace.Udp;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,14 +15,21 @@ public class WordGeneratorFloor : MonoBehaviour
     public GameObject characterThree;
     public GameObject characterFour;
     public GameObject characterFive;
-    [SerializeField] UdpReceiver udpReceiver;
+    private UdpReceiver udpReceiver;
+    private UdpCmdConfigMgr _configMgr;
 
     void Start()
     {
-        udpReceiver.SubscribeReceiveEvent(OnReceiveVirusData);
+        _configMgr = CmdConfigManager.Instance as UdpCmdConfigMgr;
+
+        if (_configMgr.applicationType == CmdConfigManager.AppType.FLOOR)
+        {
+            udpReceiver = GameObject.Find("UdpReceiver").GetComponent<UdpReceiver>();
+            udpReceiver.SubscribeReceiveEvent(OnReceiveWordData);
+        }
     }
 
-    private void OnReceiveVirusData(byte[] messageBytes, IPAddress senderIP)
+    private void OnReceiveWordData(byte[] messageBytes, IPAddress senderIP)
     {
         string jsonData = System.Text.Encoding.UTF8.GetString(messageBytes);
         string word = JsonUtility.FromJson<string>(jsonData);
