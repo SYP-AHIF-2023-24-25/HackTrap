@@ -11,7 +11,7 @@ public class MainPlayerController : MonoBehaviour
     private AudioSource audioSourceSlurp; // AudioSource für den Sound
     [SerializeField] private AudioClip clickSoundDump; // Der Soundclip für das Setzen eines Symbols
     private AudioSource audioSourceDump; // AudioSource für den Sound
-    private MeshRenderer[] meshRenderers;
+    public MeshRenderer[] meshRenderers;
     private int nextColorIndex = 0;
     private int virusCounter = 0;
 
@@ -81,7 +81,8 @@ public class MainPlayerController : MonoBehaviour
             meshRenderers[nextColorIndex + 2].material.color = collectingColor[nextColorIndex];
             nextColorIndex = (nextColorIndex + 1) % (meshRenderers.Length - 2);
             virusCounter++;
-
+            
+            Debug.Log($"MeshRenderer index {meshRenderers.Length}");
             audioSourceDump.Play();
             Player p = GetComponent<Player>();
 
@@ -131,10 +132,11 @@ public class MainPlayerController : MonoBehaviour
         }
     }
 
-    private void ResetColors()
+    public void ResetColors()
     {
         Debug.Log("Viruscounter wieder auf 0");
         virusCounter = 0;
+
         for (int i = 2; i < meshRenderers.Length; i++)
         {
             meshRenderers[i].material.color = Color.white;

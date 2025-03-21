@@ -28,11 +28,17 @@ public class WordGeneratorFloor : MonoBehaviour
             udpReceiver.SubscribeReceiveEvent(OnReceiveWordData);
         }
     }
-
+    struct WordWrapper
+    {
+        public string word;
+    }
     private void OnReceiveWordData(byte[] messageBytes, IPAddress senderIP)
     {
         string jsonData = System.Text.Encoding.UTF8.GetString(messageBytes);
-        string word = JsonUtility.FromJson<string>(jsonData);
+        WordWrapper ww = JsonUtility.FromJson<WordWrapper>(jsonData);
+        string word = ww.word;
+        Debug.Log("JsonData FLoor: " + jsonData);
+        Debug.Log("Floor Word: " + word);
 
         characterOne.GetComponent<Text>().text = word[0] + "";
         characterTwo.GetComponent<Text>().text = word[1] + "";

@@ -714,6 +714,16 @@ PrefabInstance:
       propertyPath: _debugStereoMgr
       value: 
       objectReference: {fileID: 216137770}
+    - target: {fileID: 86953819082422158, guid: e9ec609d519b1e24eafd430b475b90ea,
+        type: 3}
+      propertyPath: _remoteIpAddress
+      value: 127.0.0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 86953819581520354, guid: e9ec609d519b1e24eafd430b475b90ea,
+        type: 3}
+      propertyPath: _remoteIpAddress
+      value: 127.0.0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9ec609d519b1e24eafd430b475b90ea, type: 3}
 --- !u!224 &216137769 stripped
@@ -2640,7 +2650,7 @@ MonoBehaviour:
   - {fileID: 620192866}
   - {fileID: 743782448}
   sceneSwitchDelay: 100
-  initialScene: 0
+  initialScene: 9
 --- !u!4 &1167879953
 Transform:
   m_ObjectHideFlags: 0
@@ -3332,7 +3342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00bab3e222d7ed3479c691ef9ac086e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  applicationType: 1
+  applicationType: 0
   invertStereo: 0
   udpAddress: 127.0.0.1
   udpReceivingPort: 5560

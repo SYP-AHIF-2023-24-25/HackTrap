@@ -37,6 +37,11 @@ public class VirusSpawnerFloor : MonoBehaviour
 
         SpawnVirus(virusData.Position, virusData.Rotation, virusData.Movement);
     }
+    public void StopSpawningObjects()
+    {
+        // Stop spawning objects
+        CancelInvoke(nameof(SpawnVirus));
+    }
 
     void SpawnVirus(Vector3 position, Vector3 rotation, Vector3 movement)
     {

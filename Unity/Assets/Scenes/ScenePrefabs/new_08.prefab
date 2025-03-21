@@ -285,8 +285,6 @@ MonoBehaviour:
   rotationAngles: {x: 0, y: 0, z: 0}
   virusTag: Virus
   SpawnArea: {fileID: 996768816352272919}
-  udpSender: {fileID: 2776698989848595691, guid: 1e17b4e8a9629d44394347f9ec813792,
-    type: 3}
 --- !u!114 &3099777801815834588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -303,8 +301,6 @@ MonoBehaviour:
     type: 3}
   virusTag: Virus
   SpawnArea: {fileID: 996768816352272919}
-  udpReceiver: {fileID: 7777167791697762306, guid: 6a18a8d07b429f84fbcf33b41558410c,
-    type: 3}
 --- !u!1 &1836057077772559203
 GameObject:
   m_ObjectHideFlags: 0
@@ -1592,9 +1588,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 4815928353684690159}
-  timeout: 200
+  timeout: 20
   timeoutSound: {fileID: 6925784243852414542}
   virusSpawner: {fileID: 4280258322834223864}
+  virusSpawnerFloor: {fileID: 3099777801815834588}
 --- !u!1 &5842563376713283221
 GameObject:
   m_ObjectHideFlags: 0

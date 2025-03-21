@@ -47,35 +47,42 @@ public class WordGenerator : MonoBehaviour
         return new string(chars);
     }
 
+    struct WordWrapper
+    {
+        public string word;
+    }
 
     void Start()
     {
-        Debug.Log("Start");
-        System.Random random = new System.Random();
-        int index = random.Next(0, words.Count);
-
-        string word = words[index];
-
-        context.setCorrectWord(word);
         _configMgr = CmdConfigManager.Instance as UdpCmdConfigMgr;
-        word = ShuffleString(word);
+        Debug.Log("Start");
         if (_configMgr.applicationType == CmdConfigManager.AppType.WALL)
         {
+            System.Random random = new System.Random();
+            int index = random.Next(0, words.Count);
+
+            string word = words[index];
+
+            context.setCorrectWord(word);
+            word = ShuffleString(word);
             udpSender = GameObject.Find("UdpSenderToFloor").GetComponent<UdpSender>();
+            context.setShuffledWord(word);
+            WordWrapper ww = new WordWrapper();
+            ww.word = word;
+            Debug.Log("Wall word: " + word);
+            string jsonData = JsonUtility.ToJson(ww);
+            Debug.Log("JsonData Wall: " + jsonData);
+            udpSender.AddMessage(jsonData); // Position per UDP senden
+            characterOne.GetComponent<Text>().text = word[0] + "";
+            characterTwo.GetComponent<Text>().text = word[1] + "";
+            characterThree.GetComponent<Text>().text = word[2] + "";
+            characterFour.GetComponent<Text>().text = word[3] + "";
+            characterFive.GetComponent<Text>().text = word[4] + "";
+
+
+            Debug.Log(word);
         }
-        context.setShuffledWord(word);
-        string jsonData = JsonUtility.ToJson(word);
 
-        udpSender.AddMessage(jsonData); // Position per UDP senden
-
-        characterOne.GetComponent<Text>().text = word[0] + "";
-        characterTwo.GetComponent<Text>().text = word[1] + "";
-        characterThree.GetComponent<Text>().text = word[2] + "";
-        characterFour.GetComponent<Text>().text = word[3] + "";
-        characterFive.GetComponent<Text>().text = word[4] + "";
-
-
-        Debug.Log(word);
     }
 
     public void updateCharacter(int index, char character)
