@@ -179,11 +179,6 @@ public class Context : MonoBehaviour
         }
     }
 
-    void Start()
-    {
-        // Initialize containers and their state if needed
-    }
-
     private void resetColors()
     {
         long colorResetContainer1 = DateTime.UtcNow.Second - colorChangeTimeContainer1;

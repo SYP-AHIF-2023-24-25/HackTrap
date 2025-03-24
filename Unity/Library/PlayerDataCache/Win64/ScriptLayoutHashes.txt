@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/5Klasse/build2103/DeepSpaceDevKit.exe
+C:/5Klasse/finalBuild4/DeepSpaceDevKit.exe
 SceneListBegin?
 Assets/Scenes/HackTrap.unity
 SceneListEnd?
@@ -94,6 +94,7 @@ fc108ce7d98c40ac0907e8ca7f500c76 UnityEngine.UI.dll:UnityEngine.UI.Text
 abf1930d8126d0b2e00e9449129a0190 UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 64e54c0cbb0177c5ea26f340efb9ff85 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
 2084038ffb749d8ada1a70f8df8cb3c4 Assembly-CSharp.dll:.Player
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.cleanPlayerAndField
 35d3a30792f2e447f23bbfd9775b7bdb Assembly-CSharp.dll:.DeadZone
 c91e7631c5f19d3af64150d07de4b545 Assembly-CSharp.dll:.WordGeneratorFloor
 028837d9b205005705d9b6f0df391e8d Assembly-CSharp.dll:DeepSpace.UdpCmdConfigMgr
@@ -197,7 +198,7 @@ ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networki
 5887ef1bc706b22b773d253fd443ceef UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.HighScoreTable
 de0e43d5d0989eda835b8ad6c34c0f73 Assembly-CSharp.dll:.PlayerCounterController
-0d45ec7ee26b0eaf129db959ee68b245 Assembly-CSharp.dll:.WallUpdaterMain
+bbe345f040222065ee943c7076d4c582 Assembly-CSharp.dll:.WallUpdaterMain
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.StartTicTacToe
 510fefd6a544e16a3ffefa557ddcba39 Unity.TextMeshPro.dll:TMPro.PackageResourceImporterWindow
 b78f09ac38e48519c645816044b9eac7 Assembly-CSharp.dll:.GameSimulator
@@ -263,4 +264,3 @@ bf2c3cd839882919d3365cb62cdd8f33 Assembly-CSharp.dll:.DemoEnableDisableViews
 949c9d7bef6856227531da05f95b2dd5 Assembly-CSharp.dll:.VirusDeSpawn
 60990d72713937ff29cf779c258ddd93 Assembly-CSharp.dll:DeepSpace.MobileControlManager
 4fd54b619a94a996a475bb6e9d646f2e Assembly-CSharp.dll:.DemoTouchView
-71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.cleanPlayerAndField

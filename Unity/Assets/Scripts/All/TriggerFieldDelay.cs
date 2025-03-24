@@ -43,7 +43,7 @@ public class TriggerFieldDelay : MonoBehaviour
                     }
 
                     // Disable the GameObject
-                    obj.SetActive(false);
+                    //obj.SetActive(false);
                 }
             }
 

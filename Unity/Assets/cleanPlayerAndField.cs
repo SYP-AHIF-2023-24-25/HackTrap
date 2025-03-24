@@ -11,26 +11,26 @@ public class cleanPlayerAndField : MonoBehaviour
     void Start()
     {
         mainPlayerController = FindObjectOfType<MainPlayerController>();
-        mainPlayerController.ResetColors();
-        DestroyAllViruses();
+        //mainPlayerController.ResetColors();
+        //DestroyAllViruses();
     }
-    public void DestroyAllViruses()
-    {
-        // Find all GameObjects with the tag "Virus"
-        GameObject[] viruses = GameObject.FindGameObjectsWithTag("Virus");
+    //public void DestroyAllViruses()
+    //{
+    //    // Find all GameObjects with the tag "Virus"
+    //    GameObject[] viruses = GameObject.FindGameObjectsWithTag("Virus");
 
-        // Loop through the array and destroy each GameObject
-        foreach (GameObject virus in viruses)
-        {
-            Destroy(virus.gameObject);
-        }
-        GameObject[] virusesWithoutGameobject = GameObject.FindGameObjectsWithTag("Virus");
-        if(virusesWithoutGameobject != null)
-        {
-            foreach (GameObject virus in virusesWithoutGameobject)
-            {
-                Destroy(virus);
-            }
-        }
-    }
+    //    // Loop through the array and destroy each GameObject
+    //    foreach (GameObject virus in viruses)
+    //    {
+    //        Destroy(virus.gameObject);
+    //    }
+    //    GameObject[] virusesWithoutGameobject = GameObject.FindGameObjectsWithTag("Virus");
+    //    if(virusesWithoutGameobject != null)
+    //    {
+    //        foreach (GameObject virus in virusesWithoutGameobject)
+    //        {
+    //            Destroy(virus);
+    //        }
+    //    }
+    //}
 }

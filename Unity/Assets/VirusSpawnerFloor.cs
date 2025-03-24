@@ -33,9 +33,23 @@ public class VirusSpawnerFloor : MonoBehaviour
         string jsonData = System.Text.Encoding.UTF8.GetString(messageBytes);
         Debug.Log($"Daten Länge JsonData: {jsonData.Length} und Message: {messageBytes.Length}");
         Debug.Log($"Daten von Wall: {jsonData}");
+
         VirusData virusData = JsonUtility.FromJson<VirusData>(jsonData);
 
-        SpawnVirus(virusData.Position, virusData.Rotation, virusData.Movement);
+        if(virusData == null)
+        {
+            Debug.Log("VirusData is null :(");
+        }
+        else
+        {
+            Debug.Log($"VirusData Position: {virusData.Position}");
+            Debug.Log($"VirusData Rotation: {virusData.Rotation}");
+            Debug.Log($"VirusData Movement: {virusData.Movement}");
+        }
+        if(!(virusData.Position.sqrMagnitude <= 0.0f && virusData.Rotation.sqrMagnitude <= 0.0f && virusData.Movement.sqrMagnitude <= 0.0f))
+        {
+            SpawnVirus(virusData.Position, virusData.Rotation, virusData.Movement);
+        }
     }
     public void StopSpawningObjects()
     {

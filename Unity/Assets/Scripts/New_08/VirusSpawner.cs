@@ -51,6 +51,7 @@ public class VirusSpawner : MonoBehaviour
 
     public void StopSpawningObjects()
     {
+        Debug.Log("StopSpawningObjects Wall");
         // Stop spawning objects
         CancelInvoke(nameof(SpawnObject));
     }

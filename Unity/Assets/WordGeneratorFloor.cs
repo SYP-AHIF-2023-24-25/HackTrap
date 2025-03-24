@@ -17,10 +17,13 @@ public class WordGeneratorFloor : MonoBehaviour
     public GameObject characterFive;
     private UdpReceiver udpReceiver;
     private UdpCmdConfigMgr _configMgr;
+    private Context context;
+    private bool wordAlreadySet = false;
 
     void Start()
     {
         _configMgr = CmdConfigManager.Instance as UdpCmdConfigMgr;
+        context = GameObject.FindObjectOfType<Context>();
 
         if (_configMgr.applicationType == CmdConfigManager.AppType.FLOOR)
         {
@@ -32,46 +35,31 @@ public class WordGeneratorFloor : MonoBehaviour
     {
         public string word;
     }
+
     private void OnReceiveWordData(byte[] messageBytes, IPAddress senderIP)
     {
+
         string jsonData = System.Text.Encoding.UTF8.GetString(messageBytes);
         WordWrapper ww = JsonUtility.FromJson<WordWrapper>(jsonData);
         string word = ww.word;
         Debug.Log("JsonData FLoor: " + jsonData);
-        Debug.Log("Floor Word: " + word);
+        if(!(string.IsNullOrEmpty(word)) && wordAlreadySet == false)
+        {
+            characterOne.GetComponent<Text>().text = word[0] + "";
+            characterTwo.GetComponent<Text>().text = word[1] + "";
+            characterThree.GetComponent<Text>().text = word[2] + "";
+            characterFour.GetComponent<Text>().text = word[3] + "";
+            characterFive.GetComponent<Text>().text = word[4] + "";
+            Debug.Log("Floor Word: " + word);
+            context.setShuffledWord(word);
+            UdpSender udpSender = GameObject.Find("UdpSenderToWall").GetComponent<UdpSender>();
 
-        characterOne.GetComponent<Text>().text = word[0] + "";
-        characterTwo.GetComponent<Text>().text = word[1] + "";
-        characterThree.GetComponent<Text>().text = word[2] + "";
-        characterFour.GetComponent<Text>().text = word[3] + "";
-        characterFive.GetComponent<Text>().text = word[4] + "";
-    }
-
-    public void updateCharacter(int index, char character)
-    {
-        if (index == 0)
-        {
-            characterOne.GetComponent<Text>().text = character + "";
+            if(udpSender != null)
+            {
+                Debug.Log("Sender to Wall da, schicke Nachricht");
+                udpSender.AddMessage("thanksGotIt");
+            }
+            wordAlreadySet = true;
         }
-        if (index == 1)
-        {
-            characterTwo.GetComponent<Text>().text = character + "";
-        }
-        if (index == 2)
-        {
-            characterThree.GetComponent<Text>().text = character + "";
-        }
-        if (index == 3)
-        {
-            characterFour.GetComponent<Text>().text = character + "";
-        }
-        if (index == 4)
-        {
-            characterFive.GetComponent<Text>().text = character + "";
-        }
-    }
-    void Update()
-    {
-
     }
 }

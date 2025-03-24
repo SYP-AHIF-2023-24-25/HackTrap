@@ -18,6 +18,8 @@ public class WallUpdaterMain : MonoBehaviour
     [SerializeField] private VirusSpawner virusSpawner;
     [SerializeField] private VirusSpawnerFloor virusSpawnerFloor;
 
+    [SerializeField]
+    private Mesh _virusMesh = null;
 
     void executeTimeout()
     {
@@ -26,7 +28,7 @@ public class WallUpdaterMain : MonoBehaviour
             timeoutSound.Stop();
             PlayerPrefs.SetInt("gameOver", 1);
             virusSpawner.StopSpawningObjects();
-            virusSpawnerFloor.StopSpawningObjects();
+            // virusSpawnerFloor.StopSpawningObjects();
             DestroyAllViruses();
             PlayerPrefs.SetString("MainGameWinner", TeamVirusCounter.Instance.IsWinner());
             StateManager.Instance.SwitchToNextScenePrefab();
@@ -72,7 +74,17 @@ public class WallUpdaterMain : MonoBehaviour
         {
             Debug.Log(virus.gameObject.name + " deleted");
 
-            Destroy(virus.gameObject);
+            DestroyImmediate(virus);
+        }
+
+        MeshFilter[] meshes = GameObject.FindObjectsOfType<MeshFilter>();
+
+        foreach(MeshFilter mesh in meshes)
+        {
+            if(mesh.mesh == _virusMesh)
+            {
+                Debug.Log("Found virus mesh on: " + mesh.gameObject.name);
+            }
         }
     }
 }
