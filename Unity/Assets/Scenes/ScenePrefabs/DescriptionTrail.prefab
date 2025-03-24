@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5445414165293699302
 Transform:
   m_ObjectHideFlags: 0
@@ -353,7 +353,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Congratulations! Your team has captured the most viruses.\r\n\r\nYour next
     challenge is to rearrange the letters to form the correct word and destroy all
-    left over viruses. \r\nThis is a trail run for you to see how it works!"
+    left over viruses. \r\nThis is a trial run for you to see how it works!"
 --- !u!114 &5427585959963654064
 MonoBehaviour:
   m_ObjectHideFlags: 0
