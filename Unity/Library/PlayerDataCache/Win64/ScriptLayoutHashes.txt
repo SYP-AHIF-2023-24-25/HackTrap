@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/5Klasse/finalBuild4/DeepSpaceDevKit.exe
+C:/00_HTBLALeonding/5AHIF/SYP/Builds/Build_240325_fields/DeepSpaceDevKit.exe
 SceneListBegin?
 Assets/Scenes/HackTrap.unity
 SceneListEnd?

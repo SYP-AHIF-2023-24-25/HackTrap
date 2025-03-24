@@ -118,6 +118,17 @@ public class PlayerCounterController : MonoBehaviour
         return players;
     }
 
+    public List<Player> GetAllPlayersForStartScene()
+    {
+        foreach (Player player in players)
+        {
+            player.GetComponent<Collider>().enabled = true;
+        }
+
+        return players;
+    }
+
+    
     public List<List<GameObject>> GetTeams()
     {
         return teams.Select(t => t.Value).ToList();

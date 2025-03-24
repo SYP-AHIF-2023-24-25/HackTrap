@@ -23,7 +23,19 @@ public class TeamZoneManager : MonoBehaviour
         }
 
         playerCounterController = FindObjectOfType<PlayerCounterController>();
-        allPlayers.AddRange(playerCounterController.GetAllPlayers());
+        allPlayers.AddRange(playerCounterController.GetAllPlayersForStartScene());
+    }
+
+    void Update()
+    {
+        var allPlayersForNow = playerCounterController.GetAllPlayersForStartScene();
+        if(allPlayersForNow.Count != allPlayers.Count)
+        {
+            allPlayers.Clear();
+            Debug.Log("neue Players: " + allPlayers.Count);
+
+            allPlayers.AddRange(playerCounterController.GetAllPlayersForStartScene());
+        }
     }
 
     public void CheckIfAllPlayersAreOnCorrectField()
