@@ -12,7 +12,7 @@ public class TeamAssignment : MonoBehaviour
 
     string assignmentText = "If you want to get your data back\n Split into teams of four! ";
 
-    private async void Awake()
+    private void Awake()
     {
         teamAssignment = transform.Find("TeamAssignment").GetComponent<Text>();
         Debug.Log(teamAssignment);

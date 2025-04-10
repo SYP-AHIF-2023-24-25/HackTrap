@@ -25,7 +25,6 @@ public class WallUpdateScript : MonoBehaviour
     public AudioSource timeoutSound;
     public AudioSource backgroundAudio;
 
-
     public void updateCharacter(int index, char character)
     {
         if (index == 0)

@@ -4,12 +4,12 @@ public class VirusMovement: MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 0.65f;
     private Collider objectCollider;
-    private Vector3 randomDirection;
+    public Vector3 randomDirection;
 
-    void Start()
-    {
-        randomDirection = GetRandomDirection().normalized; // Start moving in a random direction
-    }
+    //void Start()
+    //{
+    //    randomDirection = GetRandomDirection().normalized; // Start moving in a random direction
+    //}
 
     void Update()
     {
@@ -35,7 +35,7 @@ public class VirusMovement: MonoBehaviour
         }
     }
 
-    private Vector3 GetRandomDirection()
+    public Vector3 GetRandomDirection()
     {
         float x = Random.Range(-1f, 1f);
         float z = Random.Range(-1f, 1f);

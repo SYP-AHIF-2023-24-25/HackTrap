@@ -8,6 +8,6 @@ public class FloorCubeController : MonoBehaviour
     public void UpdateWallCube()
     {
         wallCube.UpdateValue();
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
     }
 }

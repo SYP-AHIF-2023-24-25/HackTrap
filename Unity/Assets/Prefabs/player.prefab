@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 190774101}
   - component: {fileID: 190774100}
   - component: {fileID: 190774099}
-  - component: {fileID: 190774098}
   - component: {fileID: 190774097}
+  - component: {fileID: 6390490237264034502}
   m_Layer: 0
   m_Name: player
   m_TagString: DPlayer
@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 190774096}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.439, y: -4.35, z: -3.57}
-  m_LocalScale: {x: 0.30915558, y: 0.30915558, z: 0.30915558}
+  m_LocalScale: {x: 0.16735083, y: 0.16735083, z: 0.16735083}
   m_Children:
   - {fileID: 1112592651}
   - {fileID: 491200371}
@@ -51,7 +51,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -119,18 +119,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &190774098
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 190774096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71198079e4849744981d368c01371ed4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &190774097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,23 +131,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 949edd5993c42e24ea3cf4ed4a4341c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teamsColor:
-  - {r: 0.8509804, g: 0.015686275, b: 0.16078432, a: 0}
-  - {r: 0.52156866, g: 0.882353, b: 0.5137255, a: 0}
-  - {r: 0, g: 0.7058824, b: 0.84705883, a: 0}
-  - {r: 1, g: 0.8392157, b: 0, a: 0}
   teamNames:
-  - Team1
-  - Team2
-  - Team3
-  - Team4
+  - TeamGreen
+  - TeamBlue
   collectingColor:
   - {r: 1, g: 0, b: 0, a: 0}
   - {r: 1, g: 0, b: 0, a: 0}
   - {r: 1, g: 0, b: 0, a: 0}
   - {r: 1, g: 0, b: 0, a: 0}
-  loaderManager: {fileID: 0}
-  playerCounterController: {fileID: 0}
+  clickSoundSlurp: {fileID: 8300000, guid: ec8725b665501d24385236b8ef36b57c, type: 3}
+  clickSoundDump: {fileID: 8300000, guid: e9d5bbdd044f85b41829cb1dfef058bb, type: 3}
+--- !u!114 &6390490237264034502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190774096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd1cf2924f7da174dab84d1ce8be3fc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  team: 0
 --- !u!1 &334935036
 GameObject:
   m_ObjectHideFlags: 0

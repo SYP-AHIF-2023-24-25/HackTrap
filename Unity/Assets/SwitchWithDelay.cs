@@ -15,7 +15,7 @@ public class SwitchWithDelay : MonoBehaviour
         // doing something
 
         // waits 5 seconds
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(10);
 
         // do something else
     }

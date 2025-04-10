@@ -12,65 +12,86 @@ public class PlayerCounterController : MonoBehaviour
     [SerializeField] private int timeout = 15;
     [SerializeField] private Color[] teamsColor;
 
-
-
     private int playerCount = 0;
-    private List<GameObject> players = new List<GameObject>();
-    
+    private List<GameObject> playerObjects = new List<GameObject>();
 
-    private List<List<GameObject>> teams = new List<List<GameObject>>()
+    private List<Player> players = new List<Player>();
+
+    private Dictionary<string, List<GameObject>> teams = new Dictionary<string, List<GameObject>>()
     {
-        new List<GameObject>(),
-        new List<GameObject>(),
-        new List<GameObject>(),
-        new List<GameObject>()
+        { "Green", new List<GameObject>() },
+        { "Blue", new List<GameObject>() },
     };
+
+    void Start()
+    {
+        PlayerPrefs.SetInt("gameOver", 0);
+    }
 
     void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("DPlayer") && !players.Contains(other.gameObject))
+        if (other.CompareTag("DPlayer") && !playerObjects.Contains(other.gameObject))
         {
-            if (StateManager.Instance.GetCurrentIndex() == 6 || StateManager.Instance.GetCurrentIndex() == 7)
-            { 
-                players.Add(other.gameObject);
-                playerCount++;
-                AssignPlayerToTeam(other.gameObject);
-            }
+            playerObjects.Add(other.gameObject);
+            playerCount++;
+            AssignPlayerToTeam(other.gameObject);
         }
-
-        if (StateManager.Instance.GetCurrentIndex() > 7 && !other.gameObject.CompareTag("DPlayer"))
+        
+        //wenn maingame fertig ist
+        /*if (StateManager.Instance.GetCurrentIndex() > 8 && !other.gameObject.CompareTag("DPlayer"))
         {
             other.tag = "Winner";
-        }
+        }*/
     }
 
-
-    public void InitializeTeams()
+    /*void OnTriggerEnter(Collider other)
     {
-
-        List<List<GameObject>> teams = GetTeams();
-            for (int i = 0; i < teams.Count; i++)
-            {
-                foreach (GameObject player in teams[i])
-                {
-                    MeshRenderer[] currentMeshRenderers = player.GetComponentsInChildren<MeshRenderer>();
-                    currentMeshRenderers[1].material.color = teamsColor[i];
-                    player.tag = "Team" + (i + 1);
-            }
-            }
-    }
-
-
-    public void AssignPlayerToTeam(GameObject player)
-    {
-        // Find the team with the least number of members
-        if (true)
+        if (other.CompareTag("DPlayer") && !playerObjects.Contains(other.gameObject))
         {
-            List<GameObject> smallestTeam = teams.OrderBy(t => t.Count).First();
-            smallestTeam.Add(player);
-            player.name = smallestTeam[0].name;
-            InitializeTeams();
+            playerObjects.Add(other.gameObject);
+            playerCount++;
+            AssignPlayerToTeam(other.gameObject);
         }
+    }
+    */
+
+
+    public void InitializeTeamColor(GameObject playerObject)
+    {
+        List<List<GameObject>> teams = GetTeams();
+        Debug.Log(teams.Count);
+        for (int i = 0; i < teams.Count; i++)
+        {
+            foreach (GameObject playerObj in teams[i])
+            {
+                MeshRenderer[] currentMeshRenderers = playerObj.GetComponentsInChildren<MeshRenderer>();
+                currentMeshRenderers[1].material.color = teamsColor[i];
+            }
+            //player.tag = "Team" + (i + 1);  -> später ändern für MainGame
+        }
+    }
+
+
+    public void AssignPlayerToTeam(GameObject playerObject)
+    {
+        var smallestTeam = teams
+            .OrderBy(team => team.Value.Count) 
+            .First();
+        var smallestTeamList = smallestTeam.Value;
+        smallestTeamList.Add(playerObject);
+
+        Player player = playerObject.GetComponent<Player>();
+        Debug.Log("New player to add:" + player);
+        player.team = (Player.Team)Enum.Parse(typeof(Player.Team), smallestTeam.Key);
+        players.Add(player);
+        Debug.Log("Added player");
+
+        Debug.Log($"Playerobjects: {playerObjects.Count}");
+        Debug.Log($"Team 0: {teams["Green"].Count}");
+        Debug.Log($"Team 1: {teams["Blue"].Count}");
+        Debug.Log($"Players: {players.Count}");
+
+        InitializeTeamColor(playerObject);
     }
 
     /*
@@ -86,9 +107,31 @@ public class PlayerCounterController : MonoBehaviour
     }
     */
 
+    public List<Player> GetAllPlayers()
+    {
+        foreach (Player player in players)
+        {
+            player.GetComponent<Collider>().enabled = true;
+            player.SetOnCorrectField(false);
+        }
+
+        return players;
+    }
+
+    public List<Player> GetAllPlayersForStartScene()
+    {
+        foreach (Player player in players)
+        {
+            player.GetComponent<Collider>().enabled = true;
+        }
+
+        return players;
+    }
+
+    
     public List<List<GameObject>> GetTeams()
     {
-        return teams;
+        return teams.Select(t => t.Value).ToList();
     }
 
     /*
