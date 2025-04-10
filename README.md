@@ -1,4 +1,12 @@
 # HackTrap
+
+## Dokumentation
+
+Dokumentation zum Deepspace Projekt: :page_facing_up: [Deepspace-Docs](./docs/Deepspace-Docs.md)
+Dokumentation zur VR-Version: :page_facing_up: [VR-Docs](./docs/VR-Docs.md)
+
+## What is HackTrap?
+
 HackTrap is an AEC-DeepSpace-Game which teaches young children how to deal safely with the digitized internet world by playing through an exciting hacker-attack and killing the virus.
 
 ![HackTrap Logo](Skizzen/00_LOGO.png)
