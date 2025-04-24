@@ -176,13 +176,76 @@ Die Kernfunktionalität umfasst die Erstellung und kontinuierliche Aktualisierun
 - Track-Daten werden gespeichert und weitergegeben.
 - TrackingEntityManager/TrackParent aktualisiert GameObjects in Unity.
 
-## Verbindung zwischen Wall und Floor
-
 ## Main-Game (Viren-Einfangen-Spiel)
-Im `Main-Game` treten zwei Teams gegeneinander an, um möglichst viele Viren in ihr jeweiliges Teamfeld zu bringen. Jeder Spieler kann maximal 4 Viren gleichzeitig sammeln und muss anschließend zurück zum Teamfeld, um diese dort abzuladen. Das Team, das am Ende die meisten Viren gesammelt hat, qualifiziert sich für das Encrypt-Game.
+Im `Main-Game` treten zwei Teams gegeneinander an, um möglichst viele Viren in ihr jeweiliges Teamfeld zu bringen. Die Viren werden  am Boden zufällig platziert. Jeder Spieler kann maximal 4 Viren gleichzeitig sammeln und muss anschließend zurück zum Teamfeld, um diese dort abzuladen. Das Team, das am Ende die meisten Viren gesammelt hat, qualifiziert sich für das Encrypt-Game.
 
 ## Encrypt-Game (Anagramm-Lösen-Spiel)
 Im `Encrypt-Game` werden Buchstaben in zufälliger Reihenfolge auf dem Boden angezeigt. Der Spieler muss diese Buchstaben durch Betreten in die korrekte Reihenfolge bringen. Ist ein Buchstabe richtig gewählt, erscheint dieser an der Wand. Ist die Wahl falsch, ertönt ein akustisches Signal.
+
+## Verbindung zwischen Wall und Floor
+Die Verbindung zwischen Wall und Floor wird benötigt und muss man immer im Hinterkopf behalten. Da die Wall und der Floor auf `separaten Rechnern` im Deepspace laufen. Um das Problem besser zu verstehen, sehen wir uns die Spiele `Main-Game` und `Encrpt-Game`. 
+
+Beim Main-Game werden die Viren auf einer zufälligen Position platziert. Dabei führen beide Rechner die Scripte in Unity aus. Durch eine Abfrage ob die Wall oder der Floor das Script ausführt muss überprüft werden. Die Wall hat mehr Rechte als der Floor. 
+
+Das Beispiel dazu ist dieser Codeabschnitt: 
+
+```csharp
+    void Start()
+    {
+        _configMgr = CmdConfigManager.Instance as UdpCmdConfigMgr;
+
+        if (_configMgr.applicationType == CmdConfigManager.AppTypWALL)
+        {
+            udpSender = GameObject.Find("UdpSenderToFloor").GetComponent<UdpSender>();
+
+            spawnAreaCollider = SpawnArea.GetComponent<BoxCollider>();
+
+            // Start spawning objects
+            InvokeRepeating(nameof(SpawnObject), Random.Range(minSpawnDelay, maxSpawnDelay), Random.Range(minSpawnDelay, maxSpawnDelay));
+        }
+    }
+```
+Dieser Codeabschnitt überprüft ob der `CmdConfigManager` vom Typ `Wall` ist und somit den Code in der Bedingung ausführen darf. 
+Das muss überprüft werden, weil sonst dieser Code auf der Wall und dem Floor ausgeführt wird und das zu erschwerten Bedingungen beim Spawnen der Viren führt.
+
+Genauerweise werden Viren auf dem Boden und auf der Wand gespawnt - diese aber weder gleichzeitig noch schwirren die Viren in dieselbe Richtung (am Boden wie auf der Wall).
+
+## UdpManager
+Dieses Skript ermöglicht die Kommunikation zwischen zwei Unity-Anwendungen (WALL und FLOOR) über das Netzwerkprotokoll `UDP` (User Datagram Protocol). Es dient speziell dazu, JSON-basierte Nachrichten zu versenden und zu empfangen.
+
+### Funktionsweise
+
+#### Kommunikation via UDP
+
+- Nachrichten werden mittels UDP gesendet und empfangen.
+- Verwendet `JSON` als Datenformat für den Nachrichtenaustausch.
+
+#### Dynamische Konfiguration
+
+- Je nachdem, ob die Anwendung als WALL oder FLOOR konfiguriert ist, aktiviert der Manager passende Sender- und Empfängerkomponenten.
+- Nicht benötigte Senderkomponenten werden automatisch deaktiviert und entfernt.
+
+#### Nachrichtenverarbeitung
+
+- Empfängt Byte-Daten und wandelt diese in gültige JSON-Nachrichten um.
+- Stellt sicher, dass unvollständige JSON-Daten gespeichert und später vervollständigt werden, um Datenverluste zu vermeiden.
+
+### Schlüsselkomponenten
+
+Diese Skripte befinden sich unter dem Pfad: `Networksetup/UdpManager`.
+
+#### UdpSender
+
+- Zuständig für das Versenden von Nachrichten über UDP.
+
+#### UdpReceiver
+
+- Zuständig für den Empfang von Nachrichten über UDP.
+- Automatisch mit der Methode OnReceivedMessage verbunden, die empfangene Daten verarbeitet.
+
+#### ReceivedMessage
+
+- Hilfsklasse, speichert die empfangenen JSON-Nachrichten zusammen mit der Information, ob diese von WALL oder FLOOR stammen.
 
 ## Build für Deepspace verschicken
 
