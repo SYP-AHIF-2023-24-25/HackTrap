@@ -8,54 +8,45 @@ Weiters werden in den nächsten Absätzen nun genauer die von uns implementierte
 
 Grundsätzlich werden in Unity `Scenes` verwendet, da der Deepspace jedoch nur mit einer Scene arbeitet, müssen alle Scenes in `Prefabs` verwandelt und in die Hauptscene `Hacktrap` eingefügt werden.
 
-Der StateManager ist eine zentrale Komponente, die Szenenwechsel in Unity organisiert und verwaltet. Anders als der klassische Unity SceneManager, der Szenen lädt und entlädt, arbeitet dieser StateManager hauptsächlich mit Prefabs. Diese Prefabs werden zur Laufzeit aktiviert oder deaktiviert.
+Der `StateManager` ist eine zentrale Komponente, die Szenenwechsel in Unity organisiert und verwaltet. Anders als der klassische Unity `SceneManager`, der Szenen lädt und entlädt, arbeitet dieser StateManager hauptsächlich mit Prefabs. Diese Prefabs werden zur Laufzeit aktiviert oder deaktiviert.
 
 ### Komponenten aus dem Screenshot
 
 Die Komponenten sind 18 unterschiedliche Prefabs, die durch den StateManager verwaltet werden. Einige relevante Beispiele:
 
-- AnfangsScene (Einstiegspunkt)
+- `AnfangsScene` (Einstiegspunkt)
+- Diverse Szenen (z.B. `00`, `01`, `PfeilScene`, `TicTacToeCelebration` usw.)
+- Szenen zur Beschreibung und Ergebnisauswertung (`DescriptionTrail`, `MainGameResult`, `Success`, `Failure`, `End`, `TrialRunEncryption`)
+- Initiale Szene ist auf Index 0 gesetzt - für den Eintrittspunkt bzw. die Anfangsscene
 
-- Diverse Szenen (z.B. „00“, „01“, „PfeilScene“, „TikTakToeCelebration“ usw.)
-
-- Szenen zur Beschreibung und Ergebnisauswertung („DescriptionTrail“, „MainGameResult“, „Success“, „Failure“, „End“)
-
-- Initiale Szene ist auf Index 12 gesetzt („TrialRunEncryption“).
 ### Funktionsweise des bereitgestellten Skripts
 
 #### Grundlegende Eigenschaften:
 
 - Singleton-Muster (nur eine Instanz des StateManagers).
-
-- Der StateManager wird nicht zerstört (DontDestroyOnLoad).
-
-- Alle Szenen-Prefabs sind im Array (scenePrefabs) gespeichert.
+- Der StateManager wird nicht zerstört (`DontDestroyOnLoad`).
+- Alle Szenen-Prefabs sind im Array (`scenePrefabs`) gespeichert.
 
 #### Initialisierung (Start/Awake):
 
-Beim Start alle Prefabs deaktivieren, außer der initialen Szene.
+Beim Start werden alle Prefabs deaktiviert, außer der initialen Szene. Wenn auf eine andere Scene übergegangen wird, werden die vorherigen bzw. die vorherige gelöscht und die darauffolgenden sind immer noch deaktiviert.
 
 ### Wechseln der Szenen (Prefabs):
 
 - `SwitchSceneAfterDelay`: Szenenwechsel nach Verzögerung.
-
 - `SwitchToScenePrefab`: Sofortiger Wechsel ohne Verzögerung.
-
 - `SwitchToNextScenePrefab`: Zyklisch durch die Szenen.
-
 - `SwitchSceneAfterAnimation`: Nach Animation erfolgt Szenenwechsel.
 
 #### Hilfsmethoden:
 
-GetCurrentIndex: Gibt aktuellen Szenenindex zurück.
+`GetCurrentIndex`: Gibt aktuellen Szenenindex zurück.
 
 ### Scene Template (für die einzelnen Prefabs)
-Es gibt ein `TemplateScenePrefab`, das sich in der All Scene befindet. In diesem Template befindet sich eine fertige Scene mit Tracking. Eine Scene besteht aus:
+Es gibt ein `TemplateScenePrefab`, das sich in `All` in der `HackTrap` Scene befindet. In diesem Template befindet sich eine fertige Scene mit Tracking. Eine Scene besteht aus:
 
 - WALL
-
 - FLOOR
-
 - TRACKING
 
 ## PlayerTracker
@@ -128,110 +119,71 @@ Am Schluss muss noch `InitializeTeamColor()` aufgerufen werden, um diesem Spiele
 
 ## Pharus
 ### Was ist Pharus?
-Pharus ist eine Softwarelösung, die Tracking-Daten in Echtzeit verarbeitet und an Unity überträgt. Dabei können Personen oder Objekte über Sensoren (z.B. Laser-Tracking oder TUIO-basierte Systeme) erkannt und ihre Positionen kontinuierlich aktualisiert werden.
+`Pharus` ist eine Softwarelösung, die Tracking-Daten in Echtzeit verarbeitet und an Unity überträgt. Dabei können Personen oder Objekte über Sensoren (z.B. Laser-Tracking oder TUIO-basierte Systeme) erkannt und ihre Positionen kontinuierlich aktualisiert werden.
 
-Die Komponenten von Pharus:
-
-- TuioReceiveHandler
-
-- TracklinkReceiveHandler
-
-- TrackingEntityManager
-
-- TrackParent
+Die Komponenten von Pharus sind folgende:
+- `TuioReceiveHandler`
+- `TracklinkReceiveHandler`
+- `TrackingEntityManager`
+- `TrackParent`
 
 ### Erklärung und Aufgaben der Skripte
 
 #### 1. UdpReceiver (Teil von DeepSpace.Udp)
 
-Zweck: Empfängt UDP-Netzwerkpakete und verarbeitet diese.
+Zweck des UdpReceivers ist es `UDP-Netzwerkpakete` zu empfangen und diese zu verarbeiten.
 
-Aufgaben:
+Er öffnet einen `UDP-Socket`, der Nachrichten über das Netzwerk empfängt und prüft eingehende Nachrichten auf Gültigkeit und leitet die Daten an abonnierte Methoden weiter.
 
-Öffnet einen UDP-Socket, der Nachrichten über das Netzwerk empfängt.
+Die Kernfunktionalität liegt darin, den UDP-Port zu öffnen und zu binden.
 
-Prüft eingehende Nachrichten auf Gültigkeit und leitet die Daten an abonnierte Methoden weiter.
-
-Kernfunktionalität:
-
-Öffnet und bindet den UDP-Port.
-
-Verarbeitet eingehende Nachrichten (Bytes) und informiert alle registrierten Event-Handler (z.B. TracklinkReceiveHandler).
+Außerdem verarbeitet er eingehende Nachrichten (Bytes) und informiert alle registrierten Event-Handler (z.B. `TracklinkReceiveHandler`).
 
 #### 2. TracklinkReceiveHandler
 
-Zweck: Empfängt und verarbeitet Tracking-Informationen aus UDP-Nachrichten (vermutlich von einer Laser-basierten Tracklink-Technologie).
+TracklinkReceiveHandler dient dem `Empfang` und der `Verarbeitung` von Tracking-Informationen, die über `UDP-Nachrichten` übermittelt werden.
 
-Aufgaben:
+Seine Hauptaufgabe besteht darin, eingehende UDP-Datenpakete zu empfangen und daraus relevante Track-Informationen wie Position, Orientierung, Geschwindigkeit sowie Echo-Daten auszulesen. Diese Informationen werden anschließend genutzt, um sogenannte `Track-Objekte` (vom Typ `TrackRecord`) zu erstellen und fortlaufend zu verwalten.
 
-Empfängt und verarbeitet UDP-Datenpakete von Pharus.
+Im Hintergrund pflegt dieses Modul eine interne Liste (`_trackDict`), in der alle aktuell aktiven Tracks gespeichert sind. Sobald neue oder aktualisierte Track-Daten vorliegen, informiert weck automatisch alle registrierten Empfänger, die das Interface `ITrackingReceiver` implementieren.
 
-Liest Track-Informationen wie Position, Orientierung, Geschwindigkeit und Echo-Informationen aus den Datenpaketen.
-
-Erstellt und verwaltet Track-Objekte (TrackRecord).
-
-Sendet Benachrichtigungen an alle registrierten Empfänger (ITrackingReceiver).
-
-Kernfunktionalität:
-
-Verarbeitung der Rohdaten (Bytes) zu nutzbaren Track-Informationen.
-
-Verwaltung einer internen Liste (_trackDict) mit allen aktiven Tracks.
-
-Benachrichtigung anderer Komponenten.
+Die Kernfunktionalität liegt somit in der `Umwandlung von Rohdaten in verwertbare Tracking-Daten`, in der strukturierten Verwaltung dieser Informationen sowie in der reaktiven Kommunikation mit anderen Systemkomponenten, die auf diese Tracking-Daten angewiesen sind.
 
 #### 3. TuioReceiveHandler
 
-Zweck: Empfängt und verarbeitet TUIO-basierte Tracking-Daten.
+Der `TuioReceiveHandler` ist verantwortlich für den Empfang und die Verarbeitung von Tracking-Daten, die auf dem TUIO-Protokoll basieren.  
 
-TUIO (Tangible User Interface Objects): Ein Protokoll, welches Touch- und Bewegungsinformationen per Netzwerk versendet.
+`TUIO` (Tangible User Interface Objects) ist ein Netzwerkprotokoll, das speziell für die Übertragung von Touch- und Bewegungsinformationen entwickelt wurde. Der Handler lauscht auf eingehende TUIO-Nachrichten und wandelt diese in verwertbare Track-Daten um.
 
-Aufgaben:
+Im Mittelpunkt seiner Aufgaben steht die Verwaltung von Tracks, die aus Cursor-Events generiert werden. Darüber hinaus behandelt der Handler sogenannte `Echos` als eigenständige TUIO-Objekte und verarbeitet sie entsprechend.  
 
-Hört auf eingehende TUIO-Nachrichten und verarbeitet diese zu nutzbaren Track-Daten.
+Bei jeder Änderung eines Tracks oder Echo-Objekts benachrichtigt der TuioReceiveHandler alle registrierten Empfänger, die das Interface `ITrackingReceiver` implementieren.  
 
-Verwaltet Tracks basierend auf Cursor-Events.
-
-Behandelt „Echos“ separat als TUIO-Objekte.
-
-Informiert Empfänger (ITrackingReceiver) bei Änderungen von Tracks oder Echos.
-
-Kernfunktionalität:
-
-Erzeugung und Aktualisierung von TrackRecord-Objekten basierend auf TUIO-Daten.
-
-Management der Track-Daten, Positionen und Echos.
-
-Weiterleitung der Track-Updates an andere Komponenten in Unity.
+Die Kernfunktionalität umfasst die Erstellung und kontinuierliche Aktualisierung von `TrackRecord`-Objekten basierend auf den empfangenen TUIO-Daten. Dazu gehört das Management von Positionen, Bewegungen und Echos sowie die Weitergabe aller relevanten Track-Updates an andere Systemkomponenten innerhalb der Unity-Umgebung.
 
 ### Zusammenspiel aller Komponenten
 
-- Pharus: Erkennt Personen/Objekte, sendet Positionsdaten über UDP an Unity.
-
-- UdpReceiver: Empfängt Daten und leitet sie weiter.
-
-- TracklinkReceiveHandler / TuioReceiveHandler: Übersetzen Rohdaten zu nutzbaren Informationen, verwalten Tracks.
-
-- TrackingEntityManager / TrackParent: Verwalten Track-GameObjects (Positionen, Animationen etc.).
+- `Pharus`: Erkennt Personen/Objekte, sendet Positionsdaten über UDP an Unity.
+- `UdpReceiver`: Empfängt Daten und leitet sie weiter.
+- `TracklinkReceiveHandler / TuioReceiveHandler`: Übersetzen Rohdaten zu nutzbaren Informationen, verwalten Tracks.
+- `TrackingEntityManager / TrackParent`: Verwalten Track-GameObjects (Positionen, Animationen etc.).
 
 ### Typischer Ablauf (zusammenfassend)
 
 - Pharus erkennt Person/Objekt, sendet Tracking-Daten (UDP).
-
 - Unitys UdpReceiver empfängt diese Daten.
-
 - TracklinkReceiveHandler oder TuioReceiveHandler übersetzen Rohdaten.
-
 - Track-Daten werden gespeichert und weitergegeben.
-
 - TrackingEntityManager/TrackParent aktualisiert GameObjects in Unity.
+
 ## Verbindung zwischen Wall und Floor
 
-
 ## Main-Game (Viren-Einfangen-Spiel)
-Im Main-Game treten zwei Teams gegeneinander an, um möglichst viele Viren in ihr jeweiliges Teamfeld zu bringen. Jeder Spieler kann maximal 4 Viren gleichzeitig sammeln und muss anschließend zurück zum Teamfeld, um diese dort abzuladen. Das Team, das am Ende die meisten Viren gesammelt hat, qualifiziert sich für das Encrypt-Game.
+Im `Main-Game` treten zwei Teams gegeneinander an, um möglichst viele Viren in ihr jeweiliges Teamfeld zu bringen. Jeder Spieler kann maximal 4 Viren gleichzeitig sammeln und muss anschließend zurück zum Teamfeld, um diese dort abzuladen. Das Team, das am Ende die meisten Viren gesammelt hat, qualifiziert sich für das Encrypt-Game.
+
 ## Encrypt-Game (Anagramm-Lösen-Spiel)
-Im Encrypt-Game werden Buchstaben in zufälliger Reihenfolge auf dem Boden angezeigt. Der Spieler muss diese Buchstaben durch Betreten in die korrekte Reihenfolge bringen. Ist ein Buchstabe richtig gewählt, erscheint dieser an der Wand. Ist die Wahl falsch, ertönt ein akustisches Signal.
+Im `Encrypt-Game` werden Buchstaben in zufälliger Reihenfolge auf dem Boden angezeigt. Der Spieler muss diese Buchstaben durch Betreten in die korrekte Reihenfolge bringen. Ist ein Buchstabe richtig gewählt, erscheint dieser an der Wand. Ist die Wahl falsch, ertönt ein akustisches Signal.
+
 ## Build für Deepspace verschicken
 
 Um einen Build zu verschicken, muss man zunächst in Unity in der Taskleiste auf `File > Build Settings` gehen und dann die jeweilige Hauptscene auswählen (in unserem Fall `Hacktrap`).
